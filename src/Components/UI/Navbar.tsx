@@ -5,8 +5,8 @@ import CartBag from "./../../assets/Icons/CartBag";
 const Navbar = () => {
   return (
     <div>
-      <div className="w-full h-20 bg-transparent/10 fixed">
-        <div className="max-w-7xl flex justify-between items-center mx-auto h-full md:w-[80%] max-sm:px-7">
+      <div className="w-full h-20 bg-black/50 z-[1000] fixed">
+        <div className="max-w-[90rem] flex justify-between items-center mx-auto h-full md:w-[80%] max-sm:px-7 max-md:w-[70%]">
           <div className="capitalize text-3xl font-bold text-white">
             MARY'S
             <span className="text-3xl ml-1 text-[#BC9A6C]  font-bold capitalize">
