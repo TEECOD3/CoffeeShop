@@ -1,5 +1,5 @@
 import * as React from "react";
-const CoffeeJar = (props) => (
+const CoffeeJar = (props:any) => (
   <svg
     width={43}
     height={42}

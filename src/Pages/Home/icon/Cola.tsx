@@ -1,5 +1,5 @@
 import * as React from "react";
-const Cola = (props) => (
+const Cola = (props: any) => (
   <svg
     width={43}
     height={42}
