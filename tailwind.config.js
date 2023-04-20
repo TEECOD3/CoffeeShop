@@ -1,8 +1,14 @@
 /** @type {import('tailwindcss').Config} */
-import images from "./public/Images/bg-hero.png";
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      sm: "480px",
+      md: "768px",
+      lg: "976px",
+      xl: "1440px",
+    },
     extend: {
       backgroundImage: {
         hero: "url('./public/Images/bg-hero.png')",
@@ -12,6 +18,9 @@ export default {
         dottedimage: "url('./public/Images/dottedimagecofee.png')",
         coffeabout: "url('./public/Images/coffeeAboutSec.png')",
         coffeabout2: "url('./public/Images/cofeeAbout2.png')",
+        leaveright: "url('./public/Images/leaveright.png')",
+        leaveleft: "url('./public/Images/leaveleft.png')",
+        middlecofee: "url('./public/Images/cofeemids.png')",
       },
       fontFamily: {
         inter: ["lato", "sans-serif"],
@@ -21,6 +30,7 @@ export default {
       },
       colors: {
         coffee: "#BC9A6C",
+        coffeeBlack: "#333333",
       },
       fontSize: {
         sm: "0.8rem",

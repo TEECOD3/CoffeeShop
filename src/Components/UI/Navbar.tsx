@@ -5,11 +5,11 @@ import CartBag from "./../../assets/Icons/CartBag";
 const Navbar = () => {
   return (
     <div>
-      <div className="w-full h-20 bg-black/50 z-[1000] fixed">
-        <div className="max-w-[90%]  flex justify-between items-center mx-auto h-full md:w-[80%] max-sm:px-7 max-md:w-[70%]">
-          <div className="capitalize text-3xl font-bold text-white">
+      <div className=" px-3 sm:px-8 h-20 bg-black/50 z-[1000] w-full fixed ">
+        <div className="  md:w-full  md:max-w-7xl flex justify-between items-center mx-auto h-full">
+          <div className="capitalize text-2xl font-bold text-white">
             MARY'S
-            <span className="text-3xl ml-1 text-[#BC9A6C]  font-bold capitalize">
+            <span className="text-xl ml-1 text-[#BC9A6C]  font-bold capitalize">
               Foods
             </span>
           </div>
@@ -22,9 +22,9 @@ const Navbar = () => {
             </ul>
           </nav>
 
-          <ul className="flex justify-around w-[10%] max-md:hidden item-end ">
+          <ul className="flex justify-around  w-1/3 md:w-[10%] item-end ">
             <li>
-              <Search className="text-red-300 " />
+              <Search className="" />
             </li>
             <li>
               <Profile />
