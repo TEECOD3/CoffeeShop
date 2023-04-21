@@ -1,5 +1,5 @@
-import * as React from "react";
-const BlackCheck = (props: any) => (
+type blackcheckprops = {};
+const BlackCheck = (props: blackcheckprops) => (
   <svg
     width={24}
     height={24}

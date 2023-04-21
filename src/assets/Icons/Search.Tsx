@@ -1,5 +1,7 @@
 import * as React from "react";
-const Search = (props: any) => (
+
+type searchtype = {};
+const Search = (props: searchtype) => (
   <svg
     width={24}
     height={24}
