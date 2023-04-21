@@ -12,9 +12,9 @@ import middlecofs from "../../assets/Images/cofeemids.png";
 const Home = () => {
   return (
     <>
-      <section className="bg-black/90  z-30 w-full h-full  bg-hero flex  md:p-28 ">
-        <div className="  flex flex-col-reverse items-center justify-between h-full py-10 sm:py-0  space-y-2 w-full mt-28 md:mt-2 md:max-w-7xl  mx-auto sm:max-w-4xl md:flex-row sm:space-y-8 md:space-x-16 lg:mt-10 lg:space-x-28">
-          <div className="w-4/5  mx-auto relative p-8 sm:w-5/6   ">
+      <section className="bg-black/90  z-30 w-full h-full  bg-hero flex  md:p-24 ">
+        <div className="  flex flex-col-reverse items-center justify-between h-full py-10 sm:py-0  space-y-2 w-full mt-28 md:mt-2   md:max-w-7xl  mx-auto sm:max-w-4xl md:flex-row sm:space-y-8 md:space-x-16 lg:mt-0 lg:space-x-28">
+          <div className="w-4/5   mx-auto relative p-8 lg:p-5 sm:w-5/6   ">
             <div className="h-[6rem] w-[5rem]  absolute bg-seed bg-no-repeat left-[33rem] max-sm:left-[14rem] max-sm:top-[11rem] max-md:left-[22rem] top-[15rem] max-xl:left-[21rem] flex items-center justify-center"></div>
             <div className=" lg:w-3/4 lg:mt-0 mx-auto ">
               <p className="text-white text-[1rem] font-medium mb-3 font-playfair">
@@ -110,18 +110,18 @@ const Home = () => {
       </section>
 
       <section className=" mt-4 lg:mt-20">
-        <div className=" w-[90%] mx-auto md:w-[75%] lg:w-[95%] xl:w-[75%]">
+        <div className=" w-[90%] mx-auto md:w-[75%] lg:w-[95%] xl:w-[65%]">
           <div className="text-center lg:w-[40%] mx-auto w-full">
             <h2 className=" text-3xl md:text-4xl font-bold text-coffeeBlack mb-4 capitalize font-playfair">
               Coffee Category
             </h2>
-            <p className="">
+            <p className="mb-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius
               sed pharetra dictum neque massa congue
             </p>
           </div>
 
-          <div className="flex mt-5 w-full flex-col lg:flex-row justify-between md:mt-14">
+          <div className="flex mt-5 w-full flex-col lg:flex-row justify-around md:mt-14">
             <div className="text-left">
               <ul>
                 {leftCoffee.map((coffee) => (
@@ -138,22 +138,22 @@ const Home = () => {
               <img
                 src={leftleaf}
                 alt="left leaf"
-                className="bg-contain bg-no h-2/3 w-full top-[10%] left-[-3rem] absolute bg-no-repeat z-[10] "
+                className="bg-contain bg-no h-2/4 top-[10%] left-2 lg:left-[3rem]  absolute bg-no-repeat z-[10] "
               />
 
               <img
                 src={middlecofs}
                 alt="middlecoffeecan"
-                className="h-full w-full absolute bg-cover bg-no-repeat z-[20]"
+                className="h-[15rem] sm:w-2/3  w-full absolute bg-cover bg-no-repeat z-[20]"
               />
 
               <img
                 src={rightleaf}
                 alt="right leave"
-                className="bg-leaveright h-2/3 absolute w-1/3 right-[1rem] bg-no-repeat top-[13%] z-[10] bg-contain"
+                className="bg-leaveright h-1/3 absolute w-1/3 right-[1rem] lg:right-[2rem] bg-no-repeat top-[13%] z-[10] bg-contain"
               />
             </div>
-            <div className="">
+            <div className="mt-[-4rem] lg:mt-0">
               <div className="lg:text-right">
                 <ul>
                   {rightCofee.map((coffee) => (

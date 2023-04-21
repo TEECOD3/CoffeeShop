@@ -1,5 +1,9 @@
 import * as React from "react";
-const Ringer = (props: any) => (
+
+type ringerprops = {
+  className?: string;
+};
+const Ringer = (props: ringerprops) => (
   <svg
     width={81}
     height={82}
