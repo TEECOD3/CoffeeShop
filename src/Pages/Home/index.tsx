@@ -100,7 +100,7 @@ const Home = () => {
       </section>
 
       <section className=" mt-4 lg:mt-20">
-        <div className=" w-[90%] mx-auto md:max-w-[75%]">
+        <div className=" w-[90%] mx-auto md:w-[75%] lg:w-[95%] xl:w-[75%] bg-red-300">
           <div className="text-center lg:w-[40%] mx-auto w-full">
             <h2 className=" text-3xl md:text-4xl font-bold text-coffeeBlack mb-4 capitalize font-playfair">
               Coffee Category

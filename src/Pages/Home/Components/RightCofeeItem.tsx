@@ -10,7 +10,7 @@ const RightCoffeeItem = (props: rightcoffeitemtype) => {
   return (
     <li className="flex gap-4 md:w-full">
       <div className=" w-full max-sm:w-[70%] max-md:w-[80%]">
-        <h1 className="mb-2 text-xl font-bold text-[#4F4F4F] sm:text-3xl ">
+        <h1 className="mb-2 text-xl font-bold text-[#4F4F4F] sm:text-2xl xl:text-3xl ">
           {cofee}
         </h1>
         <p className="text-[#4F4F4F] text-medium text-sm md:text-base">

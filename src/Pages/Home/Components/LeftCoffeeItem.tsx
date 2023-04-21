@@ -17,7 +17,7 @@ const LeftCoffeeItem = (props: coffeitemtype) => {
         </div>
       </div>
       <div className=" w-full max-sm:w-[90%] max-md:w-[80%]">
-        <h1 className=" text-xl font-bold text-[#4F4F4F] sm:text-3xl ">
+        <h1 className=" text-xl  font-bold text-[#4F4F4F] sm:text-2xl xl:text-3xl  ">
           {cofee}
         </h1>
         <p className="text-[#4F4F4F] text-medium text-sm md:text-base ">
