@@ -38,7 +38,7 @@ const Home = () => {
           </div>
           {/* 2nd col */}
 
-          <div className="w-[60%] relative h-[20rem] md:h-[30rem]  lg:h-[35rem]">
+          <div className=" mx-auto  bg-red-300 w-[70%] relative h-[20rem] md:h-[30rem]  lg:h-[35rem]">
             <div className=" w-full absolute h-[16rem] left-[-1rem]  xl:right-[24%] top-[-1rem] border-2 border-[#BC9A6C] z-[300] sm:left-[-2rem] sm:h-[20rem] sm:w-[80%]  md:h-[15rem] lg:h-[20rem] lg:w-[80%] lg:mt-[4rem] xl:w-[80%] xl:mt-0 xl:h-[25rem] md:mt-20"></div>
             <div className=" bg-cofeeHero absolute w-full h-full z-[400] lg:w-[20rem] md:mt-20 xl:w-full bg-no-repeat bg-contain lg:mt-[5rem] xl:mt-0" />
           </div>
