@@ -16,7 +16,7 @@ const Home = () => {
               <p className="text-white text-[1rem] font-medium mb-3 font-playfair">
                 Welcome to coffee hut
               </p>
-              <h1 className=" text-3xl  lg:text-4xl xl:text-6xl   md:text-md font-bold text-[#BC9A6C]/70 mb-6 font-playfair ">
+              <h1 className=" text-3xl  xl:text-6xl   md:text-md font-bold text-[#BC9A6C]/70 mb-6 font-playfair ">
                 Heal the world with coffee
               </h1>
               <p className="text-white mb-7 text-sm">
@@ -54,7 +54,7 @@ const Home = () => {
 
             <div className="bg-coffeabout2 h-[50%] w-[50%] absolute bg-no-repeat bg-center bottom-0 left-0 max-xl:hidden " />
           </div>
-          <div className=" lg:ml-16 lg:w-[50%] p-2 max-md:h-5/6 md:w-full  max-md:p-8 w-full">
+          <div className=" lg:ml-16 xl:w-[50%] p-2 max-md:h-5/6 md:w-full  max-md:p-8 w-full">
             <h3 className="text-[1.1rem] mb-2 sm:mb-4  font-medium">
               About us
             </h3>
