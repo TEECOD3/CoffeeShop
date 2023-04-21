@@ -11,26 +11,26 @@ const Home = () => {
     <>
       <section className="bg-black/90  z-30 w-full h-full  bg-hero flex  md:p-28 ">
         <div className="  flex flex-col-reverse items-center justify-between h-full py-10 sm:py-0  space-y-2 w-full mt-28 md:mt-2 md:max-w-7xl  mx-auto sm:max-w-4xl md:flex-row sm:space-y-8 md:space-x-16 lg:mt-10 lg:space-x-28">
-          <div className="w-full  mx-auto relative p-8 sm:w-5/6   ">
+          <div className="w-3/4  mx-auto relative p-8 sm:w-5/6   ">
             <div className="h-[6rem] w-[5rem]  absolute bg-seed bg-no-repeat left-[33rem] max-sm:left-[14rem] max-sm:top-[11rem] max-md:left-[22rem] top-[15rem] max-xl:left-[21rem] flex items-center justify-center"></div>
             <div className=" lg:w-3/4 lg:mt-0 mx-auto ">
               <p className="text-white text-[1rem] font-medium mb-3 font-playfair">
                 Welcome to coffee hut
               </p>
-              <h1 className=" text-3xl  lg:text-4xl xl:text-6xl  md:text-md font-bold text-[#BC9A6C]/70 mb-6 font-playfair ">
+              <h1 className=" text-2xl  lg:text-4xl xl:text-6xl  md:text-md font-bold text-[#BC9A6C]/70 mb-6 font-playfair ">
                 Heal the world with coffee
               </h1>
-              <p className="text-white mb-7 ">
+              <p className="text-white mb-7 text-sm">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius
                 sed pharetra dictum neque massa congue
               </p>
 
-              <div className="md:w-full ">
-                <div className=" w-[80%] md:w-full gap-3 mx-auto flex ">
+              <div className="md:w-full">
+                <div className=" w-[100%] md:w-full gap-3 mx-auto flex  ">
                   <div className=" sm:px-8 bg-[#BC9A6C] font-nunito py-0 px-4 flex items-center justify-center text-sm transition-all duration-75 ease-in rounded-lg text-white hover:bg-[#BC9A6C]/20 cursor-pointer delay-200 xl:px-16 md:text-sm ">
                     order now
                   </div>
-                  <div className=" py-2 px-4 font-nunito border-double border-2  border-[#BC9A6C] text-[#BC9A6C] hover:bg-[#BC9A6C]/70 cursor-pointer hover:text-white hover:translate-y-1 transition-all ease-out delay-200 hover:border-white translate-x-1 xl:px-16">
+                  <div className=" px-1 py-1 font-nunito border-double border-2  border-[#BC9A6C] text-[#BC9A6C] hover:bg-[#BC9A6C]/70 cursor-pointer hover:text-white hover:translate-y-1 transition-all ease-out delay-200 hover:border-white translate-x-1 xl:px-16">
                     see menu
                   </div>
                 </div>
