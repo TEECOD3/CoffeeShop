@@ -5,6 +5,9 @@ import LeftCoffeeItem from "./Components/LeftCoffeeItem";
 import RightCoffeeItem from "./Components/RightCofeeItem";
 import { leftCoffee, rightCofee } from "../../Data/Cofee";
 import coffeehero from "../../assets/Images/coffeeHero.png";
+import leftleaf from "../../assets/Images/leaveleft.png";
+import rightleaf from "../../assets/Images/leaveright.png";
+import middlecofs from "../../assets/Images/cofeemids.png";
 
 const Home = () => {
   return (
@@ -45,7 +48,7 @@ const Home = () => {
 
             <img
               src={coffeehero}
-              alt="img"
+              alt="beautiful image of a coffee"
               className=" bg-cofeeHero absolute w-full h-full z-[400] lg:w-[20rem] md:h-1/2 xl:h-full md:mt-20 xl:w-full bg-no-repeat bg-cover lg:mt-[5rem] xl:mt-0"
             />
           </div>
@@ -99,7 +102,7 @@ const Home = () => {
             </div>
 
             <button className=" p-3 md:py-4 hover:bg-[#927d5f] md:px-14 bg-[#BC9A6C] focus:none outline-none capitalize text-white text-sm md:text-xl font-bold flex items-center justify-center gap-2 rounded-xl">
-              <span> learn more</span>{" "}
+              <span> learn more</span>
               <span className=" md:text-2xl">&#8594;</span>
             </button>
           </div>
@@ -107,7 +110,7 @@ const Home = () => {
       </section>
 
       <section className=" mt-4 lg:mt-20">
-        <div className=" w-[90%] mx-auto md:w-[75%] lg:w-[95%] xl:w-[75%] bg-red-300">
+        <div className=" w-[90%] mx-auto md:w-[75%] lg:w-[95%] xl:w-[75%]">
           <div className="text-center lg:w-[40%] mx-auto w-full">
             <h2 className=" text-3xl md:text-4xl font-bold text-coffeeBlack mb-4 capitalize font-playfair">
               Coffee Category
@@ -131,10 +134,24 @@ const Home = () => {
                 ))}
               </ul>
             </div>
-            <div className=" h-[20rem] w-[70%] mx-auto flex items-end justify-center relative">
-              <div className="bg-leaveleft bg-contain bg-no h-2/3 w-full top-[10%] left-[5%] absolute bg-no-repeat z-[10] lg:left-[10%]"></div>
-              <div className="bg-middlecofee  h-full w-full absolute bg-contain bg-no-repeat bottom-[-15%] lg:left-[15%] z-[20]"></div>
-              <div className="bg-leaveright hidden md:block h-2/3 absolute w-1/3 right-[10%] bg-no-repeat top-[13%] z-[10] bg-contain"></div>
+            <div className=" h-[20rem] w-[60%] md:w-[40%] mx-auto flex items-start justify-center relative">
+              <img
+                src={leftleaf}
+                alt="left leaf"
+                className="bg-contain bg-no h-2/3 w-full top-[10%] left-[-3rem] absolute bg-no-repeat z-[10] "
+              />
+
+              <img
+                src={middlecofs}
+                alt="middlecoffeecan"
+                className="h-full w-full absolute bg-cover bg-no-repeat z-[20]"
+              />
+
+              <img
+                src={rightleaf}
+                alt="right leave"
+                className="bg-leaveright h-2/3 absolute w-1/3 right-[1rem] bg-no-repeat top-[13%] z-[10] bg-contain"
+              />
             </div>
             <div className="">
               <div className="lg:text-right">
