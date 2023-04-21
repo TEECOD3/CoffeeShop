@@ -1,16 +1,14 @@
 import Profile from "./../../assets/Icons/Profile";
 import CartBag from "./../../assets/Icons/CartBag";
 import { FaSistrix } from "react-icons/fa";
+import Coffeelogo from "../../Pages/Home/icon/coffelogo";
 const Navbar = () => {
   return (
     <div>
       <div className=" px-3 sm:px-8 h-20 bg-black/50 z-[1000] w-full fixed ">
         <div className="  md:w-full  md:max-w-7xl flex justify-between items-center mx-auto h-full">
           <div className="capitalize text-2xl font-bold text-white">
-            MARY'S
-            <span className="text-xl ml-1 text-[#BC9A6C]  font-bold capitalize">
-              Foods
-            </span>
+            <Coffeelogo className="h-20 w-20 " />
           </div>
           <nav className="w-1/3 max-sm:hidden">
             <ul className="flex justify-around font-medium capitalize text-white max-md:hidden">

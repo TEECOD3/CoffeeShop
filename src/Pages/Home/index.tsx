@@ -109,13 +109,13 @@ const Home = () => {
         </div>
       </section>
 
-      <section className=" mt-4 lg:mt-20">
+      <section className=" mt-4 lg:mt-20 bg-slate-100 py-8 md:p-8">
         <div className=" w-[90%] mx-auto md:w-[75%] lg:w-[95%] xl:w-[65%]">
           <div className="text-center lg:w-[40%] mx-auto w-full">
             <h2 className=" text-3xl md:text-4xl font-bold text-coffeeBlack mb-4 capitalize font-playfair">
               Coffee Category
             </h2>
-            <p className="mb-4">
+            <p className="mb-4 text-md md:text-xl">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius
               sed pharetra dictum neque massa congue
             </p>
