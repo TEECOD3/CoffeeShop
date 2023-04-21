@@ -1,7 +1,6 @@
 import React from "react";
 import WhiteCheck from "./icon/WhiteCheck";
 import BlackCheck from "../../assets/Icons/BlackCheck";
-import Ringer from "./icon/Ringer";
 import LeftCoffeeItem from "./Components/LeftCoffeeItem";
 import RightCoffeeItem from "./Components/RightCofeeItem";
 import { leftCoffee, rightCofee } from "../../Data/Cofee";
@@ -11,13 +10,13 @@ const Home = () => {
     <>
       <section className="bg-black/90  z-30 w-full h-full  bg-hero flex  md:p-28 ">
         <div className="  flex flex-col-reverse items-center justify-between h-full py-10 sm:py-0  space-y-2 w-full mt-28 md:mt-2 md:max-w-7xl  mx-auto sm:max-w-4xl md:flex-row sm:space-y-8 md:space-x-16 lg:mt-10 lg:space-x-28">
-          <div className="w-3/4  mx-auto relative p-8 sm:w-5/6   ">
+          <div className="w-4/5  mx-auto relative p-8 sm:w-5/6   ">
             <div className="h-[6rem] w-[5rem]  absolute bg-seed bg-no-repeat left-[33rem] max-sm:left-[14rem] max-sm:top-[11rem] max-md:left-[22rem] top-[15rem] max-xl:left-[21rem] flex items-center justify-center"></div>
             <div className=" lg:w-3/4 lg:mt-0 mx-auto ">
               <p className="text-white text-[1rem] font-medium mb-3 font-playfair">
                 Welcome to coffee hut
               </p>
-              <h1 className=" text-2xl  lg:text-4xl xl:text-6xl  md:text-md font-bold text-[#BC9A6C]/70 mb-6 font-playfair ">
+              <h1 className=" text-3xl  lg:text-4xl xl:text-6xl   md:text-md font-bold text-[#BC9A6C]/70 mb-6 font-playfair ">
                 Heal the world with coffee
               </h1>
               <p className="text-white mb-7 text-sm">
