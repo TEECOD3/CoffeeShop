@@ -1,7 +1,6 @@
-import React from "react";
-import Search from "./../../assets/Icons/Search";
 import Profile from "./../../assets/Icons/Profile";
 import CartBag from "./../../assets/Icons/CartBag";
+import { FaSistrix } from "react-icons/fa";
 const Navbar = () => {
   return (
     <div>
@@ -23,8 +22,8 @@ const Navbar = () => {
           </nav>
 
           <ul className="flex justify-around  w-1/3 md:w-[10%] item-end ">
-            <li>
-              <Search className="" />
+            <li className="flex items-center justify-center">
+              <FaSistrix className="text-white text-2xl" />
             </li>
             <li>
               <Profile />

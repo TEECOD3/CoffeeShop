@@ -1,5 +1,6 @@
 import * as React from "react";
-const CartBag = (props) => (
+type cartbagtype = {};
+const CartBag = (props: cartbagtype) => (
   <svg
     width={24}
     height={24}
