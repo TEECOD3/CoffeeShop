@@ -4,23 +4,23 @@
 @tailwind components;
 @tailwind utilities;
 @layer base {
+  * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
   html {
     font-family: "Nunito", sans-serif;
   }
-}
-* {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
 
-input,
-textarea,
-button,
-select,
-a {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-a:focus,
-a:visited,
-a:active {
-  outline: none;
+  input,
+  textarea,
+  button,
+  select,
+  a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  a:focus,
+  a:visited,
+  a:active {
+    outline: none;
+  }
 }
