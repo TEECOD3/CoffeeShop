@@ -33,10 +33,10 @@ const Home = () => {
 
               <div className="md:w-full">
                 <div className=" w-full md:w-full gap-3 mx-auto flex  ">
-                  <div className=" sm:px-8 sm:py-4 outline-none bg-[#BC9A6C] font-nunito py-0 px-4 flex items-center justify-center text-sm transition-all duration-75  rounded-lg text-white hover:bg-[#BC9A6C]/20 cursor-pointer delay-200 xl:px-16 md:text-sm   hover:text-white hover:translate-y-1 ease-out  hover:border-white translate-x-1  capitalize">
+                  <div className=" sm:px-8 sm:py-4 outline-none  focus:none bg-[#BC9A6C] font-nunito py-0 px-4 flex items-center justify-center text-sm transition-all duration-75  rounded-lg text-white hover:bg-[#BC9A6C]/20 cursor-pointer delay-200 xl:px-16 md:text-sm   hover:text-white hover:translate-y-1 ease-out  hover:border-white translate-x-1  capitalize">
                     order now
                   </div>
-                  <div className=" px-1 py-1 font-nunito outline-none border-double border-2  border-[#BC9A6C] flex items-center justify-center  text-[#BC9A6C] hover:bg-[#BC9A6C]/70 cursor-pointer hover:text-white hover:translate-y-1 transition-all ease-out delay-200 hover:border-white translate-x-1 xl:px-16 capitalize">
+                  <div className=" px-1 py-1 font-nunito outline-none  focus:none border-double border-2  border-[#BC9A6C] flex items-center justify-center  text-[#BC9A6C] hover:bg-[#BC9A6C]/70 cursor-pointer hover:text-white hover:translate-y-1 transition-all ease-out delay-200 hover:border-white translate-x-1 xl:px-16 capitalize">
                     see menu
                   </div>
                 </div>
