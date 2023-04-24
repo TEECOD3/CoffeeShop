@@ -8,6 +8,9 @@ import coffeehero from "../../assets/Images/coffeeHero.png";
 import leftleaf from "../../assets/Images/leaveleft.png";
 import rightleaf from "../../assets/Images/leaveright.png";
 import middlecofs from "../../assets/Images/cofeemids.png";
+import dottedimage from "../../assets/Images/dottedimagecofee.png";
+import coffeeabout from "../../assets/Images/cofeeAbout2.png";
+import coffeeabout2 from "../../assets/Images/coffeeAboutSec.png";
 
 const Home = () => {
   return (
@@ -23,17 +26,17 @@ const Home = () => {
               <h1 className=" text-3xl  xl:text-6xl   md:text-md font-bold text-[#BC9A6C]/70 mb-6 font-playfair ">
                 Heal the world with coffee
               </h1>
-              <p className="text-white mb-7 text-sm">
+              <p className="text-white mb-7 text-sm md:text-base">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius
                 sed pharetra dictum neque massa congue
               </p>
 
               <div className="md:w-full">
-                <div className=" w-[100%] md:w-full gap-3 mx-auto flex  ">
-                  <div className=" sm:px-8 bg-[#BC9A6C] font-nunito py-0 px-4 flex items-center justify-center text-sm transition-all duration-75 ease-in rounded-lg text-white hover:bg-[#BC9A6C]/20 cursor-pointer delay-200 xl:px-16 md:text-sm ">
+                <div className=" w-full md:w-full gap-3 mx-auto flex  ">
+                  <div className=" sm:px-8 sm:py-4 bg-[#BC9A6C] font-nunito py-0 px-4 flex items-center justify-center text-sm transition-all duration-75  rounded-lg text-white hover:bg-[#BC9A6C]/20 cursor-pointer delay-200 xl:px-16 md:text-sm   hover:text-white hover:translate-y-1 ease-out  hover:border-white translate-x-1  capitalize">
                     order now
                   </div>
-                  <div className=" px-1 py-1 font-nunito border-double border-2  border-[#BC9A6C] text-[#BC9A6C] hover:bg-[#BC9A6C]/70 cursor-pointer hover:text-white hover:translate-y-1 transition-all ease-out delay-200 hover:border-white translate-x-1 xl:px-16">
+                  <div className=" px-1 py-1 font-nunito border-double border-2  border-[#BC9A6C] flex items-center justify-center  text-[#BC9A6C] hover:bg-[#BC9A6C]/70 cursor-pointer hover:text-white hover:translate-y-1 transition-all ease-out delay-200 hover:border-white translate-x-1 xl:px-16 capitalize">
                     see menu
                   </div>
                 </div>
@@ -44,7 +47,6 @@ const Home = () => {
 
           <div className=" mx-auto w-[70%] relative h-[20rem] md:h-[25rem]  lg:h-[35rem]">
             <div className=" w-full absolute h-[16rem] left-[-1rem]  xl:right-[24%] top-[-1rem] border-2 border-[#BC9A6C] z-[300] sm:left-[-2rem] sm:h-[20rem] sm:w-[80%]  md:h-[15rem] lg:h-[20rem] lg:w-[80%] lg:mt-[4rem] xl:w-[80%] xl:mt-0 xl:h-[25rem] md:mt-20"></div>
-            {/* <div className=" bg-cofeeHero absolute w-full h-full z-[400] lg:w-[20rem] md:mt-20 xl:w-full bg-no-repeat bg-contain lg:mt-[5rem] xl:mt-0" /> */}
 
             <img
               src={coffeehero}
@@ -58,20 +60,31 @@ const Home = () => {
       <section className="lg:p-4 my-4 sm:my-8 max-md:p-1  ">
         <div className=" gap-3 flex justify-between lg:max-w-7xl  mx-auto  p-2   flex-col md:flex-row">
           <div className="max-xl:w-full  max-md:h-1/6 relative w-[60%]">
-            <div className="bg-dottedimage  h-[50%] w-[40%]  absolute right-0 bg-no-repeat  top-36" />
+            <img
+              src={dottedimage}
+              alt="dotted images"
+              className="h-[50%] w-[40%] absolute right-0 bg-no-repeat  top-36"
+            />
+            <img
+              src={coffeeabout}
+              className="bg-coffeabout max-xl:bg-cover bg-no-repeat bg-center h-[100%] lg:h-2/3 md:h-4/6 xl:h-3/4 w-[60%] max-md:w-full max-lg:h-full max-md:left-0 absolute left-[14%] top-5"
+              alt="coffeeabout"
+            />
 
-            <div className="bg-coffeabout max-xl:bg-cover bg-no-repeat bg-center h-[100%] md:h-2/3 xl:h-full w-[60%] max-md:w-full max-lg:h-full max-md:left-0 absolute left-[14%] top-5" />
-
-            <div className="bg-coffeabout2 h-[50%] w-[50%] absolute bg-no-repeat bg-center bottom-0 left-0 max-xl:hidden " />
+            <img
+              src={coffeeabout2}
+              alt="cofeeabout2"
+              className="bg-coffeabout2 h-[50%] w-[50%] absolute bg-no-repeat bg-center bottom-0 left-0 max-xl:hidden "
+            />
           </div>
           <div className=" lg:ml-16 xl:w-[50%] p-2 max-md:h-5/6 md:w-full  max-md:p-8 w-full">
             <h3 className="text-[1.1rem] mb-2 sm:mb-4  font-medium">
               About us
             </h3>
-            <h2 className=" text-2xl sm:text-3xl md:text-2xl  xl:text-5xl font-bold font-playfair text-[#333333] mb-7">
+            <h2 className=" text-2xl sm:text-3xl md:text-2xl  xl:text-5xl font-bold font-playfair text-[#333333] mb-4">
               We are the best quality Coffee maker
             </h2>
-            <p className="text-[#4F4F4F] mb-4 sm:mb-8 sm:w-3/4 md:text-sm lg:text-xl">
+            <p className="text-[#4F4F4F] mb-4 sm:mb-3 sm:w-3/4 md:text-sm lg:text-xl">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi,
               accusantium magnam pariatur assumenda ipsum facere eos nulla quasi
               distinctio doloremque, odio dolorem nemo inventore, nostrum rerum
@@ -109,10 +122,10 @@ const Home = () => {
         </div>
       </section>
 
-      <section className=" mt-4 lg:mt-20 bg-slate-100 py-8 md:p-8">
+      <section className=" mt-4 lg:mt-20 bg-slate-100/50 py-8 md:p-8">
         <div className=" w-[90%] mx-auto md:w-[75%] lg:w-[95%] xl:w-[65%]">
           <div className="text-center lg:w-[40%] mx-auto w-full">
-            <h2 className=" text-3xl md:text-4xl font-bold text-coffeeBlack mb-4 capitalize font-playfair">
+            <h2 className=" text-3xl md:text-4xl font-bold text-coffeeBlack mb-1 capitalize font-playfair">
               Coffee Category
             </h2>
             <p className="mb-4 text-md md:text-xl">
@@ -138,19 +151,19 @@ const Home = () => {
               <img
                 src={leftleaf}
                 alt="left leaf"
-                className="bg-contain bg-no h-2/4 top-[10%] left-2 lg:left-[3rem]  absolute bg-no-repeat z-[10] "
+                className="bg-contain bg-no h-2/4 top-[10%] left-2  absolute bg-no-repeat z-[10] "
               />
 
               <img
                 src={middlecofs}
                 alt="middlecoffeecan"
-                className="h-[15rem] sm:w-2/3  w-full absolute bg-cover bg-no-repeat z-[20]"
+                className="h-[15rem] sm:w-2/3 lg:h-full lg:w-full  w-full absolute bg-cover bg-no-repeat z-[20]"
               />
 
               <img
                 src={rightleaf}
                 alt="right leave"
-                className="bg-leaveright h-1/3 absolute w-1/3 right-[1rem] lg:right-[2rem] bg-no-repeat top-[13%] z-[10] bg-contain"
+                className="bg-leaveright h-1/3 absolute w-1/3 right-[1rem]  bg-no-repeat top-[13%] z-[10] bg-contain"
               />
             </div>
             <div className="mt-[-4rem] lg:mt-0">
