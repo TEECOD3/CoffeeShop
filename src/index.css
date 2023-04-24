@@ -7,20 +7,20 @@
   html {
     font-family: "Nunito", sans-serif;
   }
-  * {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
+}
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
-  input,
-  textarea,
-  button,
-  select,
-  a {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-  a:focus,
-  a:visited,
-  a:active {
-    outline: none;
-  }
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a:focus,
+a:visited,
+a:active {
+  outline: none;
 }
