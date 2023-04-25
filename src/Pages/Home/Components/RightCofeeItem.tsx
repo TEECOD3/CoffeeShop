@@ -18,8 +18,8 @@ const RightCoffeeItem = (props: rightcoffeitemtype) => {
         </p>
       </div>
       <div className="relative mt-2">
-        <Ringer className="h-20 " />
-        <div className="absolute top-[0.9rem] left-[1.3rem] sm:h-full ">
+        <Ringer className="h-16 hidden md:block " />
+        <div className="md:absolute md:top-[0.9rem] md:left-[1.3rem] ">
           {image}
         </div>
       </div>

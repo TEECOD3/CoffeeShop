@@ -11,8 +11,8 @@ const LeftCoffeeItem = (props: coffeitemtype) => {
   return (
     <li className="flex gap-4 mb-2">
       <div className="relative h-1/2 md:h-full ">
-        <Ringer className="h-20 " />
-        <div className="absolute top-[0.9rem] left-[1.3rem] h-full ">
+        <Ringer className="h-16 hidden md:block " />
+        <div className="md:absolute md:top-[0.9rem] md:left-[1.3rem]">
           {image}
         </div>
       </div>
