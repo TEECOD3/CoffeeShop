@@ -11,6 +11,7 @@ import middlecofs from "../../assets/Images/cofeemids.png";
 import dottedimage from "../../assets/Images/dottedimagecofee.png";
 import coffeeabout from "../../assets/Images/cofeeAbout2.png";
 import coffeeabout2 from "../../assets/Images/coffeeAboutSec.png";
+import Button from "../../Components/UI/Button";
 
 const Home = () => {
   return (
@@ -33,7 +34,7 @@ const Home = () => {
 
               <div className="md:w-full">
                 <div className=" w-full md:w-full gap-3 mx-auto flex  ">
-                  <div className=" sm:px-8 sm:py-4 outline-none  focus:none bg-[#BC9A6C] font-nunito py-0 px-4 flex items-center justify-center text-sm transition-all duration-75  rounded-lg text-white hover:bg-[#BC9A6C]/20 cursor-pointer delay-200 xl:px-16 md:text-sm   hover:text-white hover:translate-y-1 ease-out  hover:border-white translate-x-1  capitalize">
+                  <div className=" sm:px-8 sm:py-4 outline-none  focus:none bg-[#BC9A6C] font-nunito py-0 px-4 flex items-center justify-center text-sm transition-all duration-75  rounded-lg text-white hover:bg-[#BC9A6C]/20 cursor-pointer delay-200 xl:px-16 md:text-sm   hover:text-white hover:translate-y-1 ease-out  hover:border-white translate-x-1  capitalize user  ">
                     order now
                   </div>
                   <div className=" px-1 py-1 font-nunito outline-none  focus:none border-double border-2  border-[#BC9A6C] flex items-center justify-center  text-[#BC9A6C] hover:bg-[#BC9A6C]/70 cursor-pointer hover:text-white hover:translate-y-1 transition-all ease-out delay-200 hover:border-white translate-x-1 xl:px-16 capitalize">
@@ -184,7 +185,36 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="h-[100vh] bg-blue-300 mt-10"></section>
+      <section className="h-[100vh] w-full mt-10">
+        <div className="text-center lg:w-[40%] mx-auto w-full">
+          <h2 className=" text-3xl md:text-4xl font-bold text-coffeeBlack mb-1 capitalize font-playfair">
+            Our Favorites Menu
+          </h2>
+          <p className="mb-4 text-md md:text-xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius sed
+            pharetra dictum neque massa congue
+          </p>
+        </div>
+
+        <div className="flex flex-col lg:flex-row w-full bg-red-300 lg:max-w-[80%] xl:max-w-[60%] mx-auto">
+          <div className=" overflow-x-auto no-scrollbar sm:w-full  bg-blue-300 lg:w-[25rem]">
+            <div className="flex lg:flex-col gap-3 sm:gap-24  lg:gap-10 ">
+              <Button>Americano</Button>
+              <Button>Esperesso</Button>
+              <Button>Arabica</Button>
+              <Button className="px-7 ">
+                Coffee <span>stimy</span>
+              </Button>
+              <Button>
+                Organic <span>Pack</span>
+              </Button>
+            </div>
+          </div>
+          <div className="bg-yellow-200 lg:w-full h-full lg:flex-3">
+            coffees
+          </div>
+        </div>
+      </section>
     </>
   );
 };
