@@ -12,6 +12,10 @@ import dottedimage from "../../assets/Images/dottedimagecofee.png";
 import coffeeabout from "../../assets/Images/cofeeAbout2.png";
 import coffeeabout2 from "../../assets/Images/coffeeAboutSec.png";
 import Button from "../../Components/UI/Button";
+import { SiBuymeacoffee } from "react-icons/si";
+import { GiCoffeeBeans, GiCoffeeCup, GiCoffeeMug } from "react-icons/gi";
+import { CiCoffeeBean } from "react-icons/ci";
+import Cofeecard from "./Components/CofeeCard";
 
 const Home = () => {
   return (
@@ -123,7 +127,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className=" mt-4 lg:mt-20 bg-slate-100/50 py-8 md:p-8">
+      <section className=" mt-4 lg:mt-20  bg-[#EDEAE3]/20 py-8 md:p-8">
         <div className=" w-[90%] mx-auto md:w-[75%] lg:w-[95%] xl:w-[65%]">
           <div className="text-center lg:w-[40%] mx-auto w-full">
             <h2 className=" text-3xl md:text-4xl font-bold text-coffeeBlack mb-1 capitalize font-playfair">
@@ -185,8 +189,8 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="h-[100vh] w-full mt-10">
-        <div className="text-center lg:w-[40%] mx-auto w-full">
+      <section className=" w-full mt-10 md:p-20">
+        <div className="text-center lg:w-[60%] mx-auto w-full">
           <h2 className=" text-3xl md:text-4xl font-bold text-coffeeBlack mb-1 capitalize font-playfair">
             Our Favorites Menu
           </h2>
@@ -196,22 +200,54 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row w-full bg-red-300 lg:max-w-[80%] xl:max-w-[60%] mx-auto">
-          <div className=" overflow-x-auto no-scrollbar sm:w-full  bg-blue-300 lg:w-[25rem]">
-            <div className="flex lg:flex-col gap-3 sm:gap-24  lg:gap-10 ">
-              <Button>Americano</Button>
-              <Button>Esperesso</Button>
-              <Button>Arabica</Button>
-              <Button className="px-7 ">
+        <div className="flex flex-col lg:flex-row w-full lg:max-w-[80%]  xl:max-w-[70%] mx-auto p-3 gap-4">
+          <div className=" overflow-x-auto no-scrollbar sm:w-full  lg:w-[25rem]">
+            <div className="flex lg:flex-col gap-3 sm:gap-24 lg:gap-5 md:bg-[#EDEAE3] p-4 w-full ">
+              <Button variant="coffee" size="lg">
+                <span>
+                  <GiCoffeeBeans className="text-2xl  md:text-4xl mr-2 md:mr-4 " />
+                </span>
+                <span className=""> Americano</span>
+              </Button>
+              <Button variant="coffee" size="lg">
+                <span>
+                  <SiBuymeacoffee className="text-2xl   md:text-4xl mr-2 md:mr-4 " />
+                </span>
+                Esperesso
+              </Button>
+              <Button variant="coffee" size="lg" className="">
+                <span>
+                  <CiCoffeeBean className="text-2xl md:text-4xl  mr-2 md:mr-7" />
+                </span>
+                Arabica
+              </Button>
+              <Button
+                variant="coffee"
+                size="lg"
+                className="flex items-center justify-center px-7"
+              >
+                <span>
+                  <GiCoffeeCup className="text-2xl  md:text-4xl mr-2 md:mr-4 " />
+                </span>
                 Coffee <span>stimy</span>
               </Button>
-              <Button>
+              <Button variant="coffee" size="lg">
+                <span>
+                  <GiCoffeeMug className="text-2xl  md:text-4xl mr-2 md:mr-4 " />
+                </span>
                 Organic <span>Pack</span>
               </Button>
             </div>
           </div>
-          <div className="bg-yellow-200 lg:w-full h-full lg:flex-3">
-            coffees
+          <div className="bg-yellow-200 lg:w-full lg:flex-3 ">
+            <div className="grid  grid-cols-2 md:grid-cols-3 grid-rows-3 md:grid-rows-2 h-full gap-4">
+              <Cofeecard />
+              <Cofeecard />
+              <Cofeecard />
+              <Cofeecard />
+              <Cofeecard />
+              <Cofeecard />
+            </div>
           </div>
         </div>
       </section>

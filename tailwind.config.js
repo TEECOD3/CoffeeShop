@@ -29,8 +29,11 @@ export default {
         nunito: ["nunito", "sans-serif"],
       },
       colors: {
-        coffee: "#BC9A6C",
-        coffeeBlack: "#333333",
+        coffee: {
+          100: "#BC9A6C",
+          200: "#3b2f2f",
+          800: "#333333",
+        },
       },
       fontSize: {
         sm: "0.8rem",

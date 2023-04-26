@@ -1,6 +1,8 @@
 import * as React from "react";
 
-type cofeebagprops = {};
+type cofeebagprops = {
+  className: string;
+};
 const CofeeBag = (props: cofeebagprops) => (
   <svg
     width={43}

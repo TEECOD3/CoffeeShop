@@ -11,11 +11,13 @@ const buttonVariants = cva(
       variant: {
         default: "bg-slate-900 text-white  hover:bg-slate-800",
         ghost: "bg-transparent hover:text-slate-900 hover:bg-slate-200",
+        coffee:
+          "bg-white text-coffee-100 hover:bg-coffee-100 hover:text-white border-2 border-coffee-100 focus:bg-coffee-200 focus:text-white",
       },
       size: {
         default: "h-10 py-2 px-4",
         sm: "h-9 px-2",
-        lg: "h-11 px-8",
+        lg: "h-11 px-3 md:h-13 md:px-6 text-sm sm:text-xl md:text-xl capitalize md:py-8",
       },
     },
     defaultVariants: {
