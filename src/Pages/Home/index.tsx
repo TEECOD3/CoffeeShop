@@ -192,7 +192,7 @@ const Home = () => {
 
       <section className=" w-full mt-10 md:p-20">
         <div className="text-center lg:w-[60%] mx-auto w-full">
-          <h2 className=" text-3xl md:text-4xl font-bold text-coffeeBlack mb-1 capitalize font-playfair">
+          <h2 className=" text-2xl md:text-4xl font-bold text-coffeeBlack mb-1 capitalize font-playfair">
             Our Favorites Menu
           </h2>
           <p className="mb-4 text-md md:text-xl">
@@ -240,7 +240,7 @@ const Home = () => {
               </Button>
             </div>
           </div>
-          <div className="bg-yellow-200 lg:w-full lg:flex-3 ">
+          <div className="lg:w-full lg:flex-3 ">
             <div className="grid  grid-cols-2 md:grid-cols-3 grid-rows-3 md:grid-rows-2 h-full gap-4">
               <Cofeecard />
               <Cofeecard />
