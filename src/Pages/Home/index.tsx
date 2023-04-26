@@ -12,6 +12,7 @@ import dottedimage from "../../assets/Images/dottedimagecofee.png";
 import coffeeabout from "../../assets/Images/cofeeAbout2.png";
 import coffeeabout2 from "../../assets/Images/coffeeAboutSec.png";
 import Button from "../../Components/UI/Button";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { SiBuymeacoffee } from "react-icons/si";
 import { GiCoffeeBeans, GiCoffeeCup, GiCoffeeMug } from "react-icons/gi";
 import { CiCoffeeBean } from "react-icons/ci";
