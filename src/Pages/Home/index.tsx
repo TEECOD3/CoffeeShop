@@ -12,7 +12,6 @@ import dottedimage from "../../assets/Images/dottedimagecofee.png";
 import coffeeabout from "../../assets/Images/cofeeAbout2.png";
 import coffeeabout2 from "../../assets/Images/coffeeAboutSec.png";
 import Button from "../../Components/UI/Button";
-import { RxHamburgerMenu } from "react-icons/rx";
 import { SiBuymeacoffee } from "react-icons/si";
 import { GiCoffeeBeans, GiCoffeeCup, GiCoffeeMug } from "react-icons/gi";
 import { CiCoffeeBean } from "react-icons/ci";
@@ -131,7 +130,7 @@ const Home = () => {
       </section>
 
       <section className=" mt-4 lg:mt-20  bg-[#EDEAE3]/20 py-8 md:p-8">
-        <div className=" w-[90%] mx-auto md:w-[75%] lg:w-[95%] xl:w-[65%]">
+        <div className=" w-[90%] mx-auto md:w-[75%] lg:w-[95%] xl:w-[75%]">
           <div className="text-center lg:w-[40%] mx-auto w-full">
             <h2 className=" text-4xl  md:text-4xl font-extrabold text-[#333333] text mb-1 capitalize font-rails">
               Coffee Category
