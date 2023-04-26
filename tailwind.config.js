@@ -23,9 +23,7 @@ export default {
         middlecofee: "url('./public/Images/cofeemids.png')",
       },
       fontFamily: {
-        inter: ["lato", "sans-serif"],
-        playfair: ["Playfair Display", "sans-serif"],
-        lora: ["lora", "sans-serif"],
+        rails: ["Raleway", "sans-serif"],
         nunito: ["nunito", "sans-serif"],
       },
       colors: {
@@ -34,6 +32,8 @@ export default {
           200: "#3b2f2f",
           800: "#333333",
         },
+
+        lightdark: "#4F4F4F",
       },
       fontSize: {
         sm: "0.8rem",

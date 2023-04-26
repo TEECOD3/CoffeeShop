@@ -6,7 +6,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 const Navbar = () => {
   return (
     <div>
-      <div className=" px-3 sm:px-8 h-12 md:h-20 bg-black/50 z-[1000] w-full fixed ">
+      <div className=" px-3 sm:px-8 bg-black/50   z-[1000] w-full fixed ">
         <div className="  md:w-full  md:max-w-7xl flex justify-between items-center mx-auto h-full">
           <div className="capitalize text-2xl font-bold text-white">
             <Coffeelogo className=" h-16 w-16  sm:h-20 sm:w-20 " />

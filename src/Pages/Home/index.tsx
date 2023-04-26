@@ -22,14 +22,14 @@ const Home = () => {
   return (
     <>
       <section className="bg-black/90  z-30 w-full h-full  bg-hero flex  md:p-24 ">
-        <div className="  flex flex-col-reverse items-center justify-between h-full py-10 sm:py-0  space-y-2 w-full mt-28 md:mt-2   md:max-w-7xl  mx-auto sm:max-w-4xl md:flex-row sm:space-y-8 md:space-x-16 lg:mt-0 lg:space-x-28">
+        <div className="  flex flex-col-reverse items-center justify-between h-full py-10 sm:py-0 font-rails  space-y-2 w-full mt-28 md:mt-2   md:max-w-7xl  mx-auto sm:max-w-4xl md:flex-row sm:space-y-8 md:space-x-16 lg:mt-0 lg:space-x-28">
           <div className="w-4/5   mx-auto relative p-8 lg:p-5 sm:w-5/6   ">
             <div className="h-[6rem] w-[5rem]  absolute bg-seed bg-no-repeat left-[33rem] max-sm:left-[14rem] max-sm:top-[11rem] max-md:left-[22rem] top-[15rem] max-xl:left-[21rem] flex items-center justify-center"></div>
             <div className=" lg:w-3/4 lg:mt-0 mx-auto ">
-              <p className="text-white text-[1rem] font-medium mb-3 font-playfair">
+              <p className="text-white text-[1rem] font-medium mb-3 font-rails">
                 Welcome to coffee hut
               </p>
-              <h1 className=" text-3xl  xl:text-6xl   md:text-md font-bold text-[#BC9A6C]/70 mb-6 font-playfair ">
+              <h1 className=" text-4xl  leading-8 lg:leading-10  xl:text-6xl   md:text-md font-medium text-[#BC9A6C]/70 mb-4 font-rails ">
                 Heal the world with coffee
               </h1>
               <p className="text-white mb-7 text-sm md:text-base">
@@ -39,10 +39,10 @@ const Home = () => {
 
               <div className="md:w-full">
                 <div className=" w-full md:w-full gap-3 mx-auto flex  ">
-                  <div className=" sm:px-8 sm:py-4 outline-none  focus:none bg-[#BC9A6C] font-nunito py-0 px-4 flex items-center justify-center text-sm transition-all duration-75  rounded-lg text-white hover:bg-[#BC9A6C]/20 cursor-pointer delay-200 xl:px-16 md:text-sm   hover:text-white hover:translate-y-1 ease-out  hover:border-white translate-x-1  capitalize user  ">
+                  <div className=" sm:px-8 sm:py-4 outline-none  focus:none bg-[#BC9A6C]  py-0 px-4 flex items-center justify-center text-sm transition-all duration-75  rounded-lg text-white hover:bg-[#BC9A6C]/20 cursor-pointer delay-200 xl:px-16 md:text-sm   hover:text-white hover:translate-y-1 ease-out  hover:border-white translate-x-1  capitalize user  ">
                     order now
                   </div>
-                  <div className=" px-1 py-1 font-nunito outline-none  focus:none border-double border-2  border-[#BC9A6C] flex items-center justify-center  text-[#BC9A6C] hover:bg-[#BC9A6C]/70 cursor-pointer hover:text-white hover:translate-y-1 transition-all ease-out delay-200 hover:border-white translate-x-1 xl:px-16 capitalize">
+                  <div className=" px-4 py-1 text-sm outline-none rounded-lg  focus:none border-double border-2  border-[#BC9A6C] flex items-center justify-center  text-[#BC9A6C] hover:bg-[#BC9A6C]/70 cursor-pointer hover:text-white hover:translate-y-1 transition-all ease-out delay-200 hover:border-white translate-x-1 xl:px-16 capitalize">
                     see menu
                   </div>
                 </div>
@@ -87,41 +87,43 @@ const Home = () => {
             <h3 className="text-[1.1rem] mb-2 sm:mb-4  font-medium">
               About us
             </h3>
-            <h2 className=" text-2xl sm:text-3xl md:text-2xl  xl:text-5xl font-bold font-playfair text-[#333333] mb-4">
+            <h2 className=" text-2xl sm:text-3xl md:text-2xl  xl:text-5xl font-bold font-rails text-lightdark mb-4">
               We are the best quality Coffee maker
             </h2>
-            <p className="text-[#4F4F4F] mb-4 sm:mb-3 sm:w-3/4 md:text-sm lg:text-xl">
+            <p className="text-lightdark text-base  mb-5 lg:mb-6 sm:mb-3 sm:w-3/4 md:text-sm lg:text-xl font-light">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi,
               accusantium magnam pariatur assumenda ipsum facere eos nulla quasi
               distinctio doloremque, odio dolorem nemo inventore, nostrum rerum
             </p>
 
-            <div className=" mb-4 sm:mb-8 ">
-              <ul className="space-y-2">
+            <div className=" mb-6 sm:mb-8 ">
+              <ul className="space-y-2 text-lightdark ">
                 <li className="flex gap-4">
                   <span className="bg-[#edeae3] p-[0.2em]">
                     <BlackCheck />
                   </span>
-                  <span className="font-medium">Experienced Chefs</span>{" "}
+                  <span className="font-semibold">Experienced Chefs</span>{" "}
                 </li>
                 <li className="flex gap-4">
                   <span className="bg-[#1b1b19] p-[0.2em]">
                     <WhiteCheck className="text-white" />
                   </span>
 
-                  <span className="font-medium">Fresh & Organic Foods</span>
+                  <span className="font-semibold">Fresh & Organic Foods</span>
                 </li>
                 <li className="flex gap-4 items-center">
                   <span className="bg-[#edeae3] p-[0.2em]">
                     <BlackCheck />
                   </span>
-                  <span className="font-medium">Different Coffee & Drinks</span>
+                  <span className="font-semibold">
+                    Different Coffee & Drinks
+                  </span>
                 </li>
               </ul>
             </div>
 
             <button className=" p-3 md:py-4 hover:bg-[#927d5f] md:px-14 bg-[#BC9A6C] focus:none outline-none capitalize text-white text-sm md:text-xl font-bold flex items-center justify-center gap-2 rounded-xl">
-              <span> learn more</span>
+              <span className="font-light"> learn more</span>
               <span className=" md:text-2xl">&#8594;</span>
             </button>
           </div>
@@ -131,10 +133,10 @@ const Home = () => {
       <section className=" mt-4 lg:mt-20  bg-[#EDEAE3]/20 py-8 md:p-8">
         <div className=" w-[90%] mx-auto md:w-[75%] lg:w-[95%] xl:w-[65%]">
           <div className="text-center lg:w-[40%] mx-auto w-full">
-            <h2 className=" text-2xl sm:text-3xl md:text-4xl font-bold text-coffeeBlack mb-1 capitalize font-playfair">
+            <h2 className=" text-4xl  md:text-4xl font-extrabold text-[#333333] text mb-1 capitalize font-rails">
               Coffee Category
             </h2>
-            <p className="mb-4 text-sm md:text-xl">
+            <p className="mb-4 text-base md:text-xl font-medium text-lightdark">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius
               sed pharetra dictum neque massa congue
             </p>
@@ -192,10 +194,10 @@ const Home = () => {
 
       <section className=" w-full mt-10 md:p-20">
         <div className="text-center lg:w-[60%] mx-auto w-full">
-          <h2 className=" text-2xl md:text-4xl font-bold text-coffeeBlack mb-1 capitalize font-playfair">
+          <h2 className=" text-[#333333] text-4xl font-bold text-coffeeBlack mb-1 capitalize font-rails">
             Our Favorites Menu
           </h2>
-          <p className="mb-4 text-md md:text-xl">
+          <p className=" text-md  md:text-xl text-lightdark text-medium font-medium">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius sed
             pharetra dictum neque massa congue
           </p>
