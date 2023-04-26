@@ -26,23 +26,23 @@ const Home = () => {
           <div className="w-4/5   mx-auto relative p-8 lg:p-5 sm:w-5/6   ">
             <div className="h-[6rem] w-[5rem]  absolute bg-seed bg-no-repeat left-[33rem] max-sm:left-[14rem] max-sm:top-[11rem] max-md:left-[22rem] top-[15rem] max-xl:left-[21rem] flex items-center justify-center"></div>
             <div className=" lg:w-3/4 lg:mt-0 mx-auto ">
-              <p className="text-white text-[1rem] font-medium mb-3 font-playfair">
+              <p className="text-white text-[1rem] font-medium mb-3 font-playfair text-center sm:text-left">
                 Welcome to coffee hut
               </p>
-              <h1 className=" text-3xl  xl:text-6xl   md:text-md font-bold text-[#BC9A6C]/70 mb-6 font-playfair ">
+              <h1 className=" text-3xl  xl:text-6xl   md:text-md font-bold text-center sm:text-left text-[#BC9A6C]/70 mb-6 font-playfair ">
                 Heal the world with coffee
               </h1>
-              <p className="text-white mb-7 text-sm md:text-base">
+              <p className="text-white mb-7 text-base text-center sm:text-left">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius
                 sed pharetra dictum neque massa congue
               </p>
 
               <div className="md:w-full">
-                <div className=" w-full md:w-full gap-3 mx-auto flex  ">
+                <div className=" w-full justify-center md:justify-start md:w-full gap-3 mx-auto flex  ">
                   <div className=" sm:px-8 sm:py-4 outline-none  focus:none bg-[#BC9A6C] font-nunito py-0 px-4 flex items-center justify-center text-sm transition-all duration-75  rounded-lg text-white hover:bg-[#BC9A6C]/20 cursor-pointer delay-200 xl:px-16 md:text-sm   hover:text-white hover:translate-y-1 ease-out  hover:border-white translate-x-1  capitalize user  ">
                     order now
                   </div>
-                  <div className=" px-1 py-1 font-nunito outline-none  focus:none border-double border-2  border-[#BC9A6C] flex items-center justify-center  text-[#BC9A6C] hover:bg-[#BC9A6C]/70 cursor-pointer hover:text-white hover:translate-y-1 transition-all ease-out delay-200 hover:border-white translate-x-1 xl:px-16 capitalize">
+                  <div className=" px-1 py-1 font-nunito outline-none  text-sm md:text-xl px-4 focus:none border-double border-2  border-[#BC9A6C] flex items-center justify-center  text-[#BC9A6C] hover:bg-[#BC9A6C]/70 cursor-pointer hover:text-white hover:translate-y-1 transition-all ease-out delay-200 hover:border-white translate-x-1 xl:px-16 capitalize">
                     see menu
                   </div>
                 </div>
