@@ -8,7 +8,7 @@ import Cola from "../Pages/Home/icon/Cola";
 export const leftCoffee = [
   {
     id: 1,
-    image: <CofeeBag />,
+    image: <CofeeBag className="" />,
     coffeeName: "coffeBag",
     coffeeDescription:
       " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo auguehdjdjjdjdjdjdj",
