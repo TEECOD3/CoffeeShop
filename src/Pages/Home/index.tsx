@@ -302,8 +302,8 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="lg:w-[80%] mx-auto my-32">
-        <div className="flex flex-col md:flex-row ">
+      <section className="lg:w-[80%] mx-auto lg:my-32">
+        <div className="flex flex-col lg:flex-row ">
           <div className=" relative bg-black/90  w-full lg:w-1/2 p-4">
             <div className="bg-hero  bg-cover absolute h-full w-full top-0 left-0 "></div>
             <div className="text-center">
@@ -342,7 +342,7 @@ const Home = () => {
               </Swiper>
             </div>
           </div>
-          <div className=" lg:w-1/2 bg-yellow-500"> tw0</div>
+          <div className=" w-full lg:w-1/2 bg-yellow-500"> tw0</div>
         </div>
       </section>
     </>
