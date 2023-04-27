@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-import sjsj from "./src/assets/Images/ligghtseed.png";
+import sjsj from "./src/assets/Images/bg-hero";
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {

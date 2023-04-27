@@ -4,6 +4,8 @@ import CoffeeCup from "../Pages/Home/icon/Coffecup";
 import CoffeeBlend from "../Pages/Home/icon/CofeeBlender";
 import Cola from "../Pages/Home/icon/Cola";
 import njsjs from "../Data/images/espresso/epresso1.jpg";
+import first from "../Data/images/testimonialsImages/testimonial3.jpg";
+import second from "../Data/images/testimonialsImages/testimonial5.jpg";
 
 export const leftCoffee = [
   {
@@ -50,6 +52,89 @@ export const rightCofee = [
     coffeeName: "Decaffeinated drinks:",
     coffeeDescription:
       " For those who want to enjoy the taste of coffee without the caffeine, here is a decaf category ",
+  },
+];
+
+export const testimonials = [
+  {
+    id: 1,
+    testimonial:
+      "The coffee at this shop is amazing! It's always fresh and tastes incredible.",
+    image: first,
+    name: "John Smith",
+    position: "Marketing Manager",
+  },
+  {
+    id: 2,
+    testimonial:
+      "I absolutely love the atmosphere at this coffee shop. It's the perfect place to relax and enjoy a great cup of coffee.",
+    image: second,
+    name: "Jane Doe",
+    position: "Software Engineer",
+  },
+  {
+    id: 3,
+    testimonial:
+      "The staff at this coffee shop is always so friendly and welcoming. I always feel right at home when I visit.",
+    image: first,
+    name: "Mike Johnson",
+    position: "Sales Associate",
+  },
+  {
+    id: 4,
+    testimonial:
+      "I have been coming to this coffee shop for years and I have never been disappointed. The coffee is consistently excellent.",
+    image: second,
+    name: "Sara Brown",
+    position: "Teacher",
+  },
+  {
+    id: 5,
+    testimonial:
+      "This coffee shop is my go-to spot for meetings with clients. The cozy atmosphere and delicious coffee are always a hit.",
+    image: first,
+    name: "David Lee",
+    position: "Freelance Writer",
+  },
+  {
+    id: 6,
+    testimonial:
+      "The latte art at this coffee shop is seriously impressive. It's almost too beautiful to drink!",
+    image: second,
+    name: "Emily Nguyen",
+    position: "Graphic Designer",
+  },
+  {
+    id: 7,
+    testimonial:
+      "I am a coffee snob and this shop never disappoints. The beans are always top quality and the baristas know how to brew the perfect cup.",
+    image: first,
+    name: "Maxwell Baker",
+    position: "Photographer",
+  },
+  {
+    id: 8,
+    testimonial:
+      "The pastries at this coffee shop are out of this world. I can't resist stopping by for a croissant every time I'm in the area.",
+    image: second,
+    name: "Kimberly Garcia",
+    position: "Accountant",
+  },
+  {
+    id: 9,
+    testimonial:
+      "I recently discovered this coffee shop and I am so glad I did. The cozy interior and friendly staff make it my new favorite spot.",
+    image: first,
+    name: "Daniel Hernandez",
+    position: "Student",
+  },
+  {
+    id: 10,
+    testimonial:
+      "The cold brew at this coffee shop is amazing. It's the perfect pick-me-up on a hot day.",
+    image: second,
+    name: "Isabella Martinez",
+    position: "Marketing Coordinator",
   },
 ];
 

@@ -40,3 +40,7 @@ a:visited,
 a:active {
   outline: none;
 }
+
+.swiper-pagination-bullet-active {
+  background-color: white !important;
+}

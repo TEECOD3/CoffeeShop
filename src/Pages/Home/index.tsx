@@ -11,8 +11,13 @@ import middlecofs from "../../assets/Images/cofeemids.png";
 import dottedimage from "../../assets/Images/dottedimagecofee.png";
 import coffeeabout from "../../assets/Images/cofeeAbout2.png";
 import coffeeabout2 from "../../assets/Images/coffeeAboutSec.png";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Autoplay, Pagination, Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Button from "../../Components/UI/Button";
-import { SiBuymeacoffee } from "react-icons/si";
+import { MdCoffeeMaker } from "react-icons/md";
 import { GiCoffeeBeans, GiCoffeeCup, GiCoffeeMug } from "react-icons/gi";
 import { CiCoffeeBean } from "react-icons/ci";
 import Cofeecard from "./Components/CofeeCard";
@@ -20,6 +25,8 @@ import chef1 from "../../Data/images/chefs/ourchef1.png";
 import chef2 from "../../Data/images/chefs/ourchef2.png";
 import chef3 from "../../Data/images/chefs/ourchef3.png";
 import chef4 from "../../Data/images/chefs/ourchef4.png";
+import Testimonial from "./Components/testimonialCard";
+import { testimonials } from "../../Data/Cofee";
 
 const Home = () => {
   return (
@@ -200,7 +207,7 @@ const Home = () => {
           <h2 className=" text-[#333333] text-3xl font-bold text-coffeeBlack mb-1 capitalize font-rails">
             Our Favorites Menu
           </h2>
-          <p className=" text-md  md:text-xl text-lightdark text-medium font-medium xl:w-1/2 mx-auto">
+          <p className=" text-md  md:text-xl text-lightdark text-medium font-medium xl:w-3/5 mx-auto">
             A coffee menu lists the various types of coffee and drinks that our
             coffee shop offers, along with their prices.
           </p>
@@ -219,7 +226,7 @@ const Home = () => {
               </Button>
               <Button variant="coffee" size="lg">
                 <span>
-                  <SiBuymeacoffee className="text-2xl   md:text-4xl mr-2 md:mr-4 text-center" />
+                  <MdCoffeeMaker className="text-2xl   md:text-4xl mr-2 md:mr-4 text-center" />
                 </span>
                 Esperesso
               </Button>
@@ -260,12 +267,12 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="  my-8">
+      <section className=" my-10">
         <div className="text-center md:w-[60%] mx-auto w-full">
           <h2 className=" text-[#333333] text-3xl font-bold text-coffeeBlack mb-1 capitalize font-rails">
             Meet our chefs
           </h2>
-          <p className=" text-md  md:text-xl text-lightdark text-medium font-medium xl:w-1/2 mx-auto">
+          <p className=" text-md  md:text-xl text-lightdark text-medium font-medium xl:w-3/5 mx-auto">
             A coffee menu lists the various types of coffee and drinks that our
             coffee shop offers, along with their prices.
           </p>
@@ -293,7 +300,51 @@ const Home = () => {
             <h2>owner</h2>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section className="lg:w-[80%] mx-auto my-32">
+        <div className="flex flex-col md:flex-row ">
+          <div className=" relative bg-black/90  w-full lg:w-1/2 p-4">
+            <div className="bg-hero  bg-cover absolute h-full w-full top-0 left-0 "></div>
+            <div className="text-center">
+              <h4 className="text-white mt-4 capitalize">testimonial</h4>
+              <h2 className=" text-[#ffffff] text-3xl font-extrabold text-coffeeBlack mb-1 capitalize font-rails">
+                Our customers say
+              </h2>
+            </div>
+            <div className="">
+              <Swiper
+                spaceBetween={30}
+                centeredSlides={true}
+                pagination={true}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: true,
+                }}
+                modules={[Autoplay, Pagination, Navigation]}
+                speed={2500}
+                className="w-full sm-h-full md:h-full relative flex items-center justify-start "
+              >
+                {testimonials.map((testimony) => (
+                  <SwiperSlide
+                    key={testimony.id}
+                    className="transition-all delay-75 ease-in-out"
+                  >
+                    <Testimonial
+                      image={testimony.image}
+                      name={testimony.name}
+                      description={testimony.testimonial}
+                      key={testimony.id}
+                      position={testimony.position}
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </div>
+          <div className=" lg:w-1/2 bg-yellow-500"> tw0</div>
+        </div>
+      </section>
     </>
   );
 };
