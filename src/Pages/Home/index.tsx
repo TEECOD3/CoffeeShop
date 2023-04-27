@@ -328,7 +328,7 @@ const Home = () => {
                 {testimonials.map((testimony) => (
                   <SwiperSlide
                     key={testimony.id}
-                    className="transition-all delay-75 ease-in-out"
+                    className="transition-all delay-75 ease-in-out mb-4"
                   >
                     <Testimonial
                       image={testimony.image}
