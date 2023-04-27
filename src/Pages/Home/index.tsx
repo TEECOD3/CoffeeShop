@@ -32,8 +32,8 @@ const Home = () => {
                 Heal the world with coffee
               </h1>
               <p className="text-white mb-7 text-sm md:text-base">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius
-                sed pharetra dictum neque massa congue
+                On the hunt for a place to indulge your craving for caffeine?
+                Look to our coffee maker shop for the solution!
               </p>
 
               <div className="md:w-full">
@@ -90,9 +90,9 @@ const Home = () => {
               We are the best quality Coffee maker
             </h2>
             <p className="text-lightdark text-base  mb-5 lg:mb-6 sm:mb-3 sm:w-3/4 md:text-sm lg:text-xl font-light">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi,
-              accusantium magnam pariatur assumenda ipsum facere eos nulla quasi
-              distinctio doloremque, odio dolorem nemo inventore, nostrum rerum
+              Satisfy your caffeine cravings at our coffee maker shop! We serve
+              high-quality specialty drinks crafted by our expert baristas. Come
+              in and try our delicious espresso, latte, and more.
             </p>
 
             <div className=" mb-6 sm:mb-8 ">
@@ -136,8 +136,8 @@ const Home = () => {
               Coffee Category
             </h2>
             <p className="mb-4 text-base md:text-xl font-medium text-lightdark">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius
-              sed pharetra dictum neque massa congue
+              We offer our customers a choice between six main categories, which
+              are...
             </p>
           </div>
 
@@ -174,7 +174,7 @@ const Home = () => {
               />
             </div>
             <div className="mt-[-4rem] lg:mt-0">
-              <div className="lg:text-right">
+              <div className="lg:text-right ">
                 <ul>
                   {rightCofee.map((coffee) => (
                     <RightCoffeeItem
@@ -193,23 +193,25 @@ const Home = () => {
 
       <section className=" w-full mt-10 md:p-20">
         <div className="text-center lg:w-[60%] mx-auto w-full">
-          <h2 className=" text-[#333333] text-4xl font-bold text-coffeeBlack mb-1 capitalize font-rails">
+          <h2 className=" text-[#333333] text-3xl font-bold text-coffeeBlack mb-1 capitalize font-rails">
             Our Favorites Menu
           </h2>
           <p className=" text-md  md:text-xl text-lightdark text-medium font-medium">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius sed
-            pharetra dictum neque massa congue
+            A coffee menu lists the various types of coffee and drinks that our
+            coffee shop offers, along with their prices.
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row w-full lg:max-w-[80%]  xl:max-w-[70%] mx-auto p-3 gap-4">
-          <div className=" overflow-x-auto no-scrollbar sm:w-full  lg:w-[25rem]">
+        <div className="flex flex-col lg:flex-row w-full lg:max-w-[80%]  xl:max-w-[70%] mx-auto p-3 gap-4 lg:mt-6">
+          <div className=" overflow-x-auto no-scrollbar sm:w-full  lg:w-[25rem] ">
             <div className="flex lg:flex-col gap-3 sm:gap-24 lg:gap-5 md:bg-[#EDEAE3] p-4 w-full ">
               <Button variant="coffee" size="lg">
                 <span>
                   <GiCoffeeBeans className="text-2xl  md:text-4xl mr-2 md:mr-4 " />
                 </span>
-                <span className=""> Americano</span>
+                <span className="">
+                  specialty <span> drinks</span>
+                </span>
               </Button>
               <Button variant="coffee" size="lg">
                 <span>
@@ -221,7 +223,7 @@ const Home = () => {
                 <span>
                   <CiCoffeeBean className="text-2xl md:text-4xl  mr-2 md:mr-7" />
                 </span>
-                Arabica
+                flavoured drinks
               </Button>
               <Button
                 variant="coffee"
@@ -231,18 +233,18 @@ const Home = () => {
                 <span>
                   <GiCoffeeCup className="text-2xl  md:text-4xl mr-2 md:mr-4 " />
                 </span>
-                Coffee <span>stimy</span>
+                brewed <span>coffee</span>
               </Button>
-              <Button variant="coffee" size="lg">
+              <Button variant="coffee" size="lg" className="px-10">
                 <span>
                   <GiCoffeeMug className="text-2xl  md:text-4xl mr-2 md:mr-4 " />
                 </span>
-                Organic <span>Pack</span>
+                <span>Single</span> <span>origin </span> coffees
               </Button>
             </div>
           </div>
-          <div className="lg:w-full lg:flex-3 ">
-            <div className="grid  grid-cols-2 md:grid-cols-3 grid-rows-3 md:grid-rows-2 h-full gap-4">
+          <div className="lg:w-full lg:flex-3  h-full sm:h-[30rem] lg:h-full ">
+            <div className="grid  grid-cols-2 md:grid-cols-3 grid-rows-3 md:grid-rows-2 h-full gap-4 ">
               <Cofeecard />
               <Cofeecard />
               <Cofeecard />
