@@ -16,6 +16,10 @@ import { SiBuymeacoffee } from "react-icons/si";
 import { GiCoffeeBeans, GiCoffeeCup, GiCoffeeMug } from "react-icons/gi";
 import { CiCoffeeBean } from "react-icons/ci";
 import Cofeecard from "./Components/CofeeCard";
+import chef1 from "../../Data/images/chefs/ourchef1.png";
+import chef2 from "../../Data/images/chefs/ourchef2.png";
+import chef3 from "../../Data/images/chefs/ourchef3.png";
+import chef4 from "../../Data/images/chefs/ourchef4.png";
 
 const Home = () => {
   return (
@@ -196,7 +200,7 @@ const Home = () => {
           <h2 className=" text-[#333333] text-3xl font-bold text-coffeeBlack mb-1 capitalize font-rails">
             Our Favorites Menu
           </h2>
-          <p className=" text-md  md:text-xl text-lightdark text-medium font-medium">
+          <p className=" text-md  md:text-xl text-lightdark text-medium font-medium xl:w-1/2 mx-auto">
             A coffee menu lists the various types of coffee and drinks that our
             coffee shop offers, along with their prices.
           </p>
@@ -256,7 +260,40 @@ const Home = () => {
         </div>
       </section>
 
-      <div className=""></div>
+      <div className="  my-8">
+        <div className="text-center md:w-[60%] mx-auto w-full">
+          <h2 className=" text-[#333333] text-3xl font-bold text-coffeeBlack mb-1 capitalize font-rails">
+            Meet our chefs
+          </h2>
+          <p className=" text-md  md:text-xl text-lightdark text-medium font-medium xl:w-1/2 mx-auto">
+            A coffee menu lists the various types of coffee and drinks that our
+            coffee shop offers, along with their prices.
+          </p>
+        </div>
+
+        <div className="flex w-full flex-col mx-auto sm:flex-row sm:flex-wrap lg:w-[80%] gap-4 xl:gap-2 xl:flex-nowrap text-center my-8">
+          <div className="mx-auto">
+            <img src={chef1} alt="" className="mx-auto" />
+            <h3 className="font-bold text-base mt-4">Bulbul Hassan</h3>
+            <h2>founder</h2>
+          </div>
+          <div className="mx-auto">
+            <img src={chef2} alt="" className="mx-auto" />
+            <h3 className="font-bold text-base mt-4 ">Jorina Begum</h3>
+            <h2>specialist</h2>
+          </div>
+          <div className="mx-auto">
+            <img src={chef3} alt="" className="mx-auto" />
+            <h3 className="font-bold text-base mt-4">M.Mohammad Nur</h3>
+            <h2>Chef</h2>
+          </div>
+          <div className="mx-auto">
+            <img src={chef4} alt="" className="mx-auto" />
+            <h3 className="font-bold text-base mt-4">Munna Kathy</h3>
+            <h2>owner</h2>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
