@@ -2,7 +2,7 @@ import { FC, useState } from "react";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { BsEye, BsStar } from "react-icons/bs";
-import njsjs from "../../../Data/images/espresso/espress04.jpg";
+import loves from "../../../Data/images/espresso/espresso5.jpg";
 
 interface CofeecardProps {}
 
@@ -13,13 +13,13 @@ const Cofeecard: FC<CofeecardProps> = () => {
   };
   return (
     <div
-      className={`${" relative shadow-lg hover:scale-95  w-full sm:w-3/4 mx-auto xl:w-11/12 transition-all duration-100 cursor-pointer "}  ${
+      className={`${" relative shadow-lg hover:scale-95  w-full sm:w-3/4 mx-auto xl:w-11/12 rounded-lg md:rounded-sm overflow-hidden transition-all duration-100 cursor-pointer "}  ${
         SideBar ? "hover:scale-100 transition-all" : " "
       }`}
       onClick={showSidebar}
     >
       <img
-        src={njsjs}
+        src={loves}
         alt="cofeeimage"
         className=" h-[9rem] xl:h-[12rem]  w-full bg-cover"
       />
