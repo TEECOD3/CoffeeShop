@@ -192,7 +192,7 @@ const Home = () => {
       </section>
 
       <section className=" w-full mt-10 md:p-20">
-        <div className="text-center lg:w-[60%] mx-auto w-full">
+        <div className="text-center md:w-[60%] mx-auto w-full">
           <h2 className=" text-[#333333] text-3xl font-bold text-coffeeBlack mb-1 capitalize font-rails">
             Our Favorites Menu
           </h2>
@@ -202,9 +202,9 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row w-full lg:max-w-[80%]  xl:max-w-[70%] mx-auto p-3 gap-4 lg:mt-6">
-          <div className=" overflow-x-auto no-scrollbar sm:w-full  lg:w-[25rem] ">
-            <div className="flex lg:flex-col gap-3 sm:gap-24 lg:gap-5 md:bg-[#EDEAE3] p-4 w-full ">
+        <div className="flex flex-col lg:flex-row w-full xl:w-[80%] mx-auto p-3 gap-4 lg:mt-6 ">
+          <div className=" overflow-x-auto no-scrollbar lg:w-[40%]  ">
+            <div className="flex lg:flex-col gap-3 sm:gap-24 lg:gap-5 xl:bg-[#EDEAE3] p-4 w-full ">
               <Button variant="coffee" size="lg">
                 <span>
                   <GiCoffeeBeans className="text-2xl  md:text-4xl mr-2 md:mr-4 " />
@@ -215,15 +215,15 @@ const Home = () => {
               </Button>
               <Button variant="coffee" size="lg">
                 <span>
-                  <SiBuymeacoffee className="text-2xl   md:text-4xl mr-2 md:mr-4 " />
+                  <SiBuymeacoffee className="text-2xl   md:text-4xl mr-2 md:mr-4 text-center" />
                 </span>
                 Esperesso
               </Button>
-              <Button variant="coffee" size="lg" className="">
+              <Button variant="coffee" size="lg" className="text-center">
                 <span>
-                  <CiCoffeeBean className="text-2xl md:text-4xl  mr-2 md:mr-7" />
+                  <CiCoffeeBean className="text-2xl md:text-4xl  mr-2  " />
                 </span>
-                flavoured drinks
+                flavoured <span>drinks</span>
               </Button>
               <Button
                 variant="coffee"
@@ -243,8 +243,8 @@ const Home = () => {
               </Button>
             </div>
           </div>
-          <div className="lg:w-full lg:flex-3  h-full sm:h-[30rem] lg:h-full ">
-            <div className="grid  grid-cols-2 md:grid-cols-3 grid-rows-3 md:grid-rows-2 h-full gap-4 ">
+          <div className=" w-full mx-auto h-full">
+            <div className=" w-full grid grid-cols-2 md:grid-cols-3 h-full gap-5 md:gap-3  mx-auto ">
               <Cofeecard />
               <Cofeecard />
               <Cofeecard />
@@ -255,6 +255,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <div className=""></div>
     </>
   );
 };

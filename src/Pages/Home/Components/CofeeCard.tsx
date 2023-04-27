@@ -13,16 +13,22 @@ const Cofeecard: FC<CofeecardProps> = () => {
   };
   return (
     <div
-      className={`${" relative  shadow-lg hover:scale-95  md:w-[14rem] transition-all duration-100 cursor-pointer "}  ${
+      className={`${" relative shadow-lg hover:scale-95  w-full sm:w-3/4 mx-auto xl:w-11/12 transition-all duration-100 cursor-pointer "}  ${
         SideBar ? "hover:scale-100 transition-all" : " "
       }`}
       onClick={showSidebar}
     >
-      <img src={njsjs} alt="cofeeimage" className="h-[10rem] w-full bg-cover" />
+      <img
+        src={njsjs}
+        alt="cofeeimage"
+        className=" h-[9rem] xl:h-[12rem]  w-full bg-cover"
+      />
       <div className="">
         <div className="flex items-center gap-4">
-          <div className="font-bold mt-3 mb-3 px-2 text-sm">Coffee Beans</div>
-          <div className="flex gap-1 px-2">
+          <div className="font-bold mt-3 mb-3 px-2 text-[0.8rem] sm:text-base">
+            Coffee Beans
+          </div>
+          <div className="flex  px-4">
             <span>
               <BsStar className="w-3 h-3 md:h-full md:w-full " />
             </span>
