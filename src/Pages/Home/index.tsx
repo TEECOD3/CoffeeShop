@@ -348,7 +348,7 @@ const Home = () => {
               </Swiper>
             </div>
           </div>
-          <div className=" relative w-full  lg:w-1/2 bg-black/90 mt-1 sm:mt-0">
+          <div className=" relative w-full  lg:w-1/2 bg-yellow-900 mt-1 sm:mt-0">
             <Userefplayer />
           </div>
         </div>

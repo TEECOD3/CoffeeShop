@@ -18,7 +18,7 @@ const Testimonial: FC<TestimonialProps> = (props: TestimonialProps) => {
       <img
         src={image}
         alt="testimonialimage"
-        className="rounded-full h-20 w-20 bg-cover mb-2"
+        className="rounded-full h-16 w-16 bg-cover mb-2"
       />
       <h3 className="mb-2 text-white">{name}</h3>
       <h4 className="text-white mb-4">{position}</h4>
