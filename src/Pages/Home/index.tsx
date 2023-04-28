@@ -378,7 +378,7 @@ const Home = () => {
           <h2 className=" text-coffee-100 font-mini text-xl font-bold text-coffeeBlack mb-1 capitalize ">
             Partners & Clients
           </h2>
-          <p className="  text-base sm:text-3xl  md:text-4xl text-[#333333] text-medium font-medium mx-auto lg:text-6xl lg:font-bold">
+          <p className="text-2xl sm:text-3xl  md:text-4xl text-[#333333] text-medium font-medium mx-auto lg:text-6xl lg:font-bold">
             We work with the best people
           </p>
         </div>
@@ -389,7 +389,7 @@ const Home = () => {
               key={sponsor.id}
               src={sponsor.logo}
               alt="sponsors image"
-              className=" h-8 w-8 sm:h-10 sm:w-10 md:h-24 md:w-24 xl:w-full lg:h-full"
+              className="h-10 sm:w-10 md:h-24 md:w-24 xl:w-full lg:h-full"
             />
           ))}
         </div>
