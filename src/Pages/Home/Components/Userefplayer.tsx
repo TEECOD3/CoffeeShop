@@ -23,20 +23,20 @@ const Userefplayer: FC<userefplayerProps> = () => {
   return (
     <>
       <div className="h-full">
-        <Button className="absolute top-1/2 left-1/2 z-30 rounded-full bg-transparent hover:bg-white/50 h-16 w-16">
+        <Button className="absolute top-[40%]  left-[43%] md:top-[45%] md:left-[45%] z-30 rounded-full bg-transparent hover:bg-white/50 h-16 w-16">
           {showbtn ? (
             <BsPlayFill
               onClick={handleplay}
-              className="text-coffee-100  h-10 w-10"
+              className="text-coffee-200  h-10 w-10"
             />
           ) : (
             <MdMotionPhotosPaused
               onClick={handlep}
-              className="text-coffee-100 h-10 w-10"
+              className="text-coffee-200 h-10 w-10"
             />
           )}
         </Button>
-        <video autoPlay className="h-full w-full" ref={videoref}>
+        <video autoPlay className="h-full bg-cover" ref={videoref}>
           <source src={video} />
         </video>
       </div>

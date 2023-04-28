@@ -21,10 +21,10 @@ import { MdCoffeeMaker } from "react-icons/md";
 import { GiCoffeeBeans, GiCoffeeCup, GiCoffeeMug } from "react-icons/gi";
 import { CiCoffeeBean } from "react-icons/ci";
 import Cofeecard from "./Components/CofeeCard";
-import chef1 from "../../Data/images/chefs/ourchef1.png";
+import chef1 from "../../Data/images/chefs/blackchef2.jpg";
 import chef2 from "../../Data/images/chefs/ourchef2.png";
 import chef3 from "../../Data/images/chefs/ourchef3.png";
-import chef4 from "../../Data/images/chefs/ourchef4.png";
+import chef4 from "../../Data/images/chefs/blackchef5.jpg";
 import Testimonial from "./Components/testimonialCard";
 import { testimonials } from "../../Data/Cofee";
 import Userefplayer from "./Components/Userefplayer";
@@ -314,7 +314,7 @@ const Home = () => {
             <div className="bg-hero  bg-cover absolute h-full w-full top-0 left-0 "></div>
             <div className="text-center">
               <h4 className="text-white mt-4 capitalize">testimonial</h4>
-              <h2 className=" text-[#ffffff] text-3xl font-extrabold text-coffeeBlack mb-1 capitalize font-rails">
+              <h2 className=" text-[#ffffff] text-2xl font-extrabold text-coffeeBlack mb-1 capitalize font-rails">
                 Our customers say
               </h2>
             </div>
@@ -348,7 +348,7 @@ const Home = () => {
               </Swiper>
             </div>
           </div>
-          <div className=" relative w-full  lg:w-1/2 bg-black/90">
+          <div className=" relative w-full  lg:w-1/2 bg-black/90 mt-1 sm:mt-0">
             <Userefplayer />
           </div>
         </div>
