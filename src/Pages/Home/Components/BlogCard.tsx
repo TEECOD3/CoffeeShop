@@ -1,11 +1,12 @@
 import { FC } from "react";
+import blogimage from "../../../assets/Images/loves.png";
 
 interface BlogCardProps {}
 
 const BlogCard: FC<BlogCardProps> = () => {
   return (
     <div className="">
-      <img src="" alt="" />
+      <img src={blogimage} alt="" />
     </div>
   );
 };

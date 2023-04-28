@@ -28,6 +28,7 @@ import chef4 from "../../Data/images/chefs/ourchef4.png";
 import Testimonial from "./Components/testimonialCard";
 import { testimonials } from "../../Data/Cofee";
 import Userefplayer from "./Components/Userefplayer";
+import BlogCard from "./Components/BlogCard";
 
 const Home = () => {
   return (
@@ -365,7 +366,9 @@ const Home = () => {
           </p>
         </div>
 
-        <div className=""></div>
+        <div className="">
+          <BlogCard />
+        </div>
       </section>
     </>
   );
