@@ -14,7 +14,7 @@ const Testimonial: FC<TestimonialProps> = (props: TestimonialProps) => {
   return (
     <div className="text-center flex flex-col items-center justify-center">
       <Quotes />
-      <p className=" lg:w-1/2 mx-auto text-sm md:text-base mb-2 text-white">
+      <p className=" w-3/4 lg:w-1/2 mx-auto text-sm md:text-base mb-3 text-white">
         {description}
       </p>
       <img
