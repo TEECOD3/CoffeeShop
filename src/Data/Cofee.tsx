@@ -5,7 +5,12 @@ import CoffeeBlend from "../Pages/Home/icon/CofeeBlender";
 import Cola from "../Pages/Home/icon/Cola";
 import first from "../Data/images/testimonialsImages/testimonial3.jpg";
 import second from "../Data/images/testimonialsImages/testimonial5.jpg";
-import Sponsors1 from "../Pages/Home/icon/Sponsors1";
+import spons1 from "../Pages/Home/icon/spons1.png";
+import spons2 from "../Pages/Home/icon/spon2.png";
+import spons3 from "../Pages/Home/icon/spons3.png";
+import spons4 from "../Pages/Home/icon/spons4.png";
+import spons5 from "../Pages/Home/icon/spons5.png";
+import spons6 from "../Pages/Home/icon/spons6.png";
 
 import Spon2 from "../Pages/Home/icon/spons2";
 
@@ -143,11 +148,27 @@ export const testimonials = [
 export const sponsors = [
   {
     id: 1,
-    logo: <Sponsors1 />,
+    logo: spons1,
   },
   {
     id: 2,
-    logo: <Spon2 />,
+    logo: spons2,
+  },
+  {
+    id: 3,
+    logo: spons3,
+  },
+  {
+    id: 4,
+    logo: spons4,
+  },
+  {
+    id: 5,
+    logo: spons5,
+  },
+  {
+    id: 6,
+    logo: spons6,
   },
 ];
 
