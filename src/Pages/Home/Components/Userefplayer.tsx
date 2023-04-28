@@ -1,4 +1,4 @@
-import video from "../../Home/testimonialsImages/coffeevids.mp4";
+import video from "../../Home/testimonialsImages/cofeevideo.mp4";
 import { FC, useRef, useState } from "react";
 import Button from "../../../Components/UI/Button";
 import { MdMotionPhotosPaused } from "react-icons/md";
