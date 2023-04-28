@@ -12,8 +12,6 @@ import spons4 from "../Pages/Home/icon/spons4.png";
 import spons5 from "../Pages/Home/icon/spons5.png";
 import spons6 from "../Pages/Home/icon/spons6.png";
 
-import Spon2 from "../Pages/Home/icon/spons2";
-
 export const leftCoffee = [
   {
     id: 1,

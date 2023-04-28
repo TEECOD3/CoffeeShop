@@ -29,7 +29,6 @@ import Testimonial from "./Components/testimonialCard";
 import { testimonials } from "../../Data/Cofee";
 import Userefplayer from "./Components/Userefplayer";
 import BlogCard from "./Components/BlogCard";
-import Sponsor2 from "./testimonialsImages/Sponsors2";
 
 const Home = () => {
   return (
