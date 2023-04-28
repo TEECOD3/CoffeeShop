@@ -14,14 +14,16 @@ const Testimonial: FC<TestimonialProps> = (props: TestimonialProps) => {
   return (
     <div className="text-center flex flex-col items-center justify-center">
       <Quotes />
-      <p className=" lg:w-1/2 mx-auto mb-2 text-white">{description}</p>
+      <p className=" lg:w-1/2 mx-auto text-sm md:text-base mb-2 text-white">
+        {description}
+      </p>
       <img
         src={image}
         alt="testimonialimage"
-        className="rounded-full h-16 w-16 bg-cover mb-2"
+        className="rounded-full h-12 w-12 md:h-16 md:w-16 bg-cover mb-2"
       />
-      <h3 className="mb-2 text-white">{name}</h3>
-      <h4 className="text-white mb-4">{position}</h4>
+      <h3 className="mb-2 text-white text-sm md:text-base ">{name}</h3>
+      <h4 className="text-white mb-4 text-sm md:text-base ">{position}</h4>
     </div>
   );
 };

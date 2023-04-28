@@ -310,7 +310,7 @@ const Home = () => {
 
       <section className="lg:w-[80%] mx-auto lg:my-32">
         <div className="flex flex-col lg:flex-row ">
-          <div className=" relative bg-black/90  w-full lg:w-1/2 p-4">
+          <div className=" relative bg-black/90  w-full lg:w-1/2 p-2">
             <div className="bg-hero  bg-cover absolute h-full w-full top-0 left-0 "></div>
             <div className="text-center">
               <h4 className="text-white mt-4 capitalize">testimonial</h4>
@@ -348,7 +348,7 @@ const Home = () => {
               </Swiper>
             </div>
           </div>
-          <div className=" relative w-full  lg:w-1/2 bg-yellow-900 mt-1 sm:mt-0">
+          <div className=" relative w-full  lg:w-1/2 bg-black/90 mt-1 sm:mt-0">
             <Userefplayer />
           </div>
         </div>
