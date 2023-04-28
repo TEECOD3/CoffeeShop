@@ -27,6 +27,7 @@ import chef3 from "../../Data/images/chefs/ourchef3.png";
 import chef4 from "../../Data/images/chefs/ourchef4.png";
 import Testimonial from "./Components/testimonialCard";
 import { testimonials } from "../../Data/Cofee";
+import Userefplayer from "./Components/Userefplayer";
 
 const Home = () => {
   return (
@@ -263,6 +264,11 @@ const Home = () => {
               <Cofeecard />
               <Cofeecard />
             </div>
+
+            <Button className="mt-10 bg-coffee-100 hover:bg-coffee-200/60">
+              <span className="font-light mr-4 ">check full menu</span>
+              <span className=" md:text-2xl">&#8594;</span>
+            </Button>
           </div>
         </div>
       </section>
@@ -273,8 +279,8 @@ const Home = () => {
             Meet our chefs
           </h2>
           <p className=" text-md  md:text-xl text-lightdark text-medium font-medium xl:w-3/5 mx-auto">
-            A coffee menu lists the various types of coffee and drinks that our
-            coffee shop offers, along with their prices.
+            Exploring Culinary Delights: A Chef's Passion for Creating Memorable
+            Dining Experiences
           </p>
         </div>
 
@@ -342,8 +348,24 @@ const Home = () => {
               </Swiper>
             </div>
           </div>
-          <div className=" w-full lg:w-1/2 bg-yellow-500"> tw0</div>
+          <div className=" relative w-full  lg:w-1/2 bg-black/90">
+            <Userefplayer />
+          </div>
         </div>
+      </section>
+
+      <section className="h-[100vh] bg-red-300 mt-10">
+        <div className="text-center md:w-[60%] mx-auto w-full">
+          <h2 className=" text-[#333333] text-3xl font-bold text-coffeeBlack mb-1 capitalize font-rails">
+            Latest News & Blog
+          </h2>
+          <p className=" text-md  md:text-xl text-lightdark text-medium font-medium xl:w-3/5 mx-auto">
+            Discovering the Art of Specialty Coffee: A Journey through the
+            Aromas, Flavors, and Culture of Our Cafe
+          </p>
+        </div>
+
+        <div className=""></div>
       </section>
     </>
   );
