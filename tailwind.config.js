@@ -26,6 +26,7 @@ export default {
       fontFamily: {
         rails: ["Raleway", "sans-serif"],
         nunito: ["nunito", "sans-serif"],
+        mini: ["Miniver", "sans-serif"],
       },
       colors: {
         coffee: {

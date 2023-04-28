@@ -3,9 +3,11 @@ import CoffeeJar from "../Pages/Home/icon/Coffejar";
 import CoffeeCup from "../Pages/Home/icon/Coffecup";
 import CoffeeBlend from "../Pages/Home/icon/CofeeBlender";
 import Cola from "../Pages/Home/icon/Cola";
-import njsjs from "../Data/images/espresso/epresso1.jpg";
 import first from "../Data/images/testimonialsImages/testimonial3.jpg";
 import second from "../Data/images/testimonialsImages/testimonial5.jpg";
+import Sponsors1 from "../Pages/Home/icon/Sponsors1";
+
+import Spon2 from "../Pages/Home/icon/spons2";
 
 export const leftCoffee = [
   {
@@ -135,6 +137,17 @@ export const testimonials = [
     image: second,
     name: "Isabella Martinez",
     position: "Marketing Coordinator",
+  },
+];
+
+export const sponsors = [
+  {
+    id: 1,
+    logo: <Sponsors1 />,
+  },
+  {
+    id: 2,
+    logo: <Spon2 />,
   },
 ];
 

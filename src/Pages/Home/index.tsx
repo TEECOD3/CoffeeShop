@@ -3,7 +3,7 @@ import WhiteCheck from "./icon/WhiteCheck";
 import BlackCheck from "../../assets/Icons/BlackCheck";
 import LeftCoffeeItem from "./Components/LeftCoffeeItem";
 import RightCoffeeItem from "./Components/RightCofeeItem";
-import { leftCoffee, rightCofee } from "../../Data/Cofee";
+import { leftCoffee, rightCofee, sponsors } from "../../Data/Cofee";
 import coffeehero from "../../assets/Images/coffeeHero.png";
 import leftleaf from "../../assets/Images/leaveleft.png";
 import rightleaf from "../../assets/Images/leaveright.png";
@@ -29,6 +29,9 @@ import Testimonial from "./Components/testimonialCard";
 import { testimonials } from "../../Data/Cofee";
 import Userefplayer from "./Components/Userefplayer";
 import BlogCard from "./Components/BlogCard";
+import Sponsor2 from "./testimonialsImages/Sponsors2";
+import Sponsors1 from "./icon/sponsors1";
+import Sponsors3 from "./icon/sponsors3";
 
 const Home = () => {
   return (
@@ -309,7 +312,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="lg:w-[80%] mx-auto lg:my-32">
+      <section className="lg:w-[80%] mx-auto lg:my-32 ">
         <div className="flex flex-col lg:flex-row ">
           <div className=" relative bg-black/90  w-full lg:w-1/2 p-2">
             <div className="bg-hero  bg-cover absolute h-full w-full top-0 left-0 "></div>
@@ -355,7 +358,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="h-[100vh] bg-red-300 mt-10">
+      <section className=" my-10 p-8">
         <div className="text-center md:w-[60%] mx-auto w-full">
           <h2 className=" text-[#333333] text-3xl font-bold text-coffeeBlack mb-1 capitalize font-rails">
             Latest News & Blog
@@ -366,8 +369,27 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="">
+        <div className="px-3 md:w-[95%] xl:w-[80%] flex flex-col mx-auto md:flex-row gap-6 mt-8">
           <BlogCard />
+          <BlogCard />
+          <BlogCard />
+        </div>
+      </section>
+
+      <section className="h-[100vh] bg-red-300">
+        <div className="text-center md:w-[60%] mx-auto w-full">
+          <h2 className=" text-coffee-100 font-mini text-xl font-bold text-coffeeBlack mb-1 capitalize ">
+            Partners & Clients
+          </h2>
+          <p className=" text-md  md:text-xl text-[#333333] text-medium font-medium mx-auto lg:text-6xl lg:font-bold">
+            We work with the best pepole
+          </p>
+        </div>
+
+        <div className="flex">
+          {sponsors.map((sponsor) => (
+            <div key={sponsor.id}>{sponsor.logo}</div>
+          ))}
         </div>
       </section>
     </>
