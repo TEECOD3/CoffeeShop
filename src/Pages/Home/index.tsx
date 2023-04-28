@@ -30,8 +30,6 @@ import { testimonials } from "../../Data/Cofee";
 import Userefplayer from "./Components/Userefplayer";
 import BlogCard from "./Components/BlogCard";
 import Sponsor2 from "./testimonialsImages/Sponsors2";
-import Sponsors1 from "./icon/sponsors1";
-import Sponsors3 from "./icon/sponsors3";
 
 const Home = () => {
   return (
