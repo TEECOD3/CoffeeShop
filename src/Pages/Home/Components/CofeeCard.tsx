@@ -55,7 +55,7 @@ const Cofeecard: FC<CofeecardProps> = () => {
         </div>
       </div>
 
-      <div className="absolute p-2 bg-white top-6 -right-11  opacity-0 group-hover:opacity-100 group-hover:right-5 transition-all duration-300 ">
+      <div className="absolute p-2 bg-white top-3 -right-11  opacity-0 group-hover:opacity-100 group-hover:right-2 transition-all duration-300 ">
         <button>
           <div className="h-8 w-8  flex text-center  items-center justify-center text-lightdark  bg-white shadow-lg ">
             <BsBag className="text-3xl p-2" />
