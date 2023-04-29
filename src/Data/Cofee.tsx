@@ -11,6 +11,9 @@ import spons3 from "../Pages/Home/icon/spons3.png";
 import spons4 from "../Pages/Home/icon/spons4.png";
 import spons5 from "../Pages/Home/icon/spons5.png";
 import spons6 from "../Pages/Home/icon/spons6.png";
+import { MdCoffeeMaker } from "react-icons/md";
+import { GiCoffeeBeans, GiCoffeeCup, GiCoffeeMug } from "react-icons/gi";
+import { CiCoffeeBean } from "react-icons/ci";
 
 export const leftCoffee = [
   {
@@ -167,6 +170,18 @@ export const sponsors = [
   {
     id: 6,
     logo: spons6,
+  },
+];
+
+export const buttondata = [
+  { id: 1, component: <MdCoffeeMaker />, name: "speciality drinks" },
+  { id: 2, component: <GiCoffeeBeans />, name: " Esperesso coffee" },
+  { id: 3, component: <GiCoffeeCup />, name: " flavoured drinks" },
+  { id: 4, component: <GiCoffeeMug />, name: "brewed coffee" },
+  {
+    id: 5,
+    component: <CiCoffeeBean />,
+    name: "Single origin",
   },
 ];
 

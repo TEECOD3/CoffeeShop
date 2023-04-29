@@ -4,6 +4,8 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import { BsEye, BsStar } from "react-icons/bs";
 import loves from "../../../Data/images/espresso/espresso5.jpg";
 
+import Button from "../../../Components/UI/Button";
+
 interface CofeecardProps {}
 
 const Cofeecard: FC<CofeecardProps> = () => {
@@ -13,7 +15,7 @@ const Cofeecard: FC<CofeecardProps> = () => {
   };
   return (
     <div
-      className={`${" relative shadow-lg hover:scale-95  w-full sm:w-3/4 mx-auto xl:w-11/12 rounded-lg md:rounded-sm overflow-hidden transition-all duration-100 cursor-pointer "}  ${
+      className={`${" relative shadow-lg  w-full sm:w-3/4 mx-auto xl:w-11/12 rounded-lg md:rounded-sm overflow-hidden transition-all duration-100 cursor-pointer "}  ${
         SideBar ? "hover:scale-100 transition-all" : " "
       }`}
       onClick={showSidebar}
@@ -28,22 +30,24 @@ const Cofeecard: FC<CofeecardProps> = () => {
           <div className="font-bold mt-3 mb-3 px-2 text-[0.8rem] sm:text-base">
             Coffee Beans
           </div>
-          <div className="flex  px-4">
-            <span>
-              <BsStar className="w-3 h-3 md:h-full md:w-full " />
-            </span>
-            <span>
-              <BsStar className="w-3 h-3 md:h-full md:w-full " />
-            </span>
-            <span>
-              <BsStar className="w-3 h-3 md:h-full md:w-full " />
-            </span>
-            <span>
-              <BsStar className="w-3 h-3 md:h-full md:w-full " />
-            </span>
-            <span>
-              <BsStar className="w-3 h-3 md:h-full md:w-full " />
-            </span>
+          <div className="flex px-4 flex-col items-center justify-center">
+            <div className="flex items-center justify-center">
+              <span>
+                <BsStar className="w-3 h-3  md:w-full " />
+              </span>
+              <span>
+                <BsStar className="w-3 h-3 md:h-full md:w-full " />
+              </span>
+              <span>
+                <BsStar className="w-3 h-3 md:h-full md:w-full " />
+              </span>
+              <span>
+                <BsStar className="w-3 h-3 md:h-full md:w-full " />
+              </span>
+              <span>
+                <BsStar className="w-3 h-3 :h-full md:w-full " />
+              </span>
+            </div>
           </div>
         </div>
         <div className="text-[#828282] mb-2 px-2 font-nunito text-sm ">

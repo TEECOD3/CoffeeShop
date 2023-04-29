@@ -14,7 +14,7 @@ const Navbar = () => {
           <nav className="w-1/3 max-sm:hidden">
             <ul className="flex justify-around font-medium capitalize text-white max-md:hidden">
               <li>Menu</li>
-              <li>about Us</li>
+              <li>Blog</li>
               <li>shop</li>
               <li>contact</li>
             </ul>

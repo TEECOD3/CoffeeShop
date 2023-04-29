@@ -3,7 +3,7 @@ import WhiteCheck from "./icon/WhiteCheck";
 import BlackCheck from "../../assets/Icons/BlackCheck";
 import LeftCoffeeItem from "./Components/LeftCoffeeItem";
 import RightCoffeeItem from "./Components/RightCofeeItem";
-import { leftCoffee, rightCofee, sponsors } from "../../Data/Cofee";
+import { leftCoffee, rightCofee, sponsors, buttondata } from "../../Data/Cofee";
 import coffeehero from "../../assets/Images/coffeeHero.png";
 import leftleaf from "../../assets/Images/leaveleft.png";
 import rightleaf from "../../assets/Images/leaveright.png";
@@ -17,9 +17,6 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Button from "../../Components/UI/Button";
-import { MdCoffeeMaker } from "react-icons/md";
-import { GiCoffeeBeans, GiCoffeeCup, GiCoffeeMug } from "react-icons/gi";
-import { CiCoffeeBean } from "react-icons/ci";
 import Cofeecard from "./Components/CofeeCard";
 import chef1 from "../../Data/images/chefs/ourchef1.png";
 import chef2 from "../../Data/images/chefs/ourchef2.png";
@@ -218,42 +215,23 @@ const Home = () => {
         <div className="flex flex-col lg:flex-row w-full xl:w-[80%] mx-auto p-3 gap-4 lg:mt-6 ">
           <div className=" overflow-x-auto no-scrollbar lg:w-[40%]  ">
             <div className="flex lg:flex-col gap-3 sm:gap-24 lg:gap-5 xl:bg-[#EDEAE3] p-4 w-full ">
-              <Button variant="coffee" size="lg">
-                <span>
-                  <GiCoffeeBeans className="text-2xl  md:text-4xl mr-2 md:mr-4 " />
-                </span>
-                <span className="">
-                  specialty <span> drinks</span>
-                </span>
-              </Button>
-              <Button variant="coffee" size="lg">
-                <span>
-                  <MdCoffeeMaker className="text-2xl   md:text-4xl mr-2 md:mr-4 text-center" />
-                </span>
-                Esperesso
-              </Button>
-              <Button variant="coffee" size="lg" className="text-center">
-                <span>
-                  <CiCoffeeBean className="text-2xl md:text-4xl  mr-2  " />
-                </span>
-                flavoured <span>drinks</span>
-              </Button>
-              <Button
-                variant="coffee"
-                size="lg"
-                className="flex items-center justify-center px-7"
-              >
-                <span>
-                  <GiCoffeeCup className="text-2xl  md:text-4xl mr-2 md:mr-4 " />
-                </span>
-                brewed <span>coffee</span>
-              </Button>
-              <Button variant="coffee" size="lg" className="px-10">
-                <span>
-                  <GiCoffeeMug className="text-2xl  md:text-4xl mr-2 md:mr-4 " />
-                </span>
-                <span>Single</span> <span>origin </span> coffees
-              </Button>
+              {buttondata.map((buttons) => (
+                <Button
+                  variant="coffee"
+                  size="lg"
+                  key={buttons.id}
+                  className=" w-[15rem] mx-auto p-0"
+                >
+                  <div className="flex  items-center gap-3 w-[90%] justify-between">
+                    <div className="text-3xl  md:text-4xl w-[20%]  flex justify-center">
+                      {buttons.component}
+                    </div>
+                    <div className="text-center  text-[0.7rem] md:text-base flex ">
+                      {buttons.name}
+                    </div>
+                  </div>
+                </Button>
+              ))}
             </div>
           </div>
           <div className=" w-full mx-auto h-full">
@@ -266,8 +244,8 @@ const Home = () => {
               <Cofeecard />
             </div>
 
-            <Button className="mt-10 bg-coffee-100 hover:bg-coffee-200/60">
-              <span className="font-light mr-4 ">check full menu</span>
+            <Button className="mt-6 bg-coffee-100 hover:bg-coffee-200/60">
+              <span className="font-light mr-4 ">check our shop</span>
               <span className=" md:text-2xl">&#8594;</span>
             </Button>
           </div>
@@ -373,7 +351,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="my-10">
+      <section className="my-10 w-full ">
         <div className="text-center md:w-[60%] mx-auto w-full">
           <h2 className=" text-coffee-100 font-mini text-xl font-bold text-coffeeBlack mb-1 capitalize ">
             Partners & Clients
@@ -383,13 +361,13 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="flex flex-row w-[70%] md:w-[80%] mx-auto gap-6 items-center justify-center mt-10">
+        <div className="flex flex-row w-full md:w-[80%] mx-auto gap-6 items-center justify-center mt-10">
           {sponsors.map((sponsor) => (
             <img
               key={sponsor.id}
               src={sponsor.logo}
               alt="sponsors image"
-              className="h-10 sm:w-10 md:h-24 md:w-24 xl:w-full lg:h-full"
+              className="h-10 w-8 sm:w-10 md:h-24 md:w-24 xl:w-[7rem] lg:h-full"
             />
           ))}
         </div>
