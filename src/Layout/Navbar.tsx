@@ -1,7 +1,7 @@
-import Profile from "./../../assets/Icons/Profile";
-import CartBag from "./../../assets/Icons/CartBag";
+import Profile from "../assets/Icons/Profile";
+import CartBag from "../assets/Icons/CartBag";
 import { FaSistrix } from "react-icons/fa";
-import Coffeelogo from "../../Pages/Home/icon/coffelogo";
+import Coffeelogo from "../Pages/Home/icon/coffelogo";
 import { RxHamburgerMenu } from "react-icons/rx";
 const Navbar = () => {
   return (

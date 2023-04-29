@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import sjsj from "./src/assets/Images/bg-hero";
+import sjsj from "./src/assets/Images/blackcofee.png";
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -16,7 +16,7 @@ export default {
         lightSeed: "url('./src/assets/Images/ligghtseed.png')",
         seed: "url('./public/Images/seed.png')",
         cofeeHero: "url('./public/Images/coffeeHero.png')",
-        dottedimage: "url('./public/Images/dottedimagecofee.png')",
+        blackcoffee: "url('./src/assets/Images/blackcofee.png')",
         coffeabout: "url('./public/Images/coffeeAboutSec.png')",
         coffeabout2: "url('./public/Images/cofeeAbout2.png')",
         leaveright: "url('./public/Images/leaveright.png')",
