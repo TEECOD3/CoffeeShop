@@ -22,8 +22,8 @@ const Footer = () => {
   return (
     <footer className="w-full h-full relative mt-40">
       <div className=" flex flex-col relative  md:flex-row py-10 px-4 justify-around items-center h-full bg-black/90  w-full  text-white text-sm md:text-base">
-        <div className="bg-white z-[900] py-4 rounded-lg h-[12rem] shadow-2xl absolute -top-24 mx-auto w-[90%] md:w-2/3 px-4 text-black flex flex-col items-center justify-center md:flex-row">
-          <h2 className="w-full text-center text-xl font-bold md:text-3xl">
+        <div className="bg-white z-[900] py-4 rounded-lg h-[12rem] shadow-2xl absolute -top-24 mx-auto w-[90%] md:w-2/3 px-4 text-black flex flex-col items-center justify-center xl:flex-row">
+          <h2 className="w-full text-center text-xl font-bold  lg:text-3xl">
             Subscribe To Our Newsletter
           </h2>
           <div className="w-full mt-3 ">

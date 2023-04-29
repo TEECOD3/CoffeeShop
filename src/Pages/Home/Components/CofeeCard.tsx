@@ -15,7 +15,7 @@ const Cofeecard: FC<CofeecardProps> = () => {
   };
   return (
     <div
-      className={`${" relative shadow-lg  w-full sm:w-3/4 mx-auto xl:w-11/12 rounded-lg md:rounded-sm overflow-hidden transition-all duration-100 cursor-pointer "}  ${
+      className={`${" relative shadow-lg  w-full  mx-auto xl:w-11/12 rounded-lg  overflow-hidden transition-all duration-100 cursor-pointer "}  ${
         SideBar ? "hover:scale-100 transition-all" : " "
       }`}
       onClick={showSidebar}
@@ -25,27 +25,27 @@ const Cofeecard: FC<CofeecardProps> = () => {
         alt="cofeeimage"
         className=" h-[9rem] xl:h-[12rem]  w-full bg-cover"
       />
-      <div className="">
-        <div className="flex items-center gap-4">
-          <div className="font-bold mt-3 mb-3 px-2 text-[0.8rem] sm:text-base">
+      <div className="p-1">
+        <div className=" flex items-center w-full gap-1">
+          <div className="font-bold mt-3 w-1/2  mb-3 px-2 text-[0.6rem] md:text-[0.8rem] xl:text-base">
             Coffee Beans
           </div>
-          <div className="flex px-4 flex-col items-center justify-center">
-            <div className="flex items-center justify-center">
+          <div className="flex  w-1/2 flex-col items-center justify-center">
+            <div className="flex items-center ">
               <span>
-                <BsStar className="w-3 h-3  md:w-full " />
+                <BsStar className="w-2 h-2  md:w-full md:h-full" />
               </span>
               <span>
-                <BsStar className="w-3 h-3 md:h-full md:w-full " />
+                <BsStar className="w-2 h-2 md:h-full md:w-full " />
               </span>
               <span>
-                <BsStar className="w-3 h-3 md:h-full md:w-full " />
+                <BsStar className="w-2 h-2  md:h-full md:w-full " />
               </span>
               <span>
-                <BsStar className="w-3 h-3 md:h-full md:w-full " />
+                <BsStar className="w-2 h-2 md:h-full md:w-full " />
               </span>
               <span>
-                <BsStar className="w-3 h-3 :h-full md:w-full " />
+                <BsStar className="w-2 h-2  md:h-full md:w-full " />
               </span>
             </div>
           </div>
