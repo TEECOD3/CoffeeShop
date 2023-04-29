@@ -215,13 +215,13 @@ const Home = () => {
 
         <div className="flex flex-col lg:flex-row w-full xl:w-[80%] mx-auto p-3 gap-4 lg:mt-6 ">
           <div className=" overflow-x-auto no-scrollbar lg:w-[60%] xl:w-[50%]  ">
-            <div className="flex lg:flex-col gap-3 sm:gap-24 lg:gap-5 xl:bg-[#EDEAE3] p-4 w-full ">
+            <div className="flex lg:flex-col gap-3 sm:gap-5 lg:gap-5 xl:bg-[#EDEAE3] p-4 w-full ">
               {buttondata.map((buttons) => (
                 <Button
                   variant="coffee"
                   size="lg"
                   key={buttons.id}
-                  className=" w-[15rem] mx-auto p-0"
+                  className="px-32 md:w-[15rem] mx-auto p-0"
                 >
                   <div className="flex  items-center gap-3 w-[90%] justify-between">
                     <div className="text-3xl  md:text-4xl w-[20%]  flex justify-center">
@@ -236,7 +236,7 @@ const Home = () => {
             </div>
           </div>
           <div className=" w-full mx-auto h-full">
-            <div className=" w-full grid grid-cols-2 sm:grid-cols-3 h-full gap-5 md:gap-3  mx-auto ">
+            <div className=" grid grid-cols-2 sm:grid-cols-3 h-full gap-5 md:gap-3  mx-auto ">
               <Cofeecard />
               <Cofeecard />
               <Cofeecard />
