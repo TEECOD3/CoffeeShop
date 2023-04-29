@@ -32,9 +32,10 @@ const BlogCard: FC<BlogCardProps> = () => {
           Simple coffee Recipes for Next Spring !
         </h4>
         <p className="text-sm mt-4 text-lightdark ">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Laoreet
-          cursus nec duis nec facilisis quis imperdiet venenatis. Platea at nunc
-          consequat est dolor
+          Volunteering is a great way to give back to your community while also
+          improving your own well-being. Studies have shown that people who
+          volunteer on a regular basis have lower levels of stress and
+          depression
         </p>
 
         <Button className="mt-5 bg-transparent py-6 text-sm  hover:bg-coffee-100 hover:text-white text-coffee-100 border-2 border-coffee-100">
