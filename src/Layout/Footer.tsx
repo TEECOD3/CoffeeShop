@@ -20,7 +20,7 @@ import Button from "../Components/UI/Button";
 
 const Footer = () => {
   return (
-    <footer className="w-full h-full relative mt-36">
+    <footer className="w-full h-full relative mt-40">
       <div className=" flex flex-col relative  md:flex-row py-10 px-4 justify-around items-center h-full bg-black/90  w-full  text-white text-sm md:text-base">
         <div className="bg-white z-[900] py-4 rounded-lg h-[12rem] shadow-2xl absolute -top-24 mx-auto w-[90%] md:w-2/3 px-4 text-black flex flex-col items-center justify-center md:flex-row">
           <h2 className="w-full text-center text-xl font-bold md:text-3xl">
@@ -30,31 +30,31 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Enter email .."
-              className="w-full bottom-4  border-coffee-100 p-3  md:w-2/3"
+              className="w-full border-2 rounded-lg  border-coffee-100 p-3  md:w-2/3"
             />
             <Button className="w-full text-sm mt-3 md:w-1/3  bg-coffee-100">
               Subscribe now
             </Button>
           </div>
-          <div className="w-full mx-auto mt-2">
-            <div className="w-2/3 mx-auto flex gap-2 ">
-              <div className="bg-coffee-100 flex items-center justify-center text-sm md:py-2 px-1 rounded-lg">
-                <Facebook className="text-white h-6 " />
+          <div className="w-full mx-auto my-2">
+            <div className="w-2/3 mx-auto flex gap-2 justify-center ">
+              <div className="md:bg-coffee-100 flex items-center justify-center text-sm md:py-2 px-1 rounded-lg">
+                <Facebook className="text-coffee-100 md:text-white h-6 " />
               </div>
-              <div className="bg-coffee-100  flex items-center justify-center  text-sm py-2 px-1 rounded-lg">
-                <Twitter className="text-white h-6 " />
+              <div className="md:bg-coffee-100 flex items-center justify-center  text-sm py-2 px-1 rounded-lg">
+                <Twitter className="text-coffee-100 md:text-white  h-6 " />
               </div>
-              <div className="bg-coffee-100  flex items-center justify-center text-sm py-2 px-1 rounded-lg">
-                <Instagram className="text-white h-6  " />
+              <div className="md:bg-coffee-100 flex items-center justify-center text-sm py-2 px-1 rounded-lg">
+                <Instagram className="text-coffee-100 md:text-white  h-6  " />
               </div>
-              <div className="bg-coffee-100  flex items-center justify-center text-sm py-2 px-1 rounded-lg">
-                <Youtube className="text-white h-6  " />
+              <div className="md:bg-coffee-100  flex items-center justify-center text-sm py-2 px-1 rounded-lg">
+                <Youtube className="text-coffee-100 md:text-white h-6  " />
               </div>
             </div>
           </div>
         </div>
         <div className="bg-blackcoffee opacity-20  z-[1] bg-center object-cover  bg-cover bg-no-repeat absolute h-full w-full top-0 left-0"></div>
-        <div className="w-full md:w-1/5  z-30  mt-16">
+        <div className="w-full md:w-1/5  z-30  mt-20">
           <div className="">
             <Coffeelogo className=" h-16 w-16  sm:h-20 sm:w-20 " />
           </div>

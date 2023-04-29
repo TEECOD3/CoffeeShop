@@ -4,18 +4,18 @@ import { FC, ButtonHTMLAttributes } from "react";
 import { cn } from "../../Lib/Utils";
 
 const buttonVariants = cva(
-  "active:scale-95 inline-flex  items-center justify-center rounded-md transition-color focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:pointer-events-none disbaled:opacity-50",
+  "active:scale-95 inline-flex  items-center justify-center rounded-md transition-color focus:outline-none focus:ring-2 focus:ring-coffee-100 focus:ring-offset-2 disabled:pointer-events-none disbaled:opacity-50",
 
   {
     variants: {
       variant: {
-        default: "bg-slate-900 text-white  hover:bg-slate-800",
+        default: "bg-slate-900 text-white  hover:bg-coffee-800",
         ghost: "bg-transparent hover:text-slate-900 hover:bg-slate-200",
         coffee:
           "bg-white text-coffee-100 hover:bg-coffee-100 hover:text-white border-2 border-coffee-100 focus:bg-coffee-200 focus:text-white",
       },
       size: {
-        default: "h-10 py-2 px-4",
+        default: "h-10 py-6 px-4",
         sm: "h-9 px-2",
         lg: "h-11 px-3 md:h-13 md:px-6 text-sm  md:text-base xl:text-xl capitalize md:py-6 xl:py-8",
       },
