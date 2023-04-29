@@ -21,7 +21,7 @@ const Cofeecard: FC<CofeecardProps> = () => {
         <img
           src={loves}
           alt="cofeeimage"
-          className="  rounded-xl w-full bg-cover "
+          className="  rounded-lg w-full bg-cover "
         />
       </div>
 

@@ -236,7 +236,7 @@ const Home = () => {
             </div>
           </div>
           <div className=" w-full mx-auto h-full">
-            <div className=" grid grid-cols-2 sm:grid-cols-3 h-full gap-5 md:gap-3  mx-auto ">
+            <div className=" w-full grid grid-cols-2 sm:grid-cols-3 h-full gap-5 md:gap-3  mx-auto ">
               <Cofeecard />
               <Cofeecard />
               <Cofeecard />
