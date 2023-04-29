@@ -17,7 +17,7 @@ const Cofeecard: FC<CofeecardProps> = () => {
       }`}
       onClick={showSidebar}
     >
-      <div className="w-[10rem] lg:w-full mx-auto flex items-center justify-center">
+      <div className="w-full mx-auto flex items-center justify-center">
         <img
           src={loves}
           alt="cofeeimage"
