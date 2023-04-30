@@ -13,7 +13,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayer />}>
       <Route index element={<Home />} />
-      <Route path="/menu" element={<Menu />} />
+      <Route path="menu" element={<Menu />} />
     </Route>
   )
 );
