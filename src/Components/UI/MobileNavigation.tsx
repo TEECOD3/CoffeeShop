@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { FaTimes } from "react-icons/fa";
+import { MdOutlineClose } from "react-icons/md";
 import Coffeelogo from "../../Pages/Home/icon/coffelogo";
 import { motion, AnimatePresence } from "framer-motion";
 interface MobileNavProps {
@@ -23,22 +23,27 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0  h-full w-full bg-white z-[129030020039030920] flex items-center justify-center"
+        className="fixed top-0 left-0  h-full w-full bg-coffee-100 z-[129030020039030920] flex items-end justify-start"
         variants={item}
         initial={{ height: 0, opacity: 0 }}
         animate={{ height: "100vh", opacity: 1 }}
         transition={{ duration: 0.5 }}
         exit="exit"
       >
-        <FaTimes
-          className="text-3xl absolute text-coffee-100 z-[83999999999939939399339] right-2 top-2"
+        <MdOutlineClose
+          className="text-3xl absolute text-white z-[8399] right-6 top-6"
           onClick={hideModalHandler}
         />
 
-        <div className="absolute top-4 left-4 h-10 w-10">
+        {/* <div className="absolute top-0">
+          <div className="">cart</div>
+          <div className="">profile</div>
+        </div> */}
+
+        <div className="absolute top-[18rem] left-[1.5rem] h-10 w-10">
           <Coffeelogo className=" h-16 w-16  sm:h-20 sm:w-20 bg-coffee-100 rounded-full fill-red-300" />
         </div>
-        <ul className="text-4xl space-y-4 capitalize font-rails font-medium text-coffee-100">
+        <ul className="text-3xl space-y-8 p-10 capitalize font-rails font-medium text-white">
           <motion.li
             variants={item}
             initial={{ y: 24, opacity: 0 }}
@@ -79,7 +84,7 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
             transition={{ delay: 0.4 }}
             exit={{
               opacity: 0,
-              y: 24,
+              y: 30,
               transition: {
                 ease: "easeInOut",
                 delay: 0.4,
