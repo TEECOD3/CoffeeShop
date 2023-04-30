@@ -3,6 +3,7 @@ import CartBag from "../assets/Icons/CartBag";
 import { FaSistrix } from "react-icons/fa";
 import Coffeelogo from "../Pages/Home/icon/coffelogo";
 import MobileNav from "../Components/UI/MobileNavigation";
+import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 const Navbar = () => {
@@ -17,7 +18,9 @@ const Navbar = () => {
   };
   return (
     <div>
-      {ModalOpen && <MobileNav hideModalHandler={hidemodalHandler} />}
+      <AnimatePresence>
+        {ModalOpen && <MobileNav hideModalHandler={hidemodalHandler} />}
+      </AnimatePresence>
       <div className=" px-8 sm:px-8 bg-black/50 z-[1000] w-full fixed ">
         <div className="  md:w-full  md:max-w-7xl flex justify-between items-center mx-auto h-full">
           <div className="capitalize text-2xl font-bold text-white">
