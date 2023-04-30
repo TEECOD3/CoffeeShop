@@ -27,6 +27,7 @@ import { testimonials } from "../../Data/Cofee";
 import Userefplayer from "./Components/Userefplayer";
 import BlogCard from "./Components/BlogCard";
 import Loader from "../../Components/UI/Loader";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -245,10 +246,12 @@ const Home = () => {
               <Cofeecard />
             </div>
 
-            <Button className="mt-6 bg-coffee-100 hover:bg-coffee-200/60">
-              <span className="font-light mr-4 ">check our shop</span>
-              <span className=" md:text-2xl">&#8594;</span>
-            </Button>
+            <Link to="/menu">
+              <Button className="mt-6 bg-coffee-100 hover:bg-coffee-200/60">
+                <span className="font-light mr-4 ">check our shop</span>
+                <span className=" md:text-2xl">&#8594;</span>
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

@@ -6,6 +6,7 @@ import MobileNav from "../Components/UI/MobileNavigation";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { NavLink, Link } from "react-router-dom";
 const Navbar = () => {
   const [ModalOpen, setModalOpen] = useState(false);
 
@@ -24,11 +25,15 @@ const Navbar = () => {
       <div className=" px-8 sm:px-8 bg-black/50 z-[1000] w-full fixed ">
         <div className="  md:w-full  md:max-w-7xl flex justify-between items-center mx-auto h-full">
           <div className="capitalize text-2xl font-bold text-white">
-            <Coffeelogo className=" h-16 w-16  sm:h-20 sm:w-20 " />
+            <Link to="/">
+              <Coffeelogo className=" h-16 w-16  sm:h-20 sm:w-20 " />
+            </Link>
           </div>
           <nav className="w-1/3 max-sm:hidden">
             <ul className="flex justify-around font-medium capitalize text-white max-md:hidden cursor-pointer ">
-              <li>Menu</li>
+              <NavLink to="/menu">
+                <li>Menu</li>
+              </NavLink>
               <li>Blog</li>
               <li>shop</li>
               <li>contact</li>

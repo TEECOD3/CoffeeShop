@@ -1,112 +1,123 @@
 {
-  "espresso": [
+  "coffees": [
     {
       "id": "ESP01",
       "name": "Single Shot",
       "price": 2.99,
       "rating": 4.5,
-      "image": "../Data/images/espresso/epresso1.jpg"
+      "image": "../Data/images/espresso/epresso1.jpg",
+      "category": "espresso"
     },
     {
       "id": "ESP02",
       "name": "Double Shot",
       "price": 3.99,
-      "rating": "../Data/images/espresso/epresso2.jpg"
+      "rating": "../Data/images/espresso/epresso2.jpg",
+      "category": "espresso"
     },
     {
       "id": "ESP03",
       "name": "Ristretto",
       "price": 3.49,
       "rating": 4.2,
-      "image": "../Data/images/espresso/espresso3.jpg"
+      "image": "../Data/images/espresso/espresso3.jpg",
+      "category": "espresso"
     },
     {
       "id": "ESP04",
       "name": "Lungo",
       "price": 3.49,
       "rating": 4.4,
-      "image": "../Data/images/espresso/espress04.jpg"
+      "image": "../Data/images/espresso/espress04.jpg",
+      "category": "espresso"
     },
     {
       "id": "ESP05",
       "name": "Americano",
       "price": 3.49,
       "rating": 4.3,
-      "image": "../Data/images/espresso/espresso5.jpg"
+      "image": "../Data/images/espresso/espresso5.jpg",
+      "category": "espresso"
     },
     {
       "id": "ESP06",
       "name": "Espresso Macchiato",
       "price": 3.99,
       "rating": 4.7,
-      "image": "../Data/images/espresso/espresso6.jpg"
-    }
-  ],
-  "brewedCoffee": [
+      "image": "../Data/images/espresso/espresso6.jpg",
+      "category": "espresso"
+    },
     {
       "id": "BRW01",
       "name": "House Blend",
       "price": 2.99,
       "rating": 4.4,
-      "image": "../Data/images/Brewed/BRW1.jpg"
+      "image": "../Data/images/Brewed/BRW1.jpg",
+      "category": "brewedCoffee"
     },
     {
       "id": "BRW02",
       "name": "Dark Roast",
       "price": 3.49,
       "rating": 4.5,
-      "image": "../Data/images/Brewed/BRW2.jpg"
+      "image": "../Data/images/Brewed/BRW2.jpg",
+      "category": "brewedCoffee"
     },
     {
       "id": "BRW03",
       "name": "Light Roast",
       "price": 3.49,
       "rating": 4.2,
-      "image": "../Data/images/Brewed/BRW3.jpg"
+      "image": "../Data/images/Brewed/BRW3.jpg",
+      "category": "brewedCoffee"
     },
     {
       "id": "BRW04",
       "name": "French Press",
       "price": 3.99,
       "rating": 4.8,
-      "image": "../Data/images/Brewed/BRW4.jpg"
+      "image": "../Data/images/Brewed/BRW4.jpg",
+      "category": "brewedCoffee"
     },
     {
       "id": "BRW05",
       "name": "Pour Over",
       "price": 4.49,
       "rating": 4.6,
-      "image": "../Data/images/Brewed/BRW5.jpg"
+      "image": "../Data/images/Brewed/BRW5.jpg",
+      "category": "brewedCoffee"
     },
     {
       "id": "BRW06",
       "name": "Cold Brew",
       "price": 4.99,
       "rating": 4.7,
-      "image": "../Data/images/espresso/espresso6.jpg"
-    }
-  ],
-  "flavouredCoffee": [
+      "image": "../Data/images/espresso/espresso6.jpg",
+      "category": "brewedCoffee"
+    },
     {
       "id": "FLV01",
       "name": "Vanilla Latte",
       "price": 4.99,
       "rating": 4.5,
-      "image": "../Data/images/Flavoured/FLV1.jpg"
+      "image": "../Data/images/Flavoured/FLV1.jpg",
+      "category": "flavouredCoffee"
     },
     {
       "id": "FLV02",
       "name": "Caramel Macchiato",
       "price": 5.49,
       "rating": 4.7,
-      "image": "../Data/images/Flavoured/FLV2.jpg"
+      "image": "../Data/images/Flavoured/FLV2.jpg",
+      "category": "flavouredCoffee"
     },
     {
       "id": "FLV03",
       "name": "Hazelnut Mocha",
       "price": 5.99,
       "rating": 4.6,
-      "image": "../Data/images/Flavoured/FLV3.jpg"
+      "image": "../Data/images/Flavoured/FLV3.jpg",
+      "category": "flavouredCoffee"
     },
 
     {
@@ -114,102 +125,112 @@
       "name": "Pumpkin Spice Latte",
       "price": 5.99,
       "rating": 4.8,
-      "image": "../Data/images/Flavoured/FLV4.jpg"
+      "image": "../Data/images/Flavoured/FLV4.jpg",
+      "category": "flavouredCoffee"
     },
     {
       "id": "FLV05",
       "name": "Irish Cream",
       "price": 5.49,
       "rating": 4.4,
-      "image": "../Data/images/Flavoured/FLV5.jpg"
+      "image": "../Data/images/Flavoured/FLV5.jpg",
+      "category": "flavouredCoffee"
     },
     {
       "id": "FLV06",
       "name": "Peppermint Mocha",
       "price": 5.99,
       "rating": 4.7,
-      "image": "../Data/images/Flavoured/FLV6.jpg"
-    }
-  ],
-  "specialityCoffee": [
+      "image": "../Data/images/Flavoured/FLV6.jpg",
+      "category": "flavouredCoffee"
+    },
     {
       "id": "SPC01",
       "name": "Cold Brew",
       "price": 4.99,
       "rating": 4.6,
-      "image": "../Data/images/Flavoured/FLV5.jpg"
+      "image": "../Data/images/Flavoured/FLV5.jpg",
+      "category": "specialityCoffee"
     },
     {
       "id": "SPC02",
       "name": "Pour Over",
       "price": 5.49,
       "rating": 4.8,
-      "image": "../Data/images/Flavoured/FLV2.jpg"
+      "image": "../Data/images/Flavoured/FLV2.jpg",
+      "category": "specialityCoffee"
     },
     {
       "id": "SPC03",
       "name": "Nitro Cold Brew",
       "price": 5.99,
       "rating": 4.7,
-      "image": "../Data/images/espresso/espresso5.jpg"
+      "image": "../Data/images/espresso/espresso5.jpg",
+      "category": "specialityCoffee"
     },
     {
       "id": "SPC04",
       "name": "Siphon Coffee",
       "price": 6.49,
       "rating": 4.9,
-      "image": "../Data/images/Brewed/BRW3.jpg"
+      "image": "../Data/images/Brewed/BRW3.jpg",
+      "category": "specialityCoffee"
     },
     {
       "id": "SPC05",
       "name": "Espresso Con Panna",
       "price": 3.99,
       "rating": 4.5,
-      "image": "../Data/images/espresso/epresso2.jpg"
+      "image": "../Data/images/espresso/epresso2.jpg",
+      "category": "specialityCoffee"
     },
     {
       "id": "SPC06",
       "name": "Cortado",
       "price": 4.49,
       "rating": 4.6,
-      "image": "../Data/images/Flavoured/FLV3.jpg"
-    }
-  ],
-  "singleOriginCoffee": [
+      "image": "../Data/images/Flavoured/FLV3.jpg",
+      "category": "specialityCoffee"
+    },
     {
       "id": "SNG01",
       "name": "Ethiopia Yirgacheffe",
       "price": 7.99,
       "rating": 4.8,
-      "image": "../Data/images/Flavoured/FLV2.jpg"
+      "image": "../Data/images/Flavoured/FLV2.jpg",
+      "category": "singleOriginCoffee"
     },
     {
       "id": "SNG02",
       "name": "Colombia Supremo",
       "price": 8.49,
       "rating": 4.7,
-      "image": "../Data/images/espresso/epresso1.jpg"
+      "image": "../Data/images/espresso/epresso1.jpg",
+      "category": "singleOriginCoffee"
     },
     {
       "id": "SNG03",
       "name": "Costa Rica Tarrazu",
       "price": 8.99,
       "rating": 4.6,
-      "image": "../Data/images/Brewed/BRW3.jpg"
+      "image": "../Data/images/Brewed/BRW3.jpg",
+      "category": "singleOriginCoffee"
     },
     {
       "id": "SNG04",
       "name": "Guatemala Antigua",
       "price": 9.49,
       "rating": 4.7,
-      "image": "../Data/images/espresso/epresso1.jpg"
+      "image": "../Data/images/espresso/epresso1.jpg",
+      "category": "singleOriginCoffee"
     },
     {
       "id": "SNG05",
       "name": "Kenya AA",
       "price": 9.99,
       "rating": 4.8,
-      "image": "../Data/images/Brewed/BRW5.jpg"
+      "image": "../Data/images/Brewed/BRW5.jpg",
+      "category": "singleOriginCoffee"
     },
 
     {
@@ -217,7 +238,8 @@
       "name": "Sumatra Mandheling",
       "price": 10.49,
       "rating": 4.5,
-      "image": "../Data/images/Brewed/BRW3.jpg"
+      "image": "../Data/images/Brewed/BRW3.jpg",
+      "category": "singleOriginCoffee"
     }
   ],
 

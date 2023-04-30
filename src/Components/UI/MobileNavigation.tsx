@@ -2,12 +2,23 @@ import { FC } from "react";
 import { MdOutlineClose } from "react-icons/md";
 import Coffeelogo from "../../Pages/Home/icon/coffelogo";
 import { motion, AnimatePresence } from "framer-motion";
+import { NavLink } from "react-router-dom";
 interface MobileNavProps {
   hideModalHandler: () => void;
 }
 
 const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
   const { hideModalHandler } = props;
+
+  const svgvariants = {
+    hidden: { rotate: -180 },
+    visible: {
+      rotate: 0,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
 
   const item = {
     exit: {
@@ -29,37 +40,37 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
         animate={{ height: "100vh", opacity: 1 }}
         transition={{ duration: 0.5 }}
         exit="exit"
+        onClick={hideModalHandler}
       >
         <MdOutlineClose
           className="text-3xl absolute text-white z-[8399] right-6 top-6"
           onClick={hideModalHandler}
         />
 
-        {/* <div className="absolute top-0">
-          <div className="">cart</div>
-          <div className="">profile</div>
-        </div> */}
-
         <div className="absolute top-[18rem] left-[1.5rem] h-10 w-10">
-          <Coffeelogo className=" h-16 w-16  sm:h-20 sm:w-20 bg-coffee-100 rounded-full fill-red-300" />
+          <NavLink to="/">
+            <Coffeelogo className=" h-16 w-16  sm:h-20 sm:w-20 bg-coffee-100 rounded-full fill-red-300" />
+          </NavLink>{" "}
         </div>
         <ul className="text-3xl space-y-8 p-10 capitalize font-rails font-medium text-white">
-          <motion.li
-            variants={item}
-            initial={{ y: 24, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            exit={{
-              opacity: 0,
-              y: 24,
-              transition: {
-                ease: "easeInOut",
-                delay: 0.8,
-              },
-            }}
-          >
-            Menu
-          </motion.li>
+          <NavLink to="/menu">
+            <motion.li
+              variants={item}
+              initial={{ y: 24, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              exit={{
+                opacity: 0,
+                y: 24,
+                transition: {
+                  ease: "easeInOut",
+                  delay: 0.8,
+                },
+              }}
+            >
+              <li>Menu</li>
+            </motion.li>
+          </NavLink>
           <motion.li
             variants={item}
             initial={{ y: 24, opacity: 0 }}
