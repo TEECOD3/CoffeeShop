@@ -27,8 +27,8 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
         variants={item}
         initial={{ height: 0, opacity: 0 }}
         animate={{ height: "100vh", opacity: 1 }}
-        transition={{ delay: 1.2 }}
-        exit={{ opacity: 0, height: 0 }}
+        transition={{ duration: 0.5 }}
+        exit="exit"
       >
         <FaTimes
           className="text-3xl absolute text-coffee-100 z-[83999999999939939399339] right-2 top-2"
