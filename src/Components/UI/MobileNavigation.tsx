@@ -34,7 +34,7 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0  h-full w-full bg-coffee-100 z-[129030020039030920] flex items-end justify-start"
+        className="fixed top-0 left-0  h-full w-full bg-coffee-100 z-[129030020039030920] flex items-center justify-start"
         variants={item}
         initial={{ height: 0, opacity: 0 }}
         animate={{ height: "100vh", opacity: 1 }}
@@ -42,12 +42,9 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
         exit="exit"
         onClick={hideModalHandler}
       >
-        <MdOutlineClose
-          className="text-3xl absolute text-white z-[8399] right-6 top-6"
-          onClick={hideModalHandler}
-        />
+        <MdOutlineClose className="text-3xl absolute text-white z-[8399] right-6 top-6" />
 
-        <div className="absolute top-[18rem] left-[1.5rem] h-10 w-10">
+        <div className="absolute top-[14rem] left-[1.5rem] h-10 w-10">
           <NavLink to="/">
             <Coffeelogo className=" h-16 w-16  sm:h-20 sm:w-20 bg-coffee-100 rounded-full fill-red-300" />
           </NavLink>{" "}
@@ -67,6 +64,7 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
                   delay: 0.8,
                 },
               }}
+              onClick={hideModalHandler}
             >
               <li>Menu</li>
             </motion.li>
