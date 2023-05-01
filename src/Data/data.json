@@ -6,14 +6,16 @@
       "price": 2.99,
       "rating": 4.5,
       "image": "../Data/images/espresso/epresso1.jpg",
-      "category": "espresso"
+      "category": "espresso",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "ESP02",
       "name": "Double Shot",
       "price": 3.99,
       "rating": "../Data/images/espresso/epresso2.jpg",
-      "category": "espresso"
+      "category": "espresso",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "ESP03",
@@ -21,7 +23,8 @@
       "price": 3.49,
       "rating": 4.2,
       "image": "../Data/images/espresso/espresso3.jpg",
-      "category": "espresso"
+      "category": "espresso",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "ESP04",
@@ -29,7 +32,8 @@
       "price": 3.49,
       "rating": 4.4,
       "image": "../Data/images/espresso/espress04.jpg",
-      "category": "espresso"
+      "category": "espresso",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "ESP05",
@@ -37,7 +41,8 @@
       "price": 3.49,
       "rating": 4.3,
       "image": "../Data/images/espresso/espresso5.jpg",
-      "category": "espresso"
+      "category": "espresso",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "ESP06",
@@ -45,7 +50,8 @@
       "price": 3.99,
       "rating": 4.7,
       "image": "../Data/images/espresso/espresso6.jpg",
-      "category": "espresso"
+      "category": "espresso",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "BRW01",
@@ -53,7 +59,8 @@
       "price": 2.99,
       "rating": 4.4,
       "image": "../Data/images/Brewed/BRW1.jpg",
-      "category": "brewedCoffee"
+      "category": "brewedCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "BRW02",
@@ -61,7 +68,8 @@
       "price": 3.49,
       "rating": 4.5,
       "image": "../Data/images/Brewed/BRW2.jpg",
-      "category": "brewedCoffee"
+      "category": "brewedCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "BRW03",
@@ -69,7 +77,8 @@
       "price": 3.49,
       "rating": 4.2,
       "image": "../Data/images/Brewed/BRW3.jpg",
-      "category": "brewedCoffee"
+      "category": "brewedCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "BRW04",
@@ -77,7 +86,8 @@
       "price": 3.99,
       "rating": 4.8,
       "image": "../Data/images/Brewed/BRW4.jpg",
-      "category": "brewedCoffee"
+      "category": "brewedCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "BRW05",
@@ -85,7 +95,8 @@
       "price": 4.49,
       "rating": 4.6,
       "image": "../Data/images/Brewed/BRW5.jpg",
-      "category": "brewedCoffee"
+      "category": "brewedCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "BRW06",
@@ -93,7 +104,8 @@
       "price": 4.99,
       "rating": 4.7,
       "image": "../Data/images/espresso/espresso6.jpg",
-      "category": "brewedCoffee"
+      "category": "brewedCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "FLV01",
@@ -101,7 +113,8 @@
       "price": 4.99,
       "rating": 4.5,
       "image": "../Data/images/Flavoured/FLV1.jpg",
-      "category": "flavouredCoffee"
+      "category": "flavouredCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "FLV02",
@@ -109,7 +122,8 @@
       "price": 5.49,
       "rating": 4.7,
       "image": "../Data/images/Flavoured/FLV2.jpg",
-      "category": "flavouredCoffee"
+      "category": "flavouredCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "FLV03",
@@ -117,7 +131,8 @@
       "price": 5.99,
       "rating": 4.6,
       "image": "../Data/images/Flavoured/FLV3.jpg",
-      "category": "flavouredCoffee"
+      "category": "flavouredCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
 
     {
@@ -126,7 +141,8 @@
       "price": 5.99,
       "rating": 4.8,
       "image": "../Data/images/Flavoured/FLV4.jpg",
-      "category": "flavouredCoffee"
+      "category": "flavouredCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "FLV05",
@@ -134,7 +150,8 @@
       "price": 5.49,
       "rating": 4.4,
       "image": "../Data/images/Flavoured/FLV5.jpg",
-      "category": "flavouredCoffee"
+      "category": "flavouredCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "FLV06",
@@ -142,7 +159,8 @@
       "price": 5.99,
       "rating": 4.7,
       "image": "../Data/images/Flavoured/FLV6.jpg",
-      "category": "flavouredCoffee"
+      "category": "flavouredCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "SPC01",
@@ -150,7 +168,8 @@
       "price": 4.99,
       "rating": 4.6,
       "image": "../Data/images/Flavoured/FLV5.jpg",
-      "category": "specialityCoffee"
+      "category": "specialityCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "SPC02",
@@ -158,7 +177,8 @@
       "price": 5.49,
       "rating": 4.8,
       "image": "../Data/images/Flavoured/FLV2.jpg",
-      "category": "specialityCoffee"
+      "category": "specialityCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "SPC03",
@@ -166,7 +186,8 @@
       "price": 5.99,
       "rating": 4.7,
       "image": "../Data/images/espresso/espresso5.jpg",
-      "category": "specialityCoffee"
+      "category": "specialityCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "SPC04",
@@ -174,7 +195,8 @@
       "price": 6.49,
       "rating": 4.9,
       "image": "../Data/images/Brewed/BRW3.jpg",
-      "category": "specialityCoffee"
+      "category": "specialityCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "SPC05",
@@ -182,7 +204,8 @@
       "price": 3.99,
       "rating": 4.5,
       "image": "../Data/images/espresso/epresso2.jpg",
-      "category": "specialityCoffee"
+      "category": "specialityCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "SPC06",
@@ -190,7 +213,8 @@
       "price": 4.49,
       "rating": 4.6,
       "image": "../Data/images/Flavoured/FLV3.jpg",
-      "category": "specialityCoffee"
+      "category": "specialityCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "SNG01",
@@ -198,7 +222,8 @@
       "price": 7.99,
       "rating": 4.8,
       "image": "../Data/images/Flavoured/FLV2.jpg",
-      "category": "singleOriginCoffee"
+      "category": "singleOriginCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "SNG02",
@@ -206,7 +231,8 @@
       "price": 8.49,
       "rating": 4.7,
       "image": "../Data/images/espresso/epresso1.jpg",
-      "category": "singleOriginCoffee"
+      "category": "singleOriginCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "SNG03",
@@ -214,7 +240,8 @@
       "price": 8.99,
       "rating": 4.6,
       "image": "../Data/images/Brewed/BRW3.jpg",
-      "category": "singleOriginCoffee"
+      "category": "singleOriginCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "SNG04",
@@ -222,7 +249,8 @@
       "price": 9.49,
       "rating": 4.7,
       "image": "../Data/images/espresso/epresso1.jpg",
-      "category": "singleOriginCoffee"
+      "category": "singleOriginCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
     {
       "id": "SNG05",
@@ -230,7 +258,8 @@
       "price": 9.99,
       "rating": 4.8,
       "image": "../Data/images/Brewed/BRW5.jpg",
-      "category": "singleOriginCoffee"
+      "category": "singleOriginCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     },
 
     {
@@ -239,7 +268,8 @@
       "price": 10.49,
       "rating": 4.5,
       "image": "../Data/images/Brewed/BRW3.jpg",
-      "category": "singleOriginCoffee"
+      "category": "singleOriginCoffee",
+      "description": "Coffee is a widely consumed beverage that is made by brewing roasted coffee beans in hot water. It is known for its rich, complex flavor profile, which can range from nutty and chocolaty to fruity and floral. The caffeine in coffee can provide a boost of energy and improve mental alertness, making it a popular morning drink. Coffee is grown in various parts of the world, with different regions and varieties influencing its flavor and aroma. "
     }
   ],
 

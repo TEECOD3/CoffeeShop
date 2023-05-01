@@ -359,7 +359,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="my-10 w-full ">
+      <section className=" mb-40 w-full ">
         <div className="text-center md:w-[60%] mx-auto w-full">
           <h2 className=" text-coffee-100 font-mini text-xl font-bold text-coffeeBlack mb-1 capitalize ">
             Partners & Clients
