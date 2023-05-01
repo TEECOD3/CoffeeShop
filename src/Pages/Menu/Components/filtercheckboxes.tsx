@@ -7,7 +7,7 @@ const Filtercheckboxes: FC<FiltercheckboxesProps> = () => {
   return (
     <form className=" flex items-center justify-center p-1 gap-1 ">
       <Input
-        className=" cursor-pointer"
+        className=" cursor-pointer bg-coffee-100 text-coffee-100 accent-coffee-100 h-5 w-5 focus:ring-coffee-100 dark:ring-offset-gray-800 "
         inputs={{
           type: "checkbox",
           placeholder: "search category",
@@ -16,7 +16,7 @@ const Filtercheckboxes: FC<FiltercheckboxesProps> = () => {
       />
       <label
         htmlFor="filterbycategory"
-        className="text-sm sm:text-base font-medium"
+        className="text-sm sm:text-base font-semibold"
       >
         espresso
       </label>

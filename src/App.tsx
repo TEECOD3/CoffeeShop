@@ -1,11 +1,9 @@
 import Home from "./Pages/Home";
-import { useEffect } from "react";
 import {
   Route,
   createBrowserRouter,
   createRoutesFromElements,
   RouterProvider,
-  useLocation,
 } from "react-router-dom";
 import RootLayer from "./Layout/RootLayer";
 import Menu from "./Pages/Menu";

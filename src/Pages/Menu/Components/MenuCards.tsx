@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import image from "../../../assets/Images/darks.png";
+import image from "../../../assets/Images/milkshake.png";
 interface MenucardsProps {}
 
 const Menucards: FC<MenucardsProps> = () => {
@@ -11,8 +11,8 @@ const Menucards: FC<MenucardsProps> = () => {
       </div>
       <h3 className="mt-4 text-lightdark font-bold ">espresso cofeee</h3>
       <div className="flex gap-4 mt-2 font-medium  font-nunito ">
-        <h4 className="text-coffee-100">$500</h4>
-        <s className="text-lightdark">$900</s>
+        <h4 className="text-coffee-100 text-sm">$500</h4>
+        <s className="text-lightdark text-sm">$900</s>
       </div>
     </div>
   );

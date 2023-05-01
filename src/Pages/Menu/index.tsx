@@ -3,11 +3,11 @@ import Cofeecard from "../Home/Components/CofeeCard";
 import { useEffect } from "react";
 import Menucards from "./Components/MenuCards";
 import { RiArrowGoForwardFill } from "react-icons/ri";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowDown, FaArrowRight } from "react-icons/fa";
 import Input from "../../Components/Forms/Inputfield";
 import Filtercheckboxes from "./Components/filtercheckboxes";
 import { Search } from "lucide-react";
-import image from "../../assets/Images/darks.png";
+import image from "../../assets/Images/milkshake.png";
 
 const Menu = () => {
   const { pathname } = useLocation();
@@ -22,20 +22,20 @@ const Menu = () => {
       <div className="flex flex-col max-w-7xl lg:max-w-[80%] mx-auto gap-2  md:px-2">
         <main className="w-full h-full">
           <div className="mb-6  md:w-4/12 capitalize text-base sm:text-xl font-bold flex item-center justify-left">
-            <h4 className="">complete coffee menu </h4>
+            <h4 className="">All Menu </h4>
             <span className="font-extrabold text-xl ml-2 flex items-center justify-center">
-              <FaArrowRight />
+              <FaArrowDown className="animate-bounce" />
             </span>
           </div>
           <div className="w-full mx-auto  h-full flex flex-col-reverse lg:flex-row gap-16 justify-center">
             <div className="flex  lg:flex-col flex-col-reverse lg:w-[70%] border-2 p-8">
               <div className="">
                 <h5 className="font-bold text-lightdark mt-2 md:mt-0">
-                  Latest coffee
+                  Latest...
                 </h5>
 
                 <div className="">
-                  <div className="h-10 w-10 flex gap-3 mb-4 cursor-pointer">
+                  <div className="h-10 w-12 flex gap-3 mb-4 cursor-pointer">
                     <img src={image} alt="" />
                     <img src={image} alt="" />
                     <img src={image} alt="" />
@@ -43,7 +43,7 @@ const Menu = () => {
                   </div>
                 </div>
               </div>
-              <div className=" grid-cols-2  grid   md:grid-cols-3 gap-3">
+              <div className=" grid-cols-2 grid   md:grid-cols-3 gap-3">
                 <Menucards />
                 <Menucards />
                 <Menucards />
@@ -62,7 +62,7 @@ const Menu = () => {
                     type: "text",
                     placeholder: "search category",
                   }}
-                  className=" border-coffee-100"
+                  className=" border-coffee-100 bg-white"
                 />
                 <div className="bg-coffee-100 absolute p-2 flex focus:ring-coffee-100 focus:border-coffee-100 items-center justify-center right-0 top-0 h-full">
                   <Search className="" />

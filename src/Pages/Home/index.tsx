@@ -28,6 +28,7 @@ import Userefplayer from "./Components/Userefplayer";
 import BlogCard from "./Components/BlogCard";
 import Loader from "../../Components/UI/Loader";
 import { Link, useNavigate } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -247,15 +248,17 @@ const Home = () => {
               <Cofeecard />
             </div>
 
-            <Button
-              className="mt-6 bg-coffee-100 hover:bg-coffee-200/60"
+            <div
               onClick={() => {
                 navigate("/menu");
               }}
+              className="mb-6 mt-4 cursor-pointer  md:w-4/12 capitalize text-base sm:text-xl font-bold flex item-center justify-left"
             >
-              <span className="font-light mr-4">check our shop</span>
-              <span className=" md:text-2xl">&#8594;</span>
-            </Button>
+              <h4 className="">All Menu </h4>
+              <span className="font-extrabold text-xl ml-2 flex items-center justify-center">
+                <FaArrowRight className="animate-ping" />
+              </span>
+            </div>
           </div>
         </div>
       </section>
