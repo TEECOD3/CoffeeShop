@@ -3,7 +3,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "../../Lib/Utils";
 
 const inputVariants = cva(
-  " mx-auto p-2 capitalize border-blue-400 border-[3px] rounded-md inline-flex focus:border-blue-400 outline-none w-[100%]",
+  "mx-auto p-2 capitalize border-blue-400 border-[3px] rounded-md inline-flex focus:border-blue-400 outline-none w-[100%]",
   {
     variants: {
       variant: {

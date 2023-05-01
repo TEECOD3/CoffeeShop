@@ -5,13 +5,13 @@ import { Outlet } from "react-router-dom";
 
 const RootLayer = () => {
   return (
-    <div className="">
+    <body className="relative">
       <Navbar />
-      <main>
+      <main className="h-auto">
         <Outlet />
       </main>
       <Footer />
-    </div>
+    </body>
   );
 };
 

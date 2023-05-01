@@ -41,7 +41,10 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
         transition={{ duration: 0.5 }}
         exit="exit"
       >
-        <MdOutlineClose className="text-3xl absolute text-white z-[8399] right-6 top-6" />
+        <MdOutlineClose
+          className="text-3xl absolute text-white z-[8399] right-6 top-6"
+          onClick={hideModalHandler}
+        />
 
         <div className="absolute top-[14rem] left-[1.5rem] h-10 w-10">
           <NavLink to="/">

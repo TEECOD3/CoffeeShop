@@ -1,18 +1,37 @@
-import React from "react";
-import Input from "../../Components/Forms/Inputfield";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import Cofeecard from "../Home/Components/CofeeCard";
+import { useEffect } from "react";
 
 const Menu = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  const navigate = useNavigate();
   return (
-    <div className="bg-red-300 py-28 h-[100vh]">
-      <div className="flex flex-col h-[80vh] bg-blue-300 max-w-7xl mx-auto gap-2">
-        <div className="bg-red-600">
-          <Input placeholder="newest" type="" className="w-4/12 text-black">
-            <option> yes</option>
-          </Input>
-        </div>
-        <main className="w-full h-full  bg-red-700 ">
+    <div className="p-32 mb-32 bg-hero h-full w-full">
+      <div className="flex flex-colmax-w-7xl mx-auto gap-2 ">
+        <main className="w-full h-full">
           <div className="w-full mx-auto  h-full flex gap-16 justify-center">
-            <div className="bg-blue-800 w-[70%]">main</div>
+            <div className="w-[70%] grid grid-cols-3 gap-3">
+              <Cofeecard />
+              <Cofeecard />
+              <Cofeecard />
+              <Cofeecard />
+              <Cofeecard />
+              <Cofeecard />
+              <Cofeecard />
+              <Cofeecard />
+
+              <Cofeecard />
+              <Cofeecard />
+              <Cofeecard />
+              <Cofeecard />
+              <Cofeecard />
+              <Cofeecard />
+            </div>
             <div className="w-[30%] bg-yellow-400">side</div>
           </div>
         </main>

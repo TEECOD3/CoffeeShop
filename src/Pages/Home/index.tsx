@@ -27,13 +27,14 @@ import { testimonials } from "../../Data/Cofee";
 import Userefplayer from "./Components/Userefplayer";
 import BlogCard from "./Components/BlogCard";
 import Loader from "../../Components/UI/Loader";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <>
-      <section className="bg-black/90  z-30 w-full h-full  bg-hero flex  md:p-24 ">
-        <div className="  flex flex-col-reverse items-center justify-between h-full py-10 sm:py-0 font-rails  space-y-2 w-full mt-20 md:mt-2   md:max-w-7xl  mx-auto sm:max-w-4xl md:flex-row sm:space-y-8 md:space-x-16 lg:mt-0 lg:space-x-28">
+      <section className="bg-black/90 z-30 w-full h-full  bg-hero flex  md:p-24 ">
+        <div className="flex flex-col-reverse items-center justify-between h-full py-10 sm:py-0 font-rails  space-y-2 w-full mt-20 md:mt-2   md:max-w-7xl  mx-auto sm:max-w-4xl md:flex-row sm:space-y-8 md:space-x-16 lg:mt-0 lg:space-x-28">
           <div className="w-4/5   mx-auto relative p-8 lg:p-5 sm:w-5/6   ">
             <div className="h-[6rem] w-[5rem]  absolute bg-seed bg-no-repeat left-[33rem] max-sm:left-[14rem] max-sm:top-[11rem] max-md:left-[22rem] top-[15rem] max-xl:left-[21rem] flex items-center justify-center"></div>
             <div className=" lg:w-3/4 lg:mt-0 mx-auto ">
@@ -215,20 +216,20 @@ const Home = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row w-full xl:w-[80%] mx-auto p-3 gap-4 lg:mt-6 ">
-          <div className=" overflow-x-auto no-scrollbar lg:w-[60%] xl:w-[50%]  ">
-            <div className="flex lg:flex-col gap-3 sm:gap-5 lg:gap-5 xl:bg-[#EDEAE3] p-4 w-full ">
+          <div className=" overflow-x-auto no-scrollbar w-full lg:w-[60%] xl:w-[40%]  ">
+            <div className="flex w-[60rem] lg:flex-col gap-3 sm:gap-5 lg:gap-5 xl:bg-[#EDEAE3] md:p-4 sm:w-full ">
               {buttondata.map((buttons) => (
                 <Button
                   variant="coffee"
                   size="lg"
                   key={buttons.id}
-                  className="px-32 md:w-[15rem] mx-auto p-0"
+                  className=" w-[30rem] md:w-[18rem] mx-auto p-0 shadow-sm"
                 >
-                  <div className="flex  items-center gap-3 w-[90%] justify-between">
+                  <div className="flex items-center gap-3 w-full px-6 justify-between">
                     <div className="text-3xl  md:text-4xl w-[20%]  flex justify-center">
                       {buttons.component}
                     </div>
-                    <div className="text-center  text-[0.7rem] md:text-base flex ">
+                    <div className="text-center flex-wrap text-[0.7rem] md:text-base flex w-[90%] font-bold">
                       {buttons.name}
                     </div>
                   </div>
@@ -246,12 +247,15 @@ const Home = () => {
               <Cofeecard />
             </div>
 
-            <Link to="/menu">
-              <Button className="mt-6 bg-coffee-100 hover:bg-coffee-200/60">
-                <span className="font-light mr-4 ">check our shop</span>
-                <span className=" md:text-2xl">&#8594;</span>
-              </Button>
-            </Link>
+            <Button
+              className="mt-6 bg-coffee-100 hover:bg-coffee-200/60"
+              onClick={() => {
+                navigate("/menu");
+              }}
+            >
+              <span className="font-light mr-4">check our shop</span>
+              <span className=" md:text-2xl">&#8594;</span>
+            </Button>
           </div>
         </div>
       </section>

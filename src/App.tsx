@@ -1,10 +1,11 @@
 import Home from "./Pages/Home";
+import { useEffect } from "react";
 import {
   Route,
   createBrowserRouter,
   createRoutesFromElements,
   RouterProvider,
-  Routes,
+  useLocation,
 } from "react-router-dom";
 import RootLayer from "./Layout/RootLayer";
 import Menu from "./Pages/Menu";
@@ -12,7 +13,7 @@ import Menu from "./Pages/Menu";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayer />}>
-      <Route index element={<Home />} />
+      <Route index element={<Home />}></Route>
       <Route path="menu" element={<Menu />} />
     </Route>
   )

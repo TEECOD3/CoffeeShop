@@ -2,21 +2,13 @@ import { FC, useState } from "react";
 import { BsBag, BsEye, BsPlus, BsStar } from "react-icons/bs";
 import loves from "../../../Data/images/espresso/espresso5.jpg";
 import { Link } from "react-router-dom";
+import { Heart } from "lucide-react";
 
 interface CofeecardProps {}
 
 const Cofeecard: FC<CofeecardProps> = () => {
-  const [SideBar, SetSideBar] = useState<boolean>(false);
-  const showSidebar = () => {
-    // SetSideBar(true);
-  };
   return (
-    <div
-      className={`${" relative shadow-lg  w-full border-2  transition-all duration-300 border-coffee-100  mx-auto xl:w-11/12 rounded-lg  overflow-hidden group  cursor-pointer "}  ${
-        SideBar ? "hover:scale-100 transition-all" : " "
-      }`}
-      onClick={showSidebar}
-    >
+    <div className="relative shadow-lg  w-full border-2 transition-all duration-300 border-coffee-100  mx-auto rounded-lg  overflow-hidden group  cursor-pointer">
       <div className="w-full mx-auto flex items-center justify-center">
         <img
           src={loves}
@@ -67,6 +59,10 @@ const Cofeecard: FC<CofeecardProps> = () => {
           >
             <BsEye />
           </Link>
+
+          <div className="h-8 w-8  flex text-center  items-center justify-center text-lightdark  bg-white shadow-lg">
+            <Heart className="text-3xl p-2" />
+          </div>
         </button>
       </div>
     </div>
