@@ -46,12 +46,29 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
           onClick={hideModalHandler}
         />
 
-        <div className="absolute top-[14rem] left-[1.5rem] h-10 w-10">
-          <NavLink to="/">
-            <Coffeelogo className=" h-16 w-16  sm:h-20 sm:w-20 bg-coffee-100 rounded-full fill-red-300" />
-          </NavLink>{" "}
-        </div>
         <ul className="text-3xl space-y-8 p-10 capitalize font-rails font-medium text-white">
+          <NavLink to="/menu">
+            <motion.li
+              variants={item}
+              initial={{ y: 24, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              exit={{
+                opacity: 0,
+                y: 24,
+                transition: {
+                  ease: "easeInOut",
+                  delay: 0.8,
+                },
+              }}
+              onClick={hideModalHandler}
+              className="mb-7"
+            >
+              <li>
+                <Coffeelogo className=" h-16 w-16  sm:h-20 sm:w-20 bg-coffee-100 rounded-full fill-red-300" />
+              </li>
+            </motion.li>
+          </NavLink>
           <NavLink to="/menu">
             <motion.li
               variants={item}
