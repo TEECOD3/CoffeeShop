@@ -1,6 +1,8 @@
+import { FC } from "react";
+
 interface MenucardsProps {}
 
-const Menucards: FunctionComponent<MenucardsProps> = () => {
+const Menucards: FC<MenucardsProps> = () => {
   return <div className="">MEnu card</div>;
 };
 
