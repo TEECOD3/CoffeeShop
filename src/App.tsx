@@ -1,4 +1,5 @@
 import Home from "./Pages/Home";
+import { useEffect } from "react";
 import {
   Route,
   createBrowserRouter,
