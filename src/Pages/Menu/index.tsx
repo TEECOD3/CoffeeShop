@@ -18,7 +18,7 @@ const Menu = () => {
 
   const navigate = useNavigate();
   return (
-    <div className=" py-28  bg-hero  h-full w-full px-3 xl:px-0 ">
+    <div className=" py-28 h-full w-full px-3 xl:px-0 ">
       <div className="flex flex-col max-w-7xl lg:max-w-[80%] mx-auto gap-2  md:px-2">
         <main className="w-full h-full">
           <div className="mb-6  md:w-4/12 capitalize text-base sm:text-xl font-bold flex item-center justify-left">
