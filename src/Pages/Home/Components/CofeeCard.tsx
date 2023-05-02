@@ -56,18 +56,18 @@ const Cofeecard: FC<CofeecardProps> = () => {
       <div className="absolute p-2 bg-white top-3  -right-11  opacity-0 group-hover:opacity-100 group-hover:right-2 transition-all duration-300 ">
         <button className="flex items-center justify-center  flex-col">
           <div className="h-8 w-8  flex text-center  items-center justify-center text-lightdark  bg-white shadow-lg ">
-            <ShoppingBagIcon className="text-3xl " />
+            <ShoppingBagIcon className="h-4 w-4 md:h-8 md:w-8" />
           </div>
 
           <Link
             to="/"
-            className="h-8 w-8 flex justify-center items-center text-lightdark bg-white shadow-lg "
+            className=" flex justify-center items-center text-lightdark bg-white shadow-lg "
           >
-            <EyeIcon />
+            <EyeIcon className="h-4 w-4 md:h-8 md:w-8" />
           </Link>
 
           <div className="h-10 w-10  flex text-center  items-center justify-center text-lightdark  bg-white shadow-lg">
-            <HeartIcon className="text-8xl " />
+            <HeartIcon className="h-4 w-4 md:h-8 md:w-8" />
           </div>
         </button>
       </div>

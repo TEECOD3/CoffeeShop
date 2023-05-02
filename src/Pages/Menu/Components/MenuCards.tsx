@@ -21,7 +21,7 @@ const Menucards: FC<MenucardsProps> = () => {
         <s className="text-lightdark text-sm">$900</s>
       </div>
 
-      <div className="button| absolute p-2  w-1/2 flex items-center justify-center  gap-1 md:gap-4 top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2  opacity-0 group-hover:opacity-100 group-hover:right-2 transition-all duration-300 ">
+      <div className="button| absolute p-2  w-1/2 flex items-center justify-center  gap-4 top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2  opacity-0 group-hover:opacity-100 group-hover:right-2 transition-all duration-300 ">
         <div className=" p-1 lg:p-3 bg-white rounded-full flex items-center justify-center">
           <ShoppingBagIcon className="h-4 w-4 lg:h-full lg:w-full  " />
         </div>
