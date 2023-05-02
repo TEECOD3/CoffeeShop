@@ -22,7 +22,7 @@ const Menu = () => {
     <>
       <AnimatePresence>
         <motion.div
-          className=" py-28 h-full w-full px-3 xl:px-0 "
+          className=" py-28 h-full w-full px-1 xl:px-0 "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ y: 0 }}
@@ -31,7 +31,7 @@ const Menu = () => {
             delay: 0.3,
           }}
         >
-          <div className="flex flex-col max-w-7xl lg:max-w-[80%] mx-auto gap-2  md:px-2">
+          <div className="flex flex-col w-full md:max-w-7xl lg:max-w-[80%] mx-auto gap-2  md:px-2">
             <main className="w-full h-full">
               <div className="mb-6  md:w-4/12 capitalize text-base sm:text-xl font-bold flex item-center justify-left">
                 <h4 className="">All Menu </h4>
@@ -40,7 +40,7 @@ const Menu = () => {
                 </span>
               </div>
               <div className="w-full mx-auto  h-full flex flex-col-reverse lg:flex-row gap-16 justify-center">
-                <div className="flex  lg:flex-col flex-col-reverse lg:w-[70%] border-2 p-8">
+                <div className="flex  lg:flex-col flex-col-reverse lg:w-[70%] border-2 p-2">
                   <div className="">
                     <h5 className="font-bold text-lightdark mt-2 md:mt-0">
                       Latest...
@@ -55,7 +55,7 @@ const Menu = () => {
                       </div>
                     </div>
                   </div>
-                  <div className=" grid-cols-2 grid   md:grid-cols-3 gap-3">
+                  <div className="grid-cols-2 grid md:grid-cols-3 gap-3">
                     <Menucards />
                     <Menucards />
                     <Menucards />

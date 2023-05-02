@@ -3,12 +3,10 @@ import { useLocation } from "react-router-dom";
 import image from "../../../Data/images/Brewedlarge/BRW8.jpg";
 import {
   Facebook,
-  Heart,
   Instagram,
   Linkedin,
   Minus,
   ShoppingBag,
-  Star,
   Twitter,
 } from "lucide-react";
 import { Add } from "@mui/icons-material";
@@ -25,8 +23,8 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
   }, [pathname]);
   return (
     <>
-      <section className=" py-24">
-        <div className="flex flex-col md:flex-row max-w-7xl mx-auto my-10">
+      <main className=" py-16 lg:py-20">
+        <section className="flex flex-col md:flex-row max-w-7xl mx-auto my-10">
           <div className="rightside| w-full md:w-1/2 h-full ">
             <div className=" h-[20rem]  sm:h-[30rem] md:h-[35rem] lg:h-[40rem] px-3">
               <img
@@ -38,7 +36,7 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
           </div>
 
           <div className="leftside| w-full md:w-1/2 p-3">
-            <h3 className="px-4 py-2 text-white text-sm bg-coffee-100 inline-block rounded-md">
+            <h3 className="px-4 py-2  my-2 text-white text-sm bg-coffee-100 inline-block rounded-md">
               in stock
             </h3>
             <h2 className=" text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold capitalize ">
@@ -71,19 +69,19 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
             </div>
 
             <div className="cartbutton| mt-3 flex gap-3 my-4">
-              <div className="flex border-2 border-lightdark px-4 w-[10rem] items-center justify-center ">
-                <button className="p-2 px-4 text-2xl flex item-center ">
+              <div className="flex border-2 border-lightdark md:px-4 md:w-[10rem] items-center justify-center ">
+                <button className="p-2 md:px-4 text-2xl flex item-center ">
                   <Minus />
                 </button>
-                <span className="p-1 px-4 text-2xl flex items-center border-l-2 border-lightdark border-r-2">
+                <span className="p-1 px-3 md:px-4 text-2xl flex items-center border-l-2 border-lightdark border-r-2">
                   1
                 </span>
-                <button className="p-2 px-4 text-2xl flex items-center">
+                <button className="p-2 md:px-4 text-2xl flex items-center">
                   <Add />
                 </button>
               </div>
 
-              <Button className="flex rounded-none bg-coffee-100 px-6 md:px-10 item-center justify-center gap-3">
+              <Button className="flex rounded-none bg-coffee-100 px-4 lg:px-6 md:px-10 item-center justify-center gap-3">
                 <ShoppingBag className="w-1/6" />
                 <span className="text-[0.7rem] xl:text-sm w-4/6">
                   add to cart
@@ -94,13 +92,18 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
             <hr />
 
             <div className="aboutcoffee| mt-2 flex items-start flex-col space-y-1 lg:space-y-3 text-lightdark font-medium">
-              <span className="flex items-center justify-center gap-3">
-                <BsHeart /> <span>add to wishlist</span>
+              <span className="flex items-center justify-center gap-1">
+                <BsHeart />{" "}
+                <span className="font-bold fill-red-400">add to wishlist</span>
               </span>
-              <h3>category: espresso</h3>
-              <h3>tag: our shop</h3>
+              <h3 className="font-medium">
+                <span className="font-semibold">category: </span> espresso
+              </h3>
+              <h3>
+                <span className="font-semibold">tag: </span> our shop
+              </h3>
               <div className="flex gap-1">
-                <span>share: </span>
+                <span className="font-semibold">share: </span>
                 <div className="flex gap-3 text-2xl">
                   <Facebook className="text-2xl" />
                   <Twitter />
@@ -110,8 +113,35 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* <section className="similarProducts| my-20 ">
+          <div className="">
+            <h4>similar product</h4>
+
+            <div className="flex gap-3 h-1/2">
+              <div className="h-1/2">
+                <img src={image} alt="" className="h-full object-cover w-1/2" />
+              </div>
+              <div className="h-[10rem]">
+                <img src={image} alt="" />
+              </div>
+              <div className="h-[10rem]">
+                <img src={image} alt="" />
+              </div>
+              <div className="h-[10rem]">
+                <img src={image} alt="" />
+              </div>
+              <div className="h-[10rem]">
+                <img src={image} alt="" />
+              </div>
+              <div className="h-[10rem]">
+                <img src={image} alt="" />
+              </div>
+            </div>
+          </div>
+        </section> */}
+      </main>
     </>
   );
 };
