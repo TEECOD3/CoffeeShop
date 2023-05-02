@@ -1,8 +1,14 @@
 import { FC, useState } from "react";
-import { BsBag, BsEye, BsPlus, BsStar } from "react-icons/bs";
+import { BsBag, BsEye, BsHeart, BsPlus, BsStar } from "react-icons/bs";
 import loves from "../../../Data/images/espresso/espresso5.jpg";
 import { Link } from "react-router-dom";
-import { Heart } from "lucide-react";
+import {
+  BaggageClaim,
+  EyeIcon,
+  Heart,
+  HeartIcon,
+  ShoppingBagIcon,
+} from "lucide-react";
 
 interface CofeecardProps {}
 
@@ -47,21 +53,21 @@ const Cofeecard: FC<CofeecardProps> = () => {
         </div>
       </div>
 
-      <div className="absolute p-2 bg-white top-3 -right-11  opacity-0 group-hover:opacity-100 group-hover:right-2 transition-all duration-300 ">
-        <button>
+      <div className="absolute p-2 bg-white top-3  -right-11  opacity-0 group-hover:opacity-100 group-hover:right-2 transition-all duration-300 ">
+        <button className="flex items-center justify-center  flex-col">
           <div className="h-8 w-8  flex text-center  items-center justify-center text-lightdark  bg-white shadow-lg ">
-            <BsBag className="text-3xl p-2" />
+            <ShoppingBagIcon className="text-3xl " />
           </div>
 
           <Link
             to="/"
             className="h-8 w-8 flex justify-center items-center text-lightdark bg-white shadow-lg "
           >
-            <BsEye />
+            <EyeIcon />
           </Link>
 
-          <div className="h-8 w-8  flex text-center  items-center justify-center text-lightdark  bg-white shadow-lg">
-            <Heart className="text-3xl p-2" />
+          <div className="h-10 w-10  flex text-center  items-center justify-center text-lightdark  bg-white shadow-lg">
+            <HeartIcon className="text-8xl " />
           </div>
         </button>
       </div>

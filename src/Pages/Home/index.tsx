@@ -29,12 +29,22 @@ import BlogCard from "./Components/BlogCard";
 import Loader from "../../Components/UI/Loader";
 import { Link, useNavigate } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Home = () => {
   const navigate = useNavigate();
   return (
     <>
-      <section className="bg-black/90 z-30 w-full h-full  bg-hero flex  md:p-24 ">
+      <motion.section
+        className="bg-black/90 z-30 w-full h-full  bg-hero flex  md:p-24 "
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{
+          duration: 0.2,
+          delay: 0.3,
+        }}
+      >
         <div className="flex flex-col-reverse items-center justify-between h-full py-10 sm:py-0 font-rails  space-y-2 w-full mt-20 md:mt-2   md:max-w-7xl  mx-auto sm:max-w-4xl md:flex-row sm:space-y-8 md:space-x-16 lg:mt-0 lg:space-x-28">
           <div className="w-4/5   mx-auto relative p-8 lg:p-5 sm:w-5/6   ">
             <div className="h-[6rem] w-[5rem]  absolute bg-seed bg-no-repeat left-[33rem] max-sm:left-[14rem] max-sm:top-[11rem] max-md:left-[22rem] top-[15rem] max-xl:left-[21rem] flex items-center justify-center"></div>
@@ -74,7 +84,7 @@ const Home = () => {
             />
           </div>
         </div>
-      </section>
+      </motion.section>
 
       <section className="lg:p-4 my-4 sm:my-8 max-md:p-1  ">
         <div className=" gap-3 flex justify-between lg:max-w-7xl  mx-auto  p-2   flex-col md:flex-row">

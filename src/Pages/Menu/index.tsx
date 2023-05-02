@@ -25,10 +25,10 @@ const Menu = () => {
           className=" py-28 h-full w-full px-3 xl:px-0 "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          exit={{ y: 0 }}
           transition={{
             duration: 0.2,
-            delay: 0.1,
+            delay: 0.3,
           }}
         >
           <div className="flex flex-col max-w-7xl lg:max-w-[80%] mx-auto gap-2  md:px-2">
