@@ -3,10 +3,12 @@ import blogimage from "../../../assets/Images/loves.png";
 import { BsCalendarWeek } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 import Button from "../../../Components/UI/Button";
+import { useNavigate } from "react-router-dom";
 
 interface BlogCardProps {}
 
 const BlogCard: FC<BlogCardProps> = () => {
+  const navigate = useNavigate();
   return (
     <div className=" mx-auto w-full md:w-10/12  shadow-lg">
       <img
@@ -38,7 +40,12 @@ const BlogCard: FC<BlogCardProps> = () => {
           depression
         </p>
 
-        <Button className="mt-5 bg-transparent py-6 text-sm  hover:bg-coffee-100 hover:text-white text-coffee-100 border-2 border-coffee-100">
+        <Button
+          onClick={() => {
+            navigate("/blog");
+          }}
+          className="mt-5 bg-transparent py-6 text-sm  hover:bg-coffee-100 hover:text-white text-coffee-100 border-2 border-coffee-100"
+        >
           <span className="font-light mr-4 ">Read more</span>
           <span className=" md:text-2xl">&#8594;</span>
         </Button>

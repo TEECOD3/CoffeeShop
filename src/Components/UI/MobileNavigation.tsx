@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { MdOutlineClose } from "react-icons/md";
 import Coffeelogo from "../../Pages/Home/icon/coffelogo";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion,  } from "framer-motion";
 import { NavLink } from "react-router-dom";
 interface MobileNavProps {
   hideModalHandler: () => void;
