@@ -10,7 +10,7 @@ import {
 } from "react-router-dom";
 import RootLayer from "./Layout/RootLayer";
 import Menu from "./Pages/Menu";
-import Blog from "./Pages/Blog/Blog";
+import Blog from "./Pages/Blog";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
