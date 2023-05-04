@@ -285,22 +285,22 @@ const Home = () => {
         </div>
 
         <div className="flex w-full flex-col mx-auto sm:flex-row sm:flex-wrap lg:w-[80%] gap-4 xl:gap-2 xl:flex-nowrap text-center my-8">
-          <div className="mx-auto">
+          <div className="mx-auto h-[300px] w-[300px]">
             <img src={chef1} alt="" className="mx-auto" />
             <h3 className="font-bold text-base mt-4">Bulbul Hassan</h3>
             <h2>founder</h2>
           </div>
-          <div className="mx-auto">
+          <div className="mx-auto  h-[300px] w-[300px]v">
             <img src={chef2} alt="" className="mx-auto" />
             <h3 className="font-bold text-base mt-4 ">Jorina Begum</h3>
             <h2>specialist</h2>
           </div>
-          <div className="mx-auto">
+          <div className="mx-auto  h-[300px] w-[300px]">
             <img src={chef3} alt="" className="mx-auto" />
             <h3 className="font-bold text-base mt-4">M.Mohammad Nur</h3>
             <h2>Chef</h2>
           </div>
-          <div className="mx-auto">
+          <div className="mx-auto  h-[300px] w-[300px]">
             <img src={chef4} alt="" className="mx-auto" />
             <h3 className="font-bold text-base mt-4">Munna Kathy</h3>
             <h2>owner</h2>

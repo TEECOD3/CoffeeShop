@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 
 const RootLayer = () => {
   return (
-    <body className="min-h-full flex flex-col">
+    <body className="min-h-full flex flex-col ">
       <Navbar />
       <main className="h-auto">
         <Outlet />
