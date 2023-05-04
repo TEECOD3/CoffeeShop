@@ -116,75 +116,75 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
           </div>
         </section>
 
-        <section className="similarProducts| my-20  w-[90vw] mx-auto">
+        <section className="similarProducts| my-4 md:my-16  w-[90vw] mx-auto">
           <div className="">
             <h4>similar product</h4>
             <div className="marquee">
               <div className="track">
-                <div className="w-[300px] h-full md:w-[100rem] md:h-[20rem] ">
+                <div className="w-[150px] h-full md:w-[100rem] md:h-[20rem] ">
                   <img
                     src={image}
                     alt=""
                     className="h-full object-cover w-full bg-cover bg-no-repeat bg-top"
                   />
                 </div>
-                <div className=" w-[300px] h-full md:w-[100rem] md:h-[20rem] ">
+                <div className=" w-[150px] h-full md:w-[100rem] md:h-[20rem] ">
                   <img
                     src={image}
                     alt=""
                     className="h-full object-cover w-full bg-cover bg-no-repeat bg-top"
                   />
                 </div>
-                <div className=" w-[300px] h-full md:w-[100rem]  md:h-[20rem] ">
+                <div className=" w-[150px] h-full md:w-[100rem]  md:h-[20rem] ">
                   <img
                     src={image}
                     alt=""
                     className="h-full object-cover w-full bg-cover bg-no-repeat bg-top"
                   />
                 </div>
-                <div className="w-[300px] h-full md:w-[100rem]  md:h-[20rem] ">
+                <div className="w-[150px] h-full md:w-[100rem]  md:h-[20rem] ">
                   <img
                     src={image}
                     alt=""
                     className="h-full object-cover w-full bg-cover bg-no-repeat bg-top"
                   />
                 </div>
-                <div className=" w-[300px] h-full md:w-[100rem]  md:h-[20rem] ">
+                <div className=" w-[150px] h-full md:w-[100rem]  md:h-[20rem] ">
                   <img
                     src={image}
                     alt=""
                     className="h-full object-cover w-full bg-cover bg-no-repeat bg-top"
                   />
                 </div>
-                <div className=" w-[300px] h-full md:w-[100rem]  md:h-[20rem] ">
+                <div className=" w-[150px] h-full md:w-[100rem]  md:h-[20rem] ">
                   <img
                     src={image}
                     alt=""
                     className="h-full object-cover w-full bg-cover bg-no-repeat bg-top"
                   />
                 </div>
-                <div className=" w-[300px] h-full md:w-[100rem]  md:h-[20rem] ">
+                <div className=" w-[150px] h-full md:w-[100rem]  md:h-[20rem] ">
                   <img
                     src={image2}
                     alt=""
                     className="h-full object-cover w-full bg-cover bg-no-repeat bg-top"
                   />
                 </div>
-                <div className=" w-[300px] h-full md:w-[100rem]  md:h-[20rem] ">
+                <div className=" w-[150px] h-full md:w-[100rem]  md:h-[20rem] ">
                   <img
                     src={image}
                     alt=""
                     className="h-full object-cover w-full bg-cover bg-no-repeat bg-top"
                   />
                 </div>
-                <div className="w-[300px] h-full md:w-[100rem]  md:h-[20rem] ">
+                <div className="w-[150px] h-full md:w-[100rem]  md:h-[20rem] ">
                   <img
                     src={image}
                     alt=""
                     className="h-full object-cover w-full bg-cover bg-no-repeat bg-top"
                   />
                 </div>
-                <div className="w-[300px] h-full md:w-[100rem]  md:h-[20rem] ">
+                <div className="w-[150px] h-full md:w-[100rem]  md:h-[20rem] ">
                   <img
                     src={image}
                     alt=""
