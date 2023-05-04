@@ -60,9 +60,8 @@ const Footer = () => {
           </div>
           <p className="mt-4">
             Lugbe is a suburb located in the Abuja Municipal Area Council (AMAC)
-            of the Federal Capital Territory (FCT) of Nigeria. It is situated to
-            the east of the city center Address: Lugbe, Abuja, Nigeria Phone:
-            09031269618 Email: temi236topemicheal@gmail.com
+            of the Federal Capital Territory (FCT) of Nigeria. 09031269618
+            Email: temi236topemicheal@gmail.com
           </p>
         </div>
 

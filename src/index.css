@@ -118,3 +118,40 @@ input[type="range"]:focus::-moz-range-thumb {
 /* .checkers {
   accent-color: #bc9a6c;
 } */
+
+.marquee {
+  position: relative;
+  height: 300px;
+  width: 90vw;
+  overflow-x: hidden;
+}
+.track {
+  width: 3000%;
+  position: absolute;
+  gap: 10px;
+  object-fit: cover;
+  display: flex;
+  will-change: transform;
+  animation: scroll 15s linear infinite;
+}
+.track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 768px) {
+  .marquee {
+    height: 400px;
+  }
+  .track {
+    width: 180%;
+  }
+}

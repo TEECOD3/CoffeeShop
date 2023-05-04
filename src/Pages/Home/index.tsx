@@ -36,7 +36,7 @@ const Home = () => {
   return (
     <>
       <motion.section
-        className="bg-black/90 z-30 w-full h-full  bg-hero flex  md:p-24 "
+        className="bg-black/90 z-30 w-full h-full  flex  md:p-24 "
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}

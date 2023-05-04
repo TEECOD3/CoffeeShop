@@ -11,6 +11,15 @@ export default {
       xl: "1440px",
     },
     extend: {
+      keyframes: {
+        scroll: {
+          "0%": { transform: "transalte(0)" },
+          "100%": { transform: "translate(-50%)" },
+        },
+      },
+      animation: {
+        scroll: "scroll 5s ease-in-out infinite",
+      },
       backgroundImage: {
         hero: "url('./src/assets/Images/bg-hero.png')",
         lightSeed: "url('./src/assets/Images/ligghtseed.png')",

@@ -1,6 +1,7 @@
 import { FC, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import image from "../../../Data/images/Brewedlarge/BRW8.jpg";
+import image2 from "../../../Data/images/Brewedlarge/BRW7.jpg";
 import {
   Facebook,
   Instagram,
@@ -26,7 +27,7 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
       <main className=" py-16 lg:py-20">
         <section className="flex flex-col md:flex-row max-w-7xl mx-auto my-10">
           <div className="rightside| w-full md:w-1/2 h-full ">
-            <div className=" h-[20rem]  sm:h-[30rem] md:h-[35rem] lg:h-[40rem] px-3">
+            <div className=" h-[20rem]  sm:h-[20rem] md:h-[35rem] lg:h-[40rem] px-3">
               <img
                 src={image}
                 alt="coffeedetail image"
@@ -115,32 +116,85 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
           </div>
         </section>
 
-        {/* <section className="similarProducts| my-20 ">
+        <section className="similarProducts| my-20  w-[90vw] mx-auto">
           <div className="">
             <h4>similar product</h4>
-
-            <div className="flex gap-3 h-1/2">
-              <div className="h-1/2">
-                <img src={image} alt="" className="h-full object-cover w-1/2" />
-              </div>
-              <div className="h-[10rem]">
-                <img src={image} alt="" />
-              </div>
-              <div className="h-[10rem]">
-                <img src={image} alt="" />
-              </div>
-              <div className="h-[10rem]">
-                <img src={image} alt="" />
-              </div>
-              <div className="h-[10rem]">
-                <img src={image} alt="" />
-              </div>
-              <div className="h-[10rem]">
-                <img src={image} alt="" />
+            <div className="marquee">
+              <div className="track">
+                <div className="w-[300px] h-full md:w-[100rem] md:h-[20rem] ">
+                  <img
+                    src={image}
+                    alt=""
+                    className="h-full object-cover w-full bg-cover bg-no-repeat bg-top"
+                  />
+                </div>
+                <div className=" w-[300px] h-full md:w-[100rem] md:h-[20rem] ">
+                  <img
+                    src={image}
+                    alt=""
+                    className="h-full object-cover w-full bg-cover bg-no-repeat bg-top"
+                  />
+                </div>
+                <div className=" w-[300px] h-full md:w-[100rem]  md:h-[20rem] ">
+                  <img
+                    src={image}
+                    alt=""
+                    className="h-full object-cover w-full bg-cover bg-no-repeat bg-top"
+                  />
+                </div>
+                <div className="w-[300px] h-full md:w-[100rem]  md:h-[20rem] ">
+                  <img
+                    src={image}
+                    alt=""
+                    className="h-full object-cover w-full bg-cover bg-no-repeat bg-top"
+                  />
+                </div>
+                <div className=" w-[300px] h-full md:w-[100rem]  md:h-[20rem] ">
+                  <img
+                    src={image}
+                    alt=""
+                    className="h-full object-cover w-full bg-cover bg-no-repeat bg-top"
+                  />
+                </div>
+                <div className=" w-[300px] h-full md:w-[100rem]  md:h-[20rem] ">
+                  <img
+                    src={image}
+                    alt=""
+                    className="h-full object-cover w-full bg-cover bg-no-repeat bg-top"
+                  />
+                </div>
+                <div className=" w-[300px] h-full md:w-[100rem]  md:h-[20rem] ">
+                  <img
+                    src={image2}
+                    alt=""
+                    className="h-full object-cover w-full bg-cover bg-no-repeat bg-top"
+                  />
+                </div>
+                <div className=" w-[300px] h-full md:w-[100rem]  md:h-[20rem] ">
+                  <img
+                    src={image}
+                    alt=""
+                    className="h-full object-cover w-full bg-cover bg-no-repeat bg-top"
+                  />
+                </div>
+                <div className="w-[300px] h-full md:w-[100rem]  md:h-[20rem] ">
+                  <img
+                    src={image}
+                    alt=""
+                    className="h-full object-cover w-full bg-cover bg-no-repeat bg-top"
+                  />
+                </div>
+                <div className="w-[300px] h-full md:w-[100rem]  md:h-[20rem] ">
+                  <img
+                    src={image}
+                    alt=""
+                    className="h-full object-cover w-full bg-cover bg-no-repeat bg-top"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </section> */}
+        </section>
       </main>
     </>
   );
