@@ -14,7 +14,11 @@ import spons6 from "../Pages/Home/icon/spons6.png";
 import { MdCoffeeMaker } from "react-icons/md";
 import { GiCoffeeBeans, GiCoffeeCup, GiCoffeeMug } from "react-icons/gi";
 import { CiCoffeeBean } from "react-icons/ci";
-
+import image from "../assets/Images/milkshake.png";
+import image2 from "../Data/images/Brewedlarge/BRW12.jpg";
+import image3 from "../Data/images/Brewedlarge/BRW8.jpg";
+import image4 from "../Data/images/Brewedlarge/BRW6.jpg";
+import image5 from "../Data/images/Brewedlarge/BRW10.jpg";
 export const leftCoffee = [
   {
     id: 1,
@@ -183,6 +187,23 @@ export const buttondata = [
     component: <CiCoffeeBean />,
     name: "Single origin",
   },
+];
+
+export const coffeedets = [
+  { id: 1, component: <MdCoffeeMaker />, image: image },
+  { id: 2, component: <MdCoffeeMaker />, image: image2 },
+  { id: 3, component: <MdCoffeeMaker />, image: image3 },
+  { id: 4, component: <MdCoffeeMaker />, image: image4 },
+  { id: 5, component: <MdCoffeeMaker />, image: image5 },
+  { id: 6, component: <MdCoffeeMaker />, image: image2 },
+  { id: 7, component: <MdCoffeeMaker />, image: image3 },
+  { id: 8, component: <MdCoffeeMaker />, image: image4 },
+  { id: 9, component: <MdCoffeeMaker />, image: image5 },
+  { id: 10, component: <MdCoffeeMaker />, image: image5 },
+  { id: 60, component: <MdCoffeeMaker />, image: image2 },
+  { id: 72, component: <MdCoffeeMaker />, image: image3 },
+  { id: 83, component: <MdCoffeeMaker />, image: image4 },
+  { id: 92, component: <MdCoffeeMaker />, image: image5 },
 ];
 
 // espresso

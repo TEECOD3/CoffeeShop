@@ -29,20 +29,16 @@ const Navbar = () => {
               <Coffeelogo className=" h-16 w-16  sm:h-20 sm:w-20 " />
             </Link>
           </div>
-          <nav className="w-1/3 max-sm:hidden">
-            <ul className="flex justify-around font-medium capitalize text-white max-md:hidden cursor-pointer ">
-              <NavLink to="/menu">
-                <li>Menu</li>
-              </NavLink>
-              <li>Blog</li>
-              <li>contact</li>
-            </ul>
-          </nav>
 
-          <ul className="md:flex hidden justify-around  w-1/3 md:w-[10%] item-end ">
+          <ul className="md:flex hidden justify-around  w-1/3 md:w-[40%] item-end text-white ">
+            <li>contact</li>
+            <NavLink to="/menu">
+              <li>Menu</li>
+            </NavLink>
             <li className="flex items-center justify-center">
               <FaSistrix className="text-white text-2xl" />
             </li>
+
             <li>
               <Profile />
             </li>

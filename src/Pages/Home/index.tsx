@@ -353,7 +353,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+{/* 
       <section className=" my-10 p-8">
         <div className="text-center md:w-[60%] mx-auto w-full">
           <h2 className=" text-[#333333] text-3xl font-bold text-coffeeBlack mb-1 capitalize font-rails">
@@ -370,7 +370,7 @@ const Home = () => {
           <BlogCard />
           <BlogCard />
         </div>
-      </section>
+      </section> */}
 
       <section className=" mb-40 w-full ">
         <div className="text-center md:w-[60%] mx-auto w-full">

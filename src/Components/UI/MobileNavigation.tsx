@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { MdOutlineClose } from "react-icons/md";
 import Coffeelogo from "../../Pages/Home/icon/coffelogo";
-import { motion,  } from "framer-motion";
+import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 interface MobileNavProps {
   hideModalHandler: () => void;
@@ -88,23 +88,7 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
               <li>Menu</li>
             </motion.li>
           </NavLink>
-          <motion.li
-            variants={item}
-            initial={{ y: 24, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            exit={{
-              opacity: 0,
-              y: 24,
-              transition: {
-                ease: "easeInOut",
-                delay: 0.6,
-              },
-            }}
-          >
-            {" "}
-            blog{" "}
-          </motion.li>
+
           <motion.li
             variants={item}
             initial={{ y: 24, opacity: 0 }}
