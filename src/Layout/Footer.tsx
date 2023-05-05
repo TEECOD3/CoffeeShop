@@ -36,7 +36,7 @@ const Footer = () => {
               Subscribe now
             </Button>
           </div>
-          <div className="w-full mx-auto my-2">
+          <div className="w-full mx-auto mb-6 md:mb-2">
             <div className="w-2/3 mx-auto flex gap-2 justify-center ">
               <div className="md:bg-coffee-100 flex items-center justify-center text-sm md:py-2 px-1 rounded-lg">
                 <Facebook className="text-coffee-100 md:text-white h-6 " />
