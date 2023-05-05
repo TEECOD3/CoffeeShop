@@ -1,25 +1,23 @@
 import { FC } from "react";
 import image from "../../Data/images/mainimages/coferd.png";
-import { Minus, ShoppingBag } from "lucide-react";
-import { Add } from "@mui/icons-material";
-import Button from "../../Components/UI/Button";
-import { MdClose } from "react-icons/md";
+import { RiDeleteBin2Fill } from "react-icons/ri";
 
 interface CartitemProps {}
 
 const Cartitem: FC<CartitemProps> = () => {
   return (
-    <div className="w-full">
-      <div className="bg-white shadow-lg rounded-lg mt-8 ">
+    <div className="w-full  mx-auto">
+      <div className="bg-white shadow-lg rounded-lg mt-8 p-4">
         <div className="min-h-[150px] flex items-center  gap-x-4 ">
-          <img src={image} alt="cartimage" className="max-w-[80px]" />
+          <img src={image} alt="cartimage" className="max-w-[60px]" />
 
           <div className="font-nunito w-full flex flex-col">
             <div className="flex justify-between mb-2">
               <h3 className="uppercase text-gray-800 font-bold text-sm ">
                 Coffea Canephora coffee bean
               </h3>
-              <MdClose />
+
+              <RiDeleteBin2Fill className="text-coffee-100" />
             </div>
 
             <div className="flex gap-x-3 h-[36px] text-sm">
@@ -34,11 +32,12 @@ const Cartitem: FC<CartitemProps> = () => {
                   +
                 </div>
               </div>
-              <div className="flex flex-1 justify-around items-center text-gray-400 font-bold">
-                $299.00
+              <div className="flex flex-1 justify-start items-center text-gray-400 font-bold">
+                price: $299.00
               </div>
-              <div className="flex flex-1 justify-end items-center text-gray-400 font-medium">
-                $900.00
+
+              <div className="flex flex-2 justify-end items-center text-gray-400 font-medium">
+                total: $900.00
               </div>
             </div>
           </div>

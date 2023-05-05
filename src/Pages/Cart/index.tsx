@@ -11,12 +11,15 @@ const Cartpage = () => {
           </h2>
           <div className="h-[0.15rem] w-full bg-lightdark" />
         </div>
-        <div className="mt-2 md:w-3/4 mx-auto">
-          <Cartitem />
-          <Cartitem />
-          <Cartitem />
-          <Cartitem />
-          <Cartitem />
+        <div className="mt-2 flex-row md:flex-col mx-auto">
+          <div className="md:w-1/2 bg-red-600">
+            <Cartitem />
+            <Cartitem />
+            <Cartitem />
+            <Cartitem />
+            <Cartitem />
+          </div>
+          <div className="md:w-1/2 bg-red-400 h-[150px]"></div>
         </div>
       </section>
     </main>
