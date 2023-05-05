@@ -1,8 +1,12 @@
 import { FC } from "react";
-import { MdOutlineClose } from "react-icons/md";
+import { MdMenuBook, MdOutlineClose } from "react-icons/md";
 import Coffeelogo from "../../Pages/Home/icon/coffelogo";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
+import { CgProfile } from "react-icons/cg";
+import { BookCopy, ShoppingBag } from "lucide-react";
+import { CallEndOutlined, MenuBook } from "@mui/icons-material";
+import { Menu } from "@mui/material";
 interface MobileNavProps {
   hideModalHandler: () => void;
 }
@@ -83,12 +87,13 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
                   delay: 0.8,
                 },
               }}
+              className="flex items-center justify-start gap-2 border-b-white border-b-4"
               onClick={hideModalHandler}
             >
-              <li>Menu</li>
+              <MdMenuBook />
+              <span>Menu</span>
             </motion.li>
           </NavLink>
-
           <motion.li
             variants={item}
             initial={{ y: 24, opacity: 0 }}
@@ -102,10 +107,29 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
                 delay: 0.4,
               },
             }}
+            className="flex items-center justify-start gap-2 border-b-white border-b-4"
           >
-            Shop
+            <ShoppingBag /> <span>Coffeebag</span>
           </motion.li>
           <motion.li
+            className="flex items-center justify-start gap-2 border-b-white border-b-4"
+            variants={item}
+            initial={{ y: 24, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            exit={{
+              opacity: 0,
+              y: 30,
+              transition: {
+                ease: "easeInOut",
+                delay: 0.4,
+              },
+            }}
+          >
+            <CallEndOutlined /> <span>contact us</span>
+          </motion.li>
+          <motion.li
+            className="flex items-center justify-start gap-2 border-b-white border-b-4"
             variants={item}
             initial={{ y: 24, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -119,7 +143,7 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
               },
             }}
           >
-            contact us
+            <CgProfile /> <span>profile</span>
           </motion.li>
         </ul>
       </motion.div>

@@ -31,10 +31,11 @@ const Navbar = () => {
           </div>
 
           <ul className="md:flex hidden justify-around  w-1/3 md:w-[40%] item-end text-white ">
-            <li>contact</li>
             <NavLink to="/menu">
               <li>Menu</li>
             </NavLink>
+            <li>contact</li>
+
             <li className="flex items-center justify-center">
               <FaSistrix className="text-white text-2xl" />
             </li>
