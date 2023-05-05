@@ -4,9 +4,10 @@ import { FaSistrix } from "react-icons/fa";
 import Coffeelogo from "../Pages/Home/icon/coffelogo";
 import MobileNav from "../Components/UI/MobileNavigation";
 import { AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { Profiler, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { NavLink, Link } from "react-router-dom";
+import { CgProfile } from "react-icons/cg";
 const Navbar = () => {
   const [ModalOpen, setModalOpen] = useState(false);
 
@@ -22,7 +23,7 @@ const Navbar = () => {
       <AnimatePresence>
         {ModalOpen && <MobileNav hideModalHandler={hidemodalHandler} />}
       </AnimatePresence>
-      <div className=" px-8 sm:px-8 bg-black/50 z-[1000] w-full fixed ">
+      <div className=" px-8 sm:px-8 bg-black z-[1000] w-full fixed ">
         <div className="  md:w-full  md:max-w-7xl flex justify-between items-center mx-auto h-full">
           <div className="capitalize text-2xl font-bold text-white">
             <Link to="/">
@@ -40,7 +41,7 @@ const Navbar = () => {
               <FaSistrix className="text-white text-2xl" />
             </li>
 
-            <li>
+            <li className="h-6 w-6">
               <Profile />
             </li>
             <li>
@@ -48,11 +49,14 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <ul className="flex items-center justify-center w-[10%] gap-4 md:hidden">
-            <li>
+          <ul className="flex items-center justify-center w-[20%] gap-6 md:hidden px-4 mr-4">
+            <li className="h-2 w-2">
               <CartBag />
             </li>
-            <li>
+            <li className="h-2 w-2">
+              <Profile />
+            </li>
+            <li className="h-2 w-2">
               <GiHamburgerMenu
                 className="text-white text-3xl"
                 onClick={openModalHandler}

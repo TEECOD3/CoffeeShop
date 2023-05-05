@@ -153,10 +153,10 @@ const Home = () => {
         </div>
       </section>
 
-      <section className=" mt-4 lg:mt-20  bg-[#EDEAE3]/20 py-8 md:p-8">
+      <section className=" mt-2 lg:mt-20  bg-[#EDEAE3]/20 py-8 md:p-8">
         <div className=" w-[90%] mx-auto md:w-[75%] lg:w-[95%] xl:w-[75%]">
           <div className="text-center lg:w-[40%] mx-auto w-full">
-            <h2 className=" text-4xl  md:text-4xl font-extrabold text-[#333333] text mb-1 capitalize font-rails">
+            <h2 className=" text-3xl  md:text-4xl font-extrabold text-[#333333] text mb-1 capitalize font-rails">
               Coffee Category
             </h2>
             <p className="mb-4 text-base md:text-xl font-medium text-lightdark">
@@ -353,7 +353,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-{/* 
+      {/* 
       <section className=" my-10 p-8">
         <div className="text-center md:w-[60%] mx-auto w-full">
           <h2 className=" text-[#333333] text-3xl font-bold text-coffeeBlack mb-1 capitalize font-rails">
