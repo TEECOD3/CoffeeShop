@@ -32,8 +32,12 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const breakpoints = {
-    768: {
+    480: {
       slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 3,
       spaceBetween: 10,
     },
     1024: {
@@ -52,7 +56,7 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
             <div className=" h-[20rem]  sm:h-[30rem] md:h-[35rem] lg:h-[40rem] px-3">
               <img
                 src={image}
-                alt="coffeedetail image"
+                alt="coffeedetail-image"
                 className="object-cover h-full bg-cover w-full rounded-md"
               />
             </div>
