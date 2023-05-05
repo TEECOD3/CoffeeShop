@@ -7,13 +7,13 @@ interface CartitemProps {}
 const Cartitem: FC<CartitemProps> = () => {
   return (
     <div className="w-full  mx-auto">
-      <div className="bg-white shadow-lg rounded-lg mt-8 p-4">
+      <div className="bg-white shadow-lg rounded-lg mt-2 p-4">
         <div className="min-h-[150px] flex items-center  gap-x-4 ">
           <img src={image} alt="cartimage" className="max-w-[60px]" />
 
           <div className="font-nunito w-full flex flex-col">
             <div className="flex justify-between mb-2">
-              <h3 className="uppercase text-gray-800 font-bold text-sm ">
+              <h3 className="uppercase text-gray-500 font-bold text-sm md:text-base ">
                 Coffea Canephora coffee bean
               </h3>
 
@@ -22,21 +22,21 @@ const Cartitem: FC<CartitemProps> = () => {
 
             <div className="flex gap-x-3 h-[36px] text-sm">
               <div className="flex flex-1 max-w-[100px] border-gray-100 border-2  items-center h-full text-gray-500 font-bold">
-                <div className="flex-1 flex h-full justify-center items-center ">
+                <div className="flex-1 flex h-full justify-center items-center text-base ">
                   -
                 </div>
                 <div className="h-full flex justify-center items-center px-2 ">
                   1
                 </div>
-                <div className="flex-1 h-full flex justify-center items-center ">
+                <div className="flex-1 h-full flex justify-center items-center text-base">
                   +
                 </div>
               </div>
-              <div className="flex flex-1 justify-start items-center text-gray-400 font-bold">
+              <div className="flex flex-1 justify-start items-center text-gray-400 font-bold  md:text-base">
                 price: $299.00
               </div>
 
-              <div className="flex flex-2 justify-end items-center text-gray-400 font-medium">
+              <div className="flex flex-2 justify-end items-center text-gray-400 font-medium  md:text-base">
                 total: $900.00
               </div>
             </div>
