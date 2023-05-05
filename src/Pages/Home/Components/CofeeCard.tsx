@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { BsBag, BsEye, BsHeart, BsPlus, BsStar } from "react-icons/bs";
-import loves from "../../../Data/images/espresso/espresso5.jpg";
+import loves from "../../../Data/images/jamaican-blue-mountain-coffee-coffee-bag-down-east-coffee-drink-coffee-sack-700246164a09d47271f422efc3b3229a.png";
 import { Link } from "react-router-dom";
 import {
   BaggageClaim,

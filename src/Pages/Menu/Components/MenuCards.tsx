@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import image from "../../../assets/Images/milkshake.png";
+import image from "../../../Data/images/tea-bag-pg-tips-coffee-drink-leaf-tea-f905281958c868e88b1315990bf32423.png";
 import { EyeIcon, ShoppingBagIcon } from "lucide-react";
 interface MenucardsProps {}
 

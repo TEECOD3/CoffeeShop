@@ -1,6 +1,6 @@
 import CoffeeContainer from "../icon/CoffeeContainer";
+import image from "../../../Data/images/jamaican-blue-mountain-coffee-coffee-bag-down-east-coffee-drink-coffee-sack-700246164a09d47271f422efc3b3229a.png";
 
-import Ringer from "../icon/Ringer";
 type coffeitemtype = {
   image: JSX.Element | string;
   cofee: string;

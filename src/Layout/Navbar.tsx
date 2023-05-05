@@ -24,8 +24,8 @@ const Navbar = () => {
       <AnimatePresence>
         {ModalOpen && <MobileNav hideModalHandler={hidemodalHandler} />}
       </AnimatePresence>
-      <div className=" px-2 sm:px-8 bg-black z-[1000] w-full fixed flex ">
-        <div className=" w-[90%] md:w-full  md:max-w-7xl flex justify-between items-center h-full">
+      <div className=" px-2 sm:px-8 bg-black z-[1000] w-full fixed flex md: ">
+        <div className=" w-[80%] md:w-full  md:max-w-7xl flex justify-between items-center h-full mx-auto">
           <div className="capitalize text-2xl font-bold text-white">
             <Link to="/">
               <Coffeelogo className=" h-16 w-16  sm:h-20 sm:w-20 " />

@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { useLocation } from "react-router-dom";
-import image from "../../../Data/images/Brewedlarge/BRW8.jpg";
+import image from "../../../Data/images/tea-bag-pg-tips-coffee-drink-leaf-tea-f905281958c868e88b1315990bf32423.png";
 import image2 from "../../../Data/images/Brewedlarge/BRW7.jpg";
 import {
   ArrowRight,
