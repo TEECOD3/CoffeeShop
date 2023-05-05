@@ -157,7 +157,7 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
             speed={1000}
             className="relative"
           >
-            <SwipperNavbuttons className="" />
+            <SwipperNavbuttons className="mt-4" />
             {coffeedets.map((cofee) => (
               <SwiperSlide key={cofee.id}>
                 <div className="relative w-full lg:mb-4 cursor-pointer z-20 hover:scale-[1.02] transition duration-100 delay-75 group ">
