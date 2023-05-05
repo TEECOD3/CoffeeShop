@@ -15,10 +15,15 @@ import { MdCoffeeMaker } from "react-icons/md";
 import { GiCoffeeBeans, GiCoffeeCup, GiCoffeeMug } from "react-icons/gi";
 import { CiCoffeeBean } from "react-icons/ci";
 import image from "../assets/Images/milkshake.png";
-import image2 from "../Data/images/Brewedlarge/BRW12.jpg";
-import image3 from "../Data/images/Brewedlarge/BRW8.jpg";
-import image4 from "../Data/images/Brewedlarge/BRW6.jpg";
-import image5 from "../Data/images/Brewedlarge/BRW10.jpg";
+import image2 from "../Data/images/jamaican-blue-mountain-coffee-coffee-bag-down-east-coffee-drink-coffee-sack-700246164a09d47271f422efc3b3229a.png";
+import image3 from "../Data/images/lion-coffee-bag-on-top-of-roasted-coffee-beans-png-clipart.jpg";
+import image4 from "../Data/images/tea-bag-pg-tips-coffee-drink-leaf-tea-f905281958c868e88b1315990bf32423.png";
+import image5 from "../Data/images/jamaican-blue-mountain-coffee-coffee-bag-down-east-coffee-drink-coffee-sack-700246164a09d47271f422efc3b3229a.png";
+import chef1 from "../Data/images/chefs/ourchef1.png";
+import chef2 from "../Data/images/chefs/ourchef2.png";
+import chef3 from "../Data/images/chefs/ourchef3.png";
+import chef4 from "../Data/images/chefs/ourchef4.png";
+
 export const leftCoffee = [
   {
     id: 1,
@@ -204,6 +209,13 @@ export const coffeedets = [
   { id: 72, component: <MdCoffeeMaker />, image: image3 },
   { id: 83, component: <MdCoffeeMaker />, image: image4 },
   { id: 92, component: <MdCoffeeMaker />, image: image5 },
+];
+
+export const chefs = [
+  { id: 1, image: chef1, name: "Bulbul Hassan", position: "founder" },
+  { id: 1, image: chef2, name: "Bulbul Hassan", position: "chef" },
+  { id: 1, image: chef3, name: "Jorina Begum", position: "specialist" },
+  { id: 1, image: chef4, name: "micheal ojuma", position: "owner" },
 ];
 
 // espresso

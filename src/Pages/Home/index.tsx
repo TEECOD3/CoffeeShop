@@ -30,6 +30,7 @@ import Loader from "../../Components/UI/Loader";
 import { Link, useNavigate } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { chefs } from "../../Data/Cofee";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -284,27 +285,14 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="flex w-full flex-col mx-auto sm:flex-row sm:flex-wrap lg:w-[80%] gap-4 xl:gap-2 xl:flex-nowrap text-center my-8">
-          <div className="mx-auto h-[300px] w-[300px]">
-            <img src={chef1} alt="" className="mx-auto" />
-            <h3 className="font-bold text-base mt-4">Bulbul Hassan</h3>
-            <h2>founder</h2>
-          </div>
-          <div className="mx-auto  h-[300px] w-[300px]v">
-            <img src={chef2} alt="" className="mx-auto" />
-            <h3 className="font-bold text-base mt-4 ">Jorina Begum</h3>
-            <h2>specialist</h2>
-          </div>
-          <div className="mx-auto  h-[300px] w-[300px]">
-            <img src={chef3} alt="" className="mx-auto" />
-            <h3 className="font-bold text-base mt-4">M.Mohammad Nur</h3>
-            <h2>Chef</h2>
-          </div>
-          <div className="mx-auto  h-[300px] w-[300px]">
-            <img src={chef4} alt="" className="mx-auto" />
-            <h3 className="font-bold text-base mt-4">Munna Kathy</h3>
-            <h2>owner</h2>
-          </div>
+        <div className="w-full grid grid-cols-2 md:grid-cols-4  mx-auto  lg:w-[80%] gap-4 xl:gap-2 xl:flex-nowrap text-center my-8">
+          {chefs.map((chef) => (
+            <div className="mx-auto h-full w-full px-2" key={chef.id}>
+              <img src={chef.image} alt="" className="mx-auto" />
+              <h3 className="font-bold text-base mt-4">{chef.name}</h3>
+              <h2>{chef.position}</h2>
+            </div>
+          ))}
         </div>
       </section>
 
