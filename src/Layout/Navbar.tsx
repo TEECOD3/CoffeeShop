@@ -6,11 +6,12 @@ import MobileNav from "../Components/UI/MobileNavigation";
 import { AnimatePresence } from "framer-motion";
 import { Profiler, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { NavLink, Link } from "react-router-dom";
-import { CgProfile } from "react-icons/cg";
+import { NavLink, Link, useNavigate } from "react-router-dom";
+
 import { Menu, User } from "lucide-react";
 const Navbar = () => {
   const [ModalOpen, setModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   const openModalHandler = () => {
     setModalOpen(!ModalOpen);
@@ -45,6 +46,7 @@ const Navbar = () => {
             <li className="h-6 w-6">
               <Profile />
             </li>
+
             <li>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -67,24 +69,26 @@ const Navbar = () => {
 
           <ul className="flex items-center justify-center w-[10%] gap-6 md:hidden px-4 mr-2">
             <li className="">
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  className="lucide lucide-shopping-bag text-white"
-                >
-                  <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                  <line x1="3" x2="21" y1="6" y2="6"></line>
-                  <path d="M16 10a4 4 0 0 1-8 0"></path>
-                </svg>
-              </li>
+              <Link to="/Cart">
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="lucide lucide-shopping-bag text-white"
+                  >
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" x2="21" y1="6" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                </li>
+              </Link>
             </li>
             <li>
               <User className="text-white" />

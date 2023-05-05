@@ -1,5 +1,4 @@
 import Home from "./Pages/Home";
-import { useEffect } from "react";
 import Coffeedetail from "./Pages/Menu/subpages/Coffeedetail";
 import {
   Route,
@@ -10,6 +9,7 @@ import {
 } from "react-router-dom";
 import RootLayer from "./Layout/RootLayer";
 import Menu from "./Pages/Menu";
+import Cartpage from "./Pages/Cart";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +17,7 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="menu" element={<Menu />} />
       <Route path="menu/:id" element={<Coffeedetail />} />
+      <Route path="cart" element={<Cartpage />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Route>
   )

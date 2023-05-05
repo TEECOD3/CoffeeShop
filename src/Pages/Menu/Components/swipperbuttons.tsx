@@ -12,13 +12,13 @@ const SwipperNavbuttons = (props: swipperButtons) => {
   return (
     <div className={`flex gap-4 ${className}`}>
       <button
-        className="p-2 border-2 rounded-full  "
+        className="p-2 border-2 rounded-full  active:bg-coffee-100 hover:bg-coffee-100 hover:text-white transition-all delay-300 duration-200"
         onClick={() => swiper.slidePrev()}
       >
         <ArrowLeft className="" />
       </button>
       <button
-        className="p-2 border-2 rounded-full"
+        className="p-2 border-2 rounded-full  active:bg-coffee-100 hover:bg-coffee-100 hover:text-white"
         onClick={() => swiper.slideNext()}
       >
         <ArrowRight />

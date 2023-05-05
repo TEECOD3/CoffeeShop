@@ -5,8 +5,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { useLocation } from "react-router-dom";
-import image from "../../../Data/images/tea-bag-pg-tips-coffee-drink-leaf-tea-f905281958c868e88b1315990bf32423.png";
-import image2 from "../../../Data/images/Brewedlarge/BRW7.jpg";
+import image from "../../../Data/images/mainimages/matte-coffee-bag-mockup-template-removebg-preview.png";
+
 import {
   ArrowRight,
   EyeIcon,
@@ -20,10 +20,8 @@ import {
 import { Add } from "@mui/icons-material";
 import { BsHeart, BsStar } from "react-icons/bs";
 import Button from "../../../Components/UI/Button";
-import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { coffeedets } from "../../../Data/Cofee";
-import { breakpoints } from "@mui/system";
 import SwipperNavbuttons from "../Components/swipperbuttons";
 
 interface CoffeedetailProps {}
@@ -120,7 +118,7 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
 
             <div className="aboutcoffee| mt-2 flex items-start flex-col space-y-1 lg:space-y-3 text-lightdark font-medium">
               <span className="flex items-center justify-center gap-1">
-                <BsHeart />{" "}
+                <BsHeart />
                 <span className="font-bold fill-red-400">add to wishlist</span>
               </span>
               <h3 className="font-medium">
