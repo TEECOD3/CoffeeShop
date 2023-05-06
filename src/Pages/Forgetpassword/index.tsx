@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 const Forgotpassword = () => {
   const navigate = useNavigate();
   return (
-    <div className=" pt-20 md:pt-32 mb-52 flex items-center justify-center font-nunito">
+    <div className=" py-20 md:pt-32 mb-52 flex items-center justify-center font-nunito">
       <div className=" sm:w-[100%]  lg:w-[60%] mx-auto flex flex-col sm:flex-row justify-center items-center p-4 gap-x-4 ">
         <img
           src={loginimage}

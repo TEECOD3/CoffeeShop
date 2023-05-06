@@ -32,7 +32,10 @@ const Footer = () => {
               placeholder="Enter email .."
               className="w-full border-2 rounded-lg  border-coffee-100 p-3  md:w-[60%] mr-1 "
             />
-            <Button className="w-2/4 text-sm mt-3 md:w-[35%] mx-auto bg-coffee-100">
+            <Button
+              variant="ghost"
+              className="w-2/4 text-sm mt-3 md:w-[35%] mx-auto  border-[1px] border-coffee-100"
+            >
               Subscribe now
             </Button>
           </div>

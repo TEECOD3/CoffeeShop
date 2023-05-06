@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 const Login = () => {
   const navigate = useNavigate();
   return (
-    <div className=" py-16 md:pt-32 mb-40 flex items-center justify-center font-nunito">
+    <div className=" py-20 md:pt-32 mb-40 flex items-center justify-center font-nunito">
       <div className="md:w-[70%] mx-auto flex flex-col-reverse md:flex-row justify-between p-4 gap-x-4 ">
         <div className="flex-1 md:p-4 flex items-center justify-center">
           <form className=" md:w-4/5">
