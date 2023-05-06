@@ -10,11 +10,11 @@ const Register = () => {
       <div className="md:w-[70%] mx-auto flex flex-col-reverse md:flex-row justify-between p-4 gap-x-4">
         <div className="flex-1 md:p-8  flex items-center justify-center">
           <form className="">
-            <h4 className=" text-2xl md:text-4xl font-bold text-lightdark capitalize font-rails">
+            <h4 className="text-2xl md:text-4xl font-bold text-lightdark capitalize font-rails">
               Register
             </h4>
-            <h5 className=" text-sm md:text-base font-bold text-lightdark mt-3 font-rails">
-              welcome back please enter your details
+            <h5 className=" capitalize text-sm md:text-base font-bold text-lightdark mt-3 font-rails">
+              to register please enter your details
             </h5>
 
             <div className="formgroup p-2">
@@ -67,18 +67,23 @@ const Register = () => {
                   remember for 30days
                 </label>
               </div>
-              <p className="text-sm font-nunito font-bold text-lightdark">
+              <p
+                className="text-sm font-nunito font-bold text-lightdark cursor-pointer hover:text-coffee-100"
+                onClick={() => {
+                  navigate("/forgotpassword");
+                }}
+              >
                 forgot password?
               </p>
             </div>
 
-            <Button className="w-full font-bold text-sm  ">Sign in</Button>
+            <Button className="w-full font-bold text-sm  ">Sign up</Button>
             <Button
               className="w-full cursor-pointer font-bold text-sm  mt-3 border-2 border-coffee-100 space-x-2"
               variant="ghost"
             >
               <GoogleIcon className="h-6 w-6" />
-              <span>sign in with google</span>
+              <span>sign up with google</span>
             </Button>
 
             <div className="flex items-center justify-center capitalize gap-x-3 mt-2 md:mt-3 text-lightdark font-bold text-sm md:text-base">

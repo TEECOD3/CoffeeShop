@@ -56,7 +56,13 @@ const Login = () => {
                   remember for 30days
                 </label>
               </div>
-              <p className="text-sm font-nunito font-bold text-lightdark">
+
+              <p
+                className="text-sm font-nunito font-bold text-lightdark cursor-pointer hover:text-coffee-100"
+                onClick={() => {
+                  navigate("/forgotpassword");
+                }}
+              >
                 forgot password?
               </p>
             </div>
