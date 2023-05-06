@@ -7,10 +7,10 @@ const Register = () => {
   const navigate = useNavigate();
   return (
     <div className=" pt-16 md:pt-28 mb-36 flex items-center justify-center font-nunito">
-      <div className="md:w-[70%] mx-auto flex flex-col-reverse md:flex-row justify-between p-4 gap-x-4">
+      <div className="lg:w-[70%] mx-auto flex flex-col-reverse md:flex-row justify-between p-4 gap-x-4">
         <div className="flex-1 md:p-8  flex items-center justify-center">
           <form className="">
-            <h4 className="text-2xl md:text-4xl font-bold text-lightdark capitalize font-rails">
+            <h4 className="text-3xl text-center  md:text-left md:text-4xl font-bold text-lightdark capitalize font-rails">
               Register
             </h4>
             <h5 className=" capitalize text-sm md:text-base font-bold text-lightdark mt-3 font-rails">

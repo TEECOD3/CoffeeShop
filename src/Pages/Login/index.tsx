@@ -11,7 +11,7 @@ const Login = () => {
       <div className="md:w-[70%] mx-auto flex flex-col-reverse md:flex-row justify-between p-4 gap-x-4 ">
         <div className="flex-1 md:p-4  flex items-center justify-center">
           <form className="">
-            <h4 className=" text-2xl md:text-4xl font-bold text-lightdark capitalize font-rails">
+            <h4 className=" text-3xl lg:text-4xl font-bold text-lightdark capitalize font-rails text-center md:text-left ">
               Welcome back
             </h4>
             <h5 className=" text-sm md:text-base font-bold font-rails mb-3 text-lightdark mt-3">
@@ -80,7 +80,7 @@ const Login = () => {
               onClick={() => {
                 navigate("/Register");
               }}
-              className="cursor-pointer flex items-center justify-center capitalize gap-x-3 mt-2 md:mt-3 text-lightdark font-bold text-sm md:text-base"
+              className="cursor-pointer flex items-center justify-center capitalize gap-x-3 mt-2 md:mt-3 text-lightdark font-bold text-sm lg:text-base"
             >
               <p>dont have an account ?</p>
               <span className="text-coffee-100">sign up</span>
