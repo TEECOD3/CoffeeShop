@@ -11,6 +11,7 @@ import RootLayer from "./Layout/RootLayer";
 import Menu from "./Pages/Menu";
 import Cartpage from "./Pages/Cart";
 import Login from "./Pages/Login";
+import Register from "./Pages/Signup";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +19,7 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="menu" element={<Menu />} />
       <Route path="login" element={<Login />} />
+      <Route path="Register" element={<Register />} />
       <Route path="menu/:id" element={<Coffeedetail />} />
       <Route path="cart" element={<Cartpage />} />
       <Route path="*" element={<Navigate to="/" replace />} />

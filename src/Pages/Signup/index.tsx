@@ -1,24 +1,23 @@
 import Input from "../../Components/Forms/Inputfield";
 import Button from "../../Components/UI/Button";
-import GoogleIcon from "./icons/Googleicon";
+import GoogleIcon from "./../Login/icons/Googleicon";
 import loginimage from "../Login/icons/cofeeloin-transformed.png";
-import { Link, useNavigate } from "react-router-dom";
-
-const Login = () => {
+import { useNavigate } from "react-router-dom";
+const Register = () => {
   const navigate = useNavigate();
   return (
-    <div className=" pt-16 md:pt-32 mb-40 flex items-center justify-center font-nunito">
-      <div className="md:w-[70%] mx-auto flex flex-col-reverse md:flex-row justify-between p-4 gap-x-4 ">
-        <div className="flex-1 md:p-4  flex items-center justify-center">
+    <div className=" pt-16 md:pt-28 mb-36 flex items-center justify-center font-nunito">
+      <div className="md:w-[70%] mx-auto flex flex-col-reverse md:flex-row justify-between p-4 gap-x-4">
+        <div className="flex-1 md:p-8  flex items-center justify-center">
           <form className="">
             <h4 className=" text-2xl md:text-4xl font-bold text-lightdark capitalize font-rails">
-              Welcome back
+              Register
             </h4>
-            <h5 className=" text-sm md:text-base font-bold font-rails mb-3 text-lightdark mt-3">
+            <h5 className=" text-sm md:text-base font-bold text-lightdark mt-3 font-rails">
               welcome back please enter your details
             </h5>
 
-            <div className="formgroup ">
+            <div className="formgroup p-2">
               <label
                 htmlFor="email"
                 className="capitalize text-sm md:text-base"
@@ -30,7 +29,7 @@ const Login = () => {
                 className="border-coffee-100 border-2"
               />
             </div>
-            <div className="formgroup">
+            <div className="formgroup p-2">
               <label
                 htmlFor="password"
                 className="capitalize text-sm md:text-base"
@@ -39,6 +38,18 @@ const Login = () => {
               </label>
               <Input
                 inputs={{ id: "password" }}
+                className="border-coffee-100 border-2"
+              />
+            </div>
+            <div className="formgroup p-2">
+              <label
+                htmlFor="confirm password"
+                className="capitalize text-sm md:text-base"
+              >
+                conifrm password
+              </label>
+              <Input
+                inputs={{ id: "confirm password" }}
                 className="border-coffee-100 border-2"
               />
             </div>
@@ -63,21 +74,23 @@ const Login = () => {
 
             <Button className="w-full font-bold text-sm  ">Sign in</Button>
             <Button
-              className="w-full font-bold text-sm  mt-3 border-2 border-coffee-100 space-x-2"
+              className="w-full cursor-pointer font-bold text-sm  mt-3 border-2 border-coffee-100 space-x-2"
               variant="ghost"
             >
-              <GoogleIcon className="h-6 w-6" />{" "}
+              <GoogleIcon className="h-6 w-6" />
               <span>sign in with google</span>
             </Button>
 
-            <div
-              onClick={() => {
-                navigate("/Register");
-              }}
-              className="cursor-pointer flex items-center justify-center capitalize gap-x-3 mt-2 md:mt-3 text-lightdark font-bold text-sm md:text-base"
-            >
-              <p>dont have an account ?</p>
-              <span className="text-coffee-100">sign up</span>
+            <div className="flex items-center justify-center capitalize gap-x-3 mt-2 md:mt-3 text-lightdark font-bold text-sm md:text-base">
+              <p className="capitalize"> have an account ?</p>
+              <span
+                className="text-coffee-100 cursor-pointer "
+                onClick={() => {
+                  navigate("/login");
+                }}
+              >
+                sign in
+              </span>
             </div>
           </form>
         </div>
@@ -85,7 +98,7 @@ const Login = () => {
           <img
             src={loginimage}
             alt="image of a coffee"
-            className="object-cover max-w-[100px] md:max-w-[400px] bg-cover w-full flex items-center justify-center "
+            className="object-cover max-w-[100px] md:max-w-[400px] bg-cover w-full "
           />
         </div>
       </div>
@@ -93,4 +106,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

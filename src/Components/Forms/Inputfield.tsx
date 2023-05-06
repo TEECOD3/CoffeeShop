@@ -27,6 +27,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
   return (
     <input
       ref={ref}
+      autoComplete="off"
       {...inputs}
       className={cn(inputVariants({ className, variant }))}
     />
