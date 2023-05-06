@@ -218,64 +218,94 @@ export const chefs = [
   { id: 1, image: chef4, name: "micheal ojuma", position: "owner" },
 ];
 
-// espresso
-// Single Shot - A traditional espresso that is made using 7 grams of coffee and yields approximately 1 ounce of espresso.
 
-// Double Shot - Similar to a single shot, but made using 14 grams of coffee and yields approximately 2 ounces of espresso.
 
-// Ristretto - A short shot of espresso made using the same amount of coffee as a single shot but with less water, resulting in a more concentrated and bolder flavor.
 
-// Lungo - A long shot of espresso made using the same amount of coffee as a single shot but with more water, resulting in a milder flavor and larger volume of espresso.
+// Introducing Yauco Puerto Rico Coffee: A Taste of Tropical Paradise
 
-// Americano - A shot of espresso diluted with hot water, resulting in a milder flavor and larger volume of coffee.
+// Experience the allure of the Caribbean with Yauco Puerto Rico Coffee. Grown in the fertile soils of the Yauco region, our coffee beans captivate your senses with their exceptional quality and unique flavor profile.
 
-// Espresso Macchiato - A shot of espresso with a dollop of steamed milk on top, resulting in a bolder and creamier flavor compared to a traditional espresso.
+// Indulge in the smooth, medium-bodied taste that Yauco Puerto Rico Coffee offers. With each sip, you'll be transported to a tropical paradise, as notes of tropical fruit, cocoa, and a hint of nuttiness dance on your palate.
 
-// single CoffeeEthiopian Yirgacheffe - A high-quality coffee type with a bright acidity, floral aroma, and fruity undertones, grown in the Yirgacheffe region of Ethiopia.
+// Handpicked and meticulously processed, our coffee beans reflect the dedication and expertise of local farmers. From the moment you open the bag, the enticing aroma of Yauco Puerto Rico Coffee envelops you, inviting you to savor the taste of this extraordinary brew.
 
-// Colombian Supremo - A popular coffee variety with a rich and smooth flavor, medium body, and hints of chocolate, grown in the high altitudes of Colombia.
+// Immerse yourself in the rich heritage and tradition of Puerto Rican coffee. With its smoothness, complexity, and unique terroir, Yauco Puerto Rico Coffee is a true reflection of the island's coffee-making expertise.
 
-// Costa Rican Tarrazu - A gourmet coffee variety with a bright and fruity acidity, floral aroma, and nutty undertones, grown in the Tarrazu region of Costa Rica.
+// Explore our eCommerce store and discover the captivating flavors of Yauco Puerto Rico Coffee. Elevate your coffee experience and enjoy a taste of tropical paradise in every cup.
 
-// Brazilian Santos - A coffee type with a mild and nutty flavor, low acidity, and a creamy body, grown in the state of Sao Paulo, Brazil.
 
-// Jamaican Blue Mountain - A highly prized coffee variety with a mild flavor, subtle sweetness, and floral aroma, grown in the Blue Mountains of Jamaica.
+// Introducing Chamberlain Coffee: Elevate Your Coffee Experience
 
-// Sumatran Mandheling - A full-bodied coffee type with low acidity and earthy notes, grown in Sumatra, Indonesia.
+// Indulge in the rich and captivating flavors of Chamberlain Coffee. Sourced from the world's finest coffee plantations, our beans are carefully selected and expertly roasted to perfection.
 
-// decafinnated CofeeBag
-// Swiss Water Process Decaf - A method that uses only water to remove caffeine, resulting in a chemical-free decaf coffee with a rich flavor.
+// With each sip, you'll experience a harmonious balance of boldness and smoothness. Chamberlain Coffee delights your palate with notes of caramel, chocolate, and a hint of vibrant acidity, creating a truly unforgettable coffee experience.
 
-// Carbon Dioxide (CO2) Decaf - A method that uses carbon dioxide to extract caffeine, resulting in a decaf coffee with a full-bodied flavor and balanced acidity.
+// Crafted with passion and precision, Chamberlain Coffee is the perfect companion for your morning rituals or moments of relaxation. Whether you prefer a classic black coffee or a creamy latte, our coffee beans ensure a rich and satisfying cup every time.
 
-// Ethyl Acetate (EA) Decaf - A method that uses a natural solvent derived from fruits to remove caffeine, resulting in a decaf coffee with a smooth and mellow flavor.
+// Embrace the aroma, savor the flavor, and elevate your coffee journey with Chamberlain Coffee. Explore our eCommerce store and discover the extraordinary taste that awaits you. Elevate your coffee experience with Chamberlain Coffee and let every sip transport you to a world of pure coffee bliss.
 
-// Triglyceride Process Decaf - A method that uses a natural solvent derived from coconut oil to extract caffeine, resulting in a decaf coffee with a sweet and nutty flavor.
+// Discover the epitome of coffee perfection with Cocoba Coffee Beans. Sourced from the finest coffee plantations around the world, our beans are meticulously selected for their exceptional quality and flavor.
 
-// Mountain Water Process Decaf - A method that uses water and a carbon filter to remove caffeine, resulting in a decaf coffee with a clean and bright flavor.
+// Experience a symphony of taste as you indulge in the rich aroma and bold flavors of our handcrafted coffee. Each bean undergoes a precise roasting process to unlock its full potential, resulting in a cup of coffee that is smooth, balanced, and full-bodied.
 
-// Decaffeination by Methylene Chloride (MC) - A method that uses a synthetic solvent to remove caffeine, resulting in a decaf coffee with a bold and full-bodied flavor. Note that this method is controversial due to potential health and environmental concerns associated with the solvent used.
+// From the first sip to the last, Cocoba Coffee Beans deliver a captivating journey for your taste buds. Explore notes of caramel, dark chocolate, and subtle hints of fruit that dance on your palate, leaving a lingering and satisfying finish.
 
-// specialty====Ethiopian Yirgacheffe - A coffee variety known for its bright acidity, floral notes, and fruity undertones.
+// Whether you prefer a classic black coffee, an aromatic espresso, or a velvety latte, Cocoba Coffee Beans ensure an exceptional coffee experience that will awaken your senses and elevate your morning rituals.
 
-// Colombian Supremo - A popular coffee type with a rich and smooth flavor, medium body, and hints of chocolate.
+// Unleash the barista within and experience the difference with Cocoba Coffee Beans. Explore our eCommerce store and embark on a journey of exceptional flavors and unparalleled quality. Elevate your coffee moments with Cocoba and savor the craftsmanship in every sip.
 
-// Jamaican Blue Mountain - A high-quality coffee variety with a mild flavor, subtle sweetness, and floral aroma, grown in the Blue Mountains of Jamaica.
+// Introducing Blue Beard: Unleash Your Adventurous Spirit
 
-// Sumatran Mandheling - A full-bodied coffee type with low acidity and earthy notes, grown in Sumatra, Indonesia.
+// Experience the thrill of the unknown with Blue Beard, an irresistible fragrance for the modern man. Inspired by the daring and enigmatic nature of the bluebeard flower, this scent embodies intrigue and seduction.
 
-// Costa Rican Tarrazu - A gourmet coffee variety with a bright and fruity acidity, floral aroma, and nutty undertones, grown in the Tarrazu region of Costa Rica.
+// Blue Beard opens with an alluring blend of citrus and spices, awakening your senses with a burst of energy. As the fragrance develops, notes of lavender and jasmine create an intoxicating and sophisticated aura.
 
-// Kenyan AA - A highly prized coffee type with a bold and fruity flavor, bright acidity, and wine-like finish, grown in the high altitudes of Kenya.
+// With a base of warm woods and musk, Blue Beard leaves a trail of masculinity and confidence in its wake. This captivating scent is perfect for the man who is unafraid to embrace his adventurous spirit.
 
-// brewes==== Drip coffee: This is the most common type of brewed coffee. It's made by pouring hot water over ground coffee beans placed in a paper or metal filter. The water drips through the filter and into a carafe, producing a simple and straightforward cup of coffee.
+// Whether worn for a night out or a special occasion, Blue Beard is your secret weapon, drawing others in with its magnetic allure. Unleash your inner charm and captivate those around you with the captivating scent of Blue Beard.
 
-// French press coffee: This method involves steeping coarsely ground coffee in hot water for several minutes before pressing the plunger down to separate the coffee grounds from the liquid. French press coffee has a rich, full-bodied flavor and is often preferred by coffee connoisseurs.
+// Explore our eCommerce store and embark on a fragrant journey with Blue Beard. Elevate your style and leave a lasting impression with this daring and irresistible fragrance.
 
-// Pour-over coffee: This technique involves pouring hot water over ground coffee beans placed in a paper or metal filter, which is positioned over a carafe or mug. The water is poured in a slow, steady stream, allowing it to extract the flavors and aromas from the coffee grounds.
+// Introducing Café Beausoleil: A Taste of French Delight
 
-// Aeropress coffee: This is a relatively new method that uses a device resembling a large syringe to brew coffee. Ground coffee is placed in a filter, which is inserted into the Aeropress. Hot water is then poured over the coffee, and the plunger is pushed down to extract the coffee into a cup or carafe.
+// Transport yourself to the charming streets of Paris with Café Beausoleil. Our exquisite blend captures the essence of French coffee culture, delivering a truly indulgent experience.
 
-// Turkish coffee: This method involves boiling finely ground coffee beans and water together in a small pot, then serving the resulting brew in small cups. Turkish coffee has a strong, bold flavor and a thick, sludgy consistency.
+// Immerse your senses in the rich aroma and smooth flavor of our carefully crafted beans. Sourced from premium coffee plantations, our blend combines the finest Arabica and Robusta beans for a perfectly balanced cup.
 
-// Cold brew coffee: This method involves steeping coffee grounds in cold water for an extended period, usually 12 to 24 hours. The resulting concentrate can be diluted with water or milk and served over ice. Cold brew coffee is known for its smooth, low-acid flavor and is often used as a base for iced coffee drinks.
+// With a medium-dark roast, Café Beausoleil offers a velvety texture and a delightful complexity of flavors. Discover notes of caramel, toasted nuts, and a hint of dark chocolate that linger on your palate.
+
+// Indulge in a moment of French elegance as you sip Café Beausoleil. Whether enjoyed as an espresso or a creamy latte, our coffee promises to transport you to the sidewalk cafés of Paris.
+
+// Embrace the joie de vivre and elevate your coffee experience with Café Beausoleil. Explore our eCommerce store and let the spirit of French delight infuse your daily rituals.
+
+// Experience the art of coffee with Kuska Packshot Mellemristet. Our expertly crafted blend combines the finest coffee beans from around the world to create a harmonious and balanced flavor profile.
+
+// With a medium roast, this coffee delights your senses with its smoothness and enticing aroma. The carefully selected beans undergo a precise roasting process that brings out the best qualities of each origin, resulting in a well-rounded and satisfying cup.
+
+// Indulge in the nuanced notes of caramel, chocolate, and a hint of fruity acidity that dance on your palate. The medium roast level strikes the perfect balance, ensuring a pleasant depth of flavor without overpowering bitterness.
+
+// At Kuska, we take pride in our commitment to sustainability and ethical sourcing. We partner with responsible coffee growers who share our values, ensuring fair compensation and sustainable farming practices.
+
+// Whether you're starting your day or seeking a moment of relaxation, Kuska Packshot Mellemristet delivers a refined coffee experience that will leave you craving more. Explore our eCommerce store and embark on a journey of exquisite flavors with Kuska Packshot Mellemristet. Elevate your coffee ritual and savor the craftsmanship in every cup.
+// Introducing Ferrari Placentina Deluxe Coffee Roasters: A Taste of Pure Luxury
+
+// Indulge in the epitome of coffee excellence with Ferrari Placentina Deluxe Coffee Roasters. Our meticulous craftsmanship and dedication to sourcing the finest coffee beans ensure a truly luxurious experience. Immerse yourself in the velvety richness, intoxicating aroma, and exquisite flavor profiles of our carefully roasted coffees. Each sip embodies sophistication, delivering a captivating journey for the discerning coffee enthusiast. Elevate your coffee moments with the unparalleled quality and indulgence of Ferrari Placentina Deluxe Coffee Roasters. Explore our eCommerce store and discover the pinnacle of coffee perfection.
+
+// spongy candy artisnal flavour coffee
+// Experience the extraordinary with our artisanal flavored spongy candy coffee. Indulge in the fusion of gourmet coffee and delightful candy flavors. Each sip takes you on a journey of rich, velvety coffee infused with the whimsical essence of spongy candy. Made in small batches with the finest beans and carefully crafted flavors, this unique blend is a treat for your taste buds. Elevate your coffee routine and explore our eCommerce store to discover the enchantment of spongy candy artisanal flavored coffee.
+
+// `death wish cofee description`
+
+// Discover the world's strongest coffee that packs an intense punch to kickstart your day - Death Wish Coffee! Unleash your inner adventurer and experience a bold and robust brew that's crafted to invigorate your senses like no other.
+
+// Every sip of Death Wish Coffee is an exhilarating journey. Made from carefully selected premium Arabica and Robusta beans, our unique blend undergoes a meticulous roasting process to extract maximum flavor and caffeine content. The result? A rich, full-bodied coffee that delivers an unparalleled jolt of energy with each sip.
+
+// Whether you're an avid coffee lover seeking an extra boost or a daredevil looking to conquer the day, Death Wish Coffee is here to fuel your ambitions. Embrace the boldness, embrace the intensity, and embark on your daily conquests with unwavering focus and determination.
+
+// But it's not just about the extraordinary strength. We prioritize quality at every step, ensuring that only the finest, ethically sourced beans make it into every bag of Death Wish Coffee. Our commitment to sustainable practices and fair-trade partnerships ensures that every cup you enjoy also supports responsible farming communities around the world.
+
+// At our eCommerce store, you'll find a wide range of Death Wish Coffee products tailored to suit your preferences. From whole bean and ground options to convenient single-serve pods, we offer flexibility to fit your brewing method of choice. Our curated selection includes signature blends, flavored variations, and limited-edition releases that cater to every discerning palate.
+
+// Join the growing legion of caffeine enthusiasts who have embraced the thrill of Death Wish Coffee. Fuel your mornings, power through your workdays, and conquer any challenge that comes your way with the ultimate coffee experience.
+
+// Are you ready to unleash the power within? Explore our eCommerce store today and let Death Wish Coffee awaken the fire in your soul.

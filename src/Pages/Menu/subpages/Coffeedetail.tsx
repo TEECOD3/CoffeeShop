@@ -142,7 +142,7 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
 
         <section className="similarProducts| my-20 relative w-[80%] mx-auto ">
           <h4 className="font-bold text-lightdark md:text-xl mb-4 ">
-            similar coffee categories
+            Other Collections You May Like
           </h4>
 
           <Swiper

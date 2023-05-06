@@ -62,9 +62,11 @@ const Footer = () => {
             <Coffeelogo className=" h-16 w-16  sm:h-20 sm:w-20 " />
           </div>
           <p className="mt-4">
-            Lugbe is a suburb located in the Abuja Municipal Area Council (AMAC)
-            of the Federal Capital Territory (FCT) of Nigeria. 09031269618
-            Email: temi236topemicheal@gmail.com
+            Welcome to DAVIS Roasters, where we have been dedicated to curating,
+            roasting, and delivering exceptional artisanal and specialty coffees
+            since 2010. Our mission is to bring you the finest hand-roasted,
+            your go-to destination for exquisite coffee that will elevate your
+            coffee journey.
           </p>
         </div>
 

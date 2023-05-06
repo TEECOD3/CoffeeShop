@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { BsBag, BsEye, BsHeart, BsPlus, BsStar } from "react-icons/bs";
-import loves from "../../../Data/images/mainimages/images__1_-removebg-preview.png";
+import loves from "../../../Data/speciality coffee/Blend  Totally Righteous House.png";
 import { Link } from "react-router-dom";
 import {
   BaggageClaim,

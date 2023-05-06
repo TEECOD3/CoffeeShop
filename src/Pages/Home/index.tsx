@@ -37,7 +37,7 @@ const Home = () => {
   return (
     <>
       <motion.section
-        className="bg-black/90 z-30 w-full h-full  flex  md:p-32 "
+        className="bg-black/90 z-30 w-full h-full  flex  md:p-40 "
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -158,7 +158,7 @@ const Home = () => {
         <div className=" w-[90%] mx-auto md:w-[75%] lg:w-[95%] xl:w-[75%]">
           <div className="text-center lg:w-[40%] mx-auto w-full">
             <h2 className=" text-3xl  md:text-4xl font-extrabold text-[#333333] text mb-1 capitalize font-rails">
-              Coffee Category
+              our collections
             </h2>
             <p className="mb-4 text-base md:text-xl font-medium text-lightdark">
               We offer our customers a choice between six main categories, which
@@ -219,11 +219,11 @@ const Home = () => {
       <section className=" w-full mt-10 md:p-20">
         <div className="text-center md:w-[60%] mx-auto w-full">
           <h2 className=" text-[#333333] text-3xl font-bold text-coffeeBlack mb-1 capitalize font-rails">
-            Our Favorites Menu
+            different collection
           </h2>
           <p className=" text-md  md:text-xl text-lightdark text-medium font-medium xl:w-3/5 mx-auto">
-            A coffee menu lists the various types of coffee and drinks that our
-            coffee shop offers, along with their prices.
+            A coffee menu lists the various collections of coffee and drinks
+            that our coffee shop offers, along with their prices.
           </p>
         </div>
 
@@ -265,7 +265,7 @@ const Home = () => {
               }}
               className="mb-6 mt-4 cursor-pointer  md:w-4/12 capitalize text-base sm:text-xl font-bold flex item-center justify-left"
             >
-              <h4 className="">All Menu </h4>
+              <h4 className="">view all </h4>
               <span className="font-extrabold text-xl ml-2 flex items-center justify-center">
                 <FaArrowRight className="animate-ping" />
               </span>
