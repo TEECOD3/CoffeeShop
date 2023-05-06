@@ -13,6 +13,7 @@ import Cartpage from "./Pages/Cart";
 import Login from "./Pages/Login";
 import Register from "./Pages/Signup";
 import Forgotpassword from "./Pages/Forgetpassword";
+import Checkoutpage from "./Pages/Checkoutpage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
       <Route path="login" element={<Login />} />
       <Route path="Register" element={<Register />} />
       <Route path="forgotpassword" element={<Forgotpassword />} />
+      <Route path="Checkoutpage" element={<Checkoutpage />} />
       <Route path="menu/:id" element={<Coffeedetail />} />
       <Route path="cart" element={<Cartpage />} />
       <Route path="*" element={<Navigate to="/" replace />} />

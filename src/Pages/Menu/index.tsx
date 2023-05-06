@@ -39,20 +39,6 @@ const Menu = () => {
               </div>
               <div className="w-full mx-auto  h-full flex flex-col-reverse lg:flex-row gap-16 justify-center">
                 <div className="flex  lg:flex-col flex-col-reverse lg:w-[70%] border-2 p-2">
-                  <div className="">
-                    <h5 className="font-bold text-lightdark mt-2 md:mt-0">
-                      Latest...
-                    </h5>
-
-                    <div className="">
-                      <div className="h-10 w-12 flex gap-3 mb-4 cursor-pointer">
-                        <img src={image} alt="" />
-                        <img src={image} alt="" />
-                        <img src={image} alt="" />
-                        <img src={image} alt="" />
-                      </div>
-                    </div>
-                  </div>
                   <div className="grid-cols-2 grid md:grid-cols-3 gap-3">
                     <Menucards />
                     <Menucards />

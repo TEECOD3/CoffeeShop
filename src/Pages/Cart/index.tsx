@@ -4,8 +4,10 @@ import Input from "../../Components/Forms/Inputfield";
 import Button from "../../Components/UI/Button";
 import { CheckOutlined } from "@mui/icons-material";
 import { BsFillBagCheckFill } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const Cartpage = () => {
+  const navigate = useNavigate();
   return (
     <main className=" pt-16 pb-36">
       <section className="md:max-w-7xl mx-auto">
@@ -79,7 +81,12 @@ const Cartpage = () => {
                   </div>
                 </div>
               </div>
-              <Button className="w-full md:w-2/3 mx-auto bg-coffee-100 mt-3 text-sm capitalize">
+              <Button
+                onClick={() => {
+                  navigate("/checkoutpage");
+                }}
+                className="w-full md:w-2/3 mx-auto bg-coffee-100 mt-3 text-sm capitalize"
+              >
                 proceed to checkout <BsFillBagCheckFill className="ml-3" />
               </Button>
             </div>
