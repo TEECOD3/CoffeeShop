@@ -6,10 +6,10 @@ import { useNavigate } from "react-router-dom";
 const Register = () => {
   const navigate = useNavigate();
   return (
-    <div className=" pt-16 md:pt-28 mb-36 flex items-center justify-center font-nunito">
+    <div className=" py-16 md:pt-28 mb-36 flex items-center justify-center font-nunito">
       <div className="lg:w-[70%] mx-auto flex flex-col-reverse md:flex-row justify-between p-4 gap-x-4">
         <div className="flex-1 md:p-8  flex items-center justify-center">
-          <form className="">
+          <form className="md:w-4/5">
             <h4 className="text-3xl text-center  md:text-left md:text-4xl font-bold text-lightdark capitalize font-rails">
               Register
             </h4>
@@ -17,7 +17,7 @@ const Register = () => {
               to register please enter your details
             </h5>
 
-            <div className="formgroup p-2">
+            <div className="formgroup p-2 w-full  ">
               <label
                 htmlFor="email"
                 className="capitalize text-sm md:text-base"
@@ -26,7 +26,7 @@ const Register = () => {
               </label>
               <Input
                 inputs={{ id: "email" }}
-                className="border-coffee-100 border-2"
+                className="border-coffee-100 border-2 w-full"
               />
             </div>
             <div className="formgroup p-2">
