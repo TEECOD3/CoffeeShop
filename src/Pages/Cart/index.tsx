@@ -10,7 +10,7 @@ const Cartpage = () => {
     <main className=" pt-16 pb-36">
       <section className="md:max-w-7xl mx-auto">
         <div className="">
-          <h2 className="text-sm p-4  md:text-3xl uppercase font-semibold text-lightdark">
+          <h2 className="text-sm p-6  md:text-2xl uppercase font-semibold text-lightdark">
             shopping bag <span className="font-nunito">(7)</span>
           </h2>
           <div className="h-[0.15rem] w-full bg-lightdark" />
@@ -20,12 +20,24 @@ const Cartpage = () => {
             <Cartitem />
             <Cartitem />
             <Cartitem />
+            <Cartitem />
+            <Cartitem />
+            <Cartitem />
+            <Cartitem />
+            <Cartitem />
+            <Cartitem />
+            <Cartitem />
+            <Cartitem />
+            <Cartitem />
+            <Cartitem />
+            <Cartitem />
+            <Cartitem />
           </div>
-          <div className="md:w-1/2 px-4 md:px-0 md:p-8">
+          <div className="md:w-1/2 px-4 md:px-0 md:p-8 lg:sticky top-2 ">
             <h4 className="text-sm uppercase my-4 font-bold text-gray-500">
               Coupon code
             </h4>
-            <div className="md:w-3/4 border-2 border-gray-200 p-3 md:p-5">
+            <div className="md:w-2/3 border-2 border-gray-200 p-3 md:p-5">
               <p className="text-sm font-medium  text-gray-700">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
                 omnis sequi nostrum quae ab praesentium pariatur fugit velit,
@@ -40,7 +52,7 @@ const Cartpage = () => {
               </div>
             </div>
 
-            <div className="mt-5 font- md:w-2/3">
+            <div className="mt-5 font- md:w-2/3 ">
               <div className="">
                 <h4 className="capitalize font-bold text-lightdark">
                   total bill

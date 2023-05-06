@@ -11,7 +11,13 @@ const Menucards: FC<MenucardsProps> = () => {
     <div className="relative w-full lg:mb-4 cursor-pointer z-20 hover:scale-[1.02] transition duration-100 delay-75 group ">
       <div className="w-full relative">
         <div className="absolute h-full w-full bg-black/20 opacity-0 group-hover:opacity-100"></div>
-        <img src={image} alt="" className="object-cover bg-cover bg-top" />
+        <div className="min-h-200px">
+          <img
+            src={image}
+            alt=""
+            className="object-cover bg-cover bg-top max-w-100px mx-auto"
+          />
+        </div>
       </div>
       <h3 className="mt-4 text-lightdark font-bold text-sm ">
         espresso cofeee

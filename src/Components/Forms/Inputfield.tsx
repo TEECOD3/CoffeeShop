@@ -3,11 +3,12 @@ import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "../../Lib/Utils";
 
 const inputVariants = cva(
-  "mx-auto p-2 capitalize border-blue-400 border-[3px] rounded-md inline-flex focus:border-coffee-100outline-none w-[100%]",
+  "mx-auto p-2 capitalize border-blue-400 bg-white border-[3px] rounded-md inline-flex focus:border-coffee-100outline-none w-[100%]",
   {
     variants: {
       variant: {
-        default: "bg-[#EAEAEA] text-black",
+        default:
+          "bg-[#EAEAEA] text-black bg-white focus:outline-coffee-100 active:outline-coffee-100",
       },
     },
     defaultVariants: {

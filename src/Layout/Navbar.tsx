@@ -42,11 +42,11 @@ const Navbar = () => {
             <li className="flex items-center justify-center">
               <FaSistrix className="text-white text-2xl" />
             </li>
-
-            <li className="h-6 w-6">
-              <Profile />
-            </li>
-
+            <NavLink to="/login">
+              <li className="h-6 w-6">
+                <Profile />
+              </li>
+            </NavLink>
             <li>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -90,9 +90,12 @@ const Navbar = () => {
                 </li>
               </Link>
             </li>
-            <li>
-              <User className="text-white" />
-            </li>
+            <NavLink to="/login">
+              <li>
+                <User className="text-white" />
+              </li>
+            </NavLink>
+
             <li className="">
               <Menu className="text-white" onClick={openModalHandler} />
             </li>

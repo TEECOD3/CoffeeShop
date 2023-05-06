@@ -1,8 +1,6 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import Cofeecard from "../Home/Components/CofeeCard";
 import { useEffect } from "react";
 import Menucards from "./Components/MenuCards";
-import { RiArrowGoForwardFill } from "react-icons/ri";
 import { FaArrowDown, FaArrowRight } from "react-icons/fa";
 import Input from "../../Components/Forms/Inputfield";
 import Filtercheckboxes from "./Components/filtercheckboxes";
@@ -22,7 +20,7 @@ const Menu = () => {
     <>
       <AnimatePresence>
         <motion.div
-          className=" py-28 h-full w-full px-1 xl:px-0 "
+          className="py-28 h-full w-full px-1 xl:px-0 "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ y: 0 }}
