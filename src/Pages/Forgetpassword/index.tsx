@@ -7,7 +7,12 @@ const Forgotpassword = () => {
   const navigate = useNavigate();
   return (
     <div className=" pt-20 md:pt-32 mb-52 flex items-center justify-center font-nunito">
-      <div className="md:w-[50%] mx-auto flex justify-center items-center p-4 gap-x-4 ">
+      <div className=" sm:w-[100%] lg:w-[70%] mx-auto flex flex-col sm:flex-row justify-center items-center p-4 gap-x-4 ">
+        <img
+          src={loginimage}
+          alt=""
+          className="h-[20rem] w-[20rem] lg:h-[30rem] lg:w-[30rem] "
+        />
         <div className="md:p-4  md:w-1/2 mx-auto flex items-center justify-center">
           <form className="">
             <h4 className=" text-2xl md:text-3xl font-bold text-lightdark  font-rails uppercase">
@@ -31,7 +36,7 @@ const Forgotpassword = () => {
               />
             </div>
 
-            <Button className="w-full font-bold text-sm mt-4 ">Sign in</Button>
+            <Button className="w-full font-bold text-sm mt-4 ">continue</Button>
 
             <div
               onClick={() => {
