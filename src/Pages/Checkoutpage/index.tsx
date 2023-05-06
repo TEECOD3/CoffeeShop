@@ -3,17 +3,17 @@ import Input from "../../Components/Forms/Inputfield";
 import Button from "../../Components/UI/Button";
 import { ArrowBack } from "@mui/icons-material";
 import CheckoutItem from "./CheckoutItem";
-import { ArrowDown, ArrowRight } from "lucide-react";
 
 const Checkoutpage = () => {
   return (
     <div className=" py-24 lg:py-48 mb-10">
-      <h4 className="font-bold  mb-4 capitalize text-base px-2 ">
-        <span> shipping address</span> <ArrowDown className="animate-bounce" />
-      </h4>
       <div className=" w-full md:max-w-6xl mx-auto flex flex-col-reverse md:flex-row lg:px-2  space-y-2 md:justify-between gap-3">
         <div className="md:flex-[2] lg:p-3">
           <form action="">
+            <h4 className="font-bold  mb-4 capitalize text-base">
+              shipping address
+            </h4>
+
             <div className="onerow flex justify-between items-center md:gap-4 flex-col md:flex-row">
               <div className="inputcontrol w-[90%] md:w-1/2">
                 <label className="text-sm font-semibold capitalize " htmlFor="">
@@ -137,6 +137,9 @@ const Checkoutpage = () => {
           </div>
         </div>
         <div className="md:w-[25rem] border-[1px] ">
+          <h4 className="font-bold  mb-4 capitalize text-base px-2">
+            summary{" "}
+          </h4>
           <div className="">
             <CheckoutItem />
             <CheckoutItem />
