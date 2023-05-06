@@ -5,7 +5,7 @@ import loginimage from "../Login/icons/cofeeloin-transformed.png";
 
 const Login = () => {
   return (
-    <div className="pt-28 mb-36 flex items-center justify-center font-nunito">
+    <div className=" pt-16 md:pt-28 mb-36 flex items-center justify-center font-nunito">
       <div className="md:w-[70%] mx-auto flex flex-col-reverse md:flex-row justify-between p-4 gap-x-4">
         <div className="flex-1 md:p-8  flex items-center justify-center">
           <form className="">
