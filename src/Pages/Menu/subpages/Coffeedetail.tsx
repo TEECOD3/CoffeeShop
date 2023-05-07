@@ -8,6 +8,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import image from "../../../Data/images/mainimages/matte-coffee-bag-mockup-template-removebg-preview.png";
 
 import {
+  ArrowLeft,
   ArrowRight,
   EyeIcon,
   Facebook,
@@ -15,6 +16,7 @@ import {
   Linkedin,
   Minus,
   ShoppingBag,
+  ShoppingBagIcon,
   Twitter,
 } from "lucide-react";
 import { Add } from "@mui/icons-material";
@@ -23,6 +25,7 @@ import Button from "../../../Components/UI/Button";
 import { useNavigate } from "react-router-dom";
 import { coffeedets } from "../../../Data/Cofee";
 import SwipperNavbuttons from "../Components/swipperbuttons";
+import { Link } from "react-router-dom";
 
 interface CoffeedetailProps {}
 
@@ -49,8 +52,19 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
   return (
     <>
       <main className=" py-16 lg:py-20">
+        <section className="xl:w-[70%] mx-auto mt-4">
+          <Link
+            to="/menu"
+            className="flex text-sm w-32 gap-x-4 items-center justify-center font-semibold "
+          >
+            <ArrowLeft /> <span>back to shop</span>
+          </Link>
+        </section>
         <section className="flex flex-col md:flex-row max-w-7xl mx-auto my-10">
           <div className="rightside| w-full md:w-1/2 h-full ">
+            <h4 className="text-3xl font-bold px-2 text-lightdark">
+              Coffee details
+            </h4>
             <div className=" h-[20rem]  sm:h-[30rem] md:h-[35rem] lg:h-[40rem] px-3">
               <img
                 src={image}
@@ -140,6 +154,28 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
           </div>
         </section>
 
+        <section className="w-full  xl:w-[80%] mx-auto space-x-8 ">
+          <Button
+            onClick={() => {
+              navigate("/menu/:id");
+            }}
+            className="rounded-none capitalize mb-4 ml-2 xl:ml-8"
+          >
+            description
+          </Button>
+          <Button
+            onClick={() => {
+              navigate("reviews");
+            }}
+            className="rounded-none capitalize mb-4"
+          >
+            review (24)
+          </Button>
+          <div className="w-full">
+            <Outlet />
+          </div>
+        </section>
+
         <section className="similarProducts| my-20 relative w-[80%] mx-auto ">
           <h4 className="font-bold text-lightdark md:text-xl mb-4 ">
             Other Collections You May Like
@@ -164,47 +200,31 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
               <SwiperSlide key={cofee.id}>
                 <div className="relative w-full lg:mb-4 cursor-pointer z-20 hover:scale-[1.02] transition duration-100 delay-75 group ">
                   <div className="w-full relative">
-                    <div className="absolute h-full top-0 left-0 bg-black/40 w-full  opacity-0 group-hover:opacity-100"></div>
                     <img
                       src={cofee.image}
                       alt="coffeedetail"
                       className=" w-full h-[20rem] object-cover md:w-[25rem]"
                     />
                   </div>
-                  <div className="button| absolute p-2  w-1/2 flex items-center justify-center  gap-4 top-1/2 left-[50%] md:left-1/2 -translate-x-1/2 -translate-y-1/2  opacity-0 group-hover:opacity-100 group-hover:right-2 transition-all duration-300 ">
-                    <div className=" p-1 lg:p-3 bg-white rounded-full flex items-center justify-center">
-                      <ShoppingBag className="h-4 w-4 lg:h-full lg:w-full  " />
-                    </div>
-                    <div className=" p-1 lg:p-3 bg-white rounded-full flex items-center justify-center">
-                      <EyeIcon
-                        className="h-4 w-4 lg:h-full lg:w-full animate-pulse "
-                        onClick={() => {
-                          navigate("/menu/:id");
-                        }}
-                      />
-                    </div>
+                  <div className="absolute  top-3  -right-11  opacity-0 group-hover:opacity-100 group-hover:right-2 transition-all duration-300 ">
+                    <button className="flex items-center justify-center  flex-col gap-2 md:gap-4">
+                      <div className=" flex justify-center items-center text-lightdark  shadow-lg bg-coffee-100/90 p-4 rounded-lg ">
+                        <ShoppingBagIcon className="h-4 w-4 md:h-6 md:w-6 text-white" />
+                      </div>
+
+                      <Link
+                        to="/menu/:id"
+                        className=" flex justify-center items-center text-lightdark shadow-lg bg-coffee-100/90 p-4 rounded-lg "
+                      >
+                        <EyeIcon className="h-4 w-4 md:h-6 md:w-6 text-white" />
+                      </Link>
+                    </button>
                   </div>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
         </section>
-
-        <Button
-          onClick={() => {
-            navigate("/menu/:id");
-          }}
-        >
-          description
-        </Button>
-        <Button
-          onClick={() => {
-            navigate("reviews");
-          }}
-        >
-          review
-        </Button>
-        <Outlet />
       </main>
     </>
   );
