@@ -129,11 +129,6 @@ input[type="range"]:focus::-moz-range-thumb {
   overflow-x: hidden;
 }
 .track {
-  width: 200%;
-  position: absolute;
-  gap: 10px;
-  object-fit: cover;
-  display: flex;
   will-change: transform;
   animation: scroll 10s linear infinite;
 }

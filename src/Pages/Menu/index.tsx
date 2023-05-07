@@ -52,18 +52,18 @@ const Menu = () => {
             delay: 0.3,
           }}
         >
-          <div className="flex flex-col w-full md:max-w-7xl lg:max-w-[80%] mx-auto gap-2  md:px-2">
+          <div className="flex flex-col w-[95%] md:max-w-7xl xl:max-w-[80%] mx-auto gap-2  md:px-2">
             <main className="w-full h-full">
-              <div className="mb-6  md:w-4/12 capitalize text-base sm:text-xl font-bold flex item-center justify-left">
+              <div className="mb-6 md:w-4/12 capitalize text-base sm:text-xl font-bold flex item-center justify-left">
                 <h4 className="">All collections </h4>
                 <span className="font-extrabold text-xl ml-2 flex flex-cols items-center justify-center">
                   <FaArrowDown className="animate-bounce" />
                 </span>
               </div>
               <div className="w-full mx-auto  h-full  justify-center">
-                <div className="flex flex-col-reverse lg:flex-row gap-16">
-                  <div className="flex  lg:flex-col flex-col lg:w-[70%] border-2 p-2">
-                    <div className="grid-cols-2 grid md:grid-cols-3 gap-3">
+                <div className="flex  flex-col-reverse lg:flex-row gap-16">
+                  <div className=" w-[98%] flex  lg:flex-col flex-col xl:w-[70%] border-2 p-2 mx-auto">
+                    <div className="grid-cols-2 grid md:grid-cols-3 gap-3 ">
                       <Menucards />
                       <Menucards />
                       <Menucards />
@@ -106,7 +106,7 @@ const Menu = () => {
                         filter by price
                       </h5>
 
-                      <form className="">
+                      <form className="flex flex-col">
                         <Input
                           inputs={{
                             type: "range",
@@ -144,32 +144,19 @@ const Menu = () => {
                     effect="fade"
                     modules={[Autoplay, Pagination, Navigation]}
                     speed={1000}
-                    className="relative"
+                    className="relative track xl:w-[80%]"
                   >
                     <SwipperNavbuttons className="mt-4" />
                     {coffeedets.map((cofee) => (
                       <SwiperSlide key={cofee.id}>
                         <div className="relative w-full lg:mb-4 cursor-pointer z-20 hover:scale-[1.09] transition duration-100 delay-75 group ">
-                          <div className=" flex items-center justify-center h-[300px] bg-white/90">
+                          <div className=" flex items-center justify-center h-[300px] ">
                             <img
                               src={cofee.image}
                               alt="coffeedetail"
-                              className="bg-contain object-cover "
+                              className="bg-contain object-cover max-w-[300px] "
                             />
                           </div>
-                          {/* <div className="button| absolute p-2  w-1/2 flex items-center justify-center  gap-4 top-1/2 left-[50%] md:left-1/2 -translate-x-1/2 -translate-y-1/2  opacity-0 group-hover:opacity-100 group-hover:right-2 transition-all duration-300 ">
-                            <div className=" p-1 lg:p-3 bg-white rounded-full flex items-center justify-center">
-                              <ShoppingBag className="h-4 w-4 lg:h-full lg:w-full  " />
-                            </div>
-                            <div className=" p-1 lg:p-3 bg-white rounded-full flex items-center justify-center">
-                              <EyeIcon
-                                className="h-4 w-4 lg:h-full lg:w-full animate-pulse "
-                                onClick={() => {
-                                  navigate("/menu/:id");
-                                }}
-                              />
-                            </div>
-                          </div> */}
                         </div>
                       </SwiperSlide>
                     ))}
