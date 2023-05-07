@@ -8,9 +8,8 @@ const Menucards: FC<MenucardsProps> = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   return (
-    <div className="border-2 p-2 relative w-full lg:mb-4 cursor-pointer z-20 hover:scale-[1.09] transition duration-300 delay-200 group ">
+    <div className="border-2 p-2 relative w-[90%] lg:mb-4 cursor-pointer z-20 hover:scale-[1.09] transition duration-300 delay-200 group ">
       <div className=" md:w-[200px] relative mx-auto">
-        {/* <div className="absolute h-full w-full round-xl bg-black/20 opacity-0 group-hover:opacity-100"></div> */}
         <div className="  flex items-center justify-center">
           <img
             src={image}

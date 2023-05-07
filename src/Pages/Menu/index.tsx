@@ -14,8 +14,6 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import SwipperNavbuttons from "./Components/swipperbuttons";
 import { coffeedets } from "../../Data/Cofee";
-import { ShoppingBag } from "lucide-react";
-import { EyeIcon } from "lucide-react";
 
 const Menu = () => {
   const { pathname } = useLocation();
