@@ -33,7 +33,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <ul className="md:flex hidden justify-around  w-1/3 md:w-[4 0%] item-end text-white ">
+          <ul className="md:flex hidden justify-around  w-1/3 md:w-[40%] item-end text-white ">
             <NavLink to="/menu">
               <li>Menu</li>
             </NavLink>

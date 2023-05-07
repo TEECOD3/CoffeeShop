@@ -50,7 +50,7 @@ const Menu = () => {
             delay: 0.3,
           }}
         >
-          <div className="flex flex-col w-[95%] md:max-w-7xl xl:max-w-[80%] mx-auto gap-2  md:px-2">
+          <div className="flex flex-col w-[95%] md:max-w-7xl  mx-auto gap-2  md:px-2">
             <main className="w-full h-full">
               <div className="mb-6 md:w-4/12 capitalize text-base sm:text-xl font-bold flex item-center justify-left">
                 <h4 className="">All collections </h4>
