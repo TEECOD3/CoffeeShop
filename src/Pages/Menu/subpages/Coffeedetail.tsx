@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
-import { useLocation } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import image from "../../../Data/images/mainimages/matte-coffee-bag-mockup-template-removebg-preview.png";
 
 import {
@@ -45,7 +45,7 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
   };
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, []);
   return (
     <>
       <main className=" py-16 lg:py-20">
@@ -189,6 +189,22 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
             ))}
           </Swiper>
         </section>
+
+        <Button
+          onClick={() => {
+            navigate("/menu/:id");
+          }}
+        >
+          description
+        </Button>
+        <Button
+          onClick={() => {
+            navigate("reviews");
+          }}
+        >
+          review
+        </Button>
+        <Outlet />
       </main>
     </>
   );

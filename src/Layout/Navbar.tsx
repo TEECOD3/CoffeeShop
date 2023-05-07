@@ -5,10 +5,10 @@ import Coffeelogo from "../Pages/Home/icon/coffelogo";
 import MobileNav from "../Components/UI/MobileNavigation";
 import { AnimatePresence } from "framer-motion";
 import { Profiler, useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { GiHamburgerMenu, GiTick } from "react-icons/gi";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 
-import { Menu, User } from "lucide-react";
+import { Check, Menu, User } from "lucide-react";
 const Navbar = () => {
   const [ModalOpen, setModalOpen] = useState(false);
   const navigate = useNavigate();
@@ -43,11 +43,15 @@ const Navbar = () => {
               <FaSistrix className="text-white text-2xl" />
             </li>
             <NavLink to="/login">
-              <li className="h-6 w-6">
+              <li className="h-6 w-6 relative">
+                <Check className="absolute bg-white text-black rounded-full h-4 w-4 -bottom-2 -right-2" />
                 <Profile />
               </li>
             </NavLink>
-            <li>
+            <li className="relative ">
+              <div className="absolute bg-red-500 rounded-full -top-2 text-sm -right-2  h-5 w-5 flex item-center justify-center">
+                3
+              </div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

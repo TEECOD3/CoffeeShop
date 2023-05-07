@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import image from "../../../Data/images/mainimages/Kuska-packshot-mellemristet-skraa-2.webp";
 import { EyeIcon, ShoppingBagIcon } from "lucide-react";
 interface MenucardsProps {}
@@ -22,27 +22,27 @@ const Menucards: FC<MenucardsProps> = () => {
           />
         </div>
       </div>
-      <h3 className="mt-4 text-lightdark font-light text-sm ">
-        espresso cofeee
+      <h3 className="mt-4  text-lightdark font-light text-sm md:text-base w-2/3 mx-auto text-center ">
+        espresso cofeee cofee yamayada exposio
       </h3>
-      <div className="flex gap-4 mt-2 font-medium  font-nunito ">
+      <div className="flex gap-4 mt-2 font-medium  font-nunito justify-center">
         <h4 className="text-coffee-100 text-sm">$500</h4>
         <s className="text-lightdark text-sm">$900</s>
       </div>
+      <div className="absolute p-2 bg-white top-3  -right-11  opacity-0 group-hover:opacity-100 group-hover:right-2 transition-all duration-300 ">
+        <button className="flex items-center justify-center  flex-col gap-2 md:gap-4">
+          <div className="h-8 w-8  flex text-center  items-center justify-center text-lightdark  bg-white shadow-lg ">
+            <ShoppingBagIcon className="h-4 w-4 md:h-8 md:w-8" />
+          </div>
 
-      {/* <div className="button| absolute p-2  w-1/2 flex items-center justify-center top-1/3  gap-4 left-[45%] md:bottom-4 md:left-[43%]  -translate-x-1/3 -translate-y-1/3  opacity-0 group-hover:opacity-100 group-hover:right-2 transition-all duration-300 ">
-        <div className=" p-3 lg:p-2 shadow-xl bg-white/80 rounded-full flex items-center justify-center">
-          <ShoppingBagIcon className="h-4 w-4 lg:h-6 lg:w-6 " />
-        </div>
-        <div className=" p-3 lg:p-2 shadow-xl bg-white/80 rounded-full flex items-center justify-center">
-          <EyeIcon
-            className="h-4 w-4 lg:h-6 lg:w-6  animate-pulse  "
-            onClick={() => {
-              navigate("/menu/:id");
-            }}
-          />
-        </div>
-      </div> */}
+          <Link
+            to="/menu/:id"
+            className=" flex justify-center items-center text-lightdark bg-white shadow-lg "
+          >
+            <EyeIcon className="h-4 w-4 md:h-8 md:w-8" />
+          </Link>
+        </button>
+      </div>
     </div>
   );
 };

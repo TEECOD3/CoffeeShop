@@ -14,11 +14,11 @@ import spons6 from "../Pages/Home/icon/spons6.png";
 import { MdCoffeeMaker } from "react-icons/md";
 import { GiCoffeeBeans, GiCoffeeCup, GiCoffeeMug } from "react-icons/gi";
 import { CiCoffeeBean } from "react-icons/ci";
-import image from "../assets/Images/milkshake.png";
-import image2 from "../Data/images/jamaican-blue-mountain-coffee-coffee-bag-down-east-coffee-drink-coffee-sack-700246164a09d47271f422efc3b3229a.png";
-import image3 from "../Data/images/lion-coffee-bag-on-top-of-roasted-coffee-beans-png-clipart.jpg";
-import image4 from "../Data/images/tea-bag-pg-tips-coffee-drink-leaf-tea-f905281958c868e88b1315990bf32423.png";
-import image5 from "../Data/images/jamaican-blue-mountain-coffee-coffee-bag-down-east-coffee-drink-coffee-sack-700246164a09d47271f422efc3b3229a.png";
+import image from "../Data/images/mainimages/DSC_1179_copy_web_award-transformed.png";
+import image2 from "../Data/images/mainimages/CT_PRODUCTS_CARELESS_CAT_000-DZ1-transformed.png";
+import image3 from "../Data/images/mainimages/download-9pBn27ucF-transformed.png";
+import image4 from "../Data/speciality coffee/Blend  Totally Righteous House.png";
+import image5 from "../Data/images/mainimages/Ferrari_s_Coffee_PiacentinaDeluxe6kgWholebean-transformed.png";
 import chef1 from "../Data/images/chefs/ourchef1.png";
 import chef2 from "../Data/images/chefs/ourchef2.png";
 import chef3 from "../Data/images/chefs/ourchef3.png";
@@ -218,9 +218,6 @@ export const chefs = [
   { id: 1, image: chef4, name: "micheal ojuma", position: "owner" },
 ];
 
-
-
-
 // Introducing Yauco Puerto Rico Coffee: A Taste of Tropical Paradise
 
 // Experience the allure of the Caribbean with Yauco Puerto Rico Coffee. Grown in the fertile soils of the Yauco region, our coffee beans captivate your senses with their exceptional quality and unique flavor profile.
@@ -232,7 +229,6 @@ export const chefs = [
 // Immerse yourself in the rich heritage and tradition of Puerto Rican coffee. With its smoothness, complexity, and unique terroir, Yauco Puerto Rico Coffee is a true reflection of the island's coffee-making expertise.
 
 // Explore our eCommerce store and discover the captivating flavors of Yauco Puerto Rico Coffee. Elevate your coffee experience and enjoy a taste of tropical paradise in every cup.
-
 
 // Introducing Chamberlain Coffee: Elevate Your Coffee Experience
 
