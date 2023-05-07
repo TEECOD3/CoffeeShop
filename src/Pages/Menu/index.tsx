@@ -151,11 +151,10 @@ const Menu = () => {
                       <SwiperSlide key={cofee.id}>
                         <div className="relative w-full lg:mb-4 cursor-pointer z-20 hover:scale-[1.09] transition duration-100 delay-75 group ">
                           <div className=" flex items-center justify-center h-[300px] bg-white/90">
-                            <div className="absolute h-full top-0 left-0 bg-black/40 w-full  opacity-0 group-hover:opacity-100"></div>
                             <img
                               src={cofee.image}
                               alt="coffeedetail"
-                              className="bg-contain object-cover max-w-[200px] "
+                              className="bg-contain object-cover "
                             />
                           </div>
                           {/* <div className="button| absolute p-2  w-1/2 flex items-center justify-center  gap-4 top-1/2 left-[50%] md:left-1/2 -translate-x-1/2 -translate-y-1/2  opacity-0 group-hover:opacity-100 group-hover:right-2 transition-all duration-300 ">
