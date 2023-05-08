@@ -52,7 +52,7 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
   return (
     <>
       <main className=" py-16 lg:py-20">
-        <section className="xl:w-[70%] mx-auto mt-4">
+        <section className="xl:w-[80%] mx-auto mt-4">
           <Link
             to="/menu"
             className="flex text-sm w-32 gap-x-4 items-center justify-center font-semibold "
@@ -154,12 +154,12 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
           </div>
         </section>
 
-        <section className="w-full  xl:w-[80%] mx-auto space-x-8 ">
+        <section className="px-6 md:px-10">
           <Button
             onClick={() => {
               navigate("/menu/:id");
             }}
-            className="rounded-none capitalize mb-4 ml-2 xl:ml-8"
+            className="bg-blue-300 rounded-none capitalize mb-4 ml-2 xl:ml-8"
           >
             description
           </Button>

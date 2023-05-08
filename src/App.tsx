@@ -11,7 +11,7 @@ import RootLayer from "./Layout/RootLayer";
 import Menu from "./Pages/Menu";
 import Cartpage from "./Pages/Cart";
 import Login from "./Pages/Login";
-import Register from "./Pages/Signup";
+import Register from "./Pages/Register";
 import Forgotpassword from "./Pages/Forgetpassword";
 import Checkoutpage from "./Pages/Checkoutpage";
 import Coffeedescription from "../src/Pages/Menu/subpages/Coffeedescription";

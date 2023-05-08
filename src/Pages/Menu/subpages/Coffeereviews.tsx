@@ -2,7 +2,7 @@ import React from "react";
 
 const Coffeereviews = () => {
   return (
-    <div className="w-[80%] text-sm md:text-base">
+    <div className="text-sm md:text-base">
       Introducing Yauco Puerto Rico Coffee: A Taste of Tropical Paradise //
       Experience the allure of the Caribbean with Yauco Puerto Rico Coffee.
       Grown in the fertile soils of the Yauco region, our coffee beans captivate

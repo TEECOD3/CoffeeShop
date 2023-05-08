@@ -4,7 +4,7 @@ import Menucards from "./Components/MenuCards";
 import { FaArrowDown, FaArrowRight } from "react-icons/fa";
 import Input from "../../Components/Forms/Inputfield";
 import Filtercheckboxes from "./Components/filtercheckboxes";
-import { Search } from "lucide-react";
+import { EyeIcon, Search, ShoppingBagIcon } from "lucide-react";
 import image from "../../assets/Images/milkshake.png";
 import { AnimatePresence, motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -60,7 +60,7 @@ const Menu = () => {
               </div>
               <div className="w-full mx-auto  h-full  justify-center">
                 <div className="flex  flex-col-reverse lg:flex-row gap-16">
-                  <div className=" w-[98%] flex  lg:flex-col flex-col xl:w-[70%] border-2 p-2 mx-auto">
+                  <div className=" w-[98%] flex  lg:flex-col flex-col xl:w-[90%] border-2 p-2 mx-auto">
                     <div className="grid-cols-2 grid md:grid-cols-3 gap-3 ">
                       <Menucards />
                       <Menucards />
@@ -142,18 +142,33 @@ const Menu = () => {
                     effect="fade"
                     modules={[Autoplay, Pagination, Navigation]}
                     speed={1000}
-                    className="relative track xl:w-[80%]"
+                    className="relative track xl:w-[90%]"
                   >
                     <SwipperNavbuttons className="mt-4" />
                     {coffeedets.map((cofee) => (
                       <SwiperSlide key={cofee.id}>
                         <div className="relative w-full lg:mb-4 cursor-pointer z-20 hover:scale-[1.09] transition duration-100 delay-75 group ">
-                          <div className=" flex items-center justify-center h-[300px] ">
+                          <div className=" relative flex items-center justify-center h-[300px] ">
                             <img
                               src={cofee.image}
                               alt="coffeedetail"
                               className="bg-contain object-cover max-w-[300px] "
                             />
+
+                            <div className="absolute  top-3  -right-11  opacity-0 group-hover:opacity-100 group-hover:right-2 transition-all duration-300 ">
+                              <button className="flex items-center justify-center  flex-col gap-2 md:gap-4">
+                                <div className=" flex justify-center items-center text-lightdark  shadow-lg bg-coffee-100/90 p-4 rounded-lg ">
+                                  <ShoppingBagIcon className="h-4 w-4 md:h-6 md:w-6 text-white" />
+                                </div>
+
+                                <Link
+                                  to="/menu/:id"
+                                  className=" flex justify-center items-center text-lightdark shadow-lg bg-coffee-100/90 p-4 rounded-lg "
+                                >
+                                  <EyeIcon className="h-4 w-4 md:h-6 md:w-6 text-white" />
+                                </Link>
+                              </button>
+                            </div>
                           </div>
                         </div>
                       </SwiperSlide>

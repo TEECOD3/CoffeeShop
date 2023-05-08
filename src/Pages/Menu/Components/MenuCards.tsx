@@ -15,9 +15,6 @@ const Menucards: FC<MenucardsProps> = () => {
             src={image}
             alt=""
             className="object-cover bg-cover bg-top max-w-[100px]  mx-auto"
-            onClick={() => {
-              navigate("/menu/:id");
-            }}
           />
         </div>
       </div>

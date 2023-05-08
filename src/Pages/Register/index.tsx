@@ -1,6 +1,6 @@
 import Input from "../../Components/Forms/Inputfield";
 import Button from "../../Components/UI/Button";
-import GoogleIcon from "./../Login/icons/Googleicon";
+import GoogleIcon from "../Login/icons/Googleicon";
 import loginimage from "../Login/icons/cofeeloin-transformed.png";
 import { useNavigate } from "react-router-dom";
 const Register = () => {

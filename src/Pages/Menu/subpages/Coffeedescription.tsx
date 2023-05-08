@@ -7,7 +7,7 @@ type descriptionprop = {
 const Coffeedescription = (props: descriptionprop) => {
   const { description } = props;
   return (
-    <div className="mb-10 w-[80%] text-sm md:text-base">
+    <div className="mb-10  text-sm md:text-base ">
       Indulge in the rich and captivating flavors of Chamberlain Coffee. Sourced
       from the world's finest coffee plantations, our beans are carefully
       selected and expertly roasted to perfection. With each sip, you'll

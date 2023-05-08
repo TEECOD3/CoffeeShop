@@ -265,7 +265,7 @@ const Home = () => {
               }}
               className="mb-6 mt-4 cursor-pointer  md:w-4/12 capitalize text-base sm:text-xl font-bold flex item-center justify-left"
             >
-              <h4 className="">view all </h4>
+              <h4 className="">view all collection </h4>
               <span className="font-extrabold text-xl ml-2 flex items-center justify-center">
                 <FaArrowRight className="animate-ping" />
               </span>

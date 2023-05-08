@@ -26,14 +26,14 @@ const Navbar = () => {
         {ModalOpen && <MobileNav hideModalHandler={hidemodalHandler} />}
       </AnimatePresence>
       <div className="px-2 sm:px-8 bg-black z-[1000] w-full fixed flex  ">
-        <div className=" w-[80%] md:w-full  md:max-w-7xl flex justify-between items-center h-full mx-auto">
+        <div className="w-full  md:max-w-7xl flex justify-between items-center h-full mx-auto">
           <div className="capitalize text-2xl font-bold text-white ">
             <Link to="/">
               <Coffeelogo className=" h-16 w-16  sm:h-20 sm:w-20 " />
             </Link>
           </div>
 
-          <ul className="md:flex hidden justify-around  w-1/3 md:w-[40%] item-end text-white ">
+          <ul className="md:flex hidden justify-around   md:w-[30%] item-end text-white ">
             <NavLink to="/menu">
               <li>Menu</li>
             </NavLink>
@@ -44,12 +44,12 @@ const Navbar = () => {
             </li>
             <NavLink to="/login">
               <li className="h-6 w-6 relative">
-                <Check className="absolute text-white bg-coffee-100 text-black rounded-full h-4 w-4 -bottom-2 -right-2" />
+                <Check className="absolute text-white bg-coffee-100  rounded-full h-4 w-4 -bottom-2 -right-2" />
                 <Profile />
               </li>
             </NavLink>
             <li className="relative ">
-              <div className="absolute  rounded-full -top-2 bg-coffee-100 text-sm -right-2  h-5 w-5 flex item-center justify-center">
+              <div className="absolute  rounded-full -top-2 bg-coffee-100 text-sm text-white -right-2  h-5 w-5 flex item-center justify-center">
                 3
               </div>
               <svg
@@ -71,10 +71,13 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <ul className="flex items-center justify-center gap-6 md:hidden px-4 mr-2">
+          <ul className="flex items-center justify-center gap-4 md:hidden px-2 ">
             <li className="">
               <Link to="/Cart">
-                <li>
+                <li className="relative">
+                  <div className="absolute  rounded-full -top-2 bg-coffee-100 text-sm -right-2 text-white h-5 w-5 flex item-center justify-center">
+                    3
+                  </div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -95,7 +98,8 @@ const Navbar = () => {
               </Link>
             </li>
             <NavLink to="/login">
-              <li>
+              <li className="relative">
+                <Check className="absolute text-white bg-coffee-100  rounded-full h-4 w-4 -bottom-2 -right-2" />
                 <User className="text-white" />
               </li>
             </NavLink>
