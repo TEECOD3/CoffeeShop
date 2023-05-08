@@ -3,8 +3,15 @@ import Input from "../../Components/Forms/Inputfield";
 import Button from "../../Components/UI/Button";
 import { ArrowBack } from "@mui/icons-material";
 import CheckoutItem from "./CheckoutItem";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const Checkoutpage = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <div className=" py-24 lg:py-48 mb-10">
       <div className=" w-full md:max-w-6xl mx-auto flex flex-col-reverse md:flex-row lg:px-2  space-y-2 md:justify-between gap-3">
