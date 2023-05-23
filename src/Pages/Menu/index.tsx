@@ -1,5 +1,5 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Menucards from "./Components/MenuCards";
 import { FaArrowDown, FaArrowRight } from "react-icons/fa";
 import Input from "../../Components/Forms/Inputfield";
@@ -14,13 +14,32 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import SwipperNavbuttons from "./Components/swipperbuttons";
 import { coffeedets } from "../../Data/Cofee";
+import sanityClient from "../../client";
 
 const Menu = () => {
-  const { pathname } = useLocation();
-
+  const [Categories, setCategories] = useState(null);
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    sanityClient
+      .fetch(
+        `*[_type == "coffeeProduct"]{
+      name,
+      slug,
+      oldPrice,
+      newPrice,
+      inStock,
+      image{
+        asset->{
+          _id,
+          url
+        },
+      },
+     
+    }`
+      )
+      .then((data) => setCategories(data))
+      .catch(console.error);
+  }, []);
+  console.log(Categories);
   const breakpoints = {
     480: {
       slidesPerView: 1,
@@ -41,7 +60,7 @@ const Menu = () => {
     <>
       <AnimatePresence>
         <motion.div
-          className="py-28 h-full w-full px-1 xl:px-0 "
+          className="h-full w-full px-1 py-28 xl:px-0 "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ y: 0 }}
@@ -50,18 +69,18 @@ const Menu = () => {
             delay: 0.3,
           }}
         >
-          <div className="flex flex-col w-[95%] md:max-w-7xl  mx-auto gap-2  md:px-2">
-            <main className="w-full h-full">
-              <div className="mb-6 md:w-4/12 capitalize text-base sm:text-xl font-bold flex item-center justify-left">
+          <div className="mx-auto flex w-[95%] flex-col  gap-2 md:max-w-7xl  md:px-2">
+            <main className="h-full w-full">
+              <div className="item-center justify-left mb-6 flex text-base font-bold capitalize sm:text-xl md:w-4/12">
                 <h4 className="">All collections </h4>
-                <span className="font-extrabold text-xl ml-2 flex flex-cols items-center justify-center">
+                <span className="flex-cols ml-2 flex items-center justify-center text-xl font-extrabold">
                   <FaArrowDown className="animate-bounce" />
                 </span>
               </div>
-              <div className="w-full mx-auto  h-full  justify-center">
-                <div className="flex  flex-col-reverse lg:flex-row gap-16">
-                  <div className=" w-[98%] flex  lg:flex-col flex-col xl:w-[90%] border-2 p-2 mx-auto">
-                    <div className="grid-cols-2 grid md:grid-cols-3 gap-3 ">
+              <div className="mx-auto h-full  w-full">
+                <div className="flex  flex-col-reverse gap-16 lg:flex-row">
+                  <div className=" mx-auto flex  w-[98%] flex-col border-2 p-2 lg:flex-col xl:w-[90%]">
+                    <div className="mx-auto grid w-full grid-cols-2 gap-3 md:grid-cols-3">
                       <Menucards />
                       <Menucards />
                       <Menucards />
@@ -72,8 +91,8 @@ const Menu = () => {
                       <Menucards />
                     </div>
                   </div>
-                  <div className=" lg:w-[30%] xl:w-[20%] border-2  lg:h-[30rem] p-4">
-                    <div className="flex relative sm:w-1/2  lg:w-full">
+                  <div className=" border-2 p-4 lg:h-[30rem]  lg:w-[30%] xl:w-[20%]">
+                    <div className="relative flex sm:w-1/2  lg:w-full">
                       <Input
                         inputs={{
                           type: "text",
@@ -81,7 +100,7 @@ const Menu = () => {
                         }}
                         className=" border-coffee-100 bg-white"
                       />
-                      <div className="bg-coffee-100 absolute p-2 flex focus:ring-coffee-100 focus:border-coffee-100 items-center justify-center right-0 top-0 h-full">
+                      <div className="absolute right-0 top-0 flex h-full items-center justify-center bg-coffee-100 p-2 focus:border-coffee-100 focus:ring-coffee-100">
                         <Search className="" />
                       </div>
                     </div>
@@ -89,7 +108,7 @@ const Menu = () => {
                     <div className="category| mt-4">
                       <h5 className="font-bold text-lightdark">Category</h5>
                       <div>
-                        <div className="flex lg:flex-col  lg:w-3/6 mt-3 flex-wrap  w-full  gap-2">
+                        <div className="mt-3 flex  w-full flex-wrap gap-2  lg:w-3/6  lg:flex-col">
                           <Filtercheckboxes />
                           <Filtercheckboxes />
                           <Filtercheckboxes />
@@ -100,7 +119,7 @@ const Menu = () => {
                     </div>
 
                     <div className="filter-by-price | mt-6 flex flex-col items-start justify-start gap-2">
-                      <h5 className="font-bold text-lightdark capitalize">
+                      <h5 className="font-bold capitalize text-lightdark">
                         filter by price
                       </h5>
 
@@ -112,11 +131,11 @@ const Menu = () => {
                             min: "0",
                             max: "8000",
                           }}
-                          className="text-coffee-100  bg-coffee-100 range border-coffee-100 appearance-none border-1  h-[0.3rem]"
+                          className="range  border-1 h-[0.3rem] appearance-none border-coffee-100 bg-coffee-100  text-coffee-100"
                         />
                         <label
                           htmlFor="pricefilter "
-                          className=" text-lightdark  font-nunito font-bold"
+                          className=" font-nunito  font-bold text-lightdark"
                         >
                           from $0 to $8000
                         </label>
@@ -125,8 +144,8 @@ const Menu = () => {
                   </div>
                 </div>
 
-                <section className="similarProducts| my-20 relative  mx-auto ">
-                  <h4 className="font-bold text-lightdark md:text-xl mb-4 ">
+                <section className="similarProducts| relative mx-auto  my-20 ">
+                  <h4 className="mb-4 font-bold text-lightdark md:text-xl ">
                     Other Collections You May Like
                   </h4>
 
@@ -142,30 +161,30 @@ const Menu = () => {
                     effect="fade"
                     modules={[Autoplay, Pagination, Navigation]}
                     speed={1000}
-                    className="relative track xl:w-[90%]"
+                    className="track relative xl:w-[90%]"
                   >
                     <SwipperNavbuttons className="mt-4" />
                     {coffeedets.map((cofee) => (
                       <SwiperSlide key={cofee.id}>
-                        <div className="relative w-full lg:mb-4 cursor-pointer z-20 hover:scale-[1.09] transition duration-100 delay-75 group ">
-                          <div className=" relative flex items-center justify-center h-[300px] ">
+                        <div className="group relative z-20 w-full cursor-pointer transition delay-75 duration-100 hover:scale-[1.09] lg:mb-4 ">
+                          <div className=" relative flex h-[300px] items-center justify-center ">
                             <img
                               src={cofee.image}
                               alt="coffeedetail"
-                              className="bg-contain object-cover max-w-[300px] "
+                              className="max-w-[300px] bg-contain object-cover "
                             />
 
-                            <div className="absolute  top-3  -right-11  opacity-0 group-hover:opacity-100 group-hover:right-2 transition-all duration-300 ">
-                              <button className="flex items-center justify-center  flex-col gap-2 md:gap-4">
-                                <div className=" flex justify-center items-center text-lightdark  shadow-lg bg-coffee-100/90 p-4 rounded-lg ">
-                                  <ShoppingBagIcon className="h-4 w-4 md:h-6 md:w-6 text-white" />
+                            <div className="absolute  -right-11  top-3  opacity-0 transition-all duration-300 group-hover:right-2 group-hover:opacity-100 ">
+                              <button className="flex flex-col items-center  justify-center gap-2 md:gap-4">
+                                <div className=" flex items-center justify-center rounded-lg  bg-coffee-100/90 p-4 text-lightdark shadow-lg ">
+                                  <ShoppingBagIcon className="h-4 w-4 text-white md:h-6 md:w-6" />
                                 </div>
 
                                 <Link
                                   to="/menu/:id"
-                                  className=" flex justify-center items-center text-lightdark shadow-lg bg-coffee-100/90 p-4 rounded-lg "
+                                  className=" flex items-center justify-center rounded-lg bg-coffee-100/90 p-4 text-lightdark shadow-lg "
                                 >
-                                  <EyeIcon className="h-4 w-4 md:h-6 md:w-6 text-white" />
+                                  <EyeIcon className="h-4 w-4 text-white md:h-6 md:w-6" />
                                 </Link>
                               </button>
                             </div>
