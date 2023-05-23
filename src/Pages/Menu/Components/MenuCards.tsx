@@ -18,7 +18,7 @@ const Menucards: FC<MenucardsProps> = () => {
           />
         </div>
       </div>
-      <h3 className="mx-auto  mt-4 text-left text-sm font-bold uppercase text-lightdark ">
+      <h3 className="mx-auto  mt-4 text-left text-[10px] font-bold capitalize text-lightdark ">
         espresso cofeee cofee yamayada exposio
       </h3>
       <div className="mt-2 flex justify-start gap-4  font-nunito font-medium">

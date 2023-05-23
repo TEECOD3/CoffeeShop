@@ -161,7 +161,7 @@ const Menu = () => {
                     effect="fade"
                     modules={[Autoplay, Pagination, Navigation]}
                     speed={1000}
-                    className="track relative xl:w-[90%]"
+                    className="relative xl:w-[90%]"
                   >
                     <SwipperNavbuttons className="mt-4" />
                     {coffeedets.map((cofee) => (
