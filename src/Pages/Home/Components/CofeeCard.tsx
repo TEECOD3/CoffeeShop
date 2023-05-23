@@ -14,59 +14,59 @@ interface CofeecardProps {}
 
 const Cofeecard: FC<CofeecardProps> = () => {
   return (
-    <div className="relative shadow-lg  w-full border-2 transition-all duration-300 border-coffee-100  mx-auto rounded-lg  overflow-hidden group  cursor-pointer">
-      <div className="w-full mx-auto flex items-center justify-center">
+    <div className="group relative  mx-auto w-full cursor-pointer overflow-hidden rounded-lg  border-2 border-coffee-100  shadow-lg transition-all  duration-300">
+      <div className="mx-auto flex w-full items-center justify-center">
         <img
           src={loves}
           alt="cofeeimage"
-          className="  rounded-lg w-full bg-cover "
+          className="  w-full rounded-lg bg-cover "
         />
       </div>
 
       <div className="p-1">
-        <div className=" flex items-center w-full gap-1">
-          <div className="font-bold mt-3 w-1/2  mb-3 px-2 text-[0.6rem] md:text-[0.8rem] xl:text-base">
+        <div className=" flex w-full items-center gap-1">
+          <div className="mb-3 mt-3 w-1/2  px-2 text-[0.6rem] font-bold md:text-[0.8rem] xl:text-base">
             Coffee Beans
           </div>
           <div className="flex  w-1/2 flex-col items-center justify-center">
             <div className="flex items-center ">
               <span>
-                <BsStar className="w-4 h-4  md:w-full md:h-full" />
+                <BsStar className="h-3 w-3  md:h-full md:w-full" />
               </span>
               <span>
-                <BsStar className="w-4 h-4 md:h-full md:w-full " />
+                <BsStar className="h-3 w-3 md:h-full md:w-full " />
               </span>
               <span>
-                <BsStar className="w-4 h-4  md:h-full md:w-full " />
+                <BsStar className="h-3 w-3  md:h-full md:w-full " />
               </span>
               <span>
-                <BsStar className="w-4 h-4  md:h-full md:w-full " />
+                <BsStar className="h-3 w-3  md:h-full md:w-full " />
               </span>
               <span>
-                <BsStar className="w-4 h-4  md:h-full md:w-full " />
+                <BsStar className="h-3 w-3  md:h-full md:w-full " />
               </span>
             </div>
           </div>
         </div>
-        <div className="text-[#828282] mb-2 px-2 font-nunito text-sm ">
+        <div className="mb-2 px-2 font-nunito text-sm text-[#828282] ">
           $300
         </div>
       </div>
 
-      <div className="absolute p-2 bg-white top-3  -right-11  opacity-0 group-hover:opacity-100 group-hover:right-2 transition-all duration-300 ">
-        <button className="flex items-center justify-center  flex-col gap-4 md:gap-8">
-          <div className="h-8 w-8  flex text-center  items-center justify-center text-lightdark  bg-white shadow-lg ">
+      <div className="absolute -right-11 top-3 bg-white  p-2  opacity-0 transition-all duration-300 group-hover:right-2 group-hover:opacity-100 ">
+        <button className="flex flex-col items-center  justify-center gap-4 md:gap-8">
+          <div className="flex h-8  w-8 items-center  justify-center bg-white text-center  text-lightdark shadow-lg ">
             <ShoppingBagIcon className="h-4 w-4 md:h-8 md:w-8" />
           </div>
 
           <Link
             to="/"
-            className=" flex justify-center items-center text-lightdark bg-white shadow-lg "
+            className=" flex items-center justify-center bg-white text-lightdark shadow-lg "
           >
             <EyeIcon className="h-4 w-4 md:h-8 md:w-8" />
           </Link>
 
-          <div className="h-10 w-10  flex text-center  items-center justify-center text-lightdark  bg-white shadow-lg">
+          <div className="flex h-10  w-10 items-center  justify-center bg-white text-center  text-lightdark shadow-lg">
             <HeartIcon className="h-4 w-4 md:h-8 md:w-8" />
           </div>
         </button>

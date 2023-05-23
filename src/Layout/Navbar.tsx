@@ -9,6 +9,7 @@ import { GiHamburgerMenu, GiTick } from "react-icons/gi";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 
 import { Check, Menu, User } from "lucide-react";
+import { BsPersonCheck } from "react-icons/bs";
 const Navbar = () => {
   const [ModalOpen, setModalOpen] = useState(false);
   const navigate = useNavigate();
@@ -25,31 +26,32 @@ const Navbar = () => {
       <AnimatePresence>
         {ModalOpen && <MobileNav hideModalHandler={hidemodalHandler} />}
       </AnimatePresence>
-      <div className="px-2 sm:px-8 bg-black z-[1000] w-full fixed flex  ">
-        <div className="w-full  md:max-w-7xl flex justify-between items-center h-full mx-auto">
-          <div className="capitalize text-2xl font-bold text-white ">
+      <div className="fixed z-[1000] flex w-full bg-black px-2 sm:px-8  ">
+        <div className="mx-auto  flex h-full w-full items-center justify-between md:max-w-7xl">
+          <div className="text-2xl font-bold capitalize text-white ">
             <Link to="/">
               <Coffeelogo className=" h-16 w-16  sm:h-20 sm:w-20 " />
             </Link>
           </div>
 
-          <ul className="md:flex hidden justify-around   md:w-[30%] item-end text-white ">
+          <ul className="item-end hidden justify-around   text-white md:flex md:w-[30%] ">
             <NavLink to="/menu">
               <li>Menu</li>
             </NavLink>
             <li>contact</li>
 
             <li className="flex items-center justify-center">
-              <FaSistrix className="text-white text-2xl" />
+              <FaSistrix className="text-2xl text-white" />
             </li>
             <NavLink to="/login">
-              <li className="h-6 w-6 relative">
-                <Check className="absolute text-white bg-coffee-100  rounded-full h-4 w-4 -bottom-2 -right-2" />
-                <Profile />
+              <li className="relative h-6 w-6">
+                {/* <Check className="absolute -bottom-2 -right-2  h-4 w-4 rounded-full bg-coffee-100 text-white" />
+                <Profile /> */}
+                <BsPersonCheck className="text-3xl text-white" />
               </li>
             </NavLink>
             <li className="relative ">
-              <div className="absolute  rounded-full -top-2 bg-coffee-100 text-sm text-white -right-2  h-5 w-5 flex item-center justify-center">
+              <div className="item-center  absolute -right-2 -top-2 flex h-5 w-5  justify-center rounded-full bg-coffee-100 text-sm text-white">
                 3
               </div>
               <svg
@@ -71,11 +73,11 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <ul className="flex items-center justify-center gap-4 md:hidden px-2 ">
+          <ul className="flex items-center justify-center gap-4 px-2 md:hidden ">
             <li className="">
               <Link to="/Cart">
                 <li className="relative">
-                  <div className="absolute  rounded-full -top-2 bg-coffee-100 text-sm -right-2 text-white h-5 w-5 flex item-center justify-center">
+                  <div className="item-center  absolute -right-2 -top-2 flex h-5 w-5 justify-center rounded-full bg-coffee-100 text-sm text-white">
                     3
                   </div>
                   <svg
@@ -99,8 +101,9 @@ const Navbar = () => {
             </li>
             <NavLink to="/login">
               <li className="relative">
-                <Check className="absolute text-white bg-coffee-100  rounded-full h-4 w-4 -bottom-2 -right-2" />
-                <User className="text-white" />
+                {/* <Check className="absolute -bottom-2 -right-2  h-4 w-4 rounded-full bg-coffee-100 text-white" /> */}
+                {/* <User className="text-white" /> */}
+                <BsPersonCheck className="text-3xl text-white" />
               </li>
             </NavLink>
 

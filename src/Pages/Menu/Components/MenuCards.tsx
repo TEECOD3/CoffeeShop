@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import image from "../../../Data/images/mainimages/Coffee-Bag-Mockup-removebg-preview.png";
+import image from "../../../Data/images/mainimages/DSC_1179_copy_web_award-transformed.png";
 import { EyeIcon, ShoppingBagIcon } from "lucide-react";
 interface MenucardsProps {}
 
@@ -14,7 +14,7 @@ const Menucards: FC<MenucardsProps> = () => {
           <img
             src={image}
             alt=""
-            className="mx-auto max-w-[100px] bg-cover bg-top  object-cover"
+            className="mx-auto max-w-[150px] bg-cover bg-top  object-cover"
           />
         </div>
       </div>
@@ -25,17 +25,19 @@ const Menucards: FC<MenucardsProps> = () => {
         <h4 className="text-sm text-coffee-100">$500</h4>
         <s className="text-sm text-lightdark">$900</s>
       </div>
+
+      {/* details amd add to cart */}
       <div className="absolute  -right-11  top-3  opacity-0 transition-all duration-300 group-hover:right-2 group-hover:opacity-100 ">
         <button className="flex flex-col items-center  justify-center gap-2 md:gap-4">
           <div className=" flex items-center justify-center rounded-lg  bg-coffee-100/90 p-4 text-lightdark shadow-lg ">
-            <ShoppingBagIcon className="h-4 w-4 text-white md:h-6 md:w-6" />
+            <ShoppingBagIcon className="h-4 w-4 text-white " />
           </div>
 
           <Link
             to="/menu/:id"
             className=" flex items-center justify-center rounded-lg bg-coffee-100/90 p-4 text-lightdark shadow-lg "
           >
-            <EyeIcon className="h-4 w-4 text-white md:h-6 md:w-6" />
+            <EyeIcon className="h-4 w-4 text-white" />
           </Link>
         </button>
       </div>

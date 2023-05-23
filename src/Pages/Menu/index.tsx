@@ -1,7 +1,7 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Menucards from "./Components/MenuCards";
-import { FaArrowDown, FaArrowRight } from "react-icons/fa";
+import { FaArrowDown } from "react-icons/fa";
 import Input from "../../Components/Forms/Inputfield";
 import Filtercheckboxes from "./Components/filtercheckboxes";
 import { EyeIcon, Search, ShoppingBagIcon } from "lucide-react";

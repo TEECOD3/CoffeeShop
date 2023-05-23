@@ -183,14 +183,14 @@ export const sponsors = [
 ];
 
 export const buttondata = [
-  { id: 1, component: <MdCoffeeMaker />, name: "speciality drinks" },
-  { id: 2, component: <GiCoffeeBeans />, name: " Esperesso coffee" },
-  { id: 3, component: <GiCoffeeCup />, name: " flavoured drinks" },
-  { id: 4, component: <GiCoffeeMug />, name: "brewed coffee" },
+  { id: 1, component: <MdCoffeeMaker />, name: "light roast" },
+  { id: 2, component: <GiCoffeeBeans />, name: "medium roast" },
+  { id: 3, component: <GiCoffeeCup />, name: "dark roasts" },
+  { id: 4, component: <GiCoffeeMug />, name: "bundles" },
   {
     id: 5,
     component: <CiCoffeeBean />,
-    name: "Single origin",
+    name: "unroasted coffee beans",
   },
 ];
 
