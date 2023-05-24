@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-import sjsj from "./src/assets/Images/blackcofee.png";
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],

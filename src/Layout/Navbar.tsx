@@ -4,15 +4,13 @@ import { FaSistrix } from "react-icons/fa";
 import Coffeelogo from "../Pages/Home/icon/coffelogo";
 import MobileNav from "../Components/UI/MobileNavigation";
 import { AnimatePresence } from "framer-motion";
-import { Profiler, useState } from "react";
-import { GiHamburgerMenu, GiTick } from "react-icons/gi";
+import { useState } from "react";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 
-import { Check, Menu, User } from "lucide-react";
+import { Menu } from "lucide-react";
 import { BsPersonCheck } from "react-icons/bs";
 const Navbar = () => {
   const [ModalOpen, setModalOpen] = useState(false);
-  const navigate = useNavigate();
 
   const openModalHandler = () => {
     setModalOpen(!ModalOpen);
@@ -26,8 +24,8 @@ const Navbar = () => {
       <AnimatePresence>
         {ModalOpen && <MobileNav hideModalHandler={hidemodalHandler} />}
       </AnimatePresence>
-      <div className="fixed z-[1000] flex w-full bg-black px-2 sm:px-8  ">
-        <div className="mx-auto  flex h-full w-full items-center justify-between md:max-w-7xl">
+      <div className="fixed z-[1000] flex w-full bg-black px-2 sm:px-8">
+        <div className="mx-auto  flex h-full w-full items-center justify-between lg:max-w-[70%]">
           <div className="text-2xl font-bold capitalize text-white ">
             <Link to="/">
               <Coffeelogo className=" h-16 w-16  sm:h-20 sm:w-20 " />
@@ -36,7 +34,7 @@ const Navbar = () => {
 
           <ul className="item-end hidden justify-around   text-white md:flex md:w-[30%] ">
             <NavLink to="/menu">
-              <li>Menu</li>
+              <li>Shop</li>
             </NavLink>
             <li>contact</li>
 

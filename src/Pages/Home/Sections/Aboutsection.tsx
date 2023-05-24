@@ -11,7 +11,7 @@ export default function Aboutsection({}: Props) {
   return (
     <section className="my-4 max-md:p-1 sm:my-8 lg:p-4  ">
       <div className=" mx-auto flex flex-col justify-between  gap-3  p-2   md:flex-row lg:max-w-7xl">
-        <div className="relative  w-[60%] max-xl:w-full max-md:h-1/6">
+        <div className="relative w-[60%] max-xl:w-full max-md:h-1/6">
           <img
             src={dottedimage}
             alt="dotted images"

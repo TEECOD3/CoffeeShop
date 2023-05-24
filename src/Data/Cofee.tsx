@@ -28,21 +28,21 @@ export const leftCoffee = [
   {
     id: 1,
     image: <CofeeBag className="" />,
-    coffeeName: " Espresso",
+    coffeeName: "light roast",
     coffeeDescription:
       "This category includes classic espresso drinks such as cappuccinos, lattes, macchiatos, and Americanos.",
   },
   {
     id: 2,
     image: <CoffeeCup />,
-    coffeeName: "brewed coffee",
+    coffeeName: "medium roast",
     coffeeDescription:
       "Every day we brew our house columbian and french roast coffees ,a s well as a rotating varietal",
   },
   {
     id: 3,
     image: <CoffeeJar />,
-    coffeeName: "flavoured drinks",
+    coffeeName: "Dark roast",
     coffeeDescription:
       "This category includes coffee drinks with added flavorings such as vanilla, caramel, hazelnut, or chocolate.",
   },
@@ -52,21 +52,21 @@ export const rightCofee = [
   {
     id: 1,
     image: <Cola />,
-    coffeeName: "Single origin coffees",
+    coffeeName: "bundles",
     coffeeDescription:
       "features a selection of coffees from different regions, such as Ethiopia, Colombia, and Guatemala.",
   },
   {
     id: 2,
     image: <CoffeeBlend />,
-    coffeeName: "specialty drinks",
+    coffeeName: "unroasted coffee beans",
     coffeeDescription:
       "unique category that feature ingredients such as coconut milk, matcha, or chai tea.",
   },
   {
     id: 3,
     image: <CoffeeBlend />,
-    coffeeName: "Decaffeinated drinks:",
+    coffeeName: "subscriptions",
     coffeeDescription:
       " For those who want to enjoy the taste of coffee without the caffeine, here is a decaf category ",
   },

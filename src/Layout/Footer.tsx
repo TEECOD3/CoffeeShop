@@ -1,6 +1,7 @@
 import React from "react";
 import Coffeelogo from "../Pages/Home/icon/coffelogo";
 import { GiPhone } from "react-icons/gi";
+import bgfooter from "../assets/Images/darks.png";
 import {
   MdOutlineLocationOn,
   MdOutlineEmail,
@@ -20,44 +21,47 @@ import Button from "../Components/UI/Button";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-red-400 relative bottom-0 left-0 mt-auto">
-      <div className=" flex flex-col relative  md:flex-row py-10 px-4 justify-around items-center h-full bg-black/90  w-full  text-white text-sm md:text-base">
-        <div className="bg-white z-[900] py-4 rounded-lg h-[12rem] shadow-2xl absolute -top-24 mx-auto w-[90%] md:w-2/3 px-4 text-black flex flex-col items-center justify-center xl:flex-row">
-          <h2 className="w-full text-center text-xl pt-4 font-bold  lg:text-3xl">
+    <footer className="relative bottom-0 left-0 mt-auto w-full bg-red-400">
+      <div className=" relative flex h-full  w-full flex-col items-center justify-around bg-black/90 px-4 py-10  text-sm  text-white md:flex-row md:text-base">
+        <div className="absolute -top-24 z-[900] mx-auto flex h-[12rem] w-[90%] flex-col items-center justify-center rounded-lg bg-white px-4 py-4 text-black shadow-2xl md:w-2/3 xl:flex-row">
+          <h2 className="w-full pt-4 text-center text-xl font-bold  lg:text-3xl">
             Subscribe To Our Newsletter
           </h2>
-          <div className="w-full mt-3 flex flex-col md:flex-row">
+          <div className="mt-3 flex w-full flex-col md:flex-row">
             <input
               type="email"
               placeholder="Enter email .."
-              className="w-full border-2 rounded-lg  border-coffee-100 p-3  md:w-[60%] mr-1 "
+              className="mr-1 w-full rounded-lg  border-2 border-coffee-100  p-3 md:w-[60%] "
             />
             <Button
               variant="ghost"
-              className="w-2/4 text-sm mt-3 md:w-[35%] mx-auto  border-[1px] border-coffee-100"
+              className="mx-auto mt-3 w-2/4 border-[1px] border-coffee-100  text-sm md:w-[35%]"
             >
               Subscribe now
             </Button>
           </div>
-          <div className="w-full mx-auto mb-6 md:mb-2">
-            <div className="w-2/3 mx-auto flex gap-2 justify-center ">
-              <div className="md:bg-coffee-100 flex items-center justify-center text-sm md:py-2 px-1 rounded-lg">
-                <Facebook className="text-coffee-100 md:text-white h-6 " />
+          <div className="mx-auto mb-6 w-full md:mb-2">
+            <div className="mx-auto flex w-2/3 justify-center gap-2 ">
+              <div className="flex items-center justify-center rounded-lg px-1 text-sm md:bg-coffee-100 md:py-2">
+                <Facebook className="h-6 text-coffee-100 md:text-white " />
               </div>
-              <div className="md:bg-coffee-100 flex items-center justify-center  text-sm py-2 px-1 rounded-lg">
-                <Twitter className="text-coffee-100 md:text-white  h-6 " />
+              <div className="flex items-center justify-center rounded-lg  px-1 py-2 text-sm md:bg-coffee-100">
+                <Twitter className="h-6 text-coffee-100  md:text-white " />
               </div>
-              <div className="md:bg-coffee-100 flex items-center justify-center text-sm py-2 px-1 rounded-lg">
-                <Instagram className="text-coffee-100 md:text-white  h-6  " />
+              <div className="flex items-center justify-center rounded-lg px-1 py-2 text-sm md:bg-coffee-100">
+                <Instagram className="h-6 text-coffee-100  md:text-white  " />
               </div>
-              <div className="md:bg-coffee-100  flex items-center justify-center text-sm py-2 px-1 rounded-lg">
-                <Youtube className="text-coffee-100 md:text-white h-6  " />
+              <div className="flex  items-center justify-center rounded-lg px-1 py-2 text-sm md:bg-coffee-100">
+                <Youtube className="h-6 text-coffee-100 md:text-white  " />
               </div>
             </div>
           </div>
         </div>
-        <div className="bg-blackcoffee opacity-20  z-[1] bg-center object-cover  bg-cover bg-no-repeat absolute h-full w-full top-0 left-0"></div>
-        <div className="w-full md:w-1/5  z-30  mt-20">
+        <img
+          src={bgfooter}
+          className=" absolute  left-0 top-0 z-[1]  h-full w-full bg-cover bg-center bg-no-repeat object-cover opacity-20"
+        ></img>
+        <div className="z-30 mt-20  w-full  md:w-1/5">
           <div className="">
             <Coffeelogo className=" h-16 w-16  sm:h-20 sm:w-20 " />
           </div>
@@ -70,23 +74,23 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className=" z-30 w-full  mt-4 p-5 md:w-1/5 capitalize">
+        <div className=" z-30 mt-4  w-full p-5 capitalize md:w-1/5">
           <h3 className="font-bold">Explore</h3>
 
-          <div className="flex justify-between w-full">
-            <ul className="space-y-4 mt-4">
+          <div className="flex w-full justify-between">
+            <ul className="mt-4 space-y-4">
               <li>home</li>
               <li>about us</li>
               <li>contact us</li>
             </ul>
-            <ul className="space-y-4 mt-4">
+            <ul className="mt-4 space-y-4">
               <li>blog</li>
               <li>team</li>
               <li>our menu</li>
             </ul>
           </div>
         </div>
-        <div className=" z-30 w-full mt-8 md:w-1/5 ">
+        <div className=" z-30 mt-8 w-full md:w-1/5 ">
           <ul className="space-y-6">
             <li className="flex gap-2 ">
               <span>
