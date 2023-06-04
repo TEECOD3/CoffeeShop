@@ -1,9 +1,12 @@
 import { FC } from "react";
 import Input from "../../../Components/Forms/Inputfield";
 
-interface FiltercheckboxesProps {}
+interface FiltercheckboxesProps {
+  filterName: string;
+}
 
-const Filtercheckboxes: FC<FiltercheckboxesProps> = () => {
+const Filtercheckboxes: FC<FiltercheckboxesProps> = (props) => {
+  const { filterName } = props;
   return (
     <form className=" flex items-center justify-center p-1 gap-1 ">
       <Input
@@ -18,7 +21,7 @@ const Filtercheckboxes: FC<FiltercheckboxesProps> = () => {
         htmlFor="filterbycategory"
         className="text-sm sm:text-base font-semibold"
       >
-        espresso
+        {filterName}
       </label>
     </form>
   );

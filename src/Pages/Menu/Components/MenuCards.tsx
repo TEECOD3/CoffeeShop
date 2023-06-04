@@ -2,9 +2,17 @@ import { FC } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import image from "../../../Data/images/mainimages/DSC_1179_copy_web_award-transformed.png";
 import { EyeIcon, ShoppingBagIcon } from "lucide-react";
-interface MenucardsProps {}
+import { urlFor } from "../../../client";
+interface MenucardsProps {
+  image?: string | undefined;
+  oldprice: number;
+  newprice: number;
+  coffeename: string;
+  slug?: string;
+}
 
-const Menucards: FC<MenucardsProps> = () => {
+const Menucards: FC<MenucardsProps> = (props) => {
+  const { oldprice, newprice, image, coffeename, slug } = props;
   const navigate = useNavigate();
   const { id } = useParams();
   return (
@@ -12,18 +20,18 @@ const Menucards: FC<MenucardsProps> = () => {
       <div className=" relative mx-auto md:w-[200px]">
         <div className="  flex items-center justify-center">
           <img
-            src={image}
+            src={urlFor(image).url()}
             alt=""
-            className="mx-auto max-w-[150px] bg-cover bg-top  object-cover"
+            className="mx-auto max-h-[150px] min-h-[150px] bg-cover bg-top  object-cover"
           />
         </div>
       </div>
-      <h3 className="mx-auto  mt-4 text-left text-[10px] font-bold capitalize text-lightdark ">
-        espresso cofeee cofee yamayada exposio
+      <h3 className="mx-auto  mt-4 text-left text-sm md:text-base uppercase font-bold  text-lightdark ">
+        {coffeename}
       </h3>
       <div className="mt-2 flex justify-start gap-4  font-nunito font-medium">
-        <h4 className="text-sm text-coffee-100">$500</h4>
-        <s className="text-sm text-lightdark">$900</s>
+        <h4 className="text-sm text-coffee-100">${newprice}</h4>
+        <s className="text-sm text-red-500">${oldprice}</s>
       </div>
 
       {/* details amd add to cart */}

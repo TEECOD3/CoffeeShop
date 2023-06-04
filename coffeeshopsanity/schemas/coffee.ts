@@ -48,5 +48,10 @@ export default {
       type: 'reference',
       to: [{type: 'category'}],
     },
+    {
+      name: 'description',
+      title: 'Description',
+      type: 'string',
+    },
   ],
 }

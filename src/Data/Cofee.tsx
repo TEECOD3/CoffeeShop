@@ -213,9 +213,16 @@ export const coffeedets = [
 
 export const chefs = [
   { id: 1, image: chef1, name: "Bulbul Hassan", position: "founder" },
-  { id: 1, image: chef2, name: "Bulbul Hassan", position: "chef" },
-  { id: 1, image: chef3, name: "Jorina Begum", position: "specialist" },
-  { id: 1, image: chef4, name: "micheal ojuma", position: "owner" },
+  { id: 2, image: chef2, name: "Bulbul Hassan", position: "chef" },
+  { id: 3, image: chef3, name: "Jorina Begum", position: "specialist" },
+  { id: 4, image: chef4, name: "micheal ojuma", position: "owner" },
+];
+export const filterButtons = [
+  { id: 1, name: "light roast" },
+  { id: 2, name: "medium roast" },
+  { id: 3, name: "subscription" },
+  { id: 4, name: "dark roast" },
+  { id: 5, name: "bundles" },
 ];
 
 // Introducing Yauco Puerto Rico Coffee: A Taste of Tropical Paradise

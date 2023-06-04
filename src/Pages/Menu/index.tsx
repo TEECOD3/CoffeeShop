@@ -13,13 +13,13 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import SwipperNavbuttons from "./Components/swipperbuttons";
-import { coffeedets } from "../../Data/Cofee";
-import sanityClient from "../../client";
+import { coffeedets, filterButtons } from "../../Data/Cofee";
+import { client, urlFor } from "../../client";
 
 const Menu = () => {
-  const [Categories, setCategories] = useState(null);
+  const [Categories, setCategories] = useState<any[]>([]);
   useEffect(() => {
-    sanityClient
+    client
       .fetch(
         `*[_type == "coffeeProduct"]{
       name,
@@ -39,7 +39,7 @@ const Menu = () => {
       .then((data) => setCategories(data))
       .catch(console.error);
   }, []);
-  console.log(Categories);
+  // console.log(Categories);
   const breakpoints = {
     480: {
       slidesPerView: 1,
@@ -81,14 +81,14 @@ const Menu = () => {
                 <div className="flex  flex-col-reverse gap-16 lg:flex-row">
                   <div className=" mx-auto flex  w-[98%] flex-col border-2 p-2 lg:flex-col xl:w-[90%]">
                     <div className="mx-auto grid w-full grid-cols-2 gap-3 md:grid-cols-3">
-                      <Menucards />
-                      <Menucards />
-                      <Menucards />
-                      <Menucards />
-                      <Menucards />
-                      <Menucards />
-                      <Menucards />
-                      <Menucards />
+                      {Categories.map((coffee) => (
+                        <Menucards
+                          image={coffee.image}
+                          coffeename={coffee.name}
+                          oldprice={coffee.oldPrice}
+                          newprice={coffee.newPrice}
+                        />
+                      ))}
                     </div>
                   </div>
                   <div className=" border-2 p-4 lg:h-[30rem]  lg:w-[30%] xl:w-[20%]">
@@ -109,11 +109,12 @@ const Menu = () => {
                       <h5 className="font-bold text-lightdark">Category</h5>
                       <div>
                         <div className="mt-3 flex  w-full flex-wrap gap-2  lg:w-3/6  lg:flex-col">
-                          <Filtercheckboxes />
-                          <Filtercheckboxes />
-                          <Filtercheckboxes />
-                          <Filtercheckboxes />
-                          <Filtercheckboxes />
+                          {filterButtons.map((buttondata) => (
+                            <Filtercheckboxes
+                              filterName={buttondata.name}
+                              key={buttondata.id}
+                            />
+                          ))}
                         </div>
                       </div>
                     </div>
@@ -164,17 +165,17 @@ const Menu = () => {
                     className="relative xl:w-[90%]"
                   >
                     <SwipperNavbuttons className="mt-4" />
-                    {coffeedets.map((cofee) => (
-                      <SwiperSlide key={cofee.id}>
+                    {Categories.map((cofee, index) => (
+                      <SwiperSlide key={index}>
                         <div className="group relative z-20 w-full cursor-pointer transition delay-75 duration-100 hover:scale-[1.09] lg:mb-4 ">
-                          <div className=" relative flex h-[300px] items-center justify-center ">
+                          <div className=" relative flex h-[250px] items-center justify-center ">
                             <img
-                              src={cofee.image}
+                              src={urlFor(cofee.image).url()}
                               alt="coffeedetail"
-                              className="max-w-[300px] bg-contain object-cover "
+                              className="max-h-[200px] bg-contain object-cover "
                             />
 
-                            <div className="absolute  -right-11  top-3  opacity-0 transition-all duration-300 group-hover:right-2 group-hover:opacity-100 ">
+                            <div className="absolute  -right-10  top-3  opacity-0 transition-all duration-300 group-hover:right-2 group-hover:opacity-100 ">
                               <button className="flex flex-col items-center  justify-center gap-2 md:gap-4">
                                 <div className=" flex items-center justify-center rounded-lg  bg-coffee-100/90 p-4 text-lightdark shadow-lg ">
                                   <ShoppingBagIcon className="h-4 w-4 text-white md:h-6 md:w-6" />
