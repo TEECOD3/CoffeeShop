@@ -40,8 +40,8 @@ const Menu = () => {
     }`
       )
       .then((data) => {
-        setCategories(data);
         setloading(false);
+        setCategories(data);
       })
       .catch(console.error);
   }, []);
