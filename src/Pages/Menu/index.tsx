@@ -177,7 +177,7 @@ const Menu = () => {
                         <div className="group relative z-20 w-full cursor-pointer transition delay-75 duration-100 hover:scale-[1.09] lg:mb-4 ">
                           {loading ? (
                             Array(10)
-                              .fill()
+                              .fill(9)
                               .map((box, I) => (
                                 <div
                                   className="relative flex h-[250px] items-center justify-center bg-black/20 "
