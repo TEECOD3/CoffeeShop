@@ -9,6 +9,7 @@ export default {
       name: 'name',
       title: 'Name',
       type: 'string',
+      description: 'Name of Product',
     },
     {
       name: 'image',
@@ -49,9 +50,30 @@ export default {
       to: [{type: 'category'}],
     },
     {
+      name: 'rating',
+      title: 'Rating',
+      type: 'object',
+      fields: [
+        {
+          name: 'rate',
+          title: 'Rate',
+          type: 'number',
+        },
+
+        {
+          name: 'count',
+          title: 'Count',
+          type: 'number',
+        },
+      ],
+    },
+    {
+      title: 'description',
       name: 'description',
-      title: 'Description',
-      type: 'string',
+      type: 'text',
+      description: 'Make it catchy',
+      validation: (Rule: any) =>
+        Rule.max(120).warning(`A title shouldn't be more than 120 characters.`),
     },
   ],
 }

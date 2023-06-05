@@ -21,19 +21,6 @@ const Cartpage = () => {
           <div className="md:w-1/2">
             <Cartitem />
             <Cartitem />
-            <Cartitem />
-            <Cartitem />
-            <Cartitem />
-            <Cartitem />
-            <Cartitem />
-            <Cartitem />
-            <Cartitem />
-            <Cartitem />
-            <Cartitem />
-            <Cartitem />
-            <Cartitem />
-            <Cartitem />
-            <Cartitem />
           </div>
           <div className="md:w-1/2 px-4 md:px-0 md:p-8 lg:sticky top-2 ">
             <h4 className="text-sm uppercase my-4 font-bold text-gray-500">

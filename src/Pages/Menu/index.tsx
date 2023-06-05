@@ -15,10 +15,13 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import SwipperNavbuttons from "./Components/swipperbuttons";
 import { coffeedets, filterButtons } from "../../Data/Cofee";
 import { client, urlFor } from "../../client";
+import Loader from "../../Components/UI/Loader";
 
 const Menu = () => {
   const [Categories, setCategories] = useState<any[]>([]);
+  const [loading, setloading] = useState(false);
   useEffect(() => {
+    setloading(true);
     client
       .fetch(
         `*[_type == "coffeeProduct"]{
@@ -36,7 +39,10 @@ const Menu = () => {
      
     }`
       )
-      .then((data) => setCategories(data))
+      .then((data) => {
+        setCategories(data);
+        setloading(false);
+      })
       .catch(console.error);
   }, []);
   // console.log(Categories);
@@ -87,6 +93,7 @@ const Menu = () => {
                           coffeename={coffee.name}
                           oldprice={coffee.oldPrice}
                           newprice={coffee.newPrice}
+                          loading={loading}
                         />
                       ))}
                     </div>
@@ -168,28 +175,41 @@ const Menu = () => {
                     {Categories.map((cofee, index) => (
                       <SwiperSlide key={index}>
                         <div className="group relative z-20 w-full cursor-pointer transition delay-75 duration-100 hover:scale-[1.09] lg:mb-4 ">
-                          <div className=" relative flex h-[250px] items-center justify-center ">
-                            <img
-                              src={urlFor(cofee.image).url()}
-                              alt="coffeedetail"
-                              className="max-h-[200px] bg-contain object-cover "
-                            />
-
-                            <div className="absolute  -right-10  top-3  opacity-0 transition-all duration-300 group-hover:right-2 group-hover:opacity-100 ">
-                              <button className="flex flex-col items-center  justify-center gap-2 md:gap-4">
-                                <div className=" flex items-center justify-center rounded-lg  bg-coffee-100/90 p-4 text-lightdark shadow-lg ">
-                                  <ShoppingBagIcon className="h-4 w-4 text-white md:h-6 md:w-6" />
-                                </div>
-
-                                <Link
-                                  to="/menu/:id"
-                                  className=" flex items-center justify-center rounded-lg bg-coffee-100/90 p-4 text-lightdark shadow-lg "
+                          {loading ? (
+                            Array(10)
+                              .fill()
+                              .map((box, I) => (
+                                <div
+                                  className="relative flex h-[250px] items-center justify-center bg-black/20 "
+                                  key={I}
                                 >
-                                  <EyeIcon className="h-4 w-4 text-white md:h-6 md:w-6" />
-                                </Link>
-                              </button>
+                                  <Loader className="text-black" />
+                                </div>
+                              ))
+                          ) : (
+                            <div className=" relative flex h-[250px] items-center justify-center ">
+                              <img
+                                src={urlFor(cofee.image).url()}
+                                alt="coffeedetail"
+                                className="max-h-[200px] bg-contain object-cover "
+                              />
+
+                              <div className="absolute  -right-10  top-3  opacity-0 transition-all duration-300 group-hover:right-2 group-hover:opacity-100 ">
+                                <button className="flex flex-col items-center  justify-center gap-2 md:gap-4">
+                                  <div className=" flex items-center justify-center rounded-lg  bg-coffee-100/90 p-4 text-lightdark shadow-lg ">
+                                    <ShoppingBagIcon className="h-4 w-4 text-white md:h-6 md:w-6" />
+                                  </div>
+
+                                  <Link
+                                    to="/menu/:id"
+                                    className=" flex items-center justify-center rounded-lg bg-coffee-100/90 p-4 text-lightdark shadow-lg "
+                                  >
+                                    <EyeIcon className="h-4 w-4 text-white md:h-6 md:w-6" />
+                                  </Link>
+                                </button>
+                              </div>
                             </div>
-                          </div>
+                          )}
                         </div>
                       </SwiperSlide>
                     ))}
