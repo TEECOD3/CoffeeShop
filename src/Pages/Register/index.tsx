@@ -17,15 +17,18 @@ const Register = () => {
 
   const SubmitHandler = (event: React.FormEvent) => {
     event.preventDefault();
-    const email = emailref.current?.value;
-    const password = passwords.current?.value;
-    const confirms = confirmpasswordref.current?.value;
+    const email = emailref.current.value;
+    const password = passwords.current.value;
+    const confirms = confirmpasswordref.current.value;
 
     if (password !== confirms) {
       return toast.error("The Password Does not match try again");
     }
+
+    const formatEmail = email.trim().toLowerCase();
     setloading(true);
-    createUserWithEmailAndPassword(auth, password, email)
+
+    createUserWithEmailAndPassword(auth, formatEmail, password)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
@@ -98,7 +101,7 @@ const Register = () => {
               <Input
                 ref={confirmpasswordref}
                 required
-                inputs={{ id: "confirm password", type: "password" }}
+                inputs={{ id: "confirmpassword", type: "password" }}
                 className="border-2 border-coffee-100"
               />
             </div>
