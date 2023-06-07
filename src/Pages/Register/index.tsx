@@ -32,7 +32,6 @@ const Register = () => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        console.log(user);
         setloading(false);
         toast.success("successful registration");
         navigate("/menu");
@@ -54,7 +53,7 @@ const Register = () => {
     <div className=" mb-36 flex items-center justify-center py-16 font-nunito md:pt-28">
       <div className="mx-auto flex flex-col-reverse justify-between gap-x-4 p-4 md:flex-row lg:w-[70%]">
         <div className="flex flex-1  items-center justify-center md:p-8">
-          {loading && <LoadingModal />}
+          {loading && <LoadingModal text="creating account" />}
           <form className="md:w-4/5" onSubmit={SubmitHandler}>
             <h4 className="text-center font-rails  text-3xl font-bold capitalize text-lightdark md:text-left md:text-4xl">
               Register
