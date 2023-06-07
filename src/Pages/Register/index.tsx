@@ -3,72 +3,121 @@ import Button from "../../Components/UI/Button";
 import GoogleIcon from "../Login/icons/Googleicon";
 import loginimage from "../Login/icons/cofeeloin-transformed.png";
 import { useNavigate } from "react-router-dom";
+import React, { useState, useRef } from "react";
+import toast from "react-hot-toast";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../../Firebase/config";
+import LoadingModal from "../../Components/UI/LoadingModal";
 const Register = () => {
   const navigate = useNavigate();
+  const emailref = useRef<HTMLInputElement>(null!);
+  const passwords = useRef<HTMLInputElement>(null!);
+  const confirmpasswordref = useRef<HTMLInputElement>(null!);
+  const [loading, setloading] = useState(false);
+
+  const SubmitHandler = (event: React.FormEvent) => {
+    event.preventDefault();
+    const email = emailref.current?.value;
+    const password = passwords.current?.value;
+    const confirms = confirmpasswordref.current?.value;
+
+    if (password !== confirms) {
+      return toast.error("The Password Does not match try again");
+    }
+    setloading(true);
+    createUserWithEmailAndPassword(auth, password, email)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        console.log(user);
+        setloading(false);
+        toast.success("successful registration");
+        navigate("/menu");
+
+        // ...
+      })
+      .catch((error) => {
+        setloading(false);
+        toast.error(error.message);
+        console.log(error.message);
+        // ..
+      });
+    emailref.current.value = "";
+    passwords.current.value = "";
+    confirmpasswordref.current.value = "";
+  };
+
   return (
-    <div className=" py-16 md:pt-28 mb-36 flex items-center justify-center font-nunito">
-      <div className="lg:w-[70%] mx-auto flex flex-col-reverse md:flex-row justify-between p-4 gap-x-4">
-        <div className="flex-1 md:p-8  flex items-center justify-center">
-          <form className="md:w-4/5">
-            <h4 className="text-3xl text-center  md:text-left md:text-4xl font-bold text-lightdark capitalize font-rails">
+    <div className=" mb-36 flex items-center justify-center py-16 font-nunito md:pt-28">
+      <div className="mx-auto flex flex-col-reverse justify-between gap-x-4 p-4 md:flex-row lg:w-[70%]">
+        <div className="flex flex-1  items-center justify-center md:p-8">
+          {loading && <LoadingModal />}
+          <form className="md:w-4/5" onSubmit={SubmitHandler}>
+            <h4 className="text-center font-rails  text-3xl font-bold capitalize text-lightdark md:text-left md:text-4xl">
               Register
             </h4>
-            <h5 className=" capitalize text-sm md:text-base font-bold text-lightdark mt-3 font-rails">
+            <h5 className=" mt-3 font-rails text-sm font-bold capitalize text-lightdark md:text-base">
               to register please enter your details
             </h5>
 
-            <div className="formgroup p-2 w-full  ">
+            <div className="formgroup w-full p-2  ">
               <label
                 htmlFor="email"
-                className="capitalize text-sm md:text-base"
+                className="text-sm capitalize md:text-base"
               >
                 email
               </label>
               <Input
-                inputs={{ id: "email" }}
-                className="border-coffee-100 border-2 w-full"
+                required
+                ref={emailref}
+                inputs={{ id: "email", type: "email" }}
+                className="w-full border-2 border-coffee-100"
               />
             </div>
             <div className="formgroup p-2">
               <label
                 htmlFor="password"
-                className="capitalize text-sm md:text-base"
+                className="text-sm capitalize md:text-base"
               >
                 password
               </label>
               <Input
-                inputs={{ id: "password" }}
-                className="border-coffee-100 border-2"
+                ref={passwords}
+                required
+                inputs={{ id: "password", type: "password" }}
+                className="border-2 border-coffee-100"
               />
             </div>
             <div className="formgroup p-2">
               <label
                 htmlFor="confirm password"
-                className="capitalize text-sm md:text-base"
+                className="text-sm capitalize md:text-base"
               >
                 conifrm password
               </label>
               <Input
-                inputs={{ id: "confirm password" }}
-                className="border-coffee-100 border-2"
+                ref={confirmpasswordref}
+                required
+                inputs={{ id: "confirm password", type: "password" }}
+                className="border-2 border-coffee-100"
               />
             </div>
 
-            <div className="flex justify-between my-2">
+            <div className="my-2 flex justify-between">
               <div className="formgroup flex items-center gap-x-1">
                 <Input
                   inputs={{ type: "checkbox" }}
-                  className="border-coffee-100 w-5"
+                  className="w-5 border-coffee-100"
                 />
                 <label
                   htmlFor=""
-                  className=" text-sm font-nunito font-bold text-lightdark  "
+                  className=" font-nunito text-sm font-bold text-lightdark  "
                 >
                   remember for 30days
                 </label>
               </div>
               <p
-                className="text-sm font-nunito font-bold text-lightdark cursor-pointer hover:text-coffee-100"
+                className="cursor-pointer font-nunito text-sm font-bold text-lightdark hover:text-coffee-100"
                 onClick={() => {
                   navigate("/forgotpassword");
                 }}
@@ -77,19 +126,21 @@ const Register = () => {
               </p>
             </div>
 
-            <Button className="w-full font-bold text-sm  ">Sign up</Button>
+            <Button className="w-full text-sm font-bold  " type="submit">
+              Sign up
+            </Button>
             <Button
-              className="w-full cursor-pointer font-bold text-sm  mt-3 border-2 border-coffee-100 space-x-2"
+              className="mt-3 w-full cursor-pointer space-x-2  border-2 border-coffee-100 text-sm font-bold"
               variant="ghost"
             >
               <GoogleIcon className="h-6 w-6" />
               <span>sign up with google</span>
             </Button>
 
-            <div className="flex items-center justify-center capitalize gap-x-3 mt-2 md:mt-3 text-lightdark font-bold text-sm md:text-base">
+            <div className="mt-2 flex items-center justify-center gap-x-3 text-sm font-bold capitalize text-lightdark md:mt-3 md:text-base">
               <p className="capitalize"> have an account ?</p>
               <span
-                className="text-coffee-100 cursor-pointer "
+                className="cursor-pointer text-coffee-100 "
                 onClick={() => {
                   navigate("/login");
                 }}
@@ -99,11 +150,11 @@ const Register = () => {
             </div>
           </form>
         </div>
-        <div className="bg-top md:flex-1 flex items-center  justify-center h-[100px] md:h-[500px]">
+        <div className="flex h-[100px] items-center justify-center  bg-top md:h-[500px] md:flex-1">
           <img
             src={loginimage}
             alt="image of a coffee"
-            className="object-cover max-w-[100px] md:max-w-[400px] bg-cover w-full "
+            className="w-full max-w-[100px] bg-cover object-cover md:max-w-[400px] "
           />
         </div>
       </div>
