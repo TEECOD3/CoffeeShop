@@ -137,7 +137,7 @@ const Menu = () => {
                             type: "range",
                             id: "pricefilter",
                             min: "0",
-                            max: "8000",
+                            max: "800",
                           }}
                           className="range  border-1 h-[0.3rem] appearance-none border-coffee-100 bg-coffee-100  text-coffee-100"
                         />
@@ -145,7 +145,7 @@ const Menu = () => {
                           htmlFor="pricefilter "
                           className=" font-nunito  font-bold text-lightdark"
                         >
-                          from $0 to $8000
+                          from $0 to $800
                         </label>
                       </form>
                     </div>

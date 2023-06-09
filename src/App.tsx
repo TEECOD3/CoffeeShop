@@ -16,12 +16,18 @@ import Forgotpassword from "./Pages/Forgetpassword";
 import Checkoutpage from "./Pages/Checkoutpage";
 import Coffeedescription from "../src/Pages/Menu/subpages/Coffeedescription";
 import Coffeereviews from "./Pages/Menu/subpages/Coffeereviews";
+import { Suspense } from "react";
+
+const Loading = () => {
+  return <div className="">loading...</div>;
+};
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayer />}>
       <Route index element={<Home />} />
-      <Route path="menu" element={<Menu />} />
+      <Route path="menu" element={<Menu />}></Route>
+
       <Route path="login" element={<Login />} />
       <Route path="Register" element={<Register />} />
       <Route path="forgotpassword" element={<Forgotpassword />} />

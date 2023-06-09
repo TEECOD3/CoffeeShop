@@ -6,6 +6,7 @@ import Collectionsection from "./Sections/Collectionsection";
 import Chefssection from "./Sections/Chefssection";
 import TestimonialSection from "./Sections/TestimonialSection";
 import Partnersection from "./Sections/Partnersection";
+import React from "react";
 
 const Home = () => {
   return (

@@ -2,9 +2,39 @@ import Input from "../../Components/Forms/Inputfield";
 import Button from "../../Components/UI/Button";
 import loginimage from "../Login/icons/cofeeloin-transformed.png";
 import { Link, useNavigate } from "react-router-dom";
+import React, { useState, useRef } from "react";
+import { sendPasswordResetEmail } from "firebase/auth";
+import { auth } from "../../../Firebase/config";
+import { toast } from "react-hot-toast";
+import LoadingModal from "../../Components/UI/LoadingModal";
 
 const Forgotpassword = () => {
   const navigate = useNavigate();
+  const emailref = useRef<HTMLInputElement>(null!);
+  const [loading, setloading] = useState(false);
+
+  const ForgotpasswordHandler = (event: React.FormEvent) => {
+    event.preventDefault();
+    const email = emailref.current.value;
+
+    setloading(true);
+
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        setloading(false);
+        toast.success("reset link sent to your email");
+        // ..
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        toast.error(error.message);
+        setloading(false);
+        // ..
+      });
+
+    emailref.current.value = "";
+  };
   return (
     <div className=" py-20 md:pt-32 mb-52 flex items-center justify-center font-nunito">
       <div className=" sm:w-[100%]  lg:w-[60%] mx-auto flex flex-col sm:flex-row justify-center items-center p-4 gap-x-4 ">
@@ -14,7 +44,8 @@ const Forgotpassword = () => {
           className="h-[20rem] w-[20rem] lg:h-[30rem] lg:w-[30rem] "
         />
         <div className="md:p-4  md:w-1/2 mx-auto flex items-center justify-center">
-          <form className="">
+          {loading && <LoadingModal text="resetting password" />}
+          <form className="" onSubmit={ForgotpasswordHandler}>
             <h4 className=" text-2xl md:text-3xl font-bold text-lightdark  font-rails uppercase">
               Forgot password
             </h4>
@@ -31,6 +62,7 @@ const Forgotpassword = () => {
                 email
               </label>
               <Input
+                ref={emailref}
                 inputs={{ id: "email" }}
                 className="border-coffee-100 border-2"
               />

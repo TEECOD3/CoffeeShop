@@ -1,3 +1,4 @@
 import cofeeproducts from './coffee'
 import categories from './Categories'
-export const schemaTypes = [cofeeproducts, categories]
+import MayalsoLike from './FeaturedProducts'
+export const schemaTypes = [cofeeproducts, categories, MayalsoLike]

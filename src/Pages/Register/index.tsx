@@ -32,17 +32,14 @@ const Register = () => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
+        console.log(user);
         setloading(false);
-        toast.success("successful registration");
+        toast.success("Account Created");
         navigate("/menu");
-
-        // ...
       })
       .catch((error) => {
         setloading(false);
         toast.error(error.message);
-        console.log(error.message);
-        // ..
       });
     emailref.current.value = "";
     passwords.current.value = "";
@@ -128,8 +125,12 @@ const Register = () => {
               </p>
             </div>
 
-            <Button className="w-full text-sm font-bold  " type="submit">
-              Sign up
+            <Button
+              className="w-full text-sm font-bold  "
+              type="submit"
+              isLoading={loading}
+            >
+              {loading ? "creating account..." : "Sign up"}
             </Button>
             <Button
               className="mt-3 w-full cursor-pointer space-x-2  border-2 border-coffee-100 text-sm font-bold"

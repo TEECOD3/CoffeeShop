@@ -1,16 +1,54 @@
-import Profile from "../assets/Icons/Profile";
-import CartBag from "../assets/Icons/CartBag";
 import { FaSistrix } from "react-icons/fa";
 import Coffeelogo from "../Pages/Home/icon/coffelogo";
 import MobileNav from "../Components/UI/MobileNavigation";
 import { AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink, Link, useNavigate } from "react-router-dom";
-
+import { auth } from "../../Firebase/config";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import toast from "react-hot-toast";
 import { Menu } from "lucide-react";
 import { BsPersonCheck } from "react-icons/bs";
+
+type Authuser = {
+  user: string;
+  email: string;
+};
+
 const Navbar = () => {
   const [ModalOpen, setModalOpen] = useState(false);
+  const [username, setusername] = useState<any>(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/auth.user
+        const uid = user.uid;
+        setusername(user.displayName);
+
+        // ...
+      } else {
+        // User is signed out
+        // ...
+      }
+    });
+  }, []);
+
+  const logoutHandler = () => {
+    signOut(auth)
+      .then(() => {
+        toast.success("logged out sucessfully");
+        navigate("/");
+
+        // Sign-out successful.
+      })
+      .catch((error) => {
+        toast.error(error.message);
+        // An error happened.
+      });
+  };
 
   const openModalHandler = () => {
     setModalOpen(!ModalOpen);
@@ -36,7 +74,9 @@ const Navbar = () => {
             <NavLink to="/menu">
               <li>Shop</li>
             </NavLink>
-            <li>contact</li>
+            <NavLink to="/" onClick={logoutHandler}>
+              <li>logout</li>
+            </NavLink>
 
             <li className="flex items-center justify-center">
               <FaSistrix className="text-2xl text-white" />
@@ -46,6 +86,7 @@ const Navbar = () => {
                 {/* <Check className="absolute -bottom-2 -right-2  h-4 w-4 rounded-full bg-coffee-100 text-white" />
                 <Profile /> */}
                 <BsPersonCheck className="text-3xl text-white" />
+                <div className=""> hi {username}</div>
               </li>
             </NavLink>
             <li className="relative ">

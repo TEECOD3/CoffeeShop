@@ -9,15 +9,24 @@ import {
   HeartIcon,
   ShoppingBagIcon,
 } from "lucide-react";
+import { urlFor } from "../../../client";
 
-interface CofeecardProps {}
+interface CofeecardProps {
+  image?: string | undefined;
+  oldprice?: number;
+  newprice?: number;
+  coffeename?: string;
+  slug?: string;
+  loading?: boolean;
+}
 
-const Cofeecard: FC<CofeecardProps> = () => {
+const Cofeecard: FC<CofeecardProps> = (props) => {
+  const { oldprice, newprice, image, coffeename, slug, loading } = props;
   return (
     <div className="group relative  mx-auto w-full cursor-pointer overflow-hidden rounded-lg  border-2 border-coffee-100  shadow-lg transition-all  duration-300">
       <div className="mx-auto flex w-full items-center justify-center">
         <img
-          src={loves}
+          src={urlFor(image).url()}
           alt="cofeeimage"
           className="  w-full rounded-lg bg-cover "
         />
@@ -26,7 +35,7 @@ const Cofeecard: FC<CofeecardProps> = () => {
       <div className="p-1">
         <div className=" flex w-full items-center gap-1">
           <div className="mb-3 mt-3 w-1/2  px-2 text-[0.6rem] font-bold md:text-[0.8rem] xl:text-base">
-            Coffee Beans
+            {coffeename}
           </div>
           <div className="flex  w-1/2 flex-col items-center justify-center">
             <div className="flex items-center ">
@@ -49,7 +58,7 @@ const Cofeecard: FC<CofeecardProps> = () => {
           </div>
         </div>
         <div className="mb-2 px-2 font-nunito text-sm text-[#828282] ">
-          $300
+          $ {newprice}
         </div>
       </div>
 

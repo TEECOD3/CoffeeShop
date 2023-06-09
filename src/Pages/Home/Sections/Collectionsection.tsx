@@ -4,8 +4,37 @@ import Button from "../../../Components/UI/Button";
 import Cofeecard from "../Components/CofeeCard";
 import { FaArrowRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { client } from "../../../client";
 
 const Collectionsection = () => {
+  const [Categories, setCategories] = useState<any[]>([]);
+  const [loading, setloading] = useState(false);
+  useEffect(() => {
+    setloading(true);
+    client
+      .fetch(
+        `*[_type == "categories"]{
+      name,
+      slug,
+      oldPrice,
+      newPrice,
+      inStock,
+      image{
+        asset->{
+          _id,
+          url
+        },
+      },
+     
+    }`
+      )
+      .then((data) => {
+        setloading(false);
+        setCategories(data);
+      })
+      .catch(console.error);
+  }, []);
   const navigate = useNavigate();
   return (
     <section className=" mt-10 w-full md:p-20">
@@ -43,12 +72,13 @@ const Collectionsection = () => {
         </div>
         <div className=" mx-auto h-full w-full">
           <div className=" mx-auto grid h-full w-full grid-cols-2 gap-5 sm:grid-cols-3  md:gap-3 ">
-            <Cofeecard />
-            <Cofeecard />
-            <Cofeecard />
-            <Cofeecard />
-            <Cofeecard />
-            <Cofeecard />
+            {Categories.map((cofee) => (
+              <Cofeecard
+                coffeename={cofee.name}
+                image={cofee.image}
+                newprice={cofee.newPrice}
+              />
+            ))}
           </div>
 
           <div

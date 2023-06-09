@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import Desktopcart from "../Pages/Cart/desktopcart";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -21,6 +22,7 @@ const RootLayer = () => {
       <main className="">
         <Outlet />
       </main>
+      {/* <Desktopcart /> */}
       <Footer />
     </>
   );

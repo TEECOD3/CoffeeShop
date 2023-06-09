@@ -1,15 +1,15 @@
-export const MayalsoLike = {
+export default {
   name: 'mayAlsoLike',
   title: 'MayAlsoLike',
   type: 'document',
   fields: [
     {
       name: 'topCategories',
-      title: 'Top Categories',
+      title: 'TopCategories',
       type: 'array',
       of: [
         {
-          type: 'references',
+          type: 'reference',
           to: [
             {
               type: 'category',
