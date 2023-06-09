@@ -1,9 +1,9 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 
-const rootReducer = combineReducers();
+// const rootReducer = combineReducers();
 
-const Store = configureStore({
-  reducer: rootReducer,
-});
+// const Store = configureStore({
+//   reducer: rootReducer,
+// });
 
-export default Store;
+// export default Store;
