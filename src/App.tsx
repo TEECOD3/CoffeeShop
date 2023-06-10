@@ -1,5 +1,6 @@
 import Home from "./Pages/Home";
 import Coffeedetail from "./Pages/Menu/subpages/Coffeedetail";
+import { useDispatch, useSelector } from "react-redux";
 import {
   Route,
   createBrowserRouter,
@@ -16,11 +17,9 @@ import Forgotpassword from "./Pages/Forgetpassword";
 import Checkoutpage from "./Pages/Checkoutpage";
 import Coffeedescription from "../src/Pages/Menu/subpages/Coffeedescription";
 import Coffeereviews from "./Pages/Menu/subpages/Coffeereviews";
+import Protected from "./Lib/Protect";
 import { Suspense } from "react";
-
-const Loading = () => {
-  return <div className="">loading...</div>;
-};
+import { selectLoggedstate } from "./Store/Slices/AuthSlice";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,7 +30,15 @@ const router = createBrowserRouter(
       <Route path="login" element={<Login />} />
       <Route path="Register" element={<Register />} />
       <Route path="forgotpassword" element={<Forgotpassword />} />
-      <Route path="Checkoutpage" element={<Checkoutpage />} />
+
+      <Route
+        path="Checkoutpage"
+        element={
+          <Protected>
+            <Checkoutpage />
+          </Protected>
+        }
+      />
       <Route path="menu/:id" element={<Coffeedetail />}>
         <Route index element={<Coffeedescription />} />
         <Route path="reviews" element={<Coffeereviews />} />
@@ -42,6 +49,7 @@ const router = createBrowserRouter(
   )
 );
 function App() {
+  const isloggedin = useSelector(selectLoggedstate);
   return (
     <>
       <RouterProvider router={router} />

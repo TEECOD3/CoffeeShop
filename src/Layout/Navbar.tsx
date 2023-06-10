@@ -148,7 +148,7 @@ const Navbar = () => {
           <ul className="flex items-center justify-center gap-4 px-2 md:hidden ">
             <li>
               {isLoggedIn && (
-                <NavLink to="/login" onClick={logoutHandler}>
+                <NavLink to="" onClick={logoutHandler}>
                   <li className="relative">
                     <LogoutSharp className="text-3xl text-white" />
                   </li>
@@ -188,8 +188,8 @@ const Navbar = () => {
               </NavLink>
             ) : (
               <NavLink to="/login">
-                <li className="relative">
-                  <BsPerson className="text-3xl text-white" />
+                <li className="relative text-white">
+                  <h3>login</h3>
                 </li>
               </NavLink>
             )}
