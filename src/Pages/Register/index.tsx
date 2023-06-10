@@ -20,19 +20,15 @@ const Register = () => {
     const email = emailref.current.value;
     const password = passwords.current.value;
     const confirms = confirmpasswordref.current.value;
-
     if (password !== confirms) {
       return toast.error("The Password Does not match try again");
     }
-
     const formatEmail = email.trim().toLowerCase();
     setloading(true);
-
     createUserWithEmailAndPassword(auth, formatEmail, password)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        console.log(user);
         setloading(false);
         toast.success("Account Created");
         navigate("/menu");
@@ -131,13 +127,6 @@ const Register = () => {
               isLoading={loading}
             >
               {loading ? "creating account..." : "Sign up"}
-            </Button>
-            <Button
-              className="mt-3 w-full cursor-pointer space-x-2  border-2 border-coffee-100 text-sm font-bold"
-              variant="ghost"
-            >
-              <GoogleIcon className="h-6 w-6" />
-              <span>sign up with google</span>
             </Button>
 
             <div className="mt-2 flex items-center justify-center gap-x-3 text-sm font-bold capitalize text-lightdark md:mt-3 md:text-base">

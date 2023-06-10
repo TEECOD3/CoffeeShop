@@ -7,31 +7,42 @@ import { NavLink, Link, useNavigate } from "react-router-dom";
 import { auth } from "../../Firebase/config";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import toast from "react-hot-toast";
-import { Menu } from "lucide-react";
-import { BsPersonCheck } from "react-icons/bs";
-
-type Authuser = {
-  user: string;
-  email: string;
-};
+import { LogInIcon, Menu } from "lucide-react";
+import { BsPerson, BsPersonCheck } from "react-icons/bs";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  RemoveActiveUser,
+  SetActiveUser,
+  selectLoggedstate,
+} from "../Store/Slices/AuthSlice";
+import { Logout, LogoutSharp } from "@mui/icons-material";
 
 const Navbar = () => {
   const [ModalOpen, setModalOpen] = useState(false);
   const [username, setusername] = useState<any>(null);
+  const dispatch = useDispatch();
+  const isLoggedIn = useSelector(selectLoggedstate);
   const navigate = useNavigate();
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/auth.user
         const uid = user.uid;
-        setusername(user.displayName);
-
-        // ...
-      } else {
-        // User is signed out
-        // ...
+        if (user.displayName === null) {
+          const u1 = user.email?.substring(0, user.email.indexOf("@"));
+          setusername(u1);
+        } else {
+          const userdisplayname = user.displayName.split(" ");
+          const firstname = userdisplayname.at(0);
+          setusername(firstname);
+        }
+        dispatch(
+          SetActiveUser({
+            email: user.email,
+            userName: user.displayName ? user.displayName : username,
+            userID: uid,
+          })
+        );
       }
     });
   }, []);
@@ -40,8 +51,8 @@ const Navbar = () => {
     signOut(auth)
       .then(() => {
         toast.success("logged out sucessfully");
+        dispatch(RemoveActiveUser());
         navigate("/");
-
         // Sign-out successful.
       })
       .catch((error) => {
@@ -70,25 +81,47 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <ul className="item-end hidden justify-around   text-white md:flex md:w-[30%] ">
+          <ul
+            className={`item-end hidden justify-around  text-white md:flex items-center  ${
+              isLoggedIn ? "w-[50%] xl:w-[30%]" : " w-[20%]"
+            } `}
+          >
             <NavLink to="/menu">
               <li>Shop</li>
             </NavLink>
-            <NavLink to="/" onClick={logoutHandler}>
-              <li>logout</li>
-            </NavLink>
+
+            {isLoggedIn && (
+              <NavLink to="/" onClick={logoutHandler}>
+                <li>
+                  <LogInIcon />
+                </li>
+              </NavLink>
+            )}
 
             <li className="flex items-center justify-center">
               <FaSistrix className="text-2xl text-white" />
             </li>
-            <NavLink to="/login">
-              <li className="relative h-6 w-6">
-                {/* <Check className="absolute -bottom-2 -right-2  h-4 w-4 rounded-full bg-coffee-100 text-white" />
-                <Profile /> */}
-                <BsPersonCheck className="text-3xl text-white" />
-                <div className=""> hi {username}</div>
-              </li>
-            </NavLink>
+
+            <li className="relative">
+              {isLoggedIn && (
+                <NavLink to="/">
+                  <div className="flex gap-x-3 items-center justify-center">
+                    <BsPersonCheck className="text-3xl text-white" />
+                    <div className="text-sm capitalize bg-coffee-100 p-2 rounded-lg">
+                      hi {username}
+                    </div>
+                  </div>
+                </NavLink>
+              )}
+              {!isLoggedIn && (
+                <NavLink to="/login">
+                  <div className="flex">
+                    <h2>login</h2>
+                  </div>
+                </NavLink>
+              )}
+            </li>
+
             <li className="relative ">
               <div className="item-center  absolute -right-2 -top-2 flex h-5 w-5  justify-center rounded-full bg-coffee-100 text-sm text-white">
                 3
@@ -113,6 +146,15 @@ const Navbar = () => {
           </ul>
 
           <ul className="flex items-center justify-center gap-4 px-2 md:hidden ">
+            <li>
+              {isLoggedIn && (
+                <NavLink to="/login" onClick={logoutHandler}>
+                  <li className="relative">
+                    <LogoutSharp className="text-3xl text-white" />
+                  </li>
+                </NavLink>
+              )}
+            </li>
             <li className="">
               <Link to="/Cart">
                 <li className="relative">
@@ -138,13 +180,19 @@ const Navbar = () => {
                 </li>
               </Link>
             </li>
-            <NavLink to="/login">
-              <li className="relative">
-                {/* <Check className="absolute -bottom-2 -right-2  h-4 w-4 rounded-full bg-coffee-100 text-white" /> */}
-                {/* <User className="text-white" /> */}
-                <BsPersonCheck className="text-3xl text-white" />
-              </li>
-            </NavLink>
+            {isLoggedIn ? (
+              <NavLink to="/login">
+                <li className="relative">
+                  <BsPersonCheck className="text-3xl text-white" />
+                </li>
+              </NavLink>
+            ) : (
+              <NavLink to="/login">
+                <li className="relative">
+                  <BsPerson className="text-3xl text-white" />
+                </li>
+              </NavLink>
+            )}
 
             <li className="">
               <Menu className="text-white" onClick={openModalHandler} />

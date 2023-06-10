@@ -2,33 +2,35 @@ import Input from "../../Components/Forms/Inputfield";
 import Button from "../../Components/UI/Button";
 import GoogleIcon from "./icons/Googleicon";
 import loginimage from "../Login/icons/cofeeloin-transformed.png";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import React, { useState, useRef } from "react";
 import LoadingModal from "../../Components/UI/LoadingModal";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth } from "../../../Firebase/config";
 import toast from "react-hot-toast";
 import { GoogleAuthProvider } from "firebase/auth";
+import { useDispatch } from "react-redux";
+import { SetActiveUser } from "../../Store/Slices/AuthSlice";
 
 const Login = () => {
   const navigate = useNavigate();
   const emailRef = useRef<HTMLInputElement>(null!);
   const passwordRef = useRef<HTMLInputElement>(null!);
   const [loading, setloading] = useState(false);
-
   const provider = new GoogleAuthProvider();
+  const dispatch = useDispatch();
+
   const signInWithGoogle = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         const user = result.user;
-        toast.success("logged in sucessfully");
+        dispatch(SetActiveUser);
         navigate("/");
+        toast.success("logged in sucessfully");
       })
       .catch((error) => {
         const errorMessage = error.message;
         toast.error(error.message);
-
-        // ...
       });
   };
 
@@ -43,7 +45,6 @@ const Login = () => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        console.log(user);
         setloading(false);
         toast.success("sucessfully loggged in");
         navigate("/");
@@ -61,11 +62,11 @@ const Login = () => {
   };
 
   return (
-    <div className=" mb-40 flex items-center justify-center py-20 font-nunito md:pt-32">
-      <div className="mx-auto flex flex-col-reverse justify-between gap-x-4 p-4 md:w-[70%] md:flex-row ">
+    <div className="mb-40 flex items-center justify-center py-20 font-nunito md:pt-32">
+      <div className="mx-auto flex flex-col-reverse justify-between gap-x-4 p-4 md:w-[70%] md:flex-row">
         <div className="flex flex-1 items-center justify-center md:p-4">
           {loading && <LoadingModal text="creating account" />}
-          <form className=" md:w-4/5" onSubmit={submitHandler}>
+          <form className="md:w-4/5" onSubmit={submitHandler}>
             <h4 className=" text-center font-rails text-3xl font-bold capitalize text-lightdark md:text-left lg:text-4xl ">
               Welcome back
             </h4>
