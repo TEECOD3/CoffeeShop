@@ -20,6 +20,8 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
   const authstate = useSelector(selectLoggedstate);
   const username = useSelector(selectUsername);
 
+  const shortname = username.split(" ").at(0);
+
   const svgvariants = {
     hidden: { rotate: -180 },
     visible: {
@@ -153,8 +155,8 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
           >
             {authstate ? (
               <div className="flex gap-x-2">
-                {username}
                 <CgProfile />
+                <div className="text-xl capitalize">{shortname}</div>
               </div>
             ) : (
               <Link to="/login" className="flex gap-x-4 items-center">

@@ -26,9 +26,10 @@ const Login = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         const user = result.user;
+        const username = user.displayName?.split(" ").at(0);
         dispatch(SetActiveUser);
         navigate(from, { replace: true });
-        toast.success("logged in sucessfully");
+        toast.success(`welcome Back ${username} `);
       })
       .catch((error) => {
         const errorMessage = error.message;
