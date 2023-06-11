@@ -2,17 +2,23 @@ import { FC } from "react";
 import { MdMenuBook, MdOutlineClose } from "react-icons/md";
 import Coffeelogo from "../../Pages/Home/icon/coffelogo";
 import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { BookCopy, ShoppingBag } from "lucide-react";
-import { CallEndOutlined, MenuBook } from "@mui/icons-material";
-import { Menu } from "@mui/material";
+import { CallEndOutlined, LoginSharp, MenuBook } from "@mui/icons-material";
+import { useSelector } from "react-redux";
+import {
+  selectLoggedstate,
+  selectUsername,
+} from "../../Store/Slices/AuthSlice";
 interface MobileNavProps {
   hideModalHandler: () => void;
 }
 
 const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
   const { hideModalHandler } = props;
+  const authstate = useSelector(selectLoggedstate);
+  const username = useSelector(selectUsername);
 
   const svgvariants = {
     hidden: { rotate: -180 },
@@ -91,7 +97,7 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
               onClick={hideModalHandler}
             >
               <MdMenuBook />
-              <span>Menu</span>
+              <span>Shop</span>
             </motion.li>
           </NavLink>
           <motion.li
@@ -109,7 +115,7 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
             }}
             className="flex items-center justify-start gap-2 border-b-white border-b-4"
           >
-            <ShoppingBag /> <span>Coffeebag</span>
+            <ShoppingBag /> <span>CoffeeCart</span>
           </motion.li>
           <motion.li
             className="flex items-center justify-start gap-2 border-b-white border-b-4"
@@ -128,6 +134,7 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
           >
             <CallEndOutlined /> <span>contact us</span>
           </motion.li>
+
           <motion.li
             className="flex items-center justify-start gap-2 border-b-white border-b-4"
             variants={item}
@@ -142,8 +149,19 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
                 delay: 0.2,
               },
             }}
+            onClick={hideModalHandler}
           >
-            <CgProfile /> <span>profile</span>
+            {authstate ? (
+              <div className="flex gap-x-2">
+                {username}
+                <CgProfile />
+              </div>
+            ) : (
+              <Link to="/login" className="flex gap-x-4 items-center">
+                <LoginSharp />
+                login
+              </Link>
+            )}
           </motion.li>
         </ul>
       </motion.div>

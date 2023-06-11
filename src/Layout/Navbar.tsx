@@ -16,6 +16,7 @@ import {
   selectLoggedstate,
 } from "../Store/Slices/AuthSlice";
 import { Logout, LogoutSharp } from "@mui/icons-material";
+import { cartstate, setCartmodal } from "../Store/Slices/cartslice";
 
 const Navbar = () => {
   const [ModalOpen, setModalOpen] = useState(false);
@@ -23,6 +24,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectLoggedstate);
   const navigate = useNavigate();
+  const cartmodal = useSelector(cartstate);
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -46,6 +48,10 @@ const Navbar = () => {
       }
     });
   }, []);
+
+  const CartHandler = () => {
+    dispatch(setCartmodal({ payload: 0 }));
+  };
 
   const logoutHandler = () => {
     signOut(auth)
@@ -99,7 +105,7 @@ const Navbar = () => {
             )}
 
             <li className="flex items-center justify-center">
-              <FaSistrix className="text-2xl text-white" />
+              <FaSistrix className="text-2xl text-white " />
             </li>
 
             <li className="relative">
@@ -122,7 +128,7 @@ const Navbar = () => {
               )}
             </li>
 
-            <li className="relative ">
+            <li className="relative cursor-pointer " onClick={CartHandler}>
               <div className="item-center  absolute -right-2 -top-2 flex h-5 w-5  justify-center rounded-full bg-coffee-100 text-sm text-white">
                 3
               </div>
@@ -156,7 +162,7 @@ const Navbar = () => {
               )}
             </li>
             <li className="">
-              <Link to="/Cart">
+              <Link to="" onClick={CartHandler}>
                 <li className="relative">
                   <div className="item-center  absolute -right-2 -top-2 flex h-5 w-5 justify-center rounded-full bg-coffee-100 text-sm text-white">
                     3

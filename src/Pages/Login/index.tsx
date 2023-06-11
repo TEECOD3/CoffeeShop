@@ -2,7 +2,7 @@ import Input from "../../Components/Forms/Inputfield";
 import Button from "../../Components/UI/Button";
 import GoogleIcon from "./icons/Googleicon";
 import loginimage from "../Login/icons/cofeeloin-transformed.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import React, { useState, useRef } from "react";
 import LoadingModal from "../../Components/UI/LoadingModal";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
@@ -19,13 +19,15 @@ const Login = () => {
   const [loading, setloading] = useState(false);
   const provider = new GoogleAuthProvider();
   const dispatch = useDispatch();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   const signInWithGoogle = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         const user = result.user;
         dispatch(SetActiveUser);
-        navigate("/");
+        navigate(from, { replace: true });
         toast.success("logged in sucessfully");
       })
       .catch((error) => {
