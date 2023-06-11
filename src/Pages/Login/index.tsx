@@ -23,17 +23,20 @@ const Login = () => {
   const from = location.state?.from?.pathname || "/";
 
   const signInWithGoogle = () => {
+    setloading(true);
     signInWithPopup(auth, provider)
       .then((result) => {
         const user = result.user;
         const username = user.displayName?.split(" ").at(0);
         dispatch(SetActiveUser);
+        setloading(false);
         navigate(from, { replace: true });
         toast.success(`welcome Back ${username} `);
       })
       .catch((error) => {
+        setloading(false);
         const errorMessage = error.message;
-        toast.error(error.message);
+        toast.error(errorMessage);
       });
   };
 
@@ -48,13 +51,13 @@ const Login = () => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
+        const username = user.displayName?.split(" ").at(0);
         setloading(false);
-        toast.success("sucessfully loggged in");
-        navigate("/");
+        navigate(from, { replace: true });
+        toast.success(`welcome Back ${username} `);
         // ...
       })
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
         toast.error(errorMessage);
         setloading(false);
