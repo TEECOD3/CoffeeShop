@@ -71,7 +71,7 @@ const Login = () => {
     <div className="mb-40 flex items-center justify-center py-20 font-nunito md:pt-32">
       <div className="mx-auto flex flex-col-reverse justify-between gap-x-4 p-4 md:w-[70%] md:flex-row">
         <div className="flex flex-1 items-center justify-center md:p-4">
-          {loading && <LoadingModal text="creating account" />}
+          {loading && <LoadingModal text="logging in.." />}
           <form className="md:w-4/5" onSubmit={submitHandler}>
             <h4 className=" text-center font-rails text-3xl font-bold capitalize text-lightdark md:text-left lg:text-4xl ">
               Welcome back
