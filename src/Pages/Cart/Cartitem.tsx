@@ -12,9 +12,9 @@ const Cartitem: FC<CartitemProps> = () => {
           <img src={image} alt="cartimage" className="max-w-[60px]" />
 
           <div className="font-nunito w-full flex flex-col">
-            <div className="flex justify-between mb-2">
+            <div className="flex justify-between mb-4">
               <h3 className="uppercase text-gray-500 font-bold text-sm md:text-base ">
-                Coffea Canephora coffee bean
+                coffee cupicino
               </h3>
 
               <RiDeleteBin2Fill className="text-coffee-100" />
@@ -32,8 +32,8 @@ const Cartitem: FC<CartitemProps> = () => {
                   +
                 </div>
               </div>
-              <div className="flex flex-1 justify-start items-center text-gray-400 font-bold  md:text-base">
-                price: $299.00
+              <div className="flex flex-1 justify-start items-center text-gray-400 font-bold  md:text-sm">
+                price: $299.00 x 2
               </div>
 
               <div className="flex flex-2 justify-end items-center text-gray-400 font-medium  md:text-base">

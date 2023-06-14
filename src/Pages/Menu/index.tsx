@@ -5,7 +5,6 @@ import { FaArrowDown } from "react-icons/fa";
 import Input from "../../Components/Forms/Inputfield";
 import Filtercheckboxes from "./Components/filtercheckboxes";
 import { EyeIcon, Search, ShoppingBagIcon } from "lucide-react";
-import image from "../../assets/Images/milkshake.png";
 import { AnimatePresence, motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -13,7 +12,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import SwipperNavbuttons from "./Components/swipperbuttons";
-import { coffeedets, filterButtons } from "../../Data/Cofee";
+import { filterButtons } from "../../Data/Cofee";
 import { client, urlFor } from "../../client";
 import Loader from "../../Components/UI/Loader";
 
@@ -87,15 +86,27 @@ const Menu = () => {
                 <div className="flex  flex-col-reverse gap-16 lg:flex-row">
                   <div className=" mx-auto flex  w-[98%] flex-col border-2 p-2 lg:flex-col xl:w-[90%]">
                     <div className="mx-auto grid w-full grid-cols-2 gap-3 md:grid-cols-3">
-                      {Categories.map((coffee) => (
-                        <Menucards
-                          image={coffee.image}
-                          coffeename={coffee.name}
-                          oldprice={coffee.oldPrice}
-                          newprice={coffee.newPrice}
-                          loading={loading}
-                        />
-                      ))}
+                      {loading
+                        ? [1, 2, 3, 8, 5, 6, 7, 7, 8, 11, 19, 23].map(
+                            (stuff) => (
+                              <div className="group skeleton bg-black/30 relative z-20 w-full cursor-pointer  p-2 transition delay-200 duration-300 animate-pulse tlg:mb-4 ">
+                                <div className=" relative mx-auto md:w-[200px]">
+                                  <div className="  flex items-center justify-center ">
+                                    <div className="mx-auto max-h-[150px] min-h-[150px] bg-cover bg-top object-cover" />
+                                  </div>
+                                </div>
+                              </div>
+                            )
+                          )
+                        : Categories.map((coffee) => (
+                            <Menucards
+                              image={coffee.image}
+                              coffeename={coffee.name}
+                              oldprice={coffee.oldPrice}
+                              newprice={coffee.newPrice}
+                              loading={loading}
+                            />
+                          ))}
                     </div>
                   </div>
                   <div className=" border-2 p-4 lg:h-[30rem]  lg:w-[30%] xl:w-[20%]">

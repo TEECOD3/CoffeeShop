@@ -68,7 +68,7 @@ const Desktopcart = () => {
     <>
       {cartOpen && (
         <div
-          className="bg-black/40 absolute top-0 left-0 h-full w-screen cursor-pointer z-[200000]"
+          className="bg-black/70 fixed top-0 left-0 h-full w-screen cursor-pointer z-[200000]"
           onClick={() => {
             dispatch(setCartmodal({ payload: 0 }));
           }}
@@ -79,7 +79,7 @@ const Desktopcart = () => {
         animate={cartOpen ? "visible" : "hidden"}
         exit="exit"
         variants={variant}
-        className="fixed bottom-0 right-0 z-[9000000]  h-[80vh] w-full bg-white text-black  md:right-0 md:top-0 md:h-screen md:w-1/3"
+        className="fixed bottom-0 right-0 z-[9000000] rounded-t-lg md:rounded-none  h-[90vh] w-full bg-white text-black  md:right-0 md:top-0 md:h-screen md:w-1/3"
       >
         <div className="mt-2 text-gray-500 capitalize font-bold px-3 flex justify-between">
           <Link

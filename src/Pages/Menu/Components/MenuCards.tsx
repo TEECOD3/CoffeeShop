@@ -29,6 +29,9 @@ const Menucards: FC<MenucardsProps> = (props) => {
       ) : (
         <div className="group relative z-20 w-full cursor-pointer border-2 p-2 transition delay-200 duration-300 hover:scale-[1.09] lg:mb-4 ">
           <div className=" relative mx-auto md:w-[200px]">
+            {/* <div className="bg-coffee-100 rounded-lg  text-white  w-20 text-center text-sm p-2 ">
+              sold out
+            </div> */}
             <div className="  flex items-center justify-center">
               <img
                 src={urlFor(image).url()}

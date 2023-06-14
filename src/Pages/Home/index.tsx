@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import Herosection from "./Sections/herosection";
 import Aboutsection from "./Sections/Aboutsection";
 import Descriptionsection from "./Sections/Descriptionsection";

@@ -15,9 +15,18 @@ export default {
           "0%": { transform: "transalte(0)" },
           "100%": { transform: "translate(-50%)" },
         },
+        skeleton: {
+          "0%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
+          },
+        },
       },
       animation: {
         scroll: "scroll 5s ease-in-out infinite",
+        skeleton: "skeleton 10s ease-in-out infinite",
       },
       backgroundImage: {
         hero: "url('./src/assets/Images/bg-hero.png')",

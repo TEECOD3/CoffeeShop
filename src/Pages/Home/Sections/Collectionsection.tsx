@@ -6,6 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { client } from "../../../client";
+import { Loader2 } from "lucide-react";
 
 const Collectionsection = () => {
   const [Categories, setCategories] = useState<any[]>([]);
@@ -14,20 +15,17 @@ const Collectionsection = () => {
     setloading(true);
     client
       .fetch(
-        `*[_type == "categories"]{
-      name,
-      slug,
-      oldPrice,
-      newPrice,
-      inStock,
-      image{
-        asset->{
-          _id,
-          url
-        },
-      },
-     
-    }`
+        `*[_type == 'coffeeProduct' && category._ref in *[_type == 'category' && name == 'machandize']._id] {
+  name,
+  image,
+  oldPrice,
+  newPrice,
+  inStock,
+  slug,
+  rating,
+  description
+}
+`
       )
       .then((data) => {
         setloading(false);
@@ -72,13 +70,20 @@ const Collectionsection = () => {
         </div>
         <div className=" mx-auto h-full w-full">
           <div className=" mx-auto grid h-full w-full grid-cols-2 gap-5 sm:grid-cols-3  md:gap-3 ">
-            {Categories.map((cofee) => (
-              <Cofeecard
-                coffeename={cofee.name}
-                image={cofee.image}
-                newprice={cofee.newPrice}
-              />
-            ))}
+            {loading ? (
+              <p>
+                loading ...
+                <Loader2 className="animate-spin" />
+              </p>
+            ) : (
+              Categories.map((cofee) => (
+                <Cofeecard
+                  coffeename={cofee.name}
+                  image={cofee.image}
+                  newprice={cofee.newPrice}
+                />
+              ))
+            )}
           </div>
 
           <div

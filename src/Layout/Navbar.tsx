@@ -32,6 +32,7 @@ const Navbar = () => {
         const uid = user.uid;
         if (user.displayName === null) {
           const u1 = user.email?.substring(0, user.email.indexOf("@"));
+          const uname = u1?.charAt(0).toUpperCase() || "error" + u1?.slice;
           setusername(u1);
         } else {
           const userdisplayname = user.displayName.split(" ");
@@ -162,7 +163,7 @@ const Navbar = () => {
               )}
             </li>
             <li className="">
-              <Link to="" onClick={CartHandler}>
+              <Link to=" " onClick={CartHandler}>
                 <li className="relative">
                   <div className="item-center  absolute -right-2 -top-2 flex h-5 w-5 justify-center rounded-full bg-coffee-100 text-sm text-white">
                     3

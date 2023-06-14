@@ -27,7 +27,7 @@ const Login = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         const user = result.user;
-        const username = user.displayName?.split(" ").at(0);
+        const username = user.displayName?.slice(0, 6);
         dispatch(SetActiveUser);
         setloading(false);
         navigate(from, { replace: true });
@@ -51,7 +51,7 @@ const Login = () => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        const username = user.displayName?.split(" ").at(0);
+        const username = user.displayName;
         setloading(false);
         navigate(from, { replace: true });
         toast.success(`welcome Back ${username} `);

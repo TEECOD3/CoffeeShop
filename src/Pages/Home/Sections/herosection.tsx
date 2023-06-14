@@ -2,23 +2,24 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import heroimage from "../../../assets/Images/bg-hero.png";
 import coffeehero from "../../../assets/Images/coffeeHero.png";
+4;
 
 type Props = {};
 
-const Heroskeleton = () => {
+export const Heroskeleton = () => {
   return (
-    <div className="flex h-[100vh] w-full flex-col bg-red-500 py-10">
-      <div className="m-auto flex h-full w-full flex-col-reverse gap-y-10 md:h-[80%] md:flex-row md:justify-between md:gap-y-0 lg:w-[70%] ">
-        <div className="mx-auto flex h-[40%] w-[80%] flex-col justify-between bg-yellow-400 p-3  md:m-auto md:h-[50%] md:w-[45%]">
-          <div className="h-10 w-full rounded-lg bg-green-300"></div>
-          <div className=" h-24 w-full rounded-lg bg-blue-400 md:h-32"></div>
+    <div className="flex h-[100vh] w-full flex-col py-10">
+      <div className="m-auto flex h-full w-full  flex-col-reverse gap-y-10 md:h-[80%] md:flex-row md:justify-between md:gap-y-0 lg:w-[70%] ">
+        <div className="mx-auto flex h-[40%] w-[80%] skeleton flex-col justify-between bg-gray-500 p-3  md:m-auto md:h-[50%] md:w-[45%]">
+          <div className="h-10 w-full rounded-lg skeleton bg-gray-800/50"></div>
+          <div className=" h-24 w-full rounded-lg skeleton bg-gray-800/50 z-20 md:h-32"></div>
 
-          <div className="runded-lg h-24 w-full bg-blue-900">
+          <div className="runded-lg h-24 w-full skeleton bg-gray-800/50 z-20">
             <div className=""></div>
             <div className=""></div>
           </div>
         </div>
-        <div className="m-auto  mt-20 h-[50%] w-[90%] flex-col rounded-lg bg-yellow-400 md:m-auto md:h-[90%] md:w-[45%]"></div>
+        <div className="m-auto  mt-20 h-[50%] w-[90%] flex-col rounded-lg skeleton bg-gray-800/50 md:m-auto md:h-[90%] md:w-[45%]"></div>
       </div>
     </div>
   );
@@ -42,6 +43,7 @@ export default function Herosection({}: Props) {
           }}
         >
           <img
+            loading="lazy"
             src={heroimage}
             alt="heroimage"
             className="absolute left-0 top-0 -z-[1] h-full w-full object-cover "
