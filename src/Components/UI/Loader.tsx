@@ -1,5 +1,7 @@
+import { BaggageClaimIcon } from "lucide-react";
 import { FC } from "react";
-import { FiCoffee } from "react-icons/fi";
+import { BsHandbagFill } from "react-icons/bs";
+import { TbPaperBag } from "react-icons/tb";
 import { RiLoader2Fill } from "react-icons/ri";
 
 interface LoaderProps {
@@ -11,7 +13,7 @@ const Loader: FC<LoaderProps> = (props: LoaderProps) => {
   return (
     <>
       <div className="relative h-20 top-0 left-0  w-20 flex items-center justify-center">
-        <FiCoffee
+        <TbPaperBag
           className={` ${className} h-8 absolute w-8 z-[90000000] animate-ping`}
         />
         <RiLoader2Fill

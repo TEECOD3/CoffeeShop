@@ -15,6 +15,7 @@ import Forgotpassword from "./Pages/Forgetpassword";
 import Checkoutpage from "./Pages/Checkoutpage";
 import Protected from "./Lib/Protect";
 import { Heroskeleton } from "./Pages/Home/Sections/herosection";
+import LoadingModal from "./Components/UI/LoadingModal";
 
 // Import your components using lazy-loading
 const Home = lazy(() => import("./Pages/Home"));
@@ -30,14 +31,7 @@ function App() {
 
   return (
     <Router>
-      <Suspense
-        fallback={
-          <div>
-            {" "}
-            <Heroskeleton />{" "}
-          </div>
-        }
-      >
+      <Suspense fallback={<div>loading</div>}>
         <Routes>
           <Route path="/" element={<RootLayer />}>
             <Route index element={<Home />} />
