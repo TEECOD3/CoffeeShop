@@ -31,7 +31,13 @@ function App() {
 
   return (
     <Router>
-      <Suspense fallback={<div>loading</div>}>
+      <Suspense
+        fallback={
+          <div>
+            <LoadingModal text="loading" />
+          </div>
+        }
+      >
         <Routes>
           <Route path="/" element={<RootLayer />}>
             <Route index element={<Home />} />
