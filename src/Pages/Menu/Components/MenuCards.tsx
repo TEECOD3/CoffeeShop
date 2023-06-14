@@ -34,6 +34,8 @@ const Menucards: FC<MenucardsProps> = (props) => {
             </div> */}
             <div className="  flex items-center justify-center">
               <img
+                loading="lazy"
+                placeholder="blur"
                 src={urlFor(image).url()}
                 alt="productimage"
                 className="mx-auto max-h-[150px] min-h-[150px] bg-cover bg-top object-cover"
