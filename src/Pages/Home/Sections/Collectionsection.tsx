@@ -15,7 +15,7 @@ const Collectionsection = () => {
     setloading(true);
     client
       .fetch(
-        `*[_type == 'coffeeProduct' && category._ref in *[_type == 'category' && name == 'machandize']._id] {
+        `*[_type == 'coffeeProduct' && category._ref in *[_type == 'category' && name == 'light roast']._id] {
   name,
   image,
   oldPrice,

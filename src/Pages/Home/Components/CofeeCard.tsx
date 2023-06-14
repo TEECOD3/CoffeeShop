@@ -23,18 +23,18 @@ interface CofeecardProps {
 const Cofeecard: FC<CofeecardProps> = (props) => {
   const { oldprice, newprice, image, coffeename, slug, loading } = props;
   return (
-    <div className="group relative  mx-auto w-full cursor-pointer overflow-hidden rounded-lg  border-2 border-coffee-100  shadow-lg transition-all  duration-300">
+    <div className="group relative py-3   mx-auto w-full cursor-pointer overflow-hidden rounded-lg  border-2 border-coffee-100  shadow-lg transition-all  duration-300">
       <div className="mx-auto flex w-full items-center justify-center">
         <img
           src={urlFor(image).url()}
           alt="cofeeimage"
-          className="  w-full rounded-lg bg-cover "
+          className="mx-auto max-h-[150px] min-h-[150px] bg-cover bg-top object-cover"
         />
       </div>
 
       <div className="p-1">
         <div className=" flex w-full items-center gap-1">
-          <div className="mb-3 mt-3 w-1/2  px-2 text-[0.6rem] font-bold md:text-[0.8rem] xl:text-base">
+          <div className="mb-3 mt-3 w-1/2  px-2 text-[0.6rem] font-bold md:text-[0.8rem] xl:text-base capitalize">
             {coffeename}
           </div>
           <div className="flex  w-1/2 flex-col items-center justify-center">

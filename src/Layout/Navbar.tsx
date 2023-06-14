@@ -8,15 +8,24 @@ import { auth } from "../../Firebase/config";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import toast from "react-hot-toast";
 import { LogInIcon, Menu } from "lucide-react";
-import { BsPerson, BsPersonCheck } from "react-icons/bs";
+import { BsCaretDown, BsPersonCheck } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import {
   RemoveActiveUser,
   SetActiveUser,
   selectLoggedstate,
 } from "../Store/Slices/AuthSlice";
-import { Logout, LogoutSharp } from "@mui/icons-material";
+import { LogoutSharp } from "@mui/icons-material";
 import { cartstate, setCartmodal } from "../Store/Slices/cartslice";
+import {
+  Menubar,
+  MenubarContent,
+  MenubarItem,
+  MenubarMenu,
+  MenubarSeparator,
+  MenubarShortcut,
+  MenubarTrigger,
+} from "../../components/ui/menubar";
 
 const Navbar = () => {
   const [ModalOpen, setModalOpen] = useState(false);
@@ -31,12 +40,11 @@ const Navbar = () => {
       if (user) {
         const uid = user.uid;
         if (user.displayName === null) {
-          const u1 = user.email?.substring(0, user.email.indexOf("@"));
-          const uname = u1?.charAt(0).toUpperCase() || "error" + u1?.slice;
+          const u1 = "user";
           setusername(u1);
         } else {
           const userdisplayname = user.displayName.split(" ");
-          const firstname = userdisplayname.at(0);
+          const firstname = userdisplayname[0];
           setusername(firstname);
         }
         dispatch(
@@ -89,7 +97,7 @@ const Navbar = () => {
           </div>
 
           <ul
-            className={`item-end hidden justify-around  text-white md:flex items-center  ${
+            className={`item-end hidden items-center  justify-around text-white md:flex  ${
               isLoggedIn ? "w-[50%] xl:w-[30%]" : " w-[20%]"
             } `}
           >
@@ -97,30 +105,37 @@ const Navbar = () => {
               <li>Shop</li>
             </NavLink>
 
-            {isLoggedIn && (
-              <NavLink to="/" onClick={logoutHandler}>
-                <li>
-                  <LogInIcon />
-                </li>
-              </NavLink>
-            )}
-
-            <li className="flex items-center justify-center">
-              <FaSistrix className="text-2xl text-white " />
-            </li>
-
             <li className="relative">
-              {isLoggedIn && (
+              {isLoggedIn ? (
                 <NavLink to="/">
-                  <div className="flex gap-x-3 items-center justify-center">
-                    <BsPersonCheck className="text-3xl text-white" />
-                    <div className="text-sm capitalize bg-coffee-100 p-2 rounded-lg">
-                      hi {username}
-                    </div>
+                  <div className="flex items-center justify-center gap-x-3">
+                    <Menubar>
+                      <MenubarMenu>
+                        <MenubarTrigger className="flex gap-x-3 rounded-lg bg-coffee-100 py-3 capitalize text-white ">
+                          <span>hi {username}</span>
+                          <BsCaretDown className="text-white" />
+                        </MenubarTrigger>
+                        <MenubarContent className=" text=white z-[1000000000] flex w-32 cursor-pointer flex-col items-center justify-center gap-y-2 bg-coffee-100 text-center text-white ">
+                          <MenubarItem className="p-2 px-3">
+                            Account
+                          </MenubarItem>
+                          <MenubarSeparator className="h-[1px] w-full bg-white" />
+                          <MenubarItem className="cursor-pointer p-2 px-3 ">
+                            <span
+                              className="capitalize"
+                              onClick={() => {
+                                dispatch(RemoveActiveUser());
+                              }}
+                            >
+                              logout
+                            </span>
+                          </MenubarItem>
+                        </MenubarContent>
+                      </MenubarMenu>
+                    </Menubar>
                   </div>
                 </NavLink>
-              )}
-              {!isLoggedIn && (
+              ) : (
                 <NavLink to="/login">
                   <div className="flex">
                     <h2>login</h2>
@@ -153,15 +168,6 @@ const Navbar = () => {
           </ul>
 
           <ul className="flex items-center justify-center gap-4 px-2 md:hidden ">
-            <li>
-              {isLoggedIn && (
-                <NavLink to="" onClick={logoutHandler}>
-                  <li className="relative">
-                    <LogoutSharp className="text-3xl text-white" />
-                  </li>
-                </NavLink>
-              )}
-            </li>
             <li className="">
               <Link to=" " onClick={CartHandler}>
                 <li className="relative">
@@ -187,19 +193,6 @@ const Navbar = () => {
                 </li>
               </Link>
             </li>
-            {isLoggedIn ? (
-              <NavLink to="/login">
-                <li className="relative">
-                  <BsPersonCheck className="text-3xl text-white" />
-                </li>
-              </NavLink>
-            ) : (
-              <NavLink to="/login">
-                <li className="relative text-white">
-                  <h3>login</h3>
-                </li>
-              </NavLink>
-            )}
 
             <li className="">
               <Menu className="text-white" onClick={openModalHandler} />
