@@ -100,11 +100,13 @@ const Menu = () => {
                           )
                         : Categories.map((coffee) => (
                             <Menucards
+                              key={coffee.name}
                               image={coffee.image}
                               coffeename={coffee.name}
                               oldprice={coffee.oldPrice}
                               newprice={coffee.newPrice}
                               loading={loading}
+                              slug={coffee.slug.current}
                             />
                           ))}
                     </div>

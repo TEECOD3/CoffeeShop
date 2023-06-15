@@ -1,8 +1,9 @@
 import { FC } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import image from "../../../Data/images/mainimages/DSC_1179_copy_web_award-transformed.png";
 import { EyeIcon, ShoppingBagIcon } from "lucide-react";
 import { urlFor } from "../../../client";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 interface MenucardsProps {
   image?: string | undefined;
   oldprice?: number;
@@ -32,10 +33,9 @@ const Menucards: FC<MenucardsProps> = (props) => {
             {/* <div className="bg-coffee-100 rounded-lg  text-white  w-20 text-center text-sm p-2 ">
               sold out
             </div> */}
-            <div className="  flex items-center justify-center">
-              <img
-                loading="lazy"
-                placeholder="blur"
+            <div className="flex items-center justify-center">
+              <LazyLoadImage
+                effect="blur"
                 src={urlFor(image).url()}
                 alt="productimage"
                 className="mx-auto max-h-[150px] min-h-[150px] bg-cover bg-top object-cover"
@@ -58,7 +58,7 @@ const Menucards: FC<MenucardsProps> = (props) => {
               </div>
 
               <Link
-                to="/menu/:id"
+                to={`/menu/${slug}`}
                 className=" flex items-center justify-center rounded-lg bg-coffee-100/90 p-4 text-lightdark shadow-lg "
               >
                 <EyeIcon className="h-4 w-4 text-white" />

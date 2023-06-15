@@ -4,9 +4,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation, useParams } from "react-router-dom";
 import image from "../../../Data/images/mainimages/matte-coffee-bag-mockup-template-removebg-preview.png";
-
 import {
   ArrowLeft,
   ArrowRight,
@@ -19,19 +18,52 @@ import {
   ShoppingBagIcon,
   Twitter,
 } from "lucide-react";
-import { Add } from "@mui/icons-material";
+import { Add, Details } from "@mui/icons-material";
 import { BsHeart, BsStar } from "react-icons/bs";
 import Button from "../../../Components/UI/Button";
 import { useNavigate } from "react-router-dom";
 import { coffeedets } from "../../../Data/Cofee";
 import SwipperNavbuttons from "../Components/swipperbuttons";
 import { Link } from "react-router-dom";
+import { client } from "../../../client";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import { urlFor } from "../../../client";
 
 interface CoffeedetailProps {}
 
 const Coffeedetail: FC<CoffeedetailProps> = () => {
   const { pathname } = useLocation();
+  const [details, setDetails] = useState<any>({});
   const navigate = useNavigate();
+  const { id } = useParams();
+
+  useEffect(() => {
+    client
+      .fetch(
+        `*[_type == 'coffeeProduct' && slug.current == '${id}'] {
+          name,
+          image {
+            asset-> {
+              _id,
+              url
+            }
+          },
+          oldPrice,
+          newPrice,
+          inStock,
+          slug,
+          rating,
+          description
+        }[0]`
+      )
+      .then((data) => {
+        setDetails(data);
+        console.log(data);
+      })
+      .catch(console.error);
+  }, [id]);
+
   const breakpoints = {
     480: {
       slidesPerView: 1,
@@ -49,6 +81,7 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <>
       <main className=" py-16 lg:py-20">
@@ -62,11 +95,9 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
         </section>
         <section className="flex flex-col md:flex-row max-w-7xl mx-auto my-10">
           <div className="rightside| w-full md:w-1/2 h-full ">
-            <h4 className="text-3xl font-bold px-2 text-lightdark">
-              Coffee details
-            </h4>
             <div className=" h-[20rem]  sm:h-[30rem] md:h-[35rem] lg:h-[40rem] px-3">
-              <img
+              <LazyLoadImage
+                effect="blur"
                 src={image}
                 alt="coffeedetail-image"
                 className="object-cover h-full bg-cover w-full rounded-md"
@@ -78,25 +109,21 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
             <h3 className="px-4 py-2  my-2 text-white text-sm bg-coffee-100 inline-block rounded-md">
               in stock
             </h3>
+
             <h2 className=" text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold capitalize ">
-              espresso coffee delicous
+              {details.name}
             </h2>
             <p className=" my-4 lg:my-6 text-lightdark text-sm md:text-base">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe
-              voluptatibus vel perferendis, consectetur reiciendis, maiores
-              fugiat corporis exercitationem aperiam distinctio asperiores ut
-              veniam architecto obcaecati vero et temporibus possimus assumenda?
-              Distinctio in officiis autem cupiditate facere ea, molestiae
-              similique provident. Repellendus perspiciatis laborum,
+              {details.description}
             </p>
 
             <hr className="text-lightdark" />
 
             <h3 className=" text-2xl lg:text-3xl font-nunito font-bold my-2 lg:my-3">
-              $52.00
+              ${details.oldPrice}
             </h3>
             <div className="rating| flex text-lightdark gap-4 items-center justify-start font-nunito">
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center gap-x-2">
                 <BsStar />
                 <BsStar />
                 <BsStar />
@@ -151,28 +178,6 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        <section className="px-6 md:px-10">
-          <Button
-            onClick={() => {
-              navigate("/menu/:id");
-            }}
-            className="bg-blue-300 rounded-none capitalize mb-4 ml-2 xl:ml-8"
-          >
-            description
-          </Button>
-          <Button
-            onClick={() => {
-              navigate("reviews");
-            }}
-            className="rounded-none capitalize mb-4"
-          >
-            review (24)
-          </Button>
-          <div className="w-full">
-            <Outlet />
           </div>
         </section>
 

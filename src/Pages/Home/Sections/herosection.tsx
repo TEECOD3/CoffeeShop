@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import heroimage from "../../../assets/Images/bg-hero.png";
 import coffeehero from "../../../assets/Images/coffeeHero.png";
 4;
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 type Props = {};
 
@@ -10,16 +12,16 @@ export const Heroskeleton = () => {
   return (
     <div className="flex h-[100vh] w-full flex-col py-10">
       <div className="m-auto flex h-full w-full  flex-col-reverse gap-y-10 md:h-[80%] md:flex-row md:justify-between md:gap-y-0 lg:w-[70%] ">
-        <div className="mx-auto flex h-[40%] w-[80%] skeleton flex-col justify-between bg-gray-500 p-3  md:m-auto md:h-[50%] md:w-[45%]">
-          <div className="h-10 w-full rounded-lg skeleton bg-gray-800/50"></div>
-          <div className=" h-24 w-full rounded-lg skeleton bg-gray-800/50 z-20 md:h-32"></div>
+        <div className="skeleton mx-auto flex h-[40%] w-[80%] flex-col justify-between bg-gray-500 p-3  md:m-auto md:h-[50%] md:w-[45%]">
+          <div className="skeleton h-10 w-full rounded-lg bg-gray-800/50"></div>
+          <div className=" skeleton z-20 h-24 w-full rounded-lg bg-gray-800/50 md:h-32"></div>
 
-          <div className="runded-lg h-24 w-full skeleton bg-gray-800/50 z-20">
+          <div className="runded-lg skeleton z-20 h-24 w-full bg-gray-800/50">
             <div className=""></div>
             <div className=""></div>
           </div>
         </div>
-        <div className="m-auto  mt-20 h-[50%] w-[90%] flex-col rounded-lg skeleton bg-gray-800/50 md:m-auto md:h-[90%] md:w-[45%]"></div>
+        <div className="skeleton  m-auto mt-20 h-[50%] w-[90%] flex-col rounded-lg bg-gray-800/50 md:m-auto md:h-[90%] md:w-[45%]"></div>
       </div>
     </div>
   );
@@ -42,20 +44,20 @@ export default function Herosection({}: Props) {
             delay: 0.3,
           }}
         >
-          <img
-            loading="lazy"
+          <LazyLoadImage
+            effect="blur"
             src={heroimage}
             alt="heroimage"
             className="absolute left-0 top-0 -z-[1] h-full w-full object-cover "
           />
-          <div className="mx-auto mt-20 flex h-full w-full flex-col-reverse items-center justify-between  space-y-2 py-10 font-rails sm:max-w-4xl sm:space-y-8  sm:py-0 md:mt-2 md:max-w-7xl md:flex-row md:space-x-16 lg:mt-0 lg:space-x-28">
+          <div className="font-rails mx-auto mt-20 flex h-full w-full flex-col-reverse items-center  justify-between space-y-2 py-10 sm:max-w-4xl sm:space-y-8  sm:py-0 md:mt-2 md:max-w-7xl md:flex-row md:space-x-16 lg:mt-0 lg:space-x-28">
             <div className="relative   mx-auto w-4/5 p-8 sm:w-5/6 lg:p-5   ">
-              <div className="absolute left-[33rem]  top-[15rem] flex h-[6rem] w-[5rem] items-center justify-center bg-seed bg-no-repeat max-xl:left-[21rem] max-md:left-[22rem] max-sm:left-[14rem] max-sm:top-[11rem]"></div>
+              <div className="bg-seed absolute  left-[33rem] top-[15rem] flex h-[6rem] w-[5rem] items-center justify-center bg-no-repeat max-xl:left-[21rem] max-md:left-[22rem] max-sm:left-[14rem] max-sm:top-[11rem]"></div>
               <div className=" mx-auto lg:mt-0  ">
-                <p className="mb-3 font-rails text-[1rem] font-medium text-white ">
+                <p className="font-rails mb-3 text-[1rem] font-medium text-white ">
                   Welcome to coffee hut
                 </p>
-                <h1 className=" md:text-md  mb-4 font-rails  text-4xl   font-medium leading-8 text-[#BC9A6C]/70 lg:leading-10 xl:text-6xl ">
+                <h1 className=" md:text-md  font-rails mb-4  text-4xl   font-medium leading-8 text-[#BC9A6C]/70 lg:leading-10 xl:text-6xl ">
                   Heal the world with coffee
                 </h1>
                 <p className="mb-7 text-sm text-white md:text-base">
@@ -83,7 +85,7 @@ export default function Herosection({}: Props) {
               <img
                 src={coffeehero}
                 alt="beautiful image of a coffee"
-                className=" absolute z-[400] h-full w-full bg-cofeeHero bg-cover bg-no-repeat md:mt-20 md:h-1/2 lg:mt-[5rem] lg:w-[20rem] xl:mt-0 xl:h-full xl:w-full"
+                className=" bg-cofeeHero absolute z-[400] h-full w-full bg-cover bg-no-repeat md:mt-20 md:h-1/2 lg:mt-[5rem] lg:w-[20rem] xl:mt-0 xl:h-full xl:w-full"
               />
             </div>
           </div>

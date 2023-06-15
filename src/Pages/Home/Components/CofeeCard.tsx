@@ -15,6 +15,7 @@ interface CofeecardProps {
   image?: string | undefined;
   oldprice?: number;
   newprice?: number;
+  instock?:boolean;
   coffeename?: string;
   slug?: string;
   loading?: boolean;

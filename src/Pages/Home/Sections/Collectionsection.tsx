@@ -37,7 +37,7 @@ const Collectionsection = () => {
   return (
     <section className=" mt-10 w-full md:p-20">
       <div className="mx-auto w-full text-center md:w-[60%]">
-        <h2 className=" text-coffeeBlack mb-1 font-rails text-3xl font-bold capitalize text-[#333333]">
+        <h2 className=" text-coffeeBlack font-rails mb-1 text-3xl font-bold capitalize text-[#333333]">
           different collection
         </h2>
         <p className=" text-md  mx-auto px-4 text-sm font-medium text-lightdark md:px-0 md:text-xl xl:w-3/5">
@@ -81,6 +81,7 @@ const Collectionsection = () => {
                   coffeename={cofee.name}
                   image={cofee.image}
                   newprice={cofee.newPrice}
+                  instock={cofee.instock}
                 />
               ))
             )}
