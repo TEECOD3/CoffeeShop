@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import heroimage from "../../../assets/Images/bg-hero.png";
 import coffeehero from "../../../assets/Images/coffeeHero.png";
-4;
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 

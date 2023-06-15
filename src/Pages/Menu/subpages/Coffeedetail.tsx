@@ -98,13 +98,12 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
         </section>
         <section className="flex flex-col md:flex-row max-w-7xl mx-auto my-10">
           <div className="rightside| w-full md:w-1/2 h-full ">
-            <div className=" h-[20rem]  sm:h-[28rem] md:h-[35rem] lg:h-[40rem] px-3">
+            <div className=" h-[20rem]  sm:h-[28rem] md:h-[30rem] lg:h-[40rem] px-3 flex items-center justify-center">
               <LazyLoadImage
                 effect="blur"
                 src={`${images}`}
-                // src={details.image.asset.url}
                 alt="coffeedetail-image"
-                className="object-cover h-full bg-cover w-full rounded-md"
+                className="object-cover w-2/3  md:h-full md:w-full rounded-md mx-auto bg-cover bg-top"
               />
             </div>
           </div>
@@ -169,18 +168,6 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
               <h3 className="font-medium">
                 <span className="font-semibold">category: </span> espresso
               </h3>
-              <h3>
-                <span className="font-semibold">tag: </span> our shop
-              </h3>
-              <div className="flex gap-1">
-                <span className="font-semibold">share: </span>
-                <div className="flex gap-3 text-2xl">
-                  <Facebook className="text-2xl" />
-                  <Twitter />
-                  <Instagram />
-                  <Linkedin />
-                </div>
-              </div>
             </div>
           </div>
         </section>

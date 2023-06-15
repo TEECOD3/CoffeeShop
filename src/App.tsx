@@ -16,6 +16,7 @@ import Checkoutpage from "./Pages/Checkoutpage";
 import Protected from "./Lib/Protect";
 import { Heroskeleton } from "./Pages/Home/Sections/herosection";
 import LoadingModal from "./Components/UI/LoadingModal";
+import { LoaderIcon } from "react-hot-toast";
 
 // Import your components using lazy-loading
 const Home = lazy(() => import("./Pages/Home"));
@@ -33,8 +34,11 @@ function App() {
     <Router>
       <Suspense
         fallback={
-          <div>
-            <LoadingModal text="loading" />
+          <div className="bg-white h-full w-full fixed top-0 left-0 flex items-center justify-center capitalize text-2xl font-semibold">
+            <div className="flex items-center justify-center gap-x-3">
+              <span className="animate-bounce">loading</span>{" "}
+              <LoaderIcon className="h-6 w-6" />
+            </div>
           </div>
         }
       >

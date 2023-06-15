@@ -31,7 +31,10 @@ const Login = () => {
         dispatch(SetActiveUser);
         setloading(false);
         navigate(from, { replace: true });
-        toast.success(` successful login`, { icon: "🚀" });
+        toast.success(` successful login`, {
+          icon: "🚀",
+          style: { backgroundColor: "#BC9A6C" },
+        });
       })
       .catch((error) => {
         setloading(false);
