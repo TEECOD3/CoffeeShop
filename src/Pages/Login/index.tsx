@@ -31,7 +31,7 @@ const Login = () => {
         dispatch(SetActiveUser);
         setloading(false);
         navigate(from, { replace: true });
-        toast.success(`welcome Back ${username} `);
+        toast.success(` successful login`, { icon: "🚀" });
       })
       .catch((error) => {
         setloading(false);
@@ -51,10 +51,9 @@ const Login = () => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        const username = user.displayName;
         setloading(false);
         navigate(from, { replace: true });
-        toast.success(`welcome Back ${username} `);
+        toast.success(` successful login`, { icon: "🚀" });
         // ...
       })
       .catch((error) => {
