@@ -100,6 +100,7 @@ const Menu = () => {
                           )
                         : Categories.map((coffee) => (
                             <Menucards
+                              instock={coffee.inStock}
                               key={coffee.name}
                               image={coffee.image}
                               coffeename={coffee.name}

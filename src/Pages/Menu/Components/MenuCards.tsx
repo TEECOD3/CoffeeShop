@@ -11,10 +11,12 @@ interface MenucardsProps {
   coffeename?: string;
   slug?: string;
   loading?: boolean;
+  instock: boolean;
 }
 
 const Menucards: FC<MenucardsProps> = (props) => {
-  const { oldprice, newprice, image, coffeename, slug, loading } = props;
+  const { oldprice, newprice, image, coffeename, slug, loading, instock } =
+    props;
   const navigate = useNavigate();
 
   return (
@@ -28,11 +30,17 @@ const Menucards: FC<MenucardsProps> = (props) => {
           </div>
         </div>
       ) : (
-        <div className="group relative z-20 w-full cursor-pointer border-2 p-2 transition delay-200 duration-300 hover:scale-[1.09] lg:mb-4 ">
+        <div
+          className={` ${
+            instock ? " " : " z-[900] sepia bg-gray-white "
+          }group relative  z-20 w-full cursor-pointer border-2 p-2 transition delay-200 duration-300 hover:scale-[1.09] lg:mb-4 `}
+        >
           <div className=" relative mx-auto md:w-[200px]">
-            {/* <div className="bg-coffee-100 rounded-lg  text-white  w-20 text-center text-sm p-2 ">
-              sold out
-            </div> */}
+            {!instock && (
+              <div className="bg-coffee-100 -rotate-12 rounded-lg animate-pulse  text-white  w-20 text-center text-sm mt-2 p-1 ">
+                sold out
+              </div>
+            )}
             <div className="flex items-center justify-center">
               <LazyLoadImage
                 effect="blur"

@@ -13,6 +13,8 @@ import {
   Facebook,
   Instagram,
   Linkedin,
+  LoaderIcon,
+  LucideLoader2,
   Minus,
   ShoppingBag,
   ShoppingBagIcon,
@@ -38,8 +40,10 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const [images, setimage] = useState("");
+  const [loading, setloading] = useState(false);
 
   useEffect(() => {
+    setloading(true);
     client
       .fetch(
         `*[_type == 'coffeeProduct' && slug.current == '${id}'] {
@@ -59,10 +63,9 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
         }[0]`
       )
       .then((data) => {
+        setloading(false);
         setDetails(data);
         setimage(data.image.asset.url);
-        console.log(data);
-        console.log(data.image.asset.url);
       })
       .catch(console.error);
   }, [id]);
@@ -98,19 +101,29 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
         </section>
         <section className="flex flex-col md:flex-row max-w-7xl mx-auto my-10">
           <div className="rightside| w-full md:w-1/2 h-full ">
-            <div className=" h-[20rem]  sm:h-[28rem] md:h-[30rem] lg:h-[40rem] px-3 flex items-center justify-center">
-              <LazyLoadImage
-                effect="blur"
-                src={`${images}`}
-                alt="coffeedetail-image"
-                className="object-cover w-2/3  md:h-full md:w-full rounded-md mx-auto bg-cover bg-top"
-              />
+            <div className=" h-[20rem] relative  sm:h-[28rem] md:h-[30rem] lg:h-[40rem] px-3 flex items-center justify-center">
+              {loading ? (
+                <p>
+                  <LucideLoader2 />
+                </p>
+              ) : (
+                <LazyLoadImage
+                  effect="blur"
+                  src={`${images}`}
+                  alt="coffeedetail-image"
+                  className={`object-cover w-2/3  md:h-full md:w-full rounded-md mx-auto bg-cover bg-top ${
+                    !details.inStock ? "sepia" : "sepia-0"
+                  }`}
+                />
+              )}
             </div>
           </div>
 
           <div className="leftside| w-full md:w-1/2 p-3">
-            <h3 className="px-4 py-2  my-2 text-white text-sm bg-coffee-100 inline-block rounded-md">
-              in stock
+            <h3 className="px-4 py-2 my-2 text-white text-sm bg-coffee-100 inline-block rounded-md">
+              <span className="capitalize">
+                {details.inStock ? "in stock" : " Sold out"}
+              </span>
             </h3>
 
             <h2 className=" text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold capitalize ">
