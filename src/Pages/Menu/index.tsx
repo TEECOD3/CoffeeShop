@@ -40,6 +40,7 @@ const Menu = () => {
       )
       .then((data) => {
         setloading(false);
+        console.log(data);
         setCategories(data);
       })
       .catch(console.error);

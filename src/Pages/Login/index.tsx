@@ -28,12 +28,10 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         const username = user.displayName?.slice(0, 6);
-        dispatch(SetActiveUser);
         setloading(false);
         navigate(from, { replace: true });
         toast.success(` successful login`, {
           icon: "🚀",
-          style: { backgroundColor: "#BC9A6C" },
         });
       })
       .catch((error) => {

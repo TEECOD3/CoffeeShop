@@ -61,12 +61,12 @@ const Navbar = () => {
     dispatch(setCartmodal({ payload: 0 }));
   };
 
-  const logoutHandler = () => {
+  const logoutHandler = (): any => {
     signOut(auth)
       .then(() => {
-        toast.success("logged out sucessfully");
         dispatch(RemoveActiveUser());
         navigate("/");
+        toast.success("logged out sucessfully");
         // Sign-out successful.
       })
       .catch((error) => {
@@ -122,9 +122,7 @@ const Navbar = () => {
                           <MenubarItem className="cursor-pointer p-2 px-3 ">
                             <span
                               className="capitalize"
-                              onClick={() => {
-                                dispatch(RemoveActiveUser());
-                              }}
+                              onClick={logoutHandler}
                             >
                               logout
                             </span>
