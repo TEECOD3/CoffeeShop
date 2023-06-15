@@ -15,7 +15,6 @@ import {
   SetActiveUser,
   selectLoggedstate,
 } from "../Store/Slices/AuthSlice";
-import { LogoutSharp } from "@mui/icons-material";
 import { cartstate, setCartmodal } from "../Store/Slices/cartslice";
 import {
   Menubar,

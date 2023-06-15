@@ -13,6 +13,7 @@ import {
   Facebook,
   Instagram,
   Linkedin,
+  Loader2,
   LoaderIcon,
   LucideLoader2,
   Minus,
@@ -104,7 +105,7 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
             <div className=" h-[20rem] relative  sm:h-[28rem] md:h-[30rem] lg:h-[40rem] px-3 flex items-center justify-center">
               {loading ? (
                 <p>
-                  <LucideLoader2 />
+                  <Loader2 className="animate-spin" />
                 </p>
               ) : (
                 <LazyLoadImage

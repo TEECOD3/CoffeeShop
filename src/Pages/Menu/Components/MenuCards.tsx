@@ -4,6 +4,13 @@ import { EyeIcon, ShoppingBagIcon } from "lucide-react";
 import { urlFor } from "../../../client";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../../../../components/ui/tooltip";
+
 interface MenucardsProps {
   image?: string | undefined;
   oldprice?: number;
@@ -50,7 +57,7 @@ const Menucards: FC<MenucardsProps> = (props) => {
               />
             </div>
           </div>
-          <h3 className="mx-auto  mt-4 text-left text-sm md:text-base uppercase font-bold  text-lightdark ">
+          <h3 className="mx-auto  mt-4 text-left text-[7px] sm:text-[12px] md:text-base uppercase font-bold  text-lightdark ">
             {coffeename}
           </h3>
           <div className="mt-2 flex justify-start gap-4  font-nunito font-medium">
@@ -61,16 +68,33 @@ const Menucards: FC<MenucardsProps> = (props) => {
           {/* details amd add to cart */}
           <div className="absolute  -right-11  top-3  opacity-0 transition-all duration-300 group-hover:right-2 group-hover:opacity-100 ">
             <button className="flex flex-col items-center  justify-center gap-2 md:gap-4">
-              <div className=" flex items-center justify-center rounded-lg  bg-coffee-100/90 p-4 text-lightdark shadow-lg ">
-                <ShoppingBagIcon className="h-4 w-4 text-white " />
-              </div>
-
-              <Link
-                to={`/menu/${slug}`}
-                className=" flex items-center justify-center rounded-lg bg-coffee-100/90 p-4 text-lightdark shadow-lg "
-              >
-                <EyeIcon className="h-4 w-4 text-white" />
-              </Link>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <div className=" flex items-center justify-center rounded-lg  bg-coffee-100/90 p-2 md:p-4 text-lightdark shadow-lg ">
+                      <ShoppingBagIcon className="h-2 w-2 text-white md:h-4 md:w-4" />
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent className=" bg-coffee-100/60 text-[8px] text-white px-3 py-2 w-20">
+                    <p>Add to cart</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <Link
+                      to={`/menu/${slug}`}
+                      className=" flex items-center justify-center rounded-lg bg-coffee-100/90  p-2 md:p-4 text-lightdark shadow-lg "
+                    >
+                      <EyeIcon className="h-2 w-2 md:h-4 md:w-4 text-white" />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent className=" bg-coffee-100/60 text-[8px] text-white px-3 py-2 w-20">
+                    <p>view details</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </button>
           </div>
         </div>
