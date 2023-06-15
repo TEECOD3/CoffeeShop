@@ -37,6 +37,7 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
   const [details, setDetails] = useState<any>({});
   const navigate = useNavigate();
   const { id } = useParams();
+  const [images, setimage] = useState("");
 
   useEffect(() => {
     client
@@ -59,7 +60,9 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
       )
       .then((data) => {
         setDetails(data);
+        setimage(data.image.asset.url);
         console.log(data);
+        console.log(data.image.asset.url);
       })
       .catch(console.error);
   }, [id]);
@@ -95,10 +98,11 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
         </section>
         <section className="flex flex-col md:flex-row max-w-7xl mx-auto my-10">
           <div className="rightside| w-full md:w-1/2 h-full ">
-            <div className=" h-[20rem]  sm:h-[30rem] md:h-[35rem] lg:h-[40rem] px-3">
+            <div className=" h-[20rem]  sm:h-[28rem] md:h-[35rem] lg:h-[40rem] px-3">
               <LazyLoadImage
                 effect="blur"
-                src={image}
+                src={`${images}`}
+                // src={details.image.asset.url}
                 alt="coffeedetail-image"
                 className="object-cover h-full bg-cover w-full rounded-md"
               />
