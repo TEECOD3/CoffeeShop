@@ -72,7 +72,7 @@ const Menucards: FC<MenucardsProps> = (props) => {
                 <Tooltip>
                   <TooltipTrigger>
                     <div className=" flex items-center justify-center rounded-lg  bg-coffee-100/90 p-2 md:p-4 text-lightdark shadow-lg ">
-                      <ShoppingBagIcon className="h-2 w-2 text-white md:h-4 md:w-4" />
+                      <ShoppingBagIcon className="text-white h-4 w-4" />
                     </div>
                   </TooltipTrigger>
                   <TooltipContent className=" bg-coffee-100/60 text-[8px] text-white px-3 py-2 w-20">
@@ -87,7 +87,7 @@ const Menucards: FC<MenucardsProps> = (props) => {
                       to={`/menu/${slug}`}
                       className=" flex items-center justify-center rounded-lg bg-coffee-100/90  p-2 md:p-4 text-lightdark shadow-lg "
                     >
-                      <EyeIcon className="h-2 w-2 md:h-4 md:w-4 text-white" />
+                      <EyeIcon className="text-white h-4 w-4" />
                     </Link>
                   </TooltipTrigger>
                   <TooltipContent className=" bg-coffee-100/60 text-[8px] text-white px-3 py-2 w-20">

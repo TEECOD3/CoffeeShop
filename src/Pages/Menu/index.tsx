@@ -40,7 +40,6 @@ const Menu = () => {
       )
       .then((data) => {
         setloading(false);
-        console.log(data);
         setCategories(data);
       })
       .catch(console.error);
@@ -191,25 +190,23 @@ const Menu = () => {
                       <SwiperSlide key={index}>
                         <div className="group relative z-20 w-full cursor-pointer transition delay-75 duration-100 hover:scale-[1.09] lg:mb-4 ">
                           {loading ? (
-                            Array(10)
-                              .fill(9)
-                              .map((box, I) => (
-                                <div
-                                  className="relative flex h-[250px] items-center justify-center bg-black/20 "
-                                  key={I}
-                                >
-                                  <Loader className="text-black" />
-                                </div>
-                              ))
+                            [1, 2, 3, 4, 5, 6, 76].map((box, I) => (
+                              <div
+                                className="relative flex h-[250px] items-center justify-center bg-black/20 "
+                                key={I}
+                              >
+                                <Loader className="text-black" />
+                              </div>
+                            ))
                           ) : (
-                            <div className=" relative flex h-[250px] items-center justify-center ">
+                            <div className=" relative w-[20rem] md:w-full flex h-[250px] items-center justify-center ">
                               <img
                                 src={urlFor(cofee.image).url()}
                                 alt="coffeedetail"
                                 className="max-h-[200px] bg-contain object-cover "
                               />
 
-                              <div className="absolute  -right-10  top-3  opacity-0 transition-all duration-300 group-hover:right-2 group-hover:opacity-100 ">
+                              <div className="absolute  right-0  top-3  opacity-0 transition-all duration-300 group-hover:right-2 group-hover:opacity-100 ">
                                 <button className="flex flex-col items-center  justify-center gap-2 md:gap-4">
                                   <div className=" flex items-center justify-center rounded-lg  bg-coffee-100/90 p-4 text-lightdark shadow-lg ">
                                     <ShoppingBagIcon className="h-4 w-4 text-white md:h-6 md:w-6" />

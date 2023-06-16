@@ -31,7 +31,8 @@ import { Link } from "react-router-dom";
 import { client } from "../../../client";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import { urlFor } from "../../../client";
+import { useDispatch, useSelector } from "react-redux";
+import { addItemToCart } from "../../../Store/Slices/cartslice";
 
 interface CoffeedetailProps {}
 
@@ -42,6 +43,7 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
   const { id } = useParams();
   const [images, setimage] = useState("");
   const [loading, setloading] = useState(false);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     setloading(true);
@@ -70,6 +72,17 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
       })
       .catch(console.error);
   }, [id]);
+
+  const handlerCart = () => {
+    dispatch(
+      addItemToCart({
+        id: id,
+        name: details.name,
+        price: details.newPrice,
+        image: details.image.asset.url,
+      })
+    );
+  };
 
   const breakpoints = {
     480: {
@@ -166,7 +179,10 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
 
               <Button className="flex rounded-none bg-coffee-100 px-4 lg:px-6 md:px-10 item-center justify-center gap-3">
                 <ShoppingBag className="w-1/6" />
-                <span className="text-[0.7rem] xl:text-sm w-4/6">
+                <span
+                  className="text-[0.7rem] xl:text-sm w-4/6"
+                  onClick={handlerCart}
+                >
                   add to cart
                 </span>
               </Button>
@@ -213,7 +229,7 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
                     <img
                       src={cofee.image}
                       alt="coffeedetail"
-                      className=" w-full h-[20rem] object-cover md:w-[25rem]"
+                      className="mx-auto max-h-[150px] min-h-[150px] bg-cover bg-top object-cover"
                     />
                   </div>
                   <div className="absolute  top-3  -right-11  opacity-0 group-hover:opacity-100 group-hover:right-2 transition-all duration-300 ">

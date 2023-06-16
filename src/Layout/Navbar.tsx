@@ -15,7 +15,7 @@ import {
   SetActiveUser,
   selectLoggedstate,
 } from "../Store/Slices/AuthSlice";
-import { cartstate, setCartmodal } from "../Store/Slices/cartslice";
+import { cartstate, setCartmodal, totalqty } from "../Store/Slices/cartslice";
 import {
   Menubar,
   MenubarContent,
@@ -33,6 +33,7 @@ const Navbar = () => {
   const isLoggedIn = useSelector(selectLoggedstate);
   const navigate = useNavigate();
   const cartmodal = useSelector(cartstate);
+  const qtyAmount = useSelector(totalqty);
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -142,8 +143,8 @@ const Navbar = () => {
             </li>
 
             <li className="relative cursor-pointer " onClick={CartHandler}>
-              <div className="item-center  absolute -right-2 -top-2 flex h-5 w-5  justify-center rounded-full bg-coffee-100 text-sm text-white">
-                3
+              <div className="item-center  absolute -right-2 -top-2 flex h-5 w-5  justify-center rounded-full bg-red-400 text-sm text-white">
+                {qtyAmount}
               </div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
