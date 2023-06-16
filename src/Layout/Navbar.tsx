@@ -169,8 +169,8 @@ const Navbar = () => {
             <li className="">
               <Link to=" " onClick={CartHandler}>
                 <li className="relative">
-                  <div className="item-center  absolute -right-2 -top-2 flex h-5 w-5 justify-center rounded-full bg-coffee-100 text-sm text-white">
-                    3
+                  <div className="item-center  absolute -right-2 -top-2 flex h-5 w-5 justify-center rounded-full bg-red-400 text-sm text-white">
+                    {qtyAmount}
                   </div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
