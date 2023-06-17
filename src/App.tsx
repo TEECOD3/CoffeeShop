@@ -14,7 +14,7 @@ import Register from "./Pages/Register";
 import Forgotpassword from "./Pages/Forgetpassword";
 import Checkoutpage from "./Pages/Checkoutpage";
 import Protected from "./Lib/Protect";
-import { Heroskeleton } from "./Pages/Home/Sections/herosection";
+
 import LoadingModal from "./Components/UI/LoadingModal";
 import { LoaderIcon } from "react-hot-toast";
 
