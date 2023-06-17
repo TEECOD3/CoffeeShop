@@ -6,6 +6,7 @@ import rightleaf from "../../../assets/Images/leaveright.png";
 import middlecofs from "../../../assets/Images/cofeemids.png";
 import { leftCoffee } from "../../../Data/Cofee";
 import { rightCofee } from "../../../Data/Cofee";
+import imagemiddle from "../../../assets/Images/kisscoffee.png";
 
 type Props = {};
 
@@ -44,7 +45,7 @@ export default function Descriptionsection({}: Props) {
             />
 
             <img
-              src={middlecofs}
+              src={imagemiddle}
               alt="middlecoffeecan"
               className="absolute z-[20] h-[15rem] w-full  bg-cover bg-no-repeat sm:w-2/3 lg:h-full lg:w-full"
             />

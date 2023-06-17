@@ -34,10 +34,10 @@ const Cartpage = () => {
               </p>
               <div className="flex mt-2 gap-x-2">
                 <Input
-                  className="flex-1 text-sm outline-none border-coffee-100 bg-white"
+                  className="flex-1 text-sm outline-none border-black bg-white"
                   inputs={{ placeholder: "Enter your coupon code" }}
                 />
-                <Button className="w-2/6 bg-coffee-100 ">apply</Button>
+                <Button className="w-2/6 bg-black">apply</Button>
               </div>
             </div>
 
@@ -72,7 +72,7 @@ const Cartpage = () => {
                 onClick={() => {
                   navigate("/checkoutpage");
                 }}
-                className="w-full md:w-2/3 mx-auto bg-coffee-100 mt-3 text-sm capitalize"
+                className="w-full md:w-2/3 mx-auto bg-black mt-3 text-sm capitalize"
               >
                 proceed to checkout <BsFillBagCheckFill className="ml-3" />
               </Button>

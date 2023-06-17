@@ -1,7 +1,7 @@
 import Input from "../../Components/Forms/Inputfield";
 import Button from "../../Components/UI/Button";
 import GoogleIcon from "../Login/icons/Googleicon";
-import loginimage from "../Login/icons/cofeeloin-transformed.png";
+import loginimage from "../../assets/Images/kisscoffee.png";
 import { useNavigate } from "react-router-dom";
 import React, { useState, useRef } from "react";
 import toast from "react-hot-toast";
@@ -44,7 +44,7 @@ const Register = () => {
 
   return (
     <div className=" mb-36 flex items-center justify-center py-16 font-nunito md:pt-28">
-      <div className="mx-auto flex flex-col-reverse justify-between gap-x-4 p-4 md:flex-row lg:w-[70%]">
+      <div className="mx-auto flex mt-8 md:mt-0 flex-col-reverse justify-between gap-x-4 p-4 md:flex-row lg:w-[70%]">
         <div className="flex flex-1  items-center justify-center md:p-8">
           {loading && <LoadingModal text="creating account" />}
           <form className="md:w-4/5" onSubmit={SubmitHandler}>
@@ -66,7 +66,7 @@ const Register = () => {
                 required
                 ref={emailref}
                 inputs={{ id: "email", type: "email" }}
-                className="w-full border-2 border-coffee-100"
+                className="w-full border-2 black"
               />
             </div>
             <div className="formgroup p-2">
@@ -80,7 +80,7 @@ const Register = () => {
                 ref={passwords}
                 required
                 inputs={{ id: "password", type: "password" }}
-                className="border-2 border-coffee-100"
+                className="border-2 border-black"
               />
             </div>
             <div className="formgroup p-2">
@@ -94,25 +94,13 @@ const Register = () => {
                 ref={confirmpasswordref}
                 required
                 inputs={{ id: "confirmpassword", type: "password" }}
-                className="border-2 border-coffee-100"
+                className="border-2 border-black"
               />
             </div>
 
             <div className="my-2 flex justify-between">
-              <div className="formgroup flex items-center gap-x-1">
-                <Input
-                  inputs={{ type: "checkbox" }}
-                  className="w-5 border-coffee-100"
-                />
-                <label
-                  htmlFor=""
-                  className=" font-nunito text-sm font-bold text-lightdark  "
-                >
-                  remember for 30days
-                </label>
-              </div>
               <p
-                className="cursor-pointer font-nunito text-sm font-bold text-lightdark hover:text-coffee-100"
+                className="cursor-pointer font-nunito text-sm font-bold text-lightdark hover:text-coffee-100/30"
                 onClick={() => {
                   navigate("/forgotpassword");
                 }}
@@ -132,7 +120,7 @@ const Register = () => {
             <div className="mt-2 flex items-center justify-center gap-x-3 text-sm font-bold capitalize text-lightdark md:mt-3 md:text-base">
               <p className="capitalize"> have an account ?</p>
               <span
-                className="cursor-pointer text-coffee-100 "
+                className="cursor-pointer text-black "
                 onClick={() => {
                   navigate("/login");
                 }}
@@ -142,7 +130,7 @@ const Register = () => {
             </div>
           </form>
         </div>
-        <div className="flex h-[100px] items-center justify-center  bg-top md:h-[500px] md:flex-1">
+        <div className="md:flex h-[100px] items-center justify-center  bg-top md:h-[500px] md:flex-1 hidden">
           <img
             src={loginimage}
             alt="image of a coffee"

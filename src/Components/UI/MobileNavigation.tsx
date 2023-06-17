@@ -44,7 +44,7 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0  h-full w-full bg-coffee-100 z-[129030020039030920] flex items-start justify-start"
+        className="fixed top-0 left-0  h-full w-full bg-white z-[129030020039030920] flex items-start justify-start"
         variants={item}
         initial={{ height: 0, opacity: 0 }}
         animate={{ height: "100vh", opacity: 1 }}
@@ -52,19 +52,20 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
         exit="exit"
       >
         <MdOutlineClose
-          className="text-3xl absolute text-white z-[8399] right-6 top-6"
+          className="text-3xl absolute text-black z-[8399] right-6 top-6"
           onClick={hideModalHandler}
         />
         <div className="w-full bg-cofee-100 px-10 py-4">
           <div className="">
-            <Coffeelogo className="h-16 w-16 text-coffee-100" />
+            <Coffeelogo className="h-20 w-20 text-black" />
           </div>
-          <ul className="flex flex-col gap-y-6 capitalize font-medium text-base mt-4 text-white">
-            <li>menu</li>
+          <ul className="flex flex-col gap-y-6 capitalize font-medium text-base mt-4 text-black">
+            <li className="font-bold ">menu</li>
             {authstate ? (
               <li>my account</li>
             ) : (
               <li
+                className="font-bold"
                 onClick={() => {
                   navigate("/login");
                   hideModalHandler();
@@ -76,7 +77,7 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
             <li
               className={`${
                 authstate ? "w-full" : "w-28"
-              } p-4  border-2 border-white rounded-lg  text-center`}
+              } p-4  border-2 border-black rounded-lg  text-center font-bold `}
               onClick={() => {
                 if (authstate) {
                   dispatch(RemoveActiveUser({ payload: "" }));

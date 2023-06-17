@@ -10,6 +10,7 @@ import toast from "react-hot-toast";
 import { LogInIcon, Menu } from "lucide-react";
 import { BsCaretDown, BsPersonCheck } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
+import { HiOutlineShoppingBag } from "react-icons/hi";
 import {
   RemoveActiveUser,
   SetActiveUser,
@@ -88,34 +89,40 @@ const Navbar = () => {
       <AnimatePresence>
         {ModalOpen && <MobileNav hideModalHandler={hidemodalHandler} />}
       </AnimatePresence>
-      <div className="fixed z-[1000] flex w-full bg-black px-2 sm:px-8">
-        <div className="mx-auto  flex h-full w-full items-center justify-between lg:max-w-[70%]">
-          <div className="text-2xl font-bold capitalize text-white ">
+      <div className="fixed z-[1000] flex w-full bg-[#f6f6f6]  px-2 sm:px-8">
+        <div className="mx-auto  flex h-full w-full items-center justify-between lg:max-w-[80%]">
+          <div className=" font-bold capitalize text-xl">
             <Link to="/">
-              <Coffeelogo className=" h-16 w-16  sm:h-20 sm:w-20 " />
+              <Coffeelogo className="h-20 w-20" />
             </Link>
           </div>
 
           <ul
-            className={`item-end hidden items-center  justify-around text-white md:flex  ${
-              isLoggedIn ? "w-[50%] xl:w-[30%]" : " w-[20%]"
-            } `}
+            className={`item-end hidden items-center  justify-around text-white md:flex font-bold `}
           >
             <NavLink to="/menu">
-              <li>Shop</li>
+              <li className="text-black ">Shop</li>
             </NavLink>
+          </ul>
 
-            <li className="relative">
+          <div className="flex gap-x-8 items-center justify-center">
+            <div onClick={CartHandler} className=" relative hidden md:block">
+              <HiOutlineShoppingBag className="text-2xl font-extrabold" />
+              <div className="items-center absolute -right-2 -bottom-1 flex h-4 w-4  justify-center rounded-full bg-black text-sm text-white text-center">
+                {qtyAmount}
+              </div>
+            </div>
+            <ul className="md:flex gap-x-2 items-center justify-center hidden">
               {isLoggedIn ? (
                 <NavLink to="/">
                   <div className="flex items-center justify-center gap-x-3">
                     <Menubar>
                       <MenubarMenu>
-                        <MenubarTrigger className="flex gap-x-3 rounded-lg bg-coffee-100 py-3 capitalize text-white ">
+                        <MenubarTrigger className="flex gap-x-3 rounded-lg bg-black py-3 capitalize text-white ">
                           <span>hi {username}</span>
                           <BsCaretDown className="text-white" />
                         </MenubarTrigger>
-                        <MenubarContent className=" text=white z-[1000000000] flex w-32 cursor-pointer flex-col items-center justify-center gap-y-2 bg-coffee-100 text-center text-white ">
+                        <MenubarContent className=" text=white z-[1000000000] flex w-32 cursor-pointer flex-col items-center justify-center gap-y-2 bg-black text-center text-white ">
                           <MenubarItem className="p-2 px-3">
                             Account
                           </MenubarItem>
@@ -134,66 +141,28 @@ const Navbar = () => {
                   </div>
                 </NavLink>
               ) : (
-                <NavLink to="/login">
-                  <div className="flex">
-                    <h2>login</h2>
-                  </div>
-                </NavLink>
+                <li className="w-20 py-1 font-bold text-base flex items-center justify-center border-2  border-black rounded-lg">
+                  login
+                </li>
               )}
-            </li>
-
-            <li className="relative cursor-pointer " onClick={CartHandler}>
-              <div className="item-center  absolute -right-2 -top-2 flex h-5 w-5  justify-center rounded-full bg-red-400 text-sm text-white">
-                {qtyAmount}
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                className="lucide lucide-shopping-bag"
-              >
-                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                <line x1="3" x2="21" y1="6" y2="6"></line>
-                <path d="M16 10a4 4 0 0 1-8 0"></path>
-              </svg>
-            </li>
-          </ul>
+              {!isLoggedIn && (
+                <li className="w-20 py-1 font-bold text-base flex items-center justify-center bg-black text-white rounded-lg">
+                  create
+                </li>
+              )}
+            </ul>
+          </div>
 
           <ul className="flex items-center justify-center gap-4 px-2 md:hidden ">
-            <li className="">
-              <Link to=" " onClick={CartHandler}>
-                <li className="relative">
-                  <div className="item-center  absolute -right-2 -top-2 flex h-5 w-5 justify-center rounded-full bg-red-400 text-sm text-white">
-                    {qtyAmount}
-                  </div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    className="lucide lucide-shopping-bag text-white"
-                  >
-                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                    <line x1="3" x2="21" y1="6" y2="6"></line>
-                    <path d="M16 10a4 4 0 0 1-8 0"></path>
-                  </svg>
-                </li>
-              </Link>
-            </li>
+            <div onClick={CartHandler} className=" relative ">
+              <HiOutlineShoppingBag className="text-2xl font-extrabold" />
+              <div className="items-center absolute -right-2 -bottom-1 flex h-4 w-4  justify-center rounded-full bg-black text-sm text-white text-center">
+                {qtyAmount}
+              </div>
+            </div>
 
             <li className="">
-              <Menu className="text-white" onClick={openModalHandler} />
+              <Menu className="text-black" onClick={openModalHandler} />
             </li>
           </ul>
         </div>

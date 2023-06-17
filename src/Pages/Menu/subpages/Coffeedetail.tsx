@@ -33,6 +33,8 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { useDispatch, useSelector } from "react-redux";
 import { addItemToCart } from "../../../Store/Slices/cartslice";
+import { HiOutlineTruck } from "react-icons/hi";
+import { GiClockwork } from "react-icons/gi";
 
 interface CoffeedetailProps {}
 
@@ -104,13 +106,13 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
 
   return (
     <>
-      <main className=" py-16 lg:py-20">
+      <main className=" py-16 lg:py-20 bg-[#f6f6f6]">
         <section className="xl:w-[80%] mx-auto mt-4">
           <Link
             to="/menu"
             className="flex text-sm w-32 gap-x-4 items-center justify-center font-semibold "
           >
-            <ArrowLeft /> <span>back to shop</span>
+            <ArrowLeft /> <span>shop</span>
           </Link>
         </section>
         <section className="flex flex-col md:flex-row max-w-7xl mx-auto my-10">
@@ -134,25 +136,17 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
           </div>
 
           <div className="leftside| w-full md:w-1/2 p-3">
-            <h3 className="px-4 py-2 my-2 text-white text-sm bg-coffee-100 inline-block rounded-md">
+            <h3 className="px-4 py-2 my-2 text-white text-sm bg-black inline-block rounded-md">
               <span className="capitalize">
                 {details.inStock ? "in stock" : " Sold out"}
               </span>
             </h3>
 
-            <h2 className=" text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold capitalize ">
+            <h2 className=" text-2xl mt-4  sm:text-3xl lg:text-4xl xl:text-5xl font-bold capitalize ">
               {details.name}
             </h2>
-            <p className=" my-4 lg:my-6 text-lightdark text-sm md:text-base">
-              {details.description}
-            </p>
 
-            <hr className="text-lightdark" />
-
-            <h3 className=" text-2xl lg:text-3xl font-nunito font-bold my-2 lg:my-3">
-              ${details.oldPrice}
-            </h3>
-            <div className="rating| flex text-lightdark gap-4 items-center justify-start font-nunito">
+            <div className="rating| flex text-lightdark gap-4 items-center justify-start font-nunito mt-4">
               <div className="flex items-center justify-center gap-x-2">
                 <BsStar />
                 <BsStar />
@@ -160,9 +154,20 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
                 <BsStar />
                 <BsStar />
               </div>
-              <h5>| 5.0 rating |</h5>
-              <h5>22 review</h5>
+
+              <h3 className="text-base font-bold border-b-2 border-black font-inter">
+                234 reviews
+              </h3>
             </div>
+            <p className=" my-4 lg:my-6 text-lightdark text-sm md:text-base">
+              {details.description}
+            </p>
+
+            <hr className="text-lightdark" />
+
+            <h3 className=" text-2xl lg:text-3xl font-nunito font-bold my-2 lg:my-3 font-nunito ">
+              ${details.oldPrice}
+            </h3>
 
             <div className="cartbutton| mt-3 flex gap-3 my-4">
               <div className="flex border-2 border-lightdark md:px-4 md:w-[10rem] items-center justify-center ">
@@ -177,10 +182,10 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
                 </button>
               </div>
 
-              <Button className="flex rounded-none bg-coffee-100 px-4 lg:px-6 md:px-10 item-center justify-center gap-3">
+              <Button className="flex rounded-none bg-black px-4 lg:px-6 md:px-10 item-center justify-center gap-3">
                 <ShoppingBag className="w-1/6" />
                 <span
-                  className="text-[0.7rem] xl:text-sm w-4/6"
+                  className="text-[0.7rem] xl:text-sm w-4/6 font-bold"
                   onClick={handlerCart}
                 >
                   add to cart
@@ -190,14 +195,25 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
 
             <hr />
 
-            <div className="aboutcoffee| mt-2 flex items-start flex-col space-y-1 lg:space-y-3 text-lightdark font-medium">
-              <span className="flex items-center justify-center gap-1">
+            <div className="aboutcoffee| mt-2 flex items-start justify-center flex-col space-y-1 lg:space-y-3 text-black  font-medium">
+              <span className="flex items-center justify-center gap-x-3">
                 <BsHeart />
                 <span className="font-bold fill-red-400">add to wishlist</span>
               </span>
               <h3 className="font-medium">
-                <span className="font-semibold">category: </span> espresso
+                <span className="font-semibold">category: </span> Espresso
               </h3>
+            </div>
+
+            <div className="aboutcoffee| flex item-center justify-center gap-x-6 mt-4 text-black  font-medium w-full ">
+              <div className="flex items-center justify-center gap-x-3">
+                <HiOutlineTruck />
+                <span className="font-bold"> Free shippimg</span>
+              </div>
+              <div className="font-medium flex items-center justify-center gap-x-3">
+                <GiClockwork />
+                <span className="font-semibold">cancel anytime </span>
+              </div>
             </div>
           </div>
         </section>
@@ -225,22 +241,22 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
             {coffeedets.map((cofee) => (
               <SwiperSlide key={cofee.id}>
                 <div className="relative w-full lg:mb-4 cursor-pointer z-20 hover:scale-[1.02] transition duration-100 delay-75 group ">
-                  <div className="w-full relative">
+                  <div className="w-full relative h-[200px]">
                     <img
                       src={cofee.image}
                       alt="coffeedetail"
-                      className="mx-auto max-h-[150px] min-h-[150px] bg-cover bg-top object-cover"
+                      className="mx-auto max-h-[200px] min-h-[150px] bg-cover bg-top object-cover"
                     />
                   </div>
                   <div className="absolute  top-3  -right-11  opacity-0 group-hover:opacity-100 group-hover:right-2 transition-all duration-300 ">
                     <button className="flex items-center justify-center  flex-col gap-2 md:gap-4">
-                      <div className=" flex justify-center items-center text-lightdark  shadow-lg bg-coffee-100/90 p-4 rounded-lg ">
+                      <div className=" flex justify-center items-center text-lightdark  shadow-lg bg-black p-4 rounded-lg ">
                         <ShoppingBagIcon className="h-4 w-4 md:h-6 md:w-6 text-white" />
                       </div>
 
                       <Link
                         to="/menu/:id"
-                        className=" flex justify-center items-center text-lightdark shadow-lg bg-coffee-100/90 p-4 rounded-lg "
+                        className=" flex justify-center items-center text-lightdark shadow-lg bg-black p-4 rounded-lg "
                       >
                         <EyeIcon className="h-4 w-4 md:h-6 md:w-6 text-white" />
                       </Link>

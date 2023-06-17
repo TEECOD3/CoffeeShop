@@ -44,7 +44,7 @@ const Menucards: FC<MenucardsProps> = (props) => {
         >
           <div className=" relative mx-auto md:w-[200px]">
             {!instock && (
-              <div className="bg-coffee-100 -rotate-12 rounded-lg animate-pulse  text-white  w-20 text-center text-sm mt-2 p-1 ">
+              <div className="bg-black -rotate-12 rounded-lg animate-pulse  text-white  w-20 text-center text-sm mt-2 p-1 ">
                 sold out
               </div>
             )}
@@ -61,7 +61,7 @@ const Menucards: FC<MenucardsProps> = (props) => {
             {coffeename}
           </h3>
           <div className="mt-2 flex justify-start gap-4  font-nunito font-medium">
-            <h4 className="text-sm text-coffee-100">${newprice}</h4>
+            <h4 className="text-sm text-black">${newprice}</h4>
             <s className="text-sm text-red-500">${oldprice}</s>
           </div>
 
@@ -71,11 +71,11 @@ const Menucards: FC<MenucardsProps> = (props) => {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger>
-                    <div className=" flex items-center justify-center rounded-lg  bg-coffee-100/90 p-2 md:p-4 text-lightdark shadow-lg ">
+                    <div className=" flex items-center justify-center rounded-lg  bg-black p-2 md:p-4 text-lightdark shadow-lg ">
                       <ShoppingBagIcon className="text-white h-4 w-4" />
                     </div>
                   </TooltipTrigger>
-                  <TooltipContent className=" bg-coffee-100/60 text-[8px] text-white px-3 py-2 w-20">
+                  <TooltipContent className=" bg-black text-[8px] text-white px-3 py-2 w-20">
                     <p>Add to cart</p>
                   </TooltipContent>
                 </Tooltip>
@@ -85,12 +85,12 @@ const Menucards: FC<MenucardsProps> = (props) => {
                   <TooltipTrigger>
                     <Link
                       to={`/menu/${slug}`}
-                      className=" flex items-center justify-center rounded-lg bg-coffee-100/90  p-2 md:p-4 text-lightdark shadow-lg "
+                      className=" flex items-center justify-center rounded-lg bg-black  p-2 md:p-4 text-lightdark shadow-lg "
                     >
                       <EyeIcon className="text-white h-4 w-4" />
                     </Link>
                   </TooltipTrigger>
-                  <TooltipContent className=" bg-coffee-100/60 text-[8px] text-white px-3 py-2 w-20">
+                  <TooltipContent className=" bg-black text-[8px] text-white px-3 py-2 w-20">
                     <p>view details</p>
                   </TooltipContent>
                 </Tooltip>

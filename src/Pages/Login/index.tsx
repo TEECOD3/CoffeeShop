@@ -1,8 +1,7 @@
 import Input from "../../Components/Forms/Inputfield";
 import Button from "../../Components/UI/Button";
 import GoogleIcon from "./icons/Googleicon";
-import loginimage from "../Login/icons/cofeeloin-transformed.png";
-import { useNavigate, useLocation } from "react-router-dom";
+import loginimage from "../../assets/Images/kisscoffee.png";
 import React, { useState, useRef } from "react";
 import LoadingModal from "../../Components/UI/LoadingModal";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
@@ -10,6 +9,7 @@ import { auth } from "../../../Firebase/config";
 import toast from "react-hot-toast";
 import { GoogleAuthProvider } from "firebase/auth";
 import { useDispatch } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
 import { SetActiveUser } from "../../Store/Slices/AuthSlice";
 
 const Login = () => {
@@ -69,7 +69,7 @@ const Login = () => {
 
   return (
     <div className="mb-40 flex items-center justify-center py-20 font-nunito md:pt-32">
-      <div className="mx-auto flex flex-col-reverse justify-between gap-x-4 p-4 md:w-[70%] md:flex-row">
+      <div className="mx-auto flex flex-col-reverse justify-between gap-x-4  mt-4 md:mt-0 p-4 md:w-[70%] md:flex-row">
         <div className="flex flex-1 items-center justify-center md:p-4">
           {loading && <LoadingModal text="logging in.." />}
           <form className="md:w-4/5" onSubmit={submitHandler}>
@@ -90,7 +90,7 @@ const Login = () => {
               <Input
                 ref={emailRef}
                 inputs={{ id: "email" }}
-                className="border-2 border-coffee-100"
+                className="border-2 border-black"
               />
             </div>
             <div className="formgroup">
@@ -103,26 +103,13 @@ const Login = () => {
               <Input
                 ref={passwordRef}
                 inputs={{ id: "password" }}
-                className="border-2 border-coffee-100"
+                className="border-2 border-black"
               />
             </div>
 
             <div className="my-2 flex justify-between">
-              <div className="formgroup flex items-center gap-x-1">
-                <Input
-                  inputs={{ type: "checkbox" }}
-                  className="w-5 border-coffee-100"
-                />
-                <label
-                  htmlFor=""
-                  className=" font-nunito text-sm font-bold text-lightdark  "
-                >
-                  remember for 30days
-                </label>
-              </div>
-
               <p
-                className="cursor-pointer font-nunito text-sm font-bold text-lightdark hover:text-coffee-100"
+                className="cursor-pointer font-nunito text-sm font-bold text-lightdark hover:text-black/40"
                 onClick={() => {
                   navigate("/forgotpassword");
                 }}
@@ -133,7 +120,7 @@ const Login = () => {
 
             <Button className="w-full text-sm font-bold">Sign in</Button>
             <Button
-              className="mt-3 w-full space-x-2  border-2 border-coffee-100 text-sm font-bold"
+              className="mt-3 w-full space-x-2  border-2 border-black text-sm font-bold"
               variant="ghost"
               onClick={signInWithGoogle}
             >
@@ -148,11 +135,11 @@ const Login = () => {
               className="g:text-base mt-2 flex cursor-pointer items-center justify-center gap-x-3 text-sm font-bold capitalize text-lightdark md:mt-3"
             >
               <p>dont have an account ?</p>
-              <span className="text-coffee-100">sign up</span>
+              <span className="text-black">sign up</span>
             </div>
           </form>
         </div>
-        <div className="flex h-[100px] items-center justify-center  bg-top md:h-[500px] md:flex-1">
+        <div className="hidden md:flex h-[100px] items-center justify-center  bg-top md:h-[500px] md:flex-1">
           <img
             src={loginimage}
             alt="image of a coffee"

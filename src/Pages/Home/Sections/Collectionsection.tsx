@@ -48,13 +48,13 @@ const Collectionsection = () => {
 
       <div className="mx-auto flex w-full flex-col gap-4 p-3 lg:mt-6 lg:flex-row xl:w-[80%] ">
         <div className=" no-scrollbar w-full overflow-x-auto lg:w-[60%] xl:w-[40%]  ">
-          <div className="flex w-[60rem] gap-3 sm:w-full sm:gap-5 md:p-4 lg:flex-col lg:gap-5 xl:bg-[#EDEAE3] ">
+          <div className="flex w-[60rem] gap-3 sm:w-full sm:gap-5 md:p-4 lg:flex-col lg:gap-5  bg-[#f6f6f6]">
             {buttondata.map((buttons) => (
               <Button
                 variant="coffee"
                 size="lg"
                 key={buttons.id}
-                className=" mx-auto w-[30rem] p-0 shadow-sm md:w-[18rem]"
+                className=" mx-auto w-[30rem] p-0 shadow-sm md:w-[18rem]  bg-[#f6f6f6] text-black border-black"
               >
                 <div className="flex w-full items-center justify-between gap-3 px-6">
                   <div className="flex  w-[20%] justify-center  text-3xl md:text-4xl">
@@ -78,6 +78,7 @@ const Collectionsection = () => {
             ) : (
               Categories.map((cofee) => (
                 <Cofeecard
+                  key={cofee.name}
                   coffeename={cofee.name}
                   image={cofee.image}
                   newprice={cofee.newPrice}

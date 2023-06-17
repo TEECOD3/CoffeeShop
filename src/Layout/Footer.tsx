@@ -21,7 +21,7 @@ import Button from "../Components/UI/Button";
 
 const Footer = () => {
   return (
-    <footer className="relative bottom-0 left-0 mt-auto w-full bg-red-400">
+    <footer className="relative bottom-0 left-0 mt-auto w-full">
       <div className=" relative flex h-full  w-full flex-col items-center justify-around bg-black/90 px-4 py-10  text-sm  text-white md:flex-row md:text-base">
         <div className="absolute -top-24 z-[900] mx-auto flex h-[12rem] w-[90%] flex-col items-center justify-center rounded-lg bg-white px-4 py-4 text-black shadow-2xl md:w-2/3 xl:flex-row">
           <h2 className="w-full pt-4 text-center text-xl font-bold  lg:text-3xl">
@@ -31,28 +31,28 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Enter email .."
-              className="mr-1 w-full rounded-lg  border-2 border-coffee-100  p-3 md:w-[60%] "
+              className="mr-1 w-full rounded-lg  border-2 border-black  p-3 md:w-[60%] "
             />
             <Button
               variant="ghost"
-              className="mx-auto mt-3 w-2/4 border-[1px] border-coffee-100  text-sm md:w-[35%]"
+              className="mx-auto mt-3 w-2/4 border-[1px] c text-sm md:w-[35%]"
             >
               Subscribe now
             </Button>
           </div>
           <div className="mx-auto mb-6 w-full md:mb-2">
             <div className="mx-auto flex w-2/3 justify-center gap-2 ">
-              <div className="flex items-center justify-center rounded-lg px-1 text-sm md:bg-coffee-100 md:py-2">
-                <Facebook className="h-6 text-coffee-100 md:text-white " />
+              <div className="flex items-center justify-center rounded-lg px-1 text-sm md:bg-black md:py-2">
+                <Facebook className="h-6 border-black md:text-white " />
               </div>
-              <div className="flex items-center justify-center rounded-lg  px-1 py-2 text-sm md:bg-coffee-100">
-                <Twitter className="h-6 text-coffee-100  md:text-white " />
+              <div className="flex items-center justify-center rounded-lg  px-1 py-2 text-sm md:bg-black">
+                <Twitter className="h-6 border-black md:text-white " />
               </div>
-              <div className="flex items-center justify-center rounded-lg px-1 py-2 text-sm md:bg-coffee-100">
-                <Instagram className="h-6 text-coffee-100  md:text-white  " />
+              <div className="flex items-center justify-center rounded-lg px-1 py-2 text-sm md:bg-black">
+                <Instagram className="h-6 border-black  md:text-white  " />
               </div>
-              <div className="flex  items-center justify-center rounded-lg px-1 py-2 text-sm md:bg-coffee-100">
-                <Youtube className="h-6 text-coffee-100 md:text-white  " />
+              <div className="flex  items-center justify-center rounded-lg px-1 py-2 text-sm md:bg-black">
+                <Youtube className="h-6 border-black md:text-white  " />
               </div>
             </div>
           </div>

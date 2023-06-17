@@ -24,7 +24,7 @@ interface CofeecardProps {
 const Cofeecard: FC<CofeecardProps> = (props) => {
   const { oldprice, newprice, image, coffeename, slug, loading } = props;
   return (
-    <div className="group relative mx-auto   w-full cursor-pointer overflow-hidden rounded-lg border-2  border-coffee-100 py-3  shadow-lg transition-all  duration-300">
+    <div className="group relative mx-auto   w-full cursor-pointer overflow-hidden rounded-lg border-2  border-black py-3  shadow-lg transition-all  duration-300">
       <div className="mx-auto flex w-full items-center justify-center">
         <img
           src={urlFor(image).url()}

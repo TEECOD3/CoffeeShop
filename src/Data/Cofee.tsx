@@ -12,8 +12,10 @@ import spons4 from "../Pages/Home/icon/spons4.png";
 import spons5 from "../Pages/Home/icon/spons5.png";
 import spons6 from "../Pages/Home/icon/spons6.png";
 import { MdCoffeeMaker } from "react-icons/md";
+import { TbPaperBag } from "react-icons/tb";
 import { GiCoffeeBeans, GiCoffeeCup, GiCoffeeMug } from "react-icons/gi";
 import { CiCoffeeBean } from "react-icons/ci";
+import { SiCoffeescript } from "react-icons/si";
 import image from "../Data/images/mainimages/DSC_1179_copy_web_award-transformed.png";
 import image2 from "../Data/images/mainimages/CT_PRODUCTS_CARELESS_CAT_000-DZ1-transformed.png";
 import image3 from "../Data/images/mainimages/download-9pBn27ucF-transformed.png";
@@ -23,25 +25,27 @@ import chef1 from "../Data/images/chefs/ourchef1.png";
 import chef2 from "../Data/images/chefs/ourchef2.png";
 import chef3 from "../Data/images/chefs/ourchef3.png";
 import chef4 from "../Data/images/chefs/ourchef4.png";
+import { FaMugHot } from "react-icons/fa";
+import { Coffee } from "@mui/icons-material";
 
 export const leftCoffee = [
   {
     id: 1,
-    image: <CofeeBag className="" />,
+    image: <GiCoffeeMug className="text-4xl" />,
     coffeeName: "light roast",
     coffeeDescription:
       "This category includes classic espresso drinks such as cappuccinos, lattes, macchiatos, and Americanos.",
   },
   {
     id: 2,
-    image: <CoffeeCup />,
+    image: <GiCoffeeCup className="text-4xl" />,
     coffeeName: "medium roast",
     coffeeDescription:
       "Every day we brew our house columbian and french roast coffees ,a s well as a rotating varietal",
   },
   {
     id: 3,
-    image: <CoffeeJar />,
+    image: <TbPaperBag className="text-4xl" />,
     coffeeName: "Dark roast",
     coffeeDescription:
       "This category includes coffee drinks with added flavorings such as vanilla, caramel, hazelnut, or chocolate.",
@@ -51,21 +55,21 @@ export const leftCoffee = [
 export const rightCofee = [
   {
     id: 1,
-    image: <Cola />,
+    image: <TbPaperBag className="text-4xl" />,
     coffeeName: "bundles",
     coffeeDescription:
       "features a selection of coffees from different regions, such as Ethiopia, Colombia, and Guatemala.",
   },
   {
     id: 2,
-    image: <CoffeeBlend />,
+    image: <FaMugHot className="text-4xl" />,
     coffeeName: "unroasted coffee beans",
     coffeeDescription:
       "unique category that feature ingredients such as coconut milk, matcha, or chai tea.",
   },
   {
     id: 3,
-    image: <CoffeeBlend />,
+    image: <Coffee className="text-4xl" />,
     coffeeName: "subscriptions",
     coffeeDescription:
       " For those who want to enjoy the taste of coffee without the caffeine, here is a decaf category ",
@@ -213,7 +217,7 @@ export const coffeedets = [
 
 export const chefs = [
   { id: 1, image: chef1, name: "Bulbul Hassan", position: "founder" },
-  { id: 2, image: chef2, name: "Bulbul Hassan", position: "chef" },
+  { id: 2, image: chef2, name: "Bulbul Hassan", position: "co-founder" },
   { id: 3, image: chef3, name: "Jorina Begum", position: "specialist" },
   { id: 4, image: chef4, name: "micheal ojuma", position: "owner" },
 ];

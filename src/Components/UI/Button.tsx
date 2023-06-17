@@ -4,15 +4,15 @@ import { FC, ButtonHTMLAttributes } from "react";
 import { cn } from "../../Lib/Utils";
 
 const buttonVariants = cva(
-  "active:scale-95 inline-flex  items-center justify-center rounded-md transition-color focus:outline-none focus:ring-2 focus:ring-coffee-100 focus:ring-offset-2 disabled:pointer-events-none disbaled:opacity-50",
+  "active:scale-95 inline-flex  items-center justify-center rounded-md transition-color focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 disabled:pointer-events-none disbaled:opacity-50",
 
   {
     variants: {
       variant: {
-        default: "bg-coffee-100  text-white  hover:bg-coffee-100/80",
+        default: "bg-black  text-white ",
         ghost: "bg-transparent hover:text-slate-900 hover:bg-slate-200",
         coffee:
-          "bg-white text-coffee-100 hover:bg-coffee-100 hover:text-white border-2 border-coffee-100 focus:bg-coffee-200 focus:text-white",
+          "bg-white text-black hover:bg-black hover:text-white border-2 border-black focus:bg-coffee-200 focus:text-white",
       },
       size: {
         default: "h-10 py-6 px-4",

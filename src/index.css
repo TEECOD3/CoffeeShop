@@ -21,6 +21,7 @@
   html {
     font-family: "Raleway", sans-serif;
     height: 100%;
+    background: #f6f6f6;
   }
   body {
     height: 100%;
@@ -66,7 +67,7 @@ input[type="range"]:focus {
 /***** Chrome, Safari, Opera and Edge Chromium styles *****/
 /* slider track */
 input[type="range"]::-webkit-slider-runnable-track {
-  background-color: #bc9a6c;
+  background-color: #000;
   border-radius: 0.5rem;
   height: 0.4rem;
 }
@@ -78,7 +79,7 @@ input[type="range"]::-webkit-slider-thumb {
   margin-top: -5px; /* Centers thumb on the track */
 
   /*custom styles*/
-  background-color: #bc9a6c;
+  background-color: #000;
   height: 1rem;
   width: 1rem;
   border-radius: 50%;
@@ -86,7 +87,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 input[type="range"]:focus::-webkit-slider-thumb {
   border: 1px solid white;
-  outline: 3px solid #bc9a6c;
+  outline: 3px solid #000;
   outline-offset: 0.125rem;
   border-radius: 50%;
 }
@@ -94,7 +95,7 @@ input[type="range"]:focus::-webkit-slider-thumb {
 /******** Firefox styles ********/
 /* slider track */
 input[type="range"]::-moz-range-track {
-  background-color: #bc9a6c;
+  background-color: #000;
   border-radius: 0.5rem;
   height: 0.5rem;
 }
@@ -105,14 +106,13 @@ input[type="range"]::-moz-range-thumb {
   border-radius: 0; /*Removes default border-radius that FF applies*/
 
   /*custom styles*/
-  background-color: #bc9a6c;
-  height: 1rem;
+  background-color: #000;
   width: 1rem;
 }
 
 input[type="range"]:focus::-moz-range-thumb {
-  border: 1px solid #bc9a6c;
-  outline: 3px solid #bc9a6c;
+  border: 1px solid #000;
+  outline: 3px solid #000;
   outline-offset: 0.125rem;
 }
 /* .checkers {

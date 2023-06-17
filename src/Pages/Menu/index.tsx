@@ -65,7 +65,7 @@ const Menu = () => {
     <>
       <AnimatePresence>
         <motion.div
-          className="h-full w-full px-1 py-28 xl:px-0 "
+          className="h-full w-full px-1 py-28 xl:px-0 bg-[#f6f6f6] "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ y: 0 }}
@@ -88,8 +88,11 @@ const Menu = () => {
                     <div className="mx-auto grid w-full grid-cols-2 gap-3 md:grid-cols-3">
                       {loading
                         ? [1, 2, 3, 8, 5, 6, 7, 7, 8, 11, 19, 23].map(
-                            (stuff) => (
-                              <div className="group skeleton bg-black/30 relative z-20 w-full cursor-pointer  p-2 transition delay-200 duration-300 animate-pulse tlg:mb-4 ">
+                            (stuff, i) => (
+                              <div
+                                key={i}
+                                className="group skeleton bg-black/30 relative z-20 w-full cursor-pointer  p-2 transition delay-200 duration-300 animate-pulse tlg:mb-4 "
+                              >
                                 <div className=" relative mx-auto md:w-[200px]">
                                   <div className="  flex items-center justify-center ">
                                     <div className="mx-auto max-h-[150px] min-h-[150px] bg-cover bg-top object-cover" />
@@ -121,8 +124,8 @@ const Menu = () => {
                         }}
                         className=" border-coffee-100 bg-white"
                       />
-                      <div className="absolute right-0 top-0 flex h-full items-center justify-center bg-coffee-100 p-2 focus:border-coffee-100 focus:ring-coffee-100">
-                        <Search className="" />
+                      <div className="absolute right-0 top-0 flex h-full items-center justify-center bg-black p-2 focus:black focus:ring-black">
+                        <Search className="text-white" />
                       </div>
                     </div>
 
@@ -153,11 +156,11 @@ const Menu = () => {
                             min: "0",
                             max: "800",
                           }}
-                          className="range  border-1 h-[0.3rem] appearance-none border-coffee-100 bg-coffee-100  text-coffee-100"
+                          className="range  border-1 h-[0.3rem] appearance-none border-black bg-black  text-coffee-100"
                         />
                         <label
                           htmlFor="pricefilter "
-                          className=" font-nunito  font-bold text-lightdark"
+                          className=" font-nunito  font-bold text-black"
                         >
                           from $0 to $800
                         </label>
@@ -167,7 +170,7 @@ const Menu = () => {
                 </div>
 
                 <section className="similarProducts| relative mx-auto  my-20 ">
-                  <h4 className="mb-4 font-bold text-lightdark md:text-xl ">
+                  <h4 className="mb-4 font-bold text-black md:text-xl ">
                     Other Collections You May Like
                   </h4>
 
@@ -208,13 +211,13 @@ const Menu = () => {
 
                               <div className="absolute  right-0  top-3  opacity-0 transition-all duration-300 group-hover:right-2 group-hover:opacity-100 ">
                                 <button className="flex flex-col items-center  justify-center gap-2 md:gap-4">
-                                  <div className=" flex items-center justify-center rounded-lg  bg-coffee-100/90 p-4 text-lightdark shadow-lg ">
+                                  <div className=" flex items-center justify-center rounded-lg  bg-black p-4 text-lightdark shadow-lg ">
                                     <ShoppingBagIcon className="h-4 w-4 text-white md:h-6 md:w-6" />
                                   </div>
 
                                   <Link
                                     to="/menu/:id"
-                                    className=" flex items-center justify-center rounded-lg bg-coffee-100/90 p-4 text-lightdark shadow-lg "
+                                    className=" flex items-center justify-center rounded-lg bg-black p-4 text-lightdark shadow-lg "
                                   >
                                     <EyeIcon className="h-4 w-4 text-white md:h-6 md:w-6" />
                                   </Link>

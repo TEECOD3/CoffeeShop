@@ -17,7 +17,7 @@ const Cartitem: FC<CartitemProps> = () => {
                 coffee cupicino
               </h3>
 
-              <RiDeleteBin2Fill className="text-coffee-100" />
+              <RiDeleteBin2Fill />
             </div>
 
             <div className="flex gap-x-3 h-[36px] text-sm">

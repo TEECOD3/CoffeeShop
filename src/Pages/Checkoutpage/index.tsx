@@ -64,7 +64,7 @@ const Checkoutpage = () => {
                 </label>
 
                 <select
-                  className="w-full p-2 border-coffee-100 text-sm font-semibold text-lightdark border-[1px] rounded-md"
+                  className="w-full p-2 border-black text-sm font-semibold text-lightdark border-[1px] rounded-md"
                   name="countrynames"
                   id="countrynames"
                 >
@@ -86,7 +86,7 @@ const Checkoutpage = () => {
                   city
                 </label>
                 <select
-                  className="w-full p-2 border-coffee-100 border-[1px] text-sm font-semibold text-lightdark rounded-md"
+                  className="w-full p-2 border-black border-[1px] text-sm font-semibold text-lightdark rounded-md"
                   name="countrynames"
                   id="countrynames"
                 >
