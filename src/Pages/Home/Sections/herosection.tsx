@@ -27,11 +27,11 @@ export default function Herosection({}: Props) {
               best coffee avail
             </h3>
             <h2 className="text-4xl font-extrabold capitalize">tasteful</h2>
-            <div className=" text-[1.5rem] sm:text-[2rem] md:text-[3rem] lg:text-[4rem]   font-[900] text-white uppercase ">
+            <div className=" text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[4rem]   font-[900] text-white uppercase ">
               sponge candy
             </div>
             <div className="">
-              <div className=" focus:none  inline-block  translate-x-1 cursor-pointer  items-center justify-center rounded-lg bg-red-500 px-4 text-[10px] sm:text-sm capitalize  text-white outline-none transition-all delay-200 duration-75 ease-out hover:translate-y-1   hover:border-white hover:bg-[#BC9A6C]/20 hover:text-white py-3">
+              <div className=" focus:none  inline-block  translate-x-1 cursor-pointer  items-center justify-center rounded-lg bg-red-500 px-4 text-[10px] sm:text-sm capitalize  text-white outline-none transition-all delay-200 duration-75 ease-out hover:translate-y-1 4 hover:border-white hover:bg-[#BC9A6C]/20 hover:text-white py-3">
                 order now sponge candy
               </div>
             </div>
@@ -49,7 +49,7 @@ export default function Herosection({}: Props) {
             </div>
           </div>
 
-          <div className="relative  mx-auto w-full lg:w-1/2 h-[18rem] md:h-[250px] lg:h-[80vh] my-auto">
+          <div className="relative  mx-auto w-[300px] h-[18rem] md:h-[300px] xl:h-[400px] my-auto">
             <LazyLoadImage
               effect="black-and-white"
               src={heroimage}
