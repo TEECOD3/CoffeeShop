@@ -1,43 +1,72 @@
 import { FC } from "react";
 import image from "../../Data/images/mainimages/coferd.png";
 import { RiDeleteBin2Fill } from "react-icons/ri";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addItemToCart,
+  removeItemFromCart,
+} from "../../Store/Slices/cartslice";
 
-interface CartitemProps {}
+interface CartitemProps {
+  coffeename: string;
+  image: string;
+  price: number;
+  total: number;
+  quantity: number;
+  id: number;
+}
 
-const Cartitem: FC<CartitemProps> = () => {
+const Cartitem: FC<CartitemProps> = (props: CartitemProps) => {
+  const { image, coffeename, price, total, quantity, id } = props;
+  const dispatch = useDispatch();
+
+  const addtocart = () => {
+    dispatch(
+      addItemToCart({
+        id: id,
+        name: coffeename,
+        price,
+        image,
+        quantity: 1,
+      })
+    );
+  };
   return (
-    <div className="w-full mx-auto">
-      <div className="bg-white shadow-lg rounded-lg mt-2 p-4">
-        <div className="min-h-[150px] flex items-center  gap-x-4 ">
+    <div className="mx-auto w-full">
+      <div className="mt-2 rounded-lg bg-white p-4 shadow-lg">
+        <div className="flex min-h-[150px] items-center  gap-x-4 ">
           <img src={image} alt="cartimage" className="max-w-[60px]" />
 
-          <div className="font-nunito w-full flex flex-col">
-            <div className="flex justify-between mb-4">
-              <h3 className="uppercase text-gray-500 font-bold text-sm md:text-base ">
-                coffee cupicino
+          <div className="font-nunito flex w-full flex-col">
+            <div className="mb-4 flex justify-between">
+              <h3 className="text-sm font-bold uppercase text-gray-500 md:text-base ">
+                {coffeename}
               </h3>
 
               <RiDeleteBin2Fill />
             </div>
 
-            <div className="flex gap-x-3 h-[36px] text-sm">
-              <div className="flex flex-1 max-w-[100px] border-gray-100 border-2  items-center h-full text-gray-500 font-bold">
-                <div className="flex-1 flex h-full justify-center items-center text-base ">
+            <div className="flex h-[36px] gap-x-3 text-sm">
+              <div className="flex h-full max-w-[100px] flex-1 items-center  border-2 border-gray-100 font-bold text-gray-500">
+                <div className="flex h-full flex-1 items-center justify-center text-base ">
                   -
                 </div>
-                <div className="h-full flex justify-center items-center px-2 ">
+                <div className="flex h-full items-center justify-center px-2 ">
                   1
                 </div>
-                <div className="flex-1 h-full flex justify-center items-center text-base">
+                <div
+                  className="flex h-full flex-1 items-center justify-center text-base"
+                  onClick={addtocart}
+                >
                   +
                 </div>
               </div>
-              <div className="flex flex-1 justify-start items-center text-gray-400 font-bold  md:text-sm">
-                price: $299.00 x 2
+              <div className="flex flex-1 items-center justify-start font-bold text-gray-400  md:text-sm">
+                price: ${price} x {quantity}
               </div>
 
-              <div className="flex flex-2 justify-end items-center text-gray-400 font-medium  md:text-base">
-                total: $900.00
+              <div className="flex-2 flex items-center justify-end font-medium text-gray-400  md:text-base">
+                total: ${total}
               </div>
             </div>
           </div>

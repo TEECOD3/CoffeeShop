@@ -8,7 +8,7 @@ import {
   selectUsername,
   RemoveActiveUser,
 } from "../../Store/Slices/AuthSlice";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 interface MobileNavProps {
   hideModalHandler: () => void;
 }
@@ -60,9 +60,19 @@ const MobileNav: FC<MobileNavProps> = (props: MobileNavProps) => {
             <Coffeelogo className="h-20 w-20 text-black" />
           </div>
           <ul className="flex flex-col gap-y-6 capitalize font-medium text-base mt-4 text-black">
-            <li className="font-bold ">menu</li>
+            <li
+              className="font-bold "
+              onClick={() => {
+                navigate("/menu");
+                hideModalHandler();
+              }}
+            >
+              shop
+            </li>
             {authstate ? (
-              <li>my account</li>
+              <div>
+                <li className="font-bold">my account</li>
+              </div>
             ) : (
               <li
                 className="font-bold"

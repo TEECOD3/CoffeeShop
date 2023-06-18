@@ -10,13 +10,15 @@ import React from "react";
 const Home = () => {
   return (
     <>
-      <Herosection />
-      <Aboutsection />
-      <Descriptionsection />
-      <Collectionsection />
-      <Chefssection />
-      <TestimonialSection />
-      <Partnersection />
+      <div className="bg-[#f6f6f6]">
+        <Herosection />
+        <Aboutsection />
+        <Descriptionsection />
+        <Collectionsection />
+        <Chefssection />
+        <TestimonialSection />
+        <Partnersection />
+      </div>
     </>
   );
 };

@@ -1,16 +1,30 @@
 import Cartitem from "./Cartitem";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setCartmodal, cartstate } from "../../Store/Slices/cartslice";
+import {
+  setCartmodal,
+  cartstate,
+  cartbasket,
+  removeItemFromCart,
+} from "../../Store/Slices/cartslice";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 
 const Desktopcart = () => {
-  const [cart, setcart] = useState(true);
   const dispatch = useDispatch();
   const cartOpen = useSelector(cartstate);
+  const cartbaskets = useSelector(cartbasket);
+
+  type itms = {
+    id: number;
+    quantity: number;
+    price: number;
+    totalprice: number;
+    image: string;
+    name: string;
+  };
 
   const slideFromBottomMobileVariant = {
     hidden: {
@@ -68,7 +82,7 @@ const Desktopcart = () => {
     <>
       {cartOpen && (
         <div
-          className="bg-black/70 fixed top-0 left-0 h-full w-screen cursor-pointer z-[200000]"
+          className="fixed left-0 top-0 z-[200000] h-full w-screen cursor-pointer bg-black/70"
           onClick={() => {
             dispatch(setCartmodal({ payload: 0 }));
           }}
@@ -79,9 +93,9 @@ const Desktopcart = () => {
         animate={cartOpen ? "visible" : "hidden"}
         exit="exit"
         variants={variant}
-        className="fixed bottom-0 right-0 z-[9000000] rounded-t-lg md:rounded-none  h-[90vh] w-full bg-white text-black  md:right-0 md:top-0 md:h-screen md:w-1/3"
+        className="fixed bottom-0 right-0 z-[9000000] h-[90vh] w-full  rounded-t-lg bg-white text-black md:right-0  md:top-0 md:h-screen md:w-1/3 md:rounded-none"
       >
-        <div className="mt-2 text-gray-500 capitalize font-bold px-3 flex justify-between">
+        <div className="mt-2 flex justify-between px-3 font-bold capitalize text-gray-500">
           <Link
             to="/cart"
             className=" flex gap-x-4"
@@ -90,7 +104,7 @@ const Desktopcart = () => {
             }}
           >
             <span>go to coffee cart</span>
-            <ArrowRight className="text-3xl font-bold  cursor-pointer" />
+            <ArrowRight className="cursor-pointer text-3xl  font-bold" />
           </Link>
 
           <div className="">
@@ -102,7 +116,19 @@ const Desktopcart = () => {
           </div>
         </div>
 
-        <Cartitem />
+        {cartbaskets.map(
+          ({ id, quantity, price, totalprice, image, name }: itms) => (
+            <Cartitem
+              key={id}
+              id={id}
+              coffeename={name}
+              quantity={quantity}
+              price={price}
+              image={image}
+              total={totalprice}
+            />
+          )
+        )}
       </motion.div>
     </>
   );

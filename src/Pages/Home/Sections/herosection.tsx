@@ -49,12 +49,12 @@ export default function Herosection({}: Props) {
             </div>
           </div>
 
-          <div className="relative  mx-auto w-[300px] h-[18rem] md:h-[300px] xl:h-[400px] my-auto">
+          <div className="relative  mx-auto w-[250px] h-[18rem] md:h-[300px] lg:w-[300px] xl:h-[400px] my-auto">
             <LazyLoadImage
               effect="black-and-white"
               src={heroimage}
               alt="beautiful image of a coffee"
-              className=" bg-cofeeHero absolute z-[400] h-full w-full bg-cover bg-no-repeat  xl:mt-0 xl:h-full xl:w-full"
+              className="  absolute z-[400] h-full w-full bg-cover bg-no-repeat  xl:mt-0 xl:h-full xl:w-full"
             />
           </div>
         </div>

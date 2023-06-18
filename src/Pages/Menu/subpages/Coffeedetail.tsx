@@ -35,17 +35,73 @@ import { useDispatch, useSelector } from "react-redux";
 import { addItemToCart } from "../../../Store/Slices/cartslice";
 import { HiOutlineTruck } from "react-icons/hi";
 import { GiClockwork } from "react-icons/gi";
+import { IoIosAdd, IoIosRemove } from "react-icons/io";
+
+const CartForms = (props: any) => {
+  const { cartshandle } = props;
+  const [itemnumber, setItemNumber] = useState(0);
+
+  const onSubmitHandler = (event: React.FormEvent) => {
+    event.preventDefault();
+    if (itemnumber === 0) {
+      return;
+    }
+
+    cartshandle(itemnumber);
+    setItemNumber(0);
+  };
+
+  const decrementHandler = () => {
+    setItemNumber(itemnumber - 1);
+    if (itemnumber <= 0) {
+      setItemNumber(0);
+    }
+  };
+
+  return (
+    <>
+      <form className="mt-8 flex max-sm:flex-col" onSubmit={onSubmitHandler}>
+        <div className="flex items-center justify-center">
+          <ul className="mr-4 mt-2 flex h-12 w-32 items-center justify-between rounded-xl bg-gray-200/40 px-3 max-sm:w-full max-sm:py-1">
+            <li>
+              <IoIosRemove
+                className="cursor-pointer text-2xl  text-black"
+                onClick={decrementHandler}
+              />
+            </li>
+            <li className="cursor-default">{itemnumber}</li>
+            <li>
+              <IoIosAdd
+                className="h-14 cursor-pointer p-1 text-3xl font-bold text-black"
+                onClick={() => {
+                  setItemNumber((prev) => prev + 1);
+                }}
+              />
+            </li>
+          </ul>
+
+          <Button className="item-center flex justify-center gap-3 rounded-none bg-black px-4 md:px-10 lg:px-6">
+            <ShoppingBag className="w-1/6" />
+            <span className="w-4/6 text-[0.7rem] font-bold xl:text-sm">
+              add to cart
+            </span>
+          </Button>
+        </div>
+      </form>
+    </>
+  );
+};
 
 interface CoffeedetailProps {}
 
 const Coffeedetail: FC<CoffeedetailProps> = () => {
-  const { pathname } = useLocation();
   const [details, setDetails] = useState<any>({});
   const navigate = useNavigate();
   const { id } = useParams();
   const [images, setimage] = useState("");
   const [loading, setloading] = useState(false);
   const dispatch = useDispatch();
+  const [quantities, setquantities] = useState(1);
 
   useEffect(() => {
     setloading(true);
@@ -75,13 +131,14 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
       .catch(console.error);
   }, [id]);
 
-  const handlerCart = () => {
+  const handlerCart = (amount: number) => {
     dispatch(
       addItemToCart({
         id: id,
         name: details.name,
         price: details.newPrice,
         image: details.image.asset.url,
+        quantity: amount,
       })
     );
   };
@@ -106,18 +163,18 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
 
   return (
     <>
-      <main className=" py-16 lg:py-20 bg-[#f6f6f6]">
-        <section className="xl:w-[80%] mx-auto mt-4">
+      <main className=" bg-[#f6f6f6] py-16 lg:py-20">
+        <section className="mx-auto mt-4 xl:w-[80%]">
           <Link
             to="/menu"
-            className="flex text-sm w-32 gap-x-4 items-center justify-center font-semibold "
+            className="mt-6 flex w-32 items-center justify-center gap-x-2 text-sm font-semibold"
           >
             <ArrowLeft /> <span>shop</span>
           </Link>
         </section>
-        <section className="flex flex-col md:flex-row max-w-7xl mx-auto my-10">
-          <div className="rightside| w-full md:w-1/2 h-full ">
-            <div className=" h-[20rem] relative  sm:h-[28rem] md:h-[30rem] lg:h-[40rem] px-3 flex items-center justify-center">
+        <section className="mx-auto my-10 flex max-w-7xl flex-col md:flex-row">
+          <div className="rightside| h-full w-full md:w-1/2 ">
+            <div className=" relative flex  h-[20rem] items-center justify-center px-3 sm:h-[28rem] md:h-[30rem] lg:h-[40rem]">
               {loading ? (
                 <p>
                   <Loader2 className="animate-spin" />
@@ -127,7 +184,7 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
                   effect="blur"
                   src={`${images}`}
                   alt="coffeedetail-image"
-                  className={`object-cover w-2/3  md:h-full md:w-full rounded-md mx-auto bg-cover bg-top ${
+                  className={`mx-auto w-2/3  rounded-md bg-cover bg-top object-cover md:h-full md:w-full ${
                     !details.inStock ? "sepia" : "sepia-0"
                   }`}
                 />
@@ -135,18 +192,18 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
             </div>
           </div>
 
-          <div className="leftside| w-full md:w-1/2 p-3">
-            <h3 className="px-4 py-2 my-2 text-white text-sm bg-black inline-block rounded-md">
+          <div className="leftside| w-full p-3 md:w-1/2">
+            <h3 className="my-2 inline-block rounded-md bg-black px-4 py-2 text-sm text-white">
               <span className="capitalize">
                 {details.inStock ? "in stock" : " Sold out"}
               </span>
             </h3>
 
-            <h2 className=" text-2xl mt-4  sm:text-3xl lg:text-4xl xl:text-5xl font-bold capitalize ">
+            <h2 className=" mt-4 text-2xl  font-bold capitalize sm:text-3xl lg:text-4xl xl:text-5xl ">
               {details.name}
             </h2>
 
-            <div className="rating| flex text-lightdark gap-4 items-center justify-start font-nunito mt-4">
+            <div className="rating| font-nunito mt-4 flex items-center justify-start gap-4 text-lightdark">
               <div className="flex items-center justify-center gap-x-2">
                 <BsStar />
                 <BsStar />
@@ -155,62 +212,45 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
                 <BsStar />
               </div>
 
-              <h3 className="text-base font-bold border-b-2 border-black font-inter">
+              <h3 className="font-inter border-b-2 border-black text-base font-bold">
                 234 reviews
               </h3>
             </div>
-            <p className=" my-4 lg:my-6 text-lightdark text-sm md:text-base">
+            <p className=" my-4 text-sm text-lightdark md:text-base lg:my-6">
               {details.description}
             </p>
 
             <hr className="text-lightdark" />
 
-            <h3 className=" text-2xl lg:text-3xl font-nunito font-bold my-2 lg:my-3 font-nunito ">
+            <h3 className=" font-nunito font-nunito my-2 text-2xl font-bold lg:my-3 lg:text-3xl ">
               ${details.oldPrice}
             </h3>
 
-            <div className="cartbutton| mt-3 flex gap-3 my-4">
-              <div className="flex border-2 border-lightdark md:px-4 md:w-[10rem] items-center justify-center ">
-                <button className="p-2 md:px-4 text-2xl flex item-center ">
-                  <Minus />
-                </button>
-                <span className="p-1 px-3 md:px-4 text-2xl flex items-center border-l-2 border-lightdark border-r-2">
-                  1
-                </span>
-                <button className="p-2 md:px-4 text-2xl flex items-center">
-                  <Add />
-                </button>
-              </div>
-
-              <Button className="flex rounded-none bg-black px-4 lg:px-6 md:px-10 item-center justify-center gap-3">
-                <ShoppingBag className="w-1/6" />
-                <span
-                  className="text-[0.7rem] xl:text-sm w-4/6 font-bold"
-                  onClick={handlerCart}
-                >
-                  add to cart
-                </span>
-              </Button>
+            <div className="cartbutton| my-4 mt-3 flex gap-3">
+              <CartForms
+                setqunatities={setquantities}
+                cartshandle={handlerCart}
+              />
             </div>
 
             <hr />
 
-            <div className="aboutcoffee| mt-2 flex items-start justify-center flex-col space-y-1 lg:space-y-3 text-black  font-medium">
+            <div className="aboutcoffee| mt-2 flex flex-col items-start justify-center space-y-1 font-medium text-black  lg:space-y-3">
               <span className="flex items-center justify-center gap-x-3">
                 <BsHeart />
-                <span className="font-bold fill-red-400">add to wishlist</span>
+                <span className="fill-red-400 font-bold">add to wishlist</span>
               </span>
               <h3 className="font-medium">
                 <span className="font-semibold">category: </span> Espresso
               </h3>
             </div>
 
-            <div className="aboutcoffee| flex item-center justify-center gap-x-6 mt-4 text-black  font-medium w-full ">
+            <div className="aboutcoffee| item-center mt-5 flex w-full justify-center gap-x-6  font-medium text-black ">
               <div className="flex items-center justify-center gap-x-3">
                 <HiOutlineTruck />
                 <span className="font-bold"> Free shippimg</span>
               </div>
-              <div className="font-medium flex items-center justify-center gap-x-3">
+              <div className="flex items-center justify-center gap-x-3 font-medium">
                 <GiClockwork />
                 <span className="font-semibold">cancel anytime </span>
               </div>
@@ -218,8 +258,8 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
           </div>
         </section>
 
-        <section className="similarProducts| my-20 relative w-[80%] mx-auto ">
-          <h4 className="font-bold text-lightdark md:text-xl mb-4 ">
+        <section className="similarProducts| relative mx-auto my-20 w-[80%] ">
+          <h4 className="mb-4 font-bold text-black md:text-xl ">
             Other Collections You May Like
           </h4>
 
@@ -240,25 +280,25 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
             <SwipperNavbuttons className="mt-4" />
             {coffeedets.map((cofee) => (
               <SwiperSlide key={cofee.id}>
-                <div className="relative w-full lg:mb-4 cursor-pointer z-20 hover:scale-[1.02] transition duration-100 delay-75 group ">
-                  <div className="w-full relative h-[200px]">
+                <div className="group relative z-20 w-full cursor-pointer transition delay-75 duration-100 hover:scale-[1.02] lg:mb-4 ">
+                  <div className="relative h-[200px] w-full">
                     <img
                       src={cofee.image}
                       alt="coffeedetail"
                       className="mx-auto max-h-[200px] min-h-[150px] bg-cover bg-top object-cover"
                     />
                   </div>
-                  <div className="absolute  top-3  -right-11  opacity-0 group-hover:opacity-100 group-hover:right-2 transition-all duration-300 ">
-                    <button className="flex items-center justify-center  flex-col gap-2 md:gap-4">
-                      <div className=" flex justify-center items-center text-lightdark  shadow-lg bg-black p-4 rounded-lg ">
-                        <ShoppingBagIcon className="h-4 w-4 md:h-6 md:w-6 text-white" />
+                  <div className="absolute  -right-11  top-3  opacity-0 transition-all duration-300 group-hover:right-2 group-hover:opacity-100 ">
+                    <button className="flex flex-col items-center  justify-center gap-2 md:gap-4">
+                      <div className=" flex items-center justify-center rounded-lg  bg-black p-4 text-lightdark shadow-lg ">
+                        <ShoppingBagIcon className="h-4 w-4 text-white md:h-6 md:w-6" />
                       </div>
 
                       <Link
                         to="/menu/:id"
-                        className=" flex justify-center items-center text-lightdark shadow-lg bg-black p-4 rounded-lg "
+                        className=" flex items-center justify-center rounded-lg bg-black p-4 text-lightdark shadow-lg "
                       >
-                        <EyeIcon className="h-4 w-4 md:h-6 md:w-6 text-white" />
+                        <EyeIcon className="h-4 w-4 text-white md:h-6 md:w-6" />
                       </Link>
                     </button>
                   </div>

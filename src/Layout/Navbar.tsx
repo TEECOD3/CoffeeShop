@@ -141,14 +141,18 @@ const Navbar = () => {
                   </div>
                 </NavLink>
               ) : (
-                <li className="w-20 py-1 font-bold text-base flex items-center justify-center border-2  border-black rounded-lg">
-                  login
-                </li>
+                <Link to="/login">
+                  <li className="w-20 py-1 font-bold text-base flex items-center justify-center border-2  border-black rounded-lg">
+                    login
+                  </li>
+                </Link>
               )}
               {!isLoggedIn && (
-                <li className="w-20 py-1 font-bold text-base flex items-center justify-center bg-black text-white rounded-lg">
-                  create
-                </li>
+                <Link to="/register">
+                  <li className="w-20 py-1 font-bold text-base flex items-center justify-center bg-black text-white rounded-lg">
+                    create
+                  </li>
+                </Link>
               )}
             </ul>
           </div>
