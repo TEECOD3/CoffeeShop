@@ -91,28 +91,31 @@ const Navbar = () => {
       </AnimatePresence>
       <div className="fixed z-[1000] flex w-full bg-[#f6f6f6]  px-2 sm:px-8">
         <div className="mx-auto  flex h-full w-full items-center justify-between lg:max-w-[80%]">
-          <div className=" font-bold capitalize text-xl">
+          <div className=" text-xl font-bold capitalize">
             <Link to="/">
               <Coffeelogo className="h-20 w-20" />
             </Link>
           </div>
 
           <ul
-            className={`item-end hidden items-center  justify-around text-white md:flex font-bold `}
+            className={`item-end hidden items-center  justify-around font-bold text-white md:flex `}
           >
             <NavLink to="/menu">
               <li className="text-black ">Shop</li>
             </NavLink>
           </ul>
 
-          <div className="flex gap-x-8 items-center justify-center">
-            <div onClick={CartHandler} className=" relative hidden md:block">
+          <div className="flex items-center justify-center gap-x-8">
+            <div
+              onClick={CartHandler}
+              className=" relative hidden cursor-pointer md:block"
+            >
               <HiOutlineShoppingBag className="text-2xl font-extrabold" />
-              <div className="items-center absolute -right-2 -bottom-1 flex h-4 w-4  justify-center rounded-full bg-black text-sm text-white text-center">
+              <div className="absolute -bottom-1 -right-2 flex h-4 w-4 items-center  justify-center rounded-full bg-black text-center text-sm text-white">
                 {qtyAmount}
               </div>
             </div>
-            <ul className="md:flex gap-x-2 items-center justify-center hidden">
+            <ul className="hidden items-center justify-center gap-x-2 md:flex">
               {isLoggedIn ? (
                 <NavLink to="/">
                   <div className="flex items-center justify-center gap-x-3">
@@ -142,14 +145,14 @@ const Navbar = () => {
                 </NavLink>
               ) : (
                 <Link to="/login">
-                  <li className="w-20 py-1 font-bold text-base flex items-center justify-center border-2  border-black rounded-lg">
+                  <li className="flex w-20 items-center justify-center rounded-lg border-2 border-black py-1  text-base font-bold">
                     login
                   </li>
                 </Link>
               )}
               {!isLoggedIn && (
                 <Link to="/register">
-                  <li className="w-20 py-1 font-bold text-base flex items-center justify-center bg-black text-white rounded-lg">
+                  <li className="flex w-20 items-center justify-center rounded-lg bg-black py-1 text-base font-bold text-white">
                     create
                   </li>
                 </Link>
@@ -160,7 +163,7 @@ const Navbar = () => {
           <ul className="flex items-center justify-center gap-4 px-2 md:hidden ">
             <div onClick={CartHandler} className=" relative ">
               <HiOutlineShoppingBag className="text-2xl font-extrabold" />
-              <div className="items-center absolute -right-2 -bottom-1 flex h-4 w-4  justify-center rounded-full bg-black text-sm text-white text-center">
+              <div className="absolute -bottom-1 -right-2 flex h-4 w-4 items-center  justify-center rounded-full bg-black text-center text-sm text-white">
                 {qtyAmount}
               </div>
             </div>

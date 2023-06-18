@@ -60,9 +60,12 @@ const CartForms = (props: any) => {
 
   return (
     <>
-      <form className="mt-8 flex max-sm:flex-col" onSubmit={onSubmitHandler}>
+      <form
+        className="mt-8 flex w-full max-sm:flex-col"
+        onSubmit={onSubmitHandler}
+      >
         <div className="flex items-center justify-center">
-          <ul className="mr-4 mt-2 flex h-12 w-32 items-center justify-between rounded-xl bg-gray-200/40 px-3 max-sm:w-full max-sm:py-1">
+          <ul className="mr-4 mt-2 flex h-12 w-32 items-center justify-between rounded-xl bg-gray-200/40">
             <li>
               <IoIosRemove
                 className="cursor-pointer text-2xl  text-black"
@@ -80,11 +83,9 @@ const CartForms = (props: any) => {
             </li>
           </ul>
 
-          <Button className="item-center flex justify-center gap-3 rounded-none bg-black px-4 md:px-10 lg:px-6">
-            <ShoppingBag className="w-1/6" />
-            <span className="w-4/6 text-[0.7rem] font-bold xl:text-sm">
-              add to cart
-            </span>
+          <Button className="justify-round flex w-40 gap-x-2">
+            <ShoppingBag className="text-sm" />
+            <span className="text-sm md:text-base">add to cart</span>
           </Button>
         </div>
       </form>
@@ -222,9 +223,15 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
 
             <hr className="text-lightdark" />
 
-            <h3 className=" font-nunito font-nunito my-2 text-2xl font-bold lg:my-3 lg:text-3xl ">
-              ${details.oldPrice}
-            </h3>
+            <div className=" flex items-center justify-between">
+              <h3 className=" font-nunito font-nunito my-2 text-2xl font-bold lg:my-3 lg:text-3xl ">
+                ${details.newPrice}
+              </h3>
+
+              <div className="text-xl font-bold uppercase text-black">
+                medium roast
+              </div>
+            </div>
 
             <div className="cartbutton| my-4 mt-3 flex gap-3">
               <CartForms
@@ -236,13 +243,12 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
             <hr />
 
             <div className="aboutcoffee| mt-2 flex flex-col items-start justify-center space-y-1 font-medium text-black  lg:space-y-3">
-              <span className="flex items-center justify-center gap-x-3">
+              <span className="mt-3 flex items-center justify-center gap-x-3">
                 <BsHeart />
-                <span className="fill-red-400 font-bold">add to wishlist</span>
+                <span className="fill-red-400 font-bold capitalize">
+                  add to wishlist
+                </span>
               </span>
-              <h3 className="font-medium">
-                <span className="font-semibold">category: </span> Espresso
-              </h3>
             </div>
 
             <div className="aboutcoffee| item-center mt-5 flex w-full justify-center gap-x-6  font-medium text-black ">

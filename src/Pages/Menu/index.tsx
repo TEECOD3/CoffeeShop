@@ -65,7 +65,7 @@ const Menu = () => {
     <>
       <AnimatePresence>
         <motion.div
-          className="h-full w-full px-1 py-28 xl:px-0 bg-[#f6f6f6] "
+          className="h-full w-full bg-[#f6f6f6] px-1 py-28 xl:px-0 "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ y: 0 }}
@@ -91,7 +91,7 @@ const Menu = () => {
                             (stuff, i) => (
                               <div
                                 key={i}
-                                className="group skeleton bg-black/30 relative z-20 w-full cursor-pointer  p-2 transition delay-200 duration-300 animate-pulse tlg:mb-4 "
+                                className="skeleton tlg:mb-4 group relative z-20 w-full animate-pulse  cursor-pointer bg-black/30 p-2 transition delay-200 duration-300 "
                               >
                                 <div className=" relative mx-auto md:w-[200px]">
                                   <div className="  flex items-center justify-center ">
@@ -124,13 +124,15 @@ const Menu = () => {
                         }}
                         className=" border-coffee-100 bg-white"
                       />
-                      <div className="absolute right-0 top-0 flex h-full items-center justify-center bg-black p-2 focus:black focus:ring-black">
+                      <div className="focus:black absolute right-0 top-0 flex h-full items-center justify-center bg-black p-2 focus:ring-black">
                         <Search className="text-white" />
                       </div>
                     </div>
 
                     <div className="category| mt-4">
-                      <h5 className="font-bold text-lightdark">Category</h5>
+                      <h5 className="font-medium text-black">
+                        filter by Category
+                      </h5>
                       <div>
                         <div className="mt-3 flex  w-full flex-wrap gap-2  lg:w-3/6  lg:flex-col">
                           {filterButtons.map((buttondata) => (
@@ -144,7 +146,7 @@ const Menu = () => {
                     </div>
 
                     <div className="filter-by-price | mt-6 flex flex-col items-start justify-start gap-2">
-                      <h5 className="font-bold capitalize text-lightdark">
+                      <h5 className="font-medium capitalize text-black">
                         filter by price
                       </h5>
 
@@ -202,7 +204,7 @@ const Menu = () => {
                               </div>
                             ))
                           ) : (
-                            <div className=" relative w-[20rem] md:w-full flex h-[250px] items-center justify-center ">
+                            <div className=" relative flex h-[250px] w-[20rem] items-center justify-center md:w-full ">
                               <img
                                 src={urlFor(cofee.image).url()}
                                 alt="coffeedetail"

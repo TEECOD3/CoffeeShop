@@ -20,6 +20,10 @@ const Cartitem: FC<CartitemProps> = (props: CartitemProps) => {
   const { image, coffeename, price, total, quantity, id } = props;
   const dispatch = useDispatch();
 
+  const removeitem = () => {
+    dispatch(removeItemFromCart({ id }));
+  };
+
   const addtocart = () => {
     dispatch(
       addItemToCart({
@@ -48,14 +52,17 @@ const Cartitem: FC<CartitemProps> = (props: CartitemProps) => {
 
             <div className="flex h-[36px] gap-x-3 text-sm">
               <div className="flex h-full max-w-[100px] flex-1 items-center  border-2 border-gray-100 font-bold text-gray-500">
-                <div className="flex h-full flex-1 items-center justify-center text-base ">
+                <div
+                  className="flex h-full flex-1 cursor-pointer items-center justify-center text-base "
+                  onClick={removeitem}
+                >
                   -
                 </div>
                 <div className="flex h-full items-center justify-center px-2 ">
                   1
                 </div>
                 <div
-                  className="flex h-full flex-1 items-center justify-center text-base"
+                  className="flex h-full flex-1 cursor-pointer items-center justify-center text-base"
                   onClick={addtocart}
                 >
                   +
