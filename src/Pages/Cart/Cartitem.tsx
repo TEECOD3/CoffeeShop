@@ -37,13 +37,13 @@ const Cartitem: FC<CartitemProps> = (props: CartitemProps) => {
   };
   return (
     <div className="mx-auto w-full">
-      <div className="mt-2 rounded-lg bg-white p-4 shadow-lg">
-        <div className="flex min-h-[150px] items-center  gap-x-4 ">
+      <div className="mt-2 rounded-lg bg-white p-2 shadow-lg">
+        <div className="flex min-h-[100px] items-center  gap-x-4 ">
           <img src={image} alt="cartimage" className="max-w-[60px]" />
 
           <div className="font-nunito flex w-full flex-col">
             <div className="mb-4 flex justify-between">
-              <h3 className="text-sm font-bold uppercase text-gray-500 md:text-base ">
+              <h3 className="text-[0.6rem] font-bold uppercase text-black md:text-base ">
                 {coffeename}
               </h3>
 
@@ -51,7 +51,7 @@ const Cartitem: FC<CartitemProps> = (props: CartitemProps) => {
             </div>
 
             <div className="flex h-[36px] gap-x-3 text-sm">
-              <div className="flex h-full max-w-[100px] flex-1 items-center  border-2 border-gray-100 font-bold text-gray-500">
+              <div className="flex h-full max-w-[100px] flex-1 items-center  border-2 border-gray-100 font-bold text-black">
                 <div
                   className="flex h-full flex-1 cursor-pointer items-center justify-center text-base "
                   onClick={removeitem}
@@ -68,11 +68,11 @@ const Cartitem: FC<CartitemProps> = (props: CartitemProps) => {
                   +
                 </div>
               </div>
-              <div className="flex flex-1 items-center justify-start font-bold text-gray-400  md:text-sm">
+              <div className="flex flex-1 items-center justify-start text-[0.5rem] font-bold text-black md:text-sm">
                 price: ${price} x {quantity}
               </div>
 
-              <div className="flex-2 flex items-center justify-end font-medium text-gray-400  md:text-base">
+              <div className="flex-2 flex items-center justify-end text-[0.6rem] font-medium text-black  md:text-sm">
                 total: ${total}
               </div>
             </div>
