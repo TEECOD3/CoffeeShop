@@ -173,9 +173,13 @@ const Navbar = () => {
           <ul className="flex items-center justify-center gap-4 px-2 md:hidden ">
             <div onClick={CartHandler} className=" relative ">
               <HiOutlineShoppingBag className="text-2xl font-extrabold" />
-              <div className="absolute -bottom-1 -right-2 flex h-4 w-4 items-center  justify-center rounded-full bg-black text-center text-sm text-white">
-                {qtyAmount}
-              </div>
+              {cartitems.length === 0 ? (
+                ""
+              ) : (
+                <div className="absolute -bottom-1 -right-2 flex h-4 w-4 items-center  justify-center rounded-full bg-black text-center text-sm text-white">
+                  {cartitems.length}
+                </div>
+              )}
             </div>
 
             <li className="">
