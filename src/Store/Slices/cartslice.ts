@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import Cartitem from "../../Pages/Cart/Cartitem";
 
 type initialStateprops = {
   cartModal: boolean;
@@ -26,7 +27,6 @@ const cartslice = createSlice({
         (item) => item.id === newItem.id
       );
       if (!existingItem) {
-        state.totalQuantity++;
         state.cartItems.push({
           id: newItem.id,
           name: newItem.name,
@@ -43,16 +43,14 @@ const cartslice = createSlice({
       }
     },
     removeItemFromCart: (state, action) => {
-      const id = action.payload.id;
-      const existingItems = state.cartItems.find((item) => item.id === id);
-      state.totalQuantity--;
+      const id = action.payload;
+      const existingItem = state.cartItems.find((item) => item.id === id);
 
-      if (existingItems.quantity === 1) {
-        state.cartItems.filter((item) => item.id != id);
+      if (existingItem.quantity === 1) {
+        state.cartItems = state.cartItems.filter((item) => item.id !== id);
       } else {
-        existingItems.quantity--;
-        existingItems.totalprice =
-          existingItems.totalprice - existingItems.price;
+        existingItem.quantity--;
+        existingItem.totalPrice = existingItem.totalPrice - existingItem.price;
       }
     },
     clearCart: (state) => {},

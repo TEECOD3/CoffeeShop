@@ -21,7 +21,7 @@ const Cartitem: FC<CartitemProps> = (props: CartitemProps) => {
   const dispatch = useDispatch();
 
   const removeitem = () => {
-    dispatch(removeItemFromCart({ id }));
+    dispatch(removeItemFromCart(id));
   };
 
   const addtocart = () => {

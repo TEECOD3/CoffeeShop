@@ -16,7 +16,12 @@ import {
   SetActiveUser,
   selectLoggedstate,
 } from "../Store/Slices/AuthSlice";
-import { cartstate, setCartmodal, totalqty } from "../Store/Slices/cartslice";
+import {
+  cartbasket,
+  cartstate,
+  setCartmodal,
+  totalqty,
+} from "../Store/Slices/cartslice";
 import {
   Menubar,
   MenubarContent,
@@ -35,6 +40,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const cartmodal = useSelector(cartstate);
   const qtyAmount = useSelector(totalqty);
+  const cartitems = useSelector(cartbasket);
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -111,9 +117,13 @@ const Navbar = () => {
               className=" relative hidden cursor-pointer md:block"
             >
               <HiOutlineShoppingBag className="text-2xl font-extrabold" />
-              <div className="absolute -bottom-1 -right-2 flex h-4 w-4 items-center  justify-center rounded-full bg-black text-center text-sm text-white">
-                {qtyAmount}
-              </div>
+              {cartitems.length === 0 ? (
+                ""
+              ) : (
+                <div className="absolute -bottom-1 -right-2 flex h-4 w-4 items-center  justify-center rounded-full bg-black text-center text-sm text-white">
+                  {cartitems.length}
+                </div>
+              )}
             </div>
             <ul className="hidden items-center justify-center gap-x-2 md:flex">
               {isLoggedIn ? (
