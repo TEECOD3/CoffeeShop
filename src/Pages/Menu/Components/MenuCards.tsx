@@ -29,7 +29,7 @@ const Menucards: FC<MenucardsProps> = (props) => {
   return (
     <>
       {loading ? (
-        <div className="group bg-black/30 relative z-20 w-full cursor-pointer  p-2 transition delay-200 duration-300 animate-pulse tlg:mb-4 ">
+        <div className="tlg:mb-4 group relative z-20 w-full animate-pulse  cursor-pointer bg-black/30 p-2 transition delay-200 duration-300 ">
           <div className=" relative mx-auto md:w-[200px]">
             <div className="  flex items-center justify-center ">
               <div className="mx-auto max-h-[150px] min-h-[150px] bg-cover bg-top object-cover" />
@@ -39,14 +39,12 @@ const Menucards: FC<MenucardsProps> = (props) => {
       ) : (
         <div
           className={` ${
-            instock ? " " : " z-[900] sepia bg-gray-white "
+            instock ? " " : " bg-gray-white z-[900] sepia "
           }group relative  z-20 w-full cursor-pointer border-2 p-2 transition delay-200 duration-300 hover:scale-[1.09] lg:mb-4 `}
         >
           <div className=" relative mx-auto md:w-[200px]">
             {!instock && (
-              <div className="bg-black -rotate-12 rounded-lg animate-pulse  text-white  w-20 text-center text-sm mt-2 p-1 ">
-                sold out
-              </div>
+              <div className="font-mini text-base text-black">sold out</div>
             )}
             <div className="flex items-center justify-center">
               <LazyLoadImage
@@ -57,10 +55,10 @@ const Menucards: FC<MenucardsProps> = (props) => {
               />
             </div>
           </div>
-          <h3 className="mx-auto  mt-4 text-left text-[7px] sm:text-[12px] md:text-base uppercase font-bold  text-lightdark ">
+          <h3 className="mx-auto  mt-4 text-left text-[7px] font-bold uppercase text-lightdark sm:text-[12px]  md:text-base ">
             {coffeename}
           </h3>
-          <div className="mt-2 flex justify-start gap-4  font-nunito font-medium">
+          <div className="font-nunito mt-2 flex justify-start  gap-4 font-medium">
             <h4 className="text-sm text-black">${newprice}</h4>
             <s className="text-sm text-red-500">${oldprice}</s>
           </div>
@@ -71,11 +69,11 @@ const Menucards: FC<MenucardsProps> = (props) => {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger>
-                    <div className=" flex items-center justify-center rounded-lg  bg-black p-2 md:p-4 text-lightdark shadow-lg ">
-                      <ShoppingBagIcon className="text-white h-4 w-4" />
+                    <div className=" flex items-center justify-center rounded-lg  bg-black p-2 text-lightdark shadow-lg md:p-4 ">
+                      <ShoppingBagIcon className="h-4 w-4 text-white" />
                     </div>
                   </TooltipTrigger>
-                  <TooltipContent className=" bg-black text-[8px] text-white px-3 py-2 w-20">
+                  <TooltipContent className=" w-20 bg-black px-3 py-2 text-[8px] text-white">
                     <p>Add to cart</p>
                   </TooltipContent>
                 </Tooltip>
@@ -85,12 +83,12 @@ const Menucards: FC<MenucardsProps> = (props) => {
                   <TooltipTrigger>
                     <Link
                       to={`/menu/${slug}`}
-                      className=" flex items-center justify-center rounded-lg bg-black  p-2 md:p-4 text-lightdark shadow-lg "
+                      className=" flex items-center justify-center rounded-lg bg-black  p-2 text-lightdark shadow-lg md:p-4 "
                     >
-                      <EyeIcon className="text-white h-4 w-4" />
+                      <EyeIcon className="h-4 w-4 text-white" />
                     </Link>
                   </TooltipTrigger>
-                  <TooltipContent className=" bg-black text-[8px] text-white px-3 py-2 w-20">
+                  <TooltipContent className=" w-20 bg-black px-3 py-2 text-[8px] text-white">
                     <p>view details</p>
                   </TooltipContent>
                 </Tooltip>

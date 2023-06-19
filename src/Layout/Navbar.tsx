@@ -66,7 +66,7 @@ const Navbar = () => {
   }, []);
 
   const CartHandler = () => {
-    dispatch(setCartmodal({ payload: 0 }));
+    dispatch(setCartmodal());
   };
 
   const logoutHandler = (): any => {
@@ -120,7 +120,7 @@ const Navbar = () => {
               {cartitems.length === 0 ? (
                 ""
               ) : (
-                <div className="absolute -bottom-1 -right-2 flex h-4 w-4 items-center  justify-center rounded-full bg-black text-center text-sm text-white">
+                <div className="absolute -bottom-1 -right-2 flex h-4 w-4 items-center justify-center  rounded-full bg-black text-center font-monsts text-[0.6rem] text-sm text-white">
                   {cartitems.length}
                 </div>
               )}
@@ -176,7 +176,7 @@ const Navbar = () => {
               {cartitems.length === 0 ? (
                 ""
               ) : (
-                <div className="absolute -bottom-1 -right-2 flex h-4 w-4 items-center  justify-center rounded-full bg-black text-center text-sm text-white">
+                <div className="absolute -bottom-1 -right-2 flex h-4 w-4 items-center justify-center  rounded-full bg-black text-center font-monsts text-[0.6rem] text-white">
                   {cartitems.length}
                 </div>
               )}

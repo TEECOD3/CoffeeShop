@@ -9,6 +9,13 @@ export default {
       lg: "976px",
       xl: "1440px",
     },
+    fontFamily: {
+      rails: ["Raleway", "sans-serif"],
+      nunito: ["nunito", "sans-serif"],
+      mini: ["Miniver", "sans-serif"],
+      monsts: ["Montserrat", "sans-serif"],
+    },
+
     extend: {
       colors: {
         coffee: {
@@ -80,11 +87,6 @@ export default {
           leaveright: "url('./public/Images/leaveright.png')",
           leaveleft: "url('./public/Images/leaveleft.png')",
           middlecofee: "url('./public/Images/cofeemids.png')",
-        },
-        fontFamily: {
-          rails: ["Raleway", "sans-serif"],
-          nunito: ["nunito", "sans-serif"],
-          mini: ["Miniver", "sans-serif"],
         },
 
         fontSize: {

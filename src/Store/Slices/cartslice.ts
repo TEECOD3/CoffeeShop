@@ -17,9 +17,10 @@ const cartslice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    setCartmodal: (state, action) => {
+    setCartmodal: (state) => {
       state.cartModal = !state.cartModal;
     },
+
     addItemToCart: (state, action) => {
       const newItem = action.payload;
       console.log(newItem.price);

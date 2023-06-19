@@ -1,7 +1,7 @@
 import { FC } from "react";
 import image from "../../Data/images/mainimages/coferd.png";
 import { RiDeleteBin2Fill } from "react-icons/ri";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import {
   addItemToCart,
   removeItemFromCart,
@@ -41,7 +41,7 @@ const Cartitem: FC<CartitemProps> = (props: CartitemProps) => {
         <div className="flex min-h-[100px] items-center  gap-x-4 ">
           <img src={image} alt="cartimage" className="max-w-[60px]" />
 
-          <div className="font-nunito flex w-full flex-col">
+          <div className="flex w-full flex-col font-nunito">
             <div className="mb-4 flex justify-between">
               <h3 className="text-[0.6rem] font-bold uppercase text-black md:text-base ">
                 {coffeename}
@@ -59,7 +59,7 @@ const Cartitem: FC<CartitemProps> = (props: CartitemProps) => {
                   -
                 </div>
                 <div className="flex h-full items-center justify-center px-2 ">
-                  1
+                  {quantity}
                 </div>
                 <div
                   className="flex h-full flex-1 cursor-pointer items-center justify-center text-base"
@@ -68,11 +68,11 @@ const Cartitem: FC<CartitemProps> = (props: CartitemProps) => {
                   +
                 </div>
               </div>
-              <div className="flex flex-1 items-center justify-start text-[0.5rem] font-bold text-black md:text-sm">
+              <div className="flex flex-1 items-center justify-start font-monsts text-[0.5rem] font-bold text-black md:text-sm">
                 price: ${price} x {quantity}
               </div>
 
-              <div className="flex-2 flex items-center justify-end text-[0.6rem] font-medium text-black  md:text-sm">
+              <div className="flex-2 flex items-center justify-end font-monsts text-[0.6rem] font-medium text-black  md:text-sm">
                 total: ${total}
               </div>
             </div>

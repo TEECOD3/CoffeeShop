@@ -8,20 +8,11 @@ import { Outlet, useLocation, useParams } from "react-router-dom";
 import image from "../../../Data/images/mainimages/matte-coffee-bag-mockup-template-removebg-preview.png";
 import {
   ArrowLeft,
-  ArrowRight,
   EyeIcon,
-  Facebook,
-  Instagram,
-  Linkedin,
   Loader2,
-  LoaderIcon,
-  LucideLoader2,
-  Minus,
   ShoppingBag,
   ShoppingBagIcon,
-  Twitter,
 } from "lucide-react";
-import { Add, Details } from "@mui/icons-material";
 import { BsHeart, BsStar } from "react-icons/bs";
 import Button from "../../../Components/UI/Button";
 import { useNavigate } from "react-router-dom";
@@ -40,6 +31,7 @@ import { IoIosAdd, IoIosRemove } from "react-icons/io";
 const CartForms = (props: any) => {
   const { cartshandle } = props;
   const [itemnumber, setItemNumber] = useState(0);
+  const dispatch = useDispatch();
 
   const onSubmitHandler = (event: React.FormEvent) => {
     event.preventDefault();
@@ -204,7 +196,7 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
               {details.name}
             </h2>
 
-            <div className="rating| font-nunito mt-4 flex items-center justify-start gap-4 text-lightdark">
+            <div className="rating| mt-4 flex items-center justify-start gap-4 font-nunito text-lightdark">
               <div className="flex items-center justify-center gap-x-2">
                 <BsStar />
                 <BsStar />
@@ -213,7 +205,7 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
                 <BsStar />
               </div>
 
-              <h3 className="font-inter border-b-2 border-black text-base font-bold">
+              <h3 className="font-inter border-b-2 border-black font-monsts text-base font-bold">
                 234 reviews
               </h3>
             </div>
@@ -224,7 +216,7 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
             <hr className="text-lightdark" />
 
             <div className=" flex items-center justify-between">
-              <h3 className=" font-nunito font-nunito my-2 text-2xl font-bold lg:my-3 lg:text-3xl ">
+              <h3 className="my-2 font-monsts text-2xl font-bold lg:my-3 lg:text-3xl ">
                 ${details.newPrice}
               </h3>
 

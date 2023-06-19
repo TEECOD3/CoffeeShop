@@ -9,7 +9,7 @@ import {
 } from "../../Store/Slices/cartslice";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 
@@ -17,6 +17,7 @@ const Desktopcart = () => {
   const dispatch = useDispatch();
   const cartOpen = useSelector(cartstate);
   const cartbaskets = useSelector(cartbasket);
+  const navigate = useNavigate();
 
   type itms = {
     id: number;
@@ -73,6 +74,9 @@ const Desktopcart = () => {
     },
   };
 
+  if (cartbaskets.length === 0) {
+  }
+
   const isMobile = window.innerWidth < 768;
 
   const variant = isMobile
@@ -85,7 +89,7 @@ const Desktopcart = () => {
         <div
           className="c fixed left-0 top-0 z-[200000] h-full w-screen cursor-pointer bg-black/70"
           onClick={() => {
-            dispatch(setCartmodal({ payload: 0 }));
+            dispatch(setCartmodal());
           }}
         ></div>
       )}
@@ -100,12 +104,12 @@ const Desktopcart = () => {
           <div
             className=" flex gap-x-4"
             onClick={() => {
-              dispatch(setCartmodal({ payload: 0 }));
+              dispatch(setCartmodal());
             }}
           >
             <span className="flex items-center justify-center gap-x-3 p-2">
               <HiOutlineShoppingBag className=" text-black" />{" "}
-              <span className="text-sm text-black">
+              <span className="font-monsts text-sm text-black">
                 shopping bag ({cartbaskets.length})
               </span>
             </span>
@@ -114,34 +118,57 @@ const Desktopcart = () => {
           <div className="">
             <FaTimes
               onClick={() => {
-                dispatch(setCartmodal({ payload: 0 }));
+                dispatch(setCartmodal());
               }}
             />
           </div>
         </div>
+        <div className="flex h-full w-full flex-col">
+          <div className="flex-1">
+            {cartbaskets.map(
+              ({ id, quantity, price, totalprice, image, name }: itms) => (
+                <Cartitem
+                  key={id}
+                  id={id}
+                  coffeename={name}
+                  quantity={quantity}
+                  price={price}
+                  image={image}
+                  total={totalprice}
+                />
+              )
+            )}
+          </div>
 
-        {cartbaskets.map(
-          ({ id, quantity, price, totalprice, image, name }: itms) => (
-            <Cartitem
-              key={id}
-              id={id}
-              coffeename={name}
-              quantity={quantity}
-              price={price}
-              image={image}
-              total={totalprice}
-            />
-          )
-        )}
-
-        <div className="bottom-4 mt-4 flex justify-center gap-x-10">
-          <button className="captialize w-28 rounded-lg bg-black py-2 text-sm font-bold capitalize text-white ">
-            go to cart
-          </button>
-          <button className="captialize w-28 rounded-lg bg-red-600 py-2 text-sm font-bold capitalize text-white ">
-            clear cart
-          </button>
+          <div className="h-24">
+            {cartbaskets.length > 0 && (
+              <div className="mt-30  flex justify-center gap-x-10">
+                <button
+                  onClick={() => {
+                    navigate("/cart");
+                    dispatch(setCartmodal());
+                  }}
+                  className="captialize w-28 rounded-lg bg-black py-2 text-sm font-bold capitalize text-white "
+                >
+                  go to cart page
+                </button>
+                <button className="captialize w-28 rounded-lg bg-red-600 py-2 text-sm font-bold capitalize text-white ">
+                  clear cart
+                </button>
+              </div>
+            )}
+          </div>
         </div>
+
+        {cartbaskets.length === 0 && (
+          <div className="flex  flex-col items-center justify-center gap-y-4 capitalize">
+            <span className="text-xl font-bold ">your cart is empty</span>{" "}
+            <HiOutlineShoppingBag className="text-7xl" />
+            <button className="captialize w-32  rounded-lg bg-black py-3 text-sm font-bold capitalize text-white ">
+              start shopping
+            </button>
+          </div>
+        )}
       </motion.div>
     </>
   );
