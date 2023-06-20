@@ -11,7 +11,7 @@ import Loader from "../../../Components/UI/Loader";
 const Collectionsection = () => {
   const [Categories, setCategories] = useState<any[]>([]);
   const [loading, setloading] = useState(false);
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("dark roasts");
   const handleFilter = (button: { name: string }) => {
     switch (button.name) {
       case "dark roasts":
