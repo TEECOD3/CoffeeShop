@@ -188,7 +188,7 @@ export const sponsors = [
 
 export const buttondata = [
   { id: 1, component: <MdCoffeeMaker />, name: "light roast" },
-  { id: 2, component: <GiCoffeeBeans />, name: "medium roast" },
+  { id: 2, component: <GiCoffeeBeans />, name: "subscriptions" },
   { id: 3, component: <GiCoffeeCup />, name: "dark roasts" },
   { id: 4, component: <GiCoffeeMug />, name: "bundles" },
   {

@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import Cartitem from "../../Pages/Cart/Cartitem";
+import { toast } from "react-hot-toast";
 
 type initialStateprops = {
   cartModal: boolean;
@@ -23,7 +24,6 @@ const cartslice = createSlice({
 
     addItemToCart: (state, action) => {
       const newItem = action.payload;
-      console.log(newItem.price);
       const existingItem = state.cartItems.find(
         (item) => item.id === newItem.id
       );
@@ -36,11 +36,21 @@ const cartslice = createSlice({
           totalprice: newItem.price * newItem.quantity,
           image: newItem.image,
         });
+
+        toast.success(
+          `${
+            state.cartItems[`${state.cartItems.length - 1}`].name
+          } was Added To Cart`
+        );
       } else {
         existingItem.quantity = existingItem.quantity
           ? existingItem.quantity + newItem.quantity
           : existingItem.quantity++;
         existingItem.totalprice = existingItem.quantity * existingItem.price;
+        toast.success(
+          `${existingItem.quantity} ${existingItem.name} was Added To Cart`,
+          { position: "top-left" }
+        );
       }
     },
     removeItemFromCart: (state, action) => {

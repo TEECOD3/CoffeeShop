@@ -120,6 +120,7 @@ const Coffeedetail: FC<CoffeedetailProps> = () => {
         setloading(false);
         setDetails(data);
         setimage(data.image.asset.url);
+        console.log(data.image.asset.url);
       })
       .catch(console.error);
   }, [id]);
