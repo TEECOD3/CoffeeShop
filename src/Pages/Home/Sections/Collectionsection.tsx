@@ -11,7 +11,7 @@ import Loader from "../../../Components/UI/Loader";
 const Collectionsection = () => {
   const [Categories, setCategories] = useState<any[]>([]);
   const [loading, setloading] = useState(false);
-  const [category, setCategory] = useState("machandize");
+  const [category, setCategory] = useState("");
   const handleFilter = (button: { name: string }) => {
     switch (button.name) {
       case "dark roasts":
@@ -30,7 +30,7 @@ const Collectionsection = () => {
         setCategory("subscriptions");
         break;
       default:
-        setCategory("machandize");
+        setCategory("bundles");
         break;
     }
   };
