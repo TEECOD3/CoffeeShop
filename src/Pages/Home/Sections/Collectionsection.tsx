@@ -30,7 +30,7 @@ const Collectionsection = () => {
         setCategory("subscriptions");
         break;
       default:
-        setCategory("bundles");
+        setCategory("dark roasts");
         break;
     }
   };
